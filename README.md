@@ -1,230 +1,152 @@
-# Cursor 界面汉化方案
+# Cursor 界面汉化
 
-为 Cursor 提供界面汉化，覆盖 **设置页**、**Agent 窗口** 以及 Cursor 专有功能文案。支持 **macOS** 与 **Windows**。
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows-blue.svg)](#快速开始)
+[![Language](https://img.shields.io/badge/locale-zh--CN-red.svg)](#)
 
-## 原理
+**中文** | [English](./README.en.md)
 
-Cursor 基于 VS Code，界面文案通过 **NLS（National Language Support）** 系统加载：
+为 [Cursor](https://cursor.com) 提供简体中文界面，覆盖编辑器基础 UI、**设置页**、**Agents 窗口** 以及 Cursor 专有功能文案。支持 **macOS** 与 **Windows**。
 
-| 层级 | 文件/机制 | 说明 |
-|------|-----------|------|
-| 基础 UI | `ms-ceintl.vscode-language-pack-zh-hans` | 覆盖编辑器、菜单、通用设置等约 95% 界面 |
-| Cursor 专有文案 | `data/cursor-overlay.zh-cn.json` | Agent、Composer、MCP、Cursor Settings 等待翻译条目 |
-| 语言切换 | 用户目录下的 `locale.json` | 指定显示语言为 `zh-cn` |
+> 本项目会修改 Cursor 安装目录中的部分文件（自动备份）。Cursor 更新后需重新安装汉化。
 
-汉化流程：
+## 功能特性
 
-```
-提取 Cursor 专有英文字符串 → 翻译为中文 → 合并进中文语言包 → 设置 locale → 重启 Cursor
-```
+- Phase 1：合并 NLS 中文语言包，覆盖菜单、命令面板、编辑器等约 95% 界面
+- Phase 2：Glass UI 补丁，汉化 Cursor 设置页与 Agents 窗口硬编码文案
+- 自动同步 `product.json` 校验和，降低「Installation has been modified on disk」提示
+- 一键安装 / 卸载 / 修复脚本（macOS Shell、Windows PowerShell）
 
-## 两阶段汉化架构
+## 快速开始
 
-| 阶段 | 机制 | 覆盖范围 |
-|------|------|----------|
-| **Phase 1** | NLS 语言包合并 | 编辑器、菜单、命令面板、部分 Agent 提示 |
-| **Phase 2** | Glass UI JS 补丁 + 同步 `product.json` 校验和 | **Cursor 设置页**、**Agents 窗口侧栏** |
+### Windows
 
-Phase 2 会修改以下文件（自动备份）：
-
-| 平台 | 典型路径 |
-|------|----------|
-| macOS | `Cursor.app/.../workbench.glass.main.js` 等 |
-| Windows | `%LOCALAPPDATA%\Programs\cursor\resources\app\out\vs\workbench\...` |
-
-同时更新同目录 `product.json` 中的校验和，避免安装完整性报错。
-
-```
-完整流程：
-  安装中文语言包 → 设置 locale → 合并 NLS 翻译 → 打 Glass UI 补丁并更新校验和 → 重启
-```
-
-> 若出现 `Installation has been modified on disk`：
-> - macOS: `./scripts/repair-cursor.sh` 或 `python3 scripts/patch-glass-ui.py --restore`
-> - Windows: `.\scripts\repair-cursor-win.ps1` 或 `python scripts\patch-glass-ui.py --restore`
-
-## 快速开始（Windows）
-
-### 1. 安装依赖
-
-- 已安装 [Cursor](https://cursor.com)
-- 已安装 [Python 3](https://www.python.org/downloads/)（安装时勾选 “Add Python to PATH”）
-- VS Code 简体中文语言包（脚本会尝试自动安装）
-
-### 2. 一键安装
-
-任选其一：
-
-- 双击 `scripts\install-win.bat`
-- 或在 PowerShell 中执行：
+**依赖**：已安装 [Cursor](https://cursor.com)、[Python 3](https://www.python.org/downloads/)（勾选 Add to PATH）
 
 ```powershell
-cd 项目目录
+git clone https://github.com/yibai99927/cursor-zh-hans.git
+cd cursor-zh-hans
 powershell -ExecutionPolicy Bypass -File .\scripts\install-win.ps1
 ```
 
-若 Cursor 安装在非默认路径：
+也可双击 `scripts\install-win.bat`。
+
+若 Cursor 位于 `C:\Program Files\Cursor`，请**以管理员身份**运行 PowerShell。  
+自定义安装路径：
 
 ```powershell
 $env:CURSOR_INSTALL_PATH = "D:\Apps\cursor"
 powershell -ExecutionPolicy Bypass -File .\scripts\install-win.ps1
 ```
 
-### 3. 重启 Cursor
+完成后请**完全退出** Cursor（含托盘图标）再重新打开。
 
-完全退出 Cursor（托盘图标右键退出），再重新打开。界面应显示为中文。
-
-### 4. 卸载 / 恢复
+卸载：
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\scripts\uninstall-win.ps1
 ```
 
-## 快速开始（macOS）
+### macOS
 
-### 1. 安装依赖
-
-- 已安装 [Cursor](https://cursor.com)
-- 已安装 VS Code 简体中文语言包（脚本会自动安装）
-
-### 2. 一键安装
+**依赖**：已安装 [Cursor](https://cursor.com)
 
 ```bash
-cd 项目目录
+git clone https://github.com/yibai99927/cursor-zh-hans.git
+cd cursor-zh-hans
 chmod +x scripts/*.sh
 ./scripts/install-mac.sh
 ```
 
-### 3. 重启 Cursor
+完成后请完全退出 Cursor（`Cmd+Q`）再重新打开。
 
-完全退出 Cursor（`Cmd+Q`），再重新打开。界面应显示为中文。
-
-### 4. 卸载 / 恢复
+卸载：
 
 ```bash
 ./scripts/uninstall-mac.sh
 ```
 
+## 工作原理
+
+Cursor 基于 VS Code，界面文案通过 NLS 加载；专有界面另有硬编码字符串。
+
+| 阶段 | 机制 | 覆盖范围 |
+|------|------|----------|
+| Phase 1 | 合并 `data/cursor-overlay.zh-cn.json` 到中文语言包 | 编辑器、菜单、命令面板、部分 Agent 提示 |
+| Phase 2 | 修补 `workbench.*.js` 并更新 `product.json` 校验和 | 设置页、Agents 窗口侧栏等 |
+
+```
+安装中文语言包 → 设置 locale=zh-cn → 合并 NLS → Glass UI 补丁 → 重启
+```
+
+出现安装完整性提示时：
+
+| 平台 | 修复命令 |
+|------|----------|
+| Windows | `.\scripts\repair-cursor-win.ps1` |
+| macOS | `./scripts/repair-cursor.sh` |
+
 ## 目录结构
 
 ```
-Cursor汉化/
-├── README.md
-├── scripts/
-│   ├── paths.py               # 跨平台路径检测（macOS / Windows / Linux）
-│   ├── extract.py             # 从 Cursor 安装目录提取待翻译字符串
-│   ├── merge-overlay.py       # 将 Cursor 翻译合并进中文语言包（Phase 1）
-│   ├── patch-glass-ui.py      # Glass UI 补丁 + 同步 product.json 校验和
-│   ├── install-mac.sh         # macOS 一键安装
-│   ├── uninstall-mac.sh       # macOS 卸载
-│   ├── repair-cursor.sh       # macOS 修复安装完整性
-│   ├── install-win.ps1 / .bat # Windows 一键安装
-│   ├── uninstall-win.ps1 / .bat
-│   ├── repair-cursor-win.ps1 / .bat
-│   ├── install-extension.sh   # 可选：运行时扩展（实验）
-│   └── install-extension-win.ps1
-├── extension/                 # 可选运行时扩展（DOM 方案，效果有限）
-└── data/
-    ├── cursor-strings-to-translate.json  # 提取出的英文字符串清单
-    ├── cursor-overlay.zh-cn.json         # Cursor 专有中文翻译（NLS）
-    └── glass-ui-replacements.json        # Glass UI 替换映射表
+cursor-zh-hans/
+├── README.md / README.en.md
+├── LICENSE
+├── scripts/          # 安装、补丁、提取、路径检测
+├── data/             # NLS 翻译与 Glass UI 替换表
+└── extension/        # 可选运行时扩展（实验，效果有限）
 ```
+
+主要脚本：
+
+| 脚本 | 说明 |
+|------|------|
+| `paths.py` | 跨平台路径检测 |
+| `merge-overlay.py` | Phase 1：合并 NLS 翻译 |
+| `patch-glass-ui.py` | Phase 2：Glass UI 补丁 / 恢复 |
+| `extract.py` | 从安装目录提取待翻译字符串 |
+| `install-win.ps1` / `install-mac.sh` | 一键安装 |
+| `uninstall-*.ps1` / `uninstall-mac.sh` | 卸载恢复 |
 
 ## 关键路径
 
-### Windows
+<details>
+<summary>Windows</summary>
 
 | 用途 | 路径 |
 |------|------|
-| Cursor 应用（常见） | `%LOCALAPPDATA%\Programs\cursor` |
-| 应用资源根目录 | `...\cursor\resources\app` |
-| 默认英文文案 | `...\resources\app\out\nls.messages.json` |
+| 常见安装目录 | `%LOCALAPPDATA%\Programs\cursor` 或 `C:\Program Files\Cursor` |
+| 资源根目录 | `...\resources\app` |
 | 用户配置 | `%APPDATA%\Cursor\User\` |
-| 语言包扩展 | `%USERPROFILE%\.cursor\extensions\ms-ceintl.vscode-language-pack-zh-hans-*` |
-| 自定义安装 | 设置环境变量 `CURSOR_INSTALL_PATH` |
+| 语言包 | `%USERPROFILE%\.cursor\extensions\ms-ceintl.vscode-language-pack-zh-hans-*` |
+| 自定义路径 | 环境变量 `CURSOR_INSTALL_PATH` |
 
-### macOS
+</details>
+
+<details>
+<summary>macOS</summary>
 
 | 用途 | 路径 |
 |------|------|
-| Cursor 应用 | `/Applications/Cursor.app` |
-| 默认英文文案 | `.../Cursor.app/Contents/Resources/app/out/nls.messages.json` |
-| 文案键映射 | `.../Cursor.app/Contents/Resources/app/out/nls.keys.json` |
+| 应用 | `/Applications/Cursor.app` |
+| 资源根目录 | `.../Contents/Resources/app` |
 | 用户配置 | `~/Library/Application Support/Cursor/User/` |
-| 语言包扩展 | `~/.cursor/extensions/ms-ceintl.vscode-language-pack-zh-hans-*` |
+| 语言包 | `~/.cursor/extensions/ms-ceintl.vscode-language-pack-zh-hans-*` |
 
-## 手动步骤（了解原理）
+</details>
 
-### 步骤 1：安装中文语言包
-
-在 Cursor 扩展市场搜索并安装 **Chinese (Simplified) Language Pack for Visual Studio Code**（`MS-CEINTL.vscode-language-pack-zh-hans`）。
-
-或使用命令行：
-
-```bash
-cursor --install-extension MS-CEINTL.vscode-language-pack-zh-hans
-```
-
-### 步骤 2：设置显示语言
-
-创建或编辑 `locale.json`（路径见上表）：
-
-```json
-{
-  "locale": "zh-cn"
-}
-```
-
-也可在 Cursor 中执行命令 **Configure Display Language**，选择 `zh-cn`。
-
-### 步骤 3：合并 Cursor 专有翻译
-
-```bash
-# macOS / Linux
-python3 scripts/merge-overlay.py
-
-# Windows
-python scripts\merge-overlay.py
-```
-
-脚本会找到已安装的中文语言包，将 `data/cursor-overlay.zh-cn.json` 中的翻译合并进 `translations/main.i18n.json`（合并前自动备份）。
-
-### 步骤 4：Glass UI 补丁
-
-```bash
-python3 scripts/patch-glass-ui.py
-# 或指定安装目录
-python3 scripts/patch-glass-ui.py --app-root "C:\Users\你\AppData\Local\Programs\cursor\resources\app"
-```
-
-### 步骤 5：提取新版本的待翻译字符串
-
-Cursor 更新后，可重新提取未翻译条目：
-
-```bash
-python3 scripts/extract.py
-```
-
-输出到 `data/cursor-strings-to-translate.json`，供翻译后更新 `cursor-overlay.zh-cn.json`。
-
-查看当前平台检测到的路径：
+查看当前检测到的路径：
 
 ```bash
 python3 scripts/paths.py --all
 ```
 
-## 注意事项
-
-1. **Cursor 更新后需重新运行**安装脚本，因为更新会覆盖语言包和 Glass UI bundle。
-2. **Phase 2 会修改 Cursor 安装目录内 JS 文件**（自动备份到 `backups/`），卸载可用对应平台的 uninstall 脚本恢复。
-3. 不要直接修改 `nls.messages.json`；通过语言包扩展合并是更安全的方式。
-4. 部分极少数硬编码英文（动态生成、第三方插件）可能仍无法覆盖。
-5. Windows 若安装在 `Program Files` 下，修改文件可能需要**以管理员身份**运行 PowerShell。
-6. Windows 默认用户安装路径 `%LOCALAPPDATA%\Programs\cursor` 通常无需管理员权限。
-
 ## 参与翻译
 
-编辑 `data/cursor-overlay.zh-cn.json`，格式与 VS Code 语言包一致：
+1. 编辑 `data/cursor-overlay.zh-cn.json`（NLS）或 `data/glass-ui-replacements.json`（Glass UI）
+2. 重新运行对应平台的安装脚本
+
+NLS 示例：
 
 ```json
 {
@@ -238,15 +160,33 @@ python3 scripts/paths.py --all
 }
 ```
 
-保存后重新运行对应平台的安装脚本即可生效。
+Cursor 大版本更新后，可先提取再补译：
+
+```bash
+python3 scripts/extract.py
+```
 
 ## 故障排查
 
 | 现象 | 处理 |
 |------|------|
 | 界面仍是英文 | 确认 `locale.json` 为 `zh-cn`，并已安装中文语言包 |
-| 设置页英文、编辑器中文 | 运行 `merge-overlay.py` 与 `patch-glass-ui.py` |
-| 合并后无变化 | 完全退出 Cursor 再重启；检查扩展目录下语言包版本 |
-| Windows 找不到 Cursor | 设置 `$env:CURSOR_INSTALL_PATH`，或运行 `python scripts\paths.py --all` 排查 |
-| `Installation has been modified on disk` | 运行对应平台的 repair 脚本 |
-| 安装脚本报权限错误 | macOS 通常只改用户目录；Windows 若在 Program Files 需管理员权限 |
+| 设置页英文、编辑器中文 | 重新运行安装脚本（需完成 Phase 2） |
+| Windows 权限错误 | 对 `Program Files` 安装使用管理员 PowerShell |
+| 找不到 Cursor | 设置 `CURSOR_INSTALL_PATH`，或运行 `paths.py --all` |
+| 安装完整性报错 | 运行对应平台的 `repair-cursor` 脚本 |
+
+## 注意事项
+
+- Cursor 更新后需重新运行安装脚本
+- Phase 2 会修改安装目录内 JS（备份在 `backups/`）
+- 动态生成或第三方扩展文案可能无法覆盖
+- 本项目与 Cursor / Anysphere 官方无关，为社区维护方案
+
+## 许可证
+
+本项目采用 [MIT License](./LICENSE) 开源。
+
+```
+Copyright (c) 2026 亦白 薛 (yibai99927)
+```
