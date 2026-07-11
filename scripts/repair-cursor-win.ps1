@@ -1,4 +1,4 @@
-# 修复因 JS 补丁导致的 Cursor Windows 安装完整性问题
+﻿# 修复因 JS 补丁导致的 Cursor Windows 安装完整性问题
 # 用法: powershell -ExecutionPolicy Bypass -File .\scripts\repair-cursor-win.ps1
 
 $ErrorActionPreference = "Stop"

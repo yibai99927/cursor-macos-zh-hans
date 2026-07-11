@@ -1,4 +1,4 @@
-# Cursor Windows 简体中文一键安装
+﻿# Cursor Windows 简体中文一键安装
 # 用法: 右键「使用 PowerShell 运行」，或在终端执行:
 #   powershell -ExecutionPolicy Bypass -File .\scripts\install-win.ps1
 # 自定义安装路径:

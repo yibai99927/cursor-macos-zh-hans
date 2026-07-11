@@ -1,4 +1,4 @@
-# 安装 Cursor Glass UI 中文扩展（运行时汉化，不修改安装目录）
+﻿# 安装 Cursor Glass UI 中文扩展（运行时汉化，不修改安装目录）
 # 用法: powershell -ExecutionPolicy Bypass -File .\scripts\install-extension-win.ps1
 
 $ErrorActionPreference = "Stop"

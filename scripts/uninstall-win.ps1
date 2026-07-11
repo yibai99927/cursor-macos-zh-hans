@@ -1,4 +1,4 @@
-# Cursor Windows 汉化卸载 / 恢复
+﻿# Cursor Windows 汉化卸载 / 恢复
 # 用法: powershell -ExecutionPolicy Bypass -File .\scripts\uninstall-win.ps1
 
 $ErrorActionPreference = "Stop"
