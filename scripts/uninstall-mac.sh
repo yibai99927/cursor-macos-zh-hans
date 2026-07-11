@@ -9,9 +9,16 @@ BACKUP_DIR="$ROOT/backups"
 
 echo "==> Cursor macOS 汉化卸载"
 
-# 恢复 Glass UI bundle
-echo "==> 恢复 Glass UI 原始文件..."
+# 恢复 Glass UI / product.json 备份
+echo "==> 恢复 Cursor.app 原始文件..."
 python3 "$ROOT/scripts/patch-glass-ui.py" --restore || true
+
+# 移除无效的运行时扩展（若存在）
+EXT_DEST="$HOME/.cursor/extensions/cursor-zh-local.cursor-glass-i18n-0.2.0"
+if [[ -d "$EXT_DEST" ]]; then
+  rm -rf "$EXT_DEST"
+  echo "    已移除 Glass UI 扩展"
+fi
 
 # 恢复 locale.json
 latest_locale_backup="$(ls -t "$BACKUP_DIR"/locale.json.*.bak 2>/dev/null | head -1 || true)"

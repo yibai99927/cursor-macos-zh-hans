@@ -1,9 +1,15 @@
 #!/usr/bin/env python3
-"""为 Cursor Glass UI / Settings 界面打中文补丁（macOS）。"""
+"""为 Cursor Glass UI / Settings 界面打中文补丁（macOS）。
+
+会修改 Cursor.app 内的 JS，并同步更新 product.json 中的 SHA256 校验和，
+避免触发 “Installation has been modified on disk”。
+"""
 
 from __future__ import annotations
 
 import argparse
+import base64
+import hashlib
 import json
 import shutil
 from datetime import datetime
@@ -18,6 +24,10 @@ DEFAULT_CURSOR_APP = Path("/Applications/Cursor.app/Contents/Resources/app")
 def load_config() -> dict:
     with DATA_FILE.open(encoding="utf-8") as f:
         return json.load(f)
+
+
+def sha256_checksum(data: bytes) -> str:
+    return base64.b64encode(hashlib.sha256(data).digest()).decode("ascii").rstrip("=")
 
 
 def backup_file(source: Path) -> Path:
@@ -57,6 +67,33 @@ def apply_replacements(content: str, config: dict) -> tuple[str, dict]:
             stats["missed_exact"].append(src)
 
     return content, stats
+
+
+def update_product_checksums(app_root: Path, changed_rel_paths: list[str], dry_run: bool = False) -> int:
+    product_path = app_root / "product.json"
+    product = json.loads(product_path.read_text(encoding="utf-8"))
+    checksums = product.get("checksums", {})
+    updated = 0
+
+    for rel in changed_rel_paths:
+        # product.json uses paths relative to out/
+        key = rel[4:] if rel.startswith("out/") else rel
+        if key not in checksums:
+            continue
+        data = (app_root / "out" / key).read_bytes()
+        new_sum = sha256_checksum(data)
+        if checksums[key] != new_sum:
+            print(f"  更新校验和: {key}")
+            print(f"    {checksums[key]} -> {new_sum}")
+            checksums[key] = new_sum
+            updated += 1
+
+    if updated and not dry_run:
+        backup_file(product_path)
+        product["checksums"] = checksums
+        product_path.write_text(json.dumps(product, ensure_ascii=False, indent="\t") + "\n", encoding="utf-8")
+
+    return updated
 
 
 def patch_file(app_root: Path, rel_path: str, config: dict, dry_run: bool = False) -> dict | None:
@@ -110,14 +147,25 @@ def main() -> int:
             if restore_file(filename, app_root, rel):
                 print(f"已恢复 {rel}")
                 restored += 1
+        if restore_file("product.json", app_root, "product.json"):
+            print("已恢复 product.json")
+            restored += 1
+        # After restoring JS, recompute checksums to match restored files if product wasn't restored
+        if restored:
+            # Ensure checksums match restored files
+            keys = []
+            for target in config["targets"]:
+                keys.append(target["file"])
+            update_product_checksums(app_root, keys, dry_run=False)
         if restored == 0:
             print("未找到可恢复的备份文件")
             return 1
         print(f"共恢复 {restored} 个文件")
         return 0
 
-    print("==> 应用 Glass UI 中文补丁")
+    print("==> 应用 Glass UI 中文补丁（并同步 product.json 校验和）")
     total_changed = 0
+    changed_files: list[str] = []
     for target in config["targets"]:
         rel = target["file"]
         required = target.get("required", True)
@@ -134,6 +182,7 @@ def main() -> int:
         print(f"  {rel}: {status}")
         if result["changed"]:
             total_changed += 1
+            changed_files.append(rel)
             print(f"    - 块替换: {result['blocks']} 处")
             print(f"    - 精确替换: {result['exact']} 处")
         if result["missed_blocks"]:
@@ -141,6 +190,10 @@ def main() -> int:
         if result["missed_exact"] and result["changed"]:
             missed = result["missed_exact"]
             print(f"    - 未命中条目: {len(missed)} 条")
+
+    if changed_files:
+        updated = update_product_checksums(app_root, changed_files, dry_run=args.dry_run)
+        print(f"  product.json 校验和更新: {updated} 项")
 
     if args.dry_run:
         print("预览模式，未写入任何文件")

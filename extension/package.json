@@ -1,0 +1,16 @@
+{
+  "name": "cursor-glass-i18n",
+  "displayName": "Cursor Glass UI 中文",
+  "description": "运行时汉化 Cursor 设置页与 Agents 窗口（不修改 Cursor.app）",
+  "version": "0.2.0",
+  "publisher": "cursor-zh-local",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "extensionKind": ["ui"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./extension.js",
+  "contributes": {},
+  "categories": ["Other"]
+}

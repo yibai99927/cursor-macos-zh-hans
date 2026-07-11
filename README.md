@@ -23,16 +23,20 @@ Cursor 基于 VS Code，界面文案通过 **NLS（National Language Support）*
 | 阶段 | 机制 | 覆盖范围 |
 |------|------|----------|
 | **Phase 1** | NLS 语言包合并 | 编辑器、菜单、命令面板、部分 Agent 提示 |
-| **Phase 2** | Glass UI JS 补丁 | **Cursor 设置页**、**Agents 窗口侧栏** |
+| **Phase 2** | Glass UI JS 补丁 + 同步 `product.json` 校验和 | **Cursor 设置页**、**Agents 窗口侧栏** |
 
 Phase 2 会修改以下文件（自动备份）：
 - `Cursor.app/.../workbench.glass.main.js`
 - `Cursor.app/.../workbench.desktop.main.js`
+- `Cursor.app/.../product.json`（仅更新校验和，避免安装完整性报错）
 
 ```
 完整流程：
-  安装中文语言包 → 设置 locale → 合并 NLS 翻译 → 打 Glass UI 补丁 → 重启
+  安装中文语言包 → 设置 locale → 合并 NLS 翻译 → 打 Glass UI 补丁并更新校验和 → 重启
 ```
+
+> 若出现 `Installation has been modified on disk`，运行 `./scripts/repair-cursor.sh` 或
+> `python3 scripts/patch-glass-ui.py --restore` 恢复；修复后请用新版补丁脚本重新安装。
 
 ## 快速开始（macOS）
 
@@ -67,9 +71,12 @@ Cursor汉化/
 ├── scripts/
 │   ├── extract.py          # 从 Cursor.app 提取待翻译字符串
 │   ├── merge-overlay.py    # 将 Cursor 翻译合并进中文语言包（Phase 1）
-│   ├── patch-glass-ui.py   # Glass UI 硬编码文案补丁（Phase 2）
+│   ├── patch-glass-ui.py   # Glass UI 补丁 + 同步 product.json 校验和
+│   ├── repair-cursor.sh    # 恢复备份，修复安装完整性问题
+│   ├── install-extension.sh # 可选：运行时扩展（实验）
 │   ├── install-mac.sh      # macOS 一键安装
 │   └── uninstall-mac.sh    # 恢复备份
+├── extension/              # 可选运行时扩展（DOM 方案，效果有限）
 └── data/
     ├── cursor-strings-to-translate.json  # 提取出的英文字符串清单
     ├── cursor-overlay.zh-cn.json         # Cursor 专有中文翻译（NLS）

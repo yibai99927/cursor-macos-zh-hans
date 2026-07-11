@@ -48,7 +48,7 @@ echo "    已写入 $LOCALE_FILE"
 echo "==> 合并 Cursor 专有翻译（NLS）..."
 python3 "$ROOT/scripts/merge-overlay.py"
 
-# 4. 打 Glass UI 补丁（Settings / Agents 窗口）
+# 4. 打 Glass UI 补丁（并同步 product.json 校验和，避免安装完整性报错）
 echo "==> 应用 Glass UI 中文补丁..."
 python3 "$ROOT/scripts/patch-glass-ui.py"
 
