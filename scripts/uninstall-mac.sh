@@ -3,22 +3,21 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-USER_DATA="$HOME/Library/Application Support/Cursor/User"
+USER_DATA="${CURSOR_USER_DATA_DIR:-$HOME/Library/Application Support/Cursor}/User"
 LOCALE_FILE="$USER_DATA/locale.json"
 BACKUP_DIR="$ROOT/backups"
 
 echo "==> Cursor macOS 汉化卸载"
 
-# 恢复 Glass UI / product.json 备份
-echo "==> 恢复 Cursor.app 原始文件..."
+echo "==> 移除 workbench 运行时注入..."
+python3 "$ROOT/scripts/inject-runtime.py" --restore || true
+
+echo "==> 恢复 Cursor.app 原始 JS..."
 python3 "$ROOT/scripts/patch-glass-ui.py" --restore || true
 
-# 移除无效的运行时扩展（若存在）
-EXT_DEST="$HOME/.cursor/extensions/cursor-zh-local.cursor-glass-i18n-0.2.0"
-if [[ -d "$EXT_DEST" ]]; then
-  rm -rf "$EXT_DEST"
-  echo "    已移除 Glass UI 扩展"
-fi
+# 移除旧实验扩展 / 守护扩展
+rm -rf "$HOME/.cursor/extensions"/cursor-zh-local.cursor-glass-i18n-* 2>/dev/null || true
+rm -rf "$HOME/.cursor/extensions"/cursor-zh-local.cursor-zh-hans-guard-* 2>/dev/null || true
 
 # 恢复 locale.json
 latest_locale_backup="$(ls -t "$BACKUP_DIR"/locale.json.*.bak 2>/dev/null | head -1 || true)"
@@ -47,4 +46,4 @@ else
 fi
 
 echo ""
-echo "✅ 卸载完成。请完全退出 Cursor（Cmd+Q）后重新打开。"
+echo "卸载完成。请完全退出 Cursor（Cmd+Q）后重新打开。"

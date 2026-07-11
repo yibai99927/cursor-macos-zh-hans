@@ -1,0 +1,46 @@
+{
+  "description": "部分匹配片段（仅用于叶子节点整段文本的包含替换，慎用短词）",
+  "updatedAt": "2026-07-11",
+  "entries": [
+    [
+      "Open Agents Window",
+      "打开 Agents 窗口"
+    ],
+    [
+      "Agents Window",
+      "Agents 窗口"
+    ],
+    [
+      "Cloud Agents",
+      "云端 Agent"
+    ],
+    [
+      "VS Code Settings",
+      "VS Code 设置"
+    ],
+    [
+      "Plan & Usage",
+      "套餐与用量"
+    ],
+    [
+      "Browser & Network",
+      "浏览器与网络"
+    ],
+    [
+      "Git & PRs",
+      "Git 与 PR"
+    ],
+    [
+      "Indexing & Docs",
+      "索引与文档"
+    ],
+    [
+      "Tools & MCPs",
+      "工具与 MCP"
+    ],
+    [
+      "Self-driving PRs",
+      "自动驾驶 PR"
+    ]
+  ]
+}

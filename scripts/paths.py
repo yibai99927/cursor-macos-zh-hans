@@ -3,10 +3,12 @@
 
 from __future__ import annotations
 
+import json
 import os
 import platform
 import shutil
 from pathlib import Path
+
 
 
 def is_windows() -> bool:
@@ -47,6 +49,59 @@ def cursor_extensions_dir() -> Path:
     return Path.home() / ".cursor" / "extensions"
 
 
+def cursor_install_env() -> str | None:
+    """读取安装路径环境变量（兼容两种命名）。"""
+    return os.environ.get("CURSOR_INSTALL_PATH") or os.environ.get("CURSOR_INSTALL_DIR")
+
+
+def workbench_dir(app_root: Path | None = None) -> Path:
+    """workbench.html 所在目录（electron-sandbox/workbench）。"""
+    root = app_root or find_cursor_app_root()
+    return root / "out" / "vs" / "code" / "electron-sandbox" / "workbench"
+
+
+def workbench_html_path(app_root: Path | None = None) -> Path:
+    return workbench_dir(app_root) / "workbench.html"
+
+
+def cursor_cli_path(app_root: Path | None = None) -> Path | None:
+    """尝试定位 cursor CLI 可执行文件。"""
+    which = shutil.which("cursor") or shutil.which("cursor.cmd")
+    if which:
+        return Path(which)
+    try:
+        root = app_root or find_cursor_app_root()
+    except FileNotFoundError:
+        return None
+    # Windows: resources/app/bin/cursor.cmd ；安装根目录 Cursor.exe
+    candidates = [
+        root / "bin" / "cursor.cmd",
+        root / "bin" / "cursor",
+        root.parent.parent / "Cursor.exe",
+        root.parent.parent / "cursor.exe",
+        Path("/usr/local/bin/cursor"),
+        Path("/usr/bin/cursor"),
+    ]
+    for c in candidates:
+        if c.exists():
+            return c
+    return None
+
+
+def read_product_json(app_root: Path | None = None) -> dict:
+    root = app_root or find_cursor_app_root()
+    return json.loads((root / "product.json").read_text(encoding="utf-8"))
+
+
+def cursor_vscode_version(app_root: Path | None = None) -> str | None:
+    """读取 Cursor 内嵌的 VS Code 版本号。"""
+    product = read_product_json(app_root)
+    val = product.get("vscodeVersion")
+    if isinstance(val, str) and val.strip():
+        return val.strip()
+    return None
+
+
 def _windows_candidate_roots() -> list[Path]:
     local = os.environ.get("LOCALAPPDATA", "")
     program_files = os.environ.get("ProgramFiles", r"C:\Program Files")
@@ -68,7 +123,7 @@ def _windows_candidate_roots() -> list[Path]:
         ]
     )
     # 自定义环境变量覆盖
-    custom = os.environ.get("CURSOR_INSTALL_PATH")
+    custom = cursor_install_env()
     if custom:
         candidates.insert(0, Path(custom))
     return candidates
@@ -79,7 +134,7 @@ def _macos_candidate_roots() -> list[Path]:
         Path("/Applications/Cursor.app/Contents/Resources/app"),
         Path.home() / "Applications" / "Cursor.app" / "Contents" / "Resources" / "app",
     ]
-    custom = os.environ.get("CURSOR_INSTALL_PATH")
+    custom = cursor_install_env()
     if custom:
         p = Path(custom)
         # 允许传入 .app 或 Resources/app
@@ -97,7 +152,7 @@ def _linux_candidate_roots() -> list[Path]:
         Path("/opt/cursor/resources/app"),
         Path.home() / ".local" / "share" / "cursor" / "resources" / "app",
     ]
-    custom = os.environ.get("CURSOR_INSTALL_PATH")
+    custom = cursor_install_env()
     if custom:
         candidates.insert(0, Path(custom))
     return candidates
@@ -213,6 +268,16 @@ if __name__ == "__main__":
         help="Print locale.json path",
     )
     parser.add_argument(
+        "--workbench-html",
+        action="store_true",
+        help="Print workbench.html path",
+    )
+    parser.add_argument(
+        "--vscode-version",
+        action="store_true",
+        help="Print embedded VS Code version",
+    )
+    parser.add_argument(
         "--all",
         action="store_true",
         help="Print all known paths",
@@ -220,12 +285,22 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     try:
-        if args.all or not any([args.app_root, args.user_data, args.extensions, args.locale]):
+        flags = [
+            args.app_root,
+            args.user_data,
+            args.extensions,
+            args.locale,
+            args.workbench_html,
+            args.vscode_version,
+        ]
+        if args.all or not any(flags):
             print(f"platform={platform_display_name()}")
             print(f"app_root={find_cursor_app_root()}")
             print(f"user_data={cursor_user_data_dir()}")
             print(f"extensions={cursor_extensions_dir()}")
             print(f"locale={cursor_locale_file()}")
+            print(f"workbench_html={workbench_html_path()}")
+            print(f"vscode_version={cursor_vscode_version() or ''}")
         else:
             if args.app_root:
                 print(find_cursor_app_root())
@@ -235,6 +310,11 @@ if __name__ == "__main__":
                 print(cursor_extensions_dir())
             if args.locale:
                 print(cursor_locale_file())
+            if args.workbench_html:
+                print(workbench_html_path())
+            if args.vscode_version:
+                print(cursor_vscode_version() or "")
     except FileNotFoundError as exc:
         print(f"error: {exc}", file=sys.stderr)
         raise SystemExit(1) from exc
+

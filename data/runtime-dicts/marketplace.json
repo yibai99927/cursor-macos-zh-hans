@@ -1,0 +1,78 @@
+{
+  "description": "插件市场常见界面文案",
+  "updatedAt": "2026-07-11",
+  "entries": [
+    [
+      "Marketplace",
+      "市场"
+    ],
+    [
+      "Browse Marketplace",
+      "浏览市场"
+    ],
+    [
+      "Search Marketplace",
+      "搜索市场"
+    ],
+    [
+      "Install",
+      "安装"
+    ],
+    [
+      "Installed",
+      "已安装"
+    ],
+    [
+      "Uninstall",
+      "卸载"
+    ],
+    [
+      "Disable",
+      "禁用"
+    ],
+    [
+      "Enable",
+      "启用"
+    ],
+    [
+      "Extension",
+      "扩展"
+    ],
+    [
+      "Extensions",
+      "扩展"
+    ],
+    [
+      "Publisher",
+      "发布者"
+    ],
+    [
+      "Featured",
+      "精选"
+    ],
+    [
+      "Popular",
+      "热门"
+    ],
+    [
+      "Recently Updated",
+      "最近更新"
+    ],
+    [
+      "No results found",
+      "未找到结果"
+    ],
+    [
+      "Install Extension",
+      "安装扩展"
+    ],
+    [
+      "View Extension",
+      "查看扩展"
+    ],
+    [
+      "More Actions",
+      "更多操作"
+    ]
+  ]
+}

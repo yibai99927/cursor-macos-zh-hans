@@ -1,0 +1,36 @@
+{
+  "description": "动态文案正则替换",
+  "updatedAt": "2026-07-11",
+  "patterns": [
+    {
+      "regex": "^(\\d+) files? indexed$",
+      "flags": "i",
+      "replacement": "\\1 个文件已索引"
+    },
+    {
+      "regex": "^(\\d+) files? changed$",
+      "flags": "i",
+      "replacement": "\\1 个文件已更改"
+    },
+    {
+      "regex": "^(\\d+) agents?$",
+      "flags": "i",
+      "replacement": "\\1 个 Agent"
+    },
+    {
+      "regex": "^(\\d+) chats?$",
+      "flags": "i",
+      "replacement": "\\1 个对话"
+    },
+    {
+      "regex": "^Used (\\d+)% of included usage$",
+      "flags": "i",
+      "replacement": "已使用包含额度的 \\1%"
+    },
+    {
+      "regex": "^(\\d+) remaining$",
+      "flags": "i",
+      "replacement": "剩余 \\1"
+    }
+  ]
+}

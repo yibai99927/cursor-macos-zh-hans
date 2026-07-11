@@ -8,7 +8,6 @@ $UserData = Join-Path $env:APPDATA "Cursor\User"
 $LocaleFile = Join-Path $UserData "locale.json"
 $BackupDir = Join-Path $Root "backups"
 $ExtensionsDir = Join-Path $env:USERPROFILE ".cursor\extensions"
-$ExtDest = Join-Path $ExtensionsDir "cursor-zh-local.cursor-glass-i18n-0.2.0"
 
 Write-Host "==> Cursor Windows 汉化卸载"
 
@@ -16,10 +15,10 @@ $Python = $null
 $UsePyLauncher = $false
 foreach ($name in @("python", "python3", "py")) {
     $cmd = Get-Command $name -ErrorAction SilentlyContinue
-    if ($cmd) {
-        if ($name -eq "py") { $UsePyLauncher = $true; $Python = "py" } else { $Python = $cmd.Source }
-        break
-    }
+    if (-not $cmd) { continue }
+    if ($cmd.Source -match '(?i)WindowsApps') { continue }
+    if ($name -eq "py") { $UsePyLauncher = $true; $Python = "py" } else { $Python = $cmd.Source }
+    break
 }
 if (-not $Python) {
     Write-Error "未找到 Python 3"
@@ -35,18 +34,30 @@ function Invoke-Python {
     }
 }
 
-# 恢复 Glass UI / product.json
-Write-Host "==> 恢复 Cursor 安装目录原始文件..."
+# 1. 移除运行时注入
+Write-Host "==> 移除 workbench 运行时注入..."
+try {
+    Invoke-Python -PyArgs @("$Root\scripts\inject-runtime.py", "--restore")
+} catch {
+    Write-Warning "运行时恢复失败: $_"
+}
+
+# 2. 恢复 Glass UI / product.json
+Write-Host "==> 恢复 Cursor 安装目录原始 JS..."
 try {
     Invoke-Python -PyArgs @("$Root\scripts\patch-glass-ui.py", "--restore")
 } catch {
-    Write-Warning "自动恢复失败: $_"
+    Write-Warning "Glass UI 恢复失败: $_"
 }
 
-# 移除运行时扩展（若存在）
-if (Test-Path $ExtDest) {
-    Remove-Item -Recurse -Force $ExtDest
-    Write-Host "    已移除 Glass UI 扩展"
+# 移除旧版实验扩展（若存在）
+Get-ChildItem -Path $ExtensionsDir -Directory -Filter "cursor-zh-local.cursor-glass-i18n-*" -ErrorAction SilentlyContinue | ForEach-Object {
+    Remove-Item -Recurse -Force $_.FullName
+    Write-Host "    已移除扩展: $($_.Name)"
+}
+Get-ChildItem -Path $ExtensionsDir -Directory -Filter "cursor-zh-local.cursor-zh-hans-guard-*" -ErrorAction SilentlyContinue | ForEach-Object {
+    Remove-Item -Recurse -Force $_.FullName
+    Write-Host "    已移除守护扩展: $($_.Name)"
 }
 
 # 恢复 locale.json

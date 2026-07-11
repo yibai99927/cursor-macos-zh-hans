@@ -1,22 +1,18 @@
-﻿# 安装 Cursor Glass UI 中文扩展（运行时汉化，不修改安装目录）
-# 用法: powershell -ExecutionPolicy Bypass -File .\scripts\install-extension-win.ps1
-
+﻿# 安装守护扩展到 %USERPROFILE%\.cursor\extensions
 $ErrorActionPreference = "Stop"
-
 $Root = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path)
-$ExtSrc = Join-Path $Root "extension"
-$ExtDest = Join-Path $env:USERPROFILE ".cursor\extensions\cursor-zh-local.cursor-glass-i18n-0.2.0"
+$Src = Join-Path $Root "extension"
+$DestDir = Join-Path $env:USERPROFILE ".cursor\extensions"
+$Name = "cursor-zh-local.cursor-zh-hans-guard-0.3.0"
+$Dest = Join-Path $DestDir $Name
 
-if (-not (Test-Path (Join-Path $ExtSrc "package.json"))) {
-    Write-Error "未找到扩展目录 $ExtSrc"
-    exit 1
+New-Item -ItemType Directory -Force -Path $DestDir | Out-Null
+if (Test-Path $Dest) { Remove-Item -Recurse -Force $Dest }
+New-Item -ItemType Directory -Force -Path $Dest | Out-Null
+Copy-Item (Join-Path $Src "package.json") $Dest
+Copy-Item (Join-Path $Src "extension.js") $Dest
+if (Test-Path (Join-Path $Src "translations.json")) {
+    Copy-Item (Join-Path $Src "translations.json") $Dest
 }
-
-Write-Host "==> 安装 Glass UI 中文扩展"
-if (Test-Path $ExtDest) {
-    Remove-Item -Recurse -Force $ExtDest
-}
-New-Item -ItemType Directory -Force -Path (Split-Path $ExtDest) | Out-Null
-Copy-Item -Recurse $ExtSrc $ExtDest
-Write-Host "    已安装到 $ExtDest"
-Write-Host "    提示: 请重新加载 Cursor 窗口或完全退出后重新打开使扩展生效"
+Write-Host "已安装守护扩展: $Dest"
+Write-Host "请重新加载 Cursor 窗口或完全重启。"

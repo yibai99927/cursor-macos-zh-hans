@@ -1,0 +1,466 @@
+{
+  "description": "通用界面精确匹配词典（设置侧栏、Agent 窗口等）",
+  "updatedAt": "2026-07-11",
+  "entries": [
+    [
+      "Cannot create project rules without a workspace. Please open a folder first.",
+      "没有工作区无法创建项目规则。请先打开一个文件夹。"
+    ],
+    [
+      "Continue working with agents in a simpler, more powerful interface.",
+      "在更简洁、更强大的界面中继续使用 Agent。"
+    ],
+    [
+      "Show system notifications when Agent completes or needs attention",
+      "当 Agent 完成或需要关注时显示系统通知"
+    ],
+    [
+      "Enter the GitHub/GitLab repository URL to import project rules",
+      "输入 GitHub/GitLab 仓库 URL 以导入项目规则"
+    ],
+    [
+      "Open the Agents Window by default when Cursor launches",
+      "Cursor 启动时默认打开 Agents 窗口"
+    ],
+    [
+      "Prefer the Agent layout? Try the new Agents Window.",
+      "更喜欢 Agent 布局？试试全新的 Agents 窗口。"
+    ],
+    [
+      "Customize is the new home for managing this page",
+      "自定义是管理此页面的新入口"
+    ],
+    [
+      "Your agent chats now live in the Agents Window",
+      "你的 Agent 对话现已迁移至 Agents 窗口"
+    ],
+    [
+      "Play a sound when Agent finishes responding",
+      "Agent 完成回复时播放提示音"
+    ],
+    [
+      "Your agents now live in the Agents Window",
+      "你的 Agent 现已迁移至 Agents 窗口"
+    ],
+    [
+      "Import Project Rules from GitHub/GitLab",
+      "从 GitHub/GitLab 导入项目规则"
+    ],
+    [
+      "Quick Open Previous Recently Used Agent",
+      "快速打开最近使用的 Agent"
+    ],
+    [
+      "Installation has been modified on disk",
+      "检测到安装文件已被修改"
+    ],
+    [
+      "Show rotating tips on the empty screen",
+      "在空白界面显示轮换提示"
+    ],
+    [
+      "Quick Open Least Recently Used Agent",
+      "快速打开最久未使用的 Agent"
+    ],
+    [
+      "Switch between recently used agents",
+      "在最近使用的 Agent 之间切换"
+    ],
+    [
+      "Customize your Cursor experience",
+      "自定义你的 Cursor 体验"
+    ],
+    [
+      "Loading Cloud Agents settings...",
+      "正在加载云端 Agent 设置..."
+    ],
+    [
+      "Show warning-level in-app toasts",
+      "显示警告级别的应用内通知"
+    ],
+    [
+      "Start a new agent to see it here",
+      "新建 Agent 后将显示在此处"
+    ],
+    [
+      "Manage your account and billing",
+      "管理你的账户和账单"
+    ],
+    [
+      "Abort Agent and Restore Query",
+      "中止 Agent 并恢复查询"
+    ],
+    [
+      "Find Previous in Browser Page",
+      "查找上一处（浏览器）"
+    ],
+    [
+      "Open Agents Window on Startup",
+      "启动时打开 Agents 窗口"
+    ],
+    [
+      "Search chats and cloud agents",
+      "搜索对话和云端 Agent"
+    ],
+    [
+      "Try a different search query",
+      "尝试其他搜索关键词"
+    ],
+    [
+      "Meet the new Agents Window",
+      "认识全新的 Agents 窗口"
+    ],
+    [
+      "Find Next in Browser Page",
+      "查找下一处（浏览器）"
+    ],
+    [
+      "Rules, Skills, Subagents",
+      "规则、技能与子 Agent"
+    ],
+    [
+      "Hard Reload Browser Tab",
+      "强制重新加载浏览器标签页"
+    ],
+    [
+      "Scroll Agent Panel Down",
+      "向下滚动 Agent 面板"
+    ],
+    [
+      "Search Cursor settings…",
+      "搜索 Cursor 设置…"
+    ],
+    [
+      "Show Cursor in menu bar",
+      "在菜单栏中显示 Cursor"
+    ],
+    [
+      "Skip Pending Shell Tool",
+      "跳过待处理的 Shell 工具"
+    ],
+    [
+      "Agent is still working",
+      "Agent 仍在运行"
+    ],
+    [
+      "No Agent For This Task",
+      "此任务没有可用 Agent"
+    ],
+    [
+      "Reopen Last Closed Tab",
+      "重新打开上次关闭的标签页"
+    ],
+    [
+      "Search Cursor Settings",
+      "搜索 Cursor 设置"
+    ],
+    [
+      "Scroll Agent Panel Up",
+      "向上滚动 Agent 面板"
+    ],
+    [
+      "Warning Notifications",
+      "警告通知"
+    ],
+    [
+      "Activate Browser Tab",
+      "激活浏览器标签页"
+    ],
+    [
+      "Find in Browser Page",
+      "在浏览器页面中查找"
+    ],
+    [
+      "Open Cursor Settings",
+      "打开 Cursor 设置"
+    ],
+    [
+      "System Notifications",
+      "系统通知"
+    ],
+    [
+      "Copy Agent Deeplink",
+      "复制 Agent 深度链接"
+    ],
+    [
+      "Search chat history",
+      "搜索对话历史"
+    ],
+    [
+      "Browser Navigation",
+      "浏览器导航"
+    ],
+    [
+      "Browser Tool Calls",
+      "浏览器工具调用"
+    ],
+    [
+      "Close Browser Find",
+      "关闭浏览器查找"
+    ],
+    [
+      "Close Running Tab?",
+      "关闭正在运行的标签页？"
+    ],
+    [
+      "No chats available",
+      "没有可用的对话"
+    ],
+    [
+      "Open Agents Window",
+      "打开 Agents 窗口"
+    ],
+    [
+      "Browser & Network",
+      "浏览器与网络"
+    ],
+    [
+      "Close Browser Tab",
+      "关闭浏览器标签页"
+    ],
+    [
+      "Customize Sidebar",
+      "自定义侧栏"
+    ],
+    [
+      "New Agents Window",
+      "新建 Agents 窗口"
+    ],
+    [
+      "Pin / Unpin Agent",
+      "固定 / 取消固定 Agent"
+    ],
+    [
+      "Completion Sound",
+      "完成提示音"
+    ],
+    [
+      "Empty Plan State",
+      "空计划状态"
+    ],
+    [
+      "No recent agents",
+      "没有最近的 Agent"
+    ],
+    [
+      "Self-driving PRs",
+      "自动驾驶 PR"
+    ],
+    [
+      "VS Code Settings",
+      "VS Code 设置"
+    ],
+    [
+      "Cursor Settings",
+      "Cursor 设置"
+    ],
+    [
+      "Indexing & Docs",
+      "索引与文档"
+    ],
+    [
+      "Search Settings",
+      "搜索设置"
+    ],
+    [
+      "Close Settings",
+      "关闭设置"
+    ],
+    [
+      "Create New Tab",
+      "创建新标签页"
+    ],
+    [
+      "Cursor Account",
+      "Cursor 账户"
+    ],
+    [
+      "Go to Settings",
+      "前往设置"
+    ],
+    [
+      "Previous Agent",
+      "上一个 Agent"
+    ],
+    [
+      "Agents Window",
+      "Agents 窗口"
+    ],
+    [
+      "Browser Tools",
+      "浏览器工具"
+    ],
+    [
+      "Codebase, web",
+      "代码库、网络"
+    ],
+    [
+      "Menu Bar Icon",
+      "菜单栏图标"
+    ],
+    [
+      "Notifications",
+      "通知"
+    ],
+    [
+      "Open Settings",
+      "打开设置"
+    ],
+    [
+      "Search Agents",
+      "搜索 Agent"
+    ],
+    [
+      "Search agents",
+      "搜索 Agent"
+    ],
+    [
+      "Untitled chat",
+      "未命名对话"
+    ],
+    [
+      "Browser Menu",
+      "浏览器菜单"
+    ],
+    [
+      "Cloud Agents",
+      "云端 Agent"
+    ],
+    [
+      "Cloud agents",
+      "云端 Agent"
+    ],
+    [
+      "Fix in Agent",
+      "在 Agent 中修复"
+    ],
+    [
+      "New Tab Menu",
+      "新建标签页菜单"
+    ],
+    [
+      "Plan & Usage",
+      "套餐与用量"
+    ],
+    [
+      "Previous Tab",
+      "上一个标签页"
+    ],
+    [
+      "Repositories",
+      "仓库"
+    ],
+    [
+      "Tools & MCPs",
+      "工具与 MCP"
+    ],
+    [
+      "Automations",
+      "自动化"
+    ],
+    [
+      "Cloud Agent",
+      "云端 Agent"
+    ],
+    [
+      "Marketplace",
+      "市场"
+    ],
+    [
+      "New Browser",
+      "新建浏览器"
+    ],
+    [
+      "Agent Mode",
+      "Agent 模式"
+    ],
+    [
+      "All Agents",
+      "所有 Agent"
+    ],
+    [
+      "Appearance",
+      "外观"
+    ],
+    [
+      "Build Plan",
+      "生成计划"
+    ],
+    [
+      "Next Agent",
+      "下一个 Agent"
+    ],
+    [
+      "Switch Tab",
+      "切换标签页"
+    ],
+    [
+      "Close Tab",
+      "关闭标签页"
+    ],
+    [
+      "Customize",
+      "自定义"
+    ],
+    [
+      "Git & PRs",
+      "Git 与 PR"
+    ],
+    [
+      "List Tabs",
+      "列出标签页"
+    ],
+    [
+      "New Agent",
+      "新建 Agent"
+    ],
+    [
+      "Plan Mode",
+      "计划模式"
+    ],
+    [
+      "Pro Trial",
+      "Pro 试用"
+    ],
+    [
+      "View Plan",
+      "查看计划"
+    ],
+    [
+      "With Plan",
+      "使用计划"
+    ],
+    [
+      "Next Tab",
+      "下一个标签页"
+    ],
+    [
+      "Pro Plan",
+      "Pro 套餐"
+    ],
+    [
+      "General",
+      "通用"
+    ],
+    [
+      "New Tab",
+      "新建标签页"
+    ],
+    [
+      "Profile",
+      "个人资料"
+    ],
+    [
+      "Startup",
+      "启动"
+    ],
+    [
+      "Agents",
+      "Agent"
+    ],
+    [
+      "Fun",
+      "趣味"
+    ]
+  ]
+}

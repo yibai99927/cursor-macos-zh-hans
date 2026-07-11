@@ -1,0 +1,62 @@
+{
+  "description": "通知与推广弹层常见文案",
+  "updatedAt": "2026-07-11",
+  "entries": [
+    [
+      "Dismiss",
+      "关闭"
+    ],
+    [
+      "Learn more",
+      "了解更多"
+    ],
+    [
+      "Learn More",
+      "了解更多"
+    ],
+    [
+      "Try again",
+      "重试"
+    ],
+    [
+      "Got it",
+      "知道了"
+    ],
+    [
+      "Don't show again",
+      "不再显示"
+    ],
+    [
+      "Not now",
+      "暂时不要"
+    ],
+    [
+      "Maybe later",
+      "稍后再说"
+    ],
+    [
+      "Upgrade to Pro",
+      "升级到 Pro"
+    ],
+    [
+      "Upgrade Plan",
+      "升级套餐"
+    ],
+    [
+      "View Usage",
+      "查看用量"
+    ],
+    [
+      "New Update Available",
+      "有可用更新"
+    ],
+    [
+      "Reload to Update",
+      "重新加载以更新"
+    ],
+    [
+      "Restart to Update",
+      "重启以更新"
+    ]
+  ]
+}

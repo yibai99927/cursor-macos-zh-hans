@@ -10,30 +10,32 @@ $ErrorActionPreference = "Stop"
 $Root = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path)
 $UserData = Join-Path $env:APPDATA "Cursor\User"
 $LocaleFile = Join-Path $UserData "locale.json"
-$ExtensionsDir = Join-Path $env:USERPROFILE ".cursor\extensions"
-$ExtensionId = "MS-CEINTL.vscode-language-pack-zh-hans"
 $BackupDir = Join-Path $Root "backups"
 
 Write-Host "==> Cursor Windows 汉化安装"
 Write-Host "    项目目录: $Root"
 
-# 检查 Python
+# 检查 Python（排除 Windows Store 占位）
 $Python = $null
 $UsePyLauncher = $false
 foreach ($name in @("python", "python3", "py")) {
     $cmd = Get-Command $name -ErrorAction SilentlyContinue
-    if ($cmd) {
-        if ($name -eq "py") {
-            $UsePyLauncher = $true
-            $Python = "py"
-        } else {
-            $Python = $cmd.Source
-        }
-        break
+    if (-not $cmd) { continue }
+    $src = $cmd.Source
+    if ($src -match '(?i)WindowsApps') {
+        Write-Host "    跳过 Store 占位: $src" -ForegroundColor Yellow
+        continue
     }
+    if ($name -eq "py") {
+        $UsePyLauncher = $true
+        $Python = "py"
+    } else {
+        $Python = $src
+    }
+    break
 }
 if (-not $Python) {
-    Write-Error "未找到 Python 3。请先安装 Python 3 并确保可在 PATH 中调用 python。"
+    Write-Error "未找到可用的 Python 3。请从 https://www.python.org/downloads/ 安装，并勾选 Add python.exe to PATH。不要使用 Microsoft Store 占位版。"
     exit 1
 }
 
@@ -59,11 +61,10 @@ try {
     if (-not $AppRoot) { throw "empty app root" }
     Write-Host "    找到: $AppRoot"
 } catch {
-    Write-Error "未找到 Cursor 安装目录。请确认已安装 Cursor，或设置环境变量 CURSOR_INSTALL_PATH 指向安装根目录（含 resources\app）。常见路径: %LOCALAPPDATA%\Programs\cursor"
+    Write-Error "未找到 Cursor 安装目录。请确认已安装 Cursor，或设置环境变量 CURSOR_INSTALL_PATH / CURSOR_INSTALL_DIR。"
     exit 1
 }
 
-# Program Files 需要管理员权限才能打 Glass UI 补丁
 if ($AppRoot -match '(?i)Program Files') {
     $identity = [Security.Principal.WindowsIdentity]::GetCurrent()
     $principal = New-Object Security.Principal.WindowsPrincipal($identity)
@@ -82,24 +83,9 @@ if ($AppRoot -match '(?i)Program Files') {
 New-Item -ItemType Directory -Force -Path $UserData | Out-Null
 New-Item -ItemType Directory -Force -Path $BackupDir | Out-Null
 
-# 1. 安装 VS Code 简体中文语言包
-Write-Host "==> 检查中文语言包..."
-$PackExists = Get-ChildItem -Path $ExtensionsDir -Directory -Filter "ms-ceintl.vscode-language-pack-zh-hans-*" -ErrorAction SilentlyContinue
-if (-not $PackExists) {
-    Write-Host "    正在安装 $ExtensionId ..."
-    $cursorCmd = Get-Command cursor -ErrorAction SilentlyContinue
-    if ($cursorCmd) {
-        try {
-            & cursor --install-extension $ExtensionId
-        } catch {
-            Write-Warning "自动安装语言包失败，请在 Cursor 扩展市场手动安装 Chinese (Simplified) Language Pack。"
-        }
-    } else {
-        Write-Warning "未找到 cursor 命令行工具，请手动在扩展市场安装中文语言包: $ExtensionId"
-    }
-} else {
-    Write-Host "    中文语言包已存在"
-}
+# 1. 按版本匹配安装语言包
+Write-Host "==> 确保中文语言包版本匹配..."
+Invoke-Python -PyArgs @("$Root\scripts\ensure-language-pack.py", "--app-root", $AppRoot)
 
 # 2. 设置显示语言
 Write-Host "==> 设置显示语言为 zh-cn"
@@ -114,15 +100,35 @@ if (Test-Path $LocaleFile) {
 '@ | Set-Content -Path $LocaleFile -Encoding UTF8
 Write-Host "    已写入 $LocaleFile"
 
-# 3. 合并 Cursor 专有翻译（NLS）
+# 3. 合并 NLS overlay
 Write-Host "==> 合并 Cursor 专有翻译（NLS）..."
 Invoke-Python -PyArgs @("$Root\scripts\merge-overlay.py")
 
-# 4. Glass UI 补丁
-Write-Host "==> 应用 Glass UI 中文补丁..."
+# 4. 私有扩展桥接
+Write-Host "==> 桥接私有扩展翻译..."
+try {
+    Invoke-Python -PyArgs @("$Root\scripts\bridge-private-extensions.py")
+} catch {
+    Write-Warning "私有扩展桥接失败（可忽略）: $_"
+}
+
+# 5. 运行时注入
+Write-Host "==> 注入 workbench 运行时翻译..."
+Invoke-Python -PyArgs @("$Root\scripts\inject-runtime.py", "--app-root", $AppRoot)
+
+# 6. Glass UI / 结构化静态补丁
+Write-Host "==> 应用 Glass UI / 结构化静态补丁..."
 Invoke-Python -PyArgs @("$Root\scripts\patch-glass-ui.py", "--app-root", $AppRoot)
 
-# 5. 提取字符串（维护用，失败不影响安装）
+# 7. 安装守护扩展（可选，失败不影响主流程）
+Write-Host "==> 安装汉化守护扩展..."
+try {
+    & powershell -ExecutionPolicy Bypass -File "$Root\scripts\install-extension-win.ps1"
+} catch {
+    Write-Warning "守护扩展安装失败（可忽略）: $_"
+}
+
+# 8. 提取字符串（维护用）
 Write-Host "==> 提取当前版本待翻译字符串..."
 try {
     Invoke-Python -PyArgs @("$Root\scripts\extract.py", $AppRoot)
@@ -136,4 +142,4 @@ Write-Host ""
 Write-Host "请完全退出 Cursor（托盘图标右键退出）后重新打开。"
 Write-Host "若界面未切换，可在 Cursor 中执行命令: Configure Display Language → 选择 zh-cn"
 Write-Host ""
-Write-Host "卸载汉化: .\scripts\uninstall-win.ps1"
+Write-Host "卸载汉化: .\scripts\uninstall-win.ps1  或  双击 取消汉化_Win.bat"

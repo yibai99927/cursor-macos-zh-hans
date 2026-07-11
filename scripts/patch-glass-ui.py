@@ -13,6 +13,7 @@ import base64
 import hashlib
 import json
 import os
+import re
 import shutil
 import sys
 import time
@@ -23,6 +24,7 @@ from paths import find_cursor_app_root, is_windows, platform_display_name, quit_
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_FILE = ROOT / "data/glass-ui-replacements.json"
+STRUCTURED_FILE = ROOT / "data/structured-patches.json"
 BACKUP_DIR = ROOT / "backups"
 
 
@@ -32,6 +34,13 @@ def log(msg: str = "") -> None:
 
 def load_config() -> dict:
     with DATA_FILE.open(encoding="utf-8") as f:
+        return json.load(f)
+
+
+def load_structured() -> dict | None:
+    if not STRUCTURED_FILE.exists():
+        return None
+    with STRUCTURED_FILE.open(encoding="utf-8") as f:
         return json.load(f)
 
 
@@ -71,7 +80,7 @@ def ensure_writable(app_root: Path) -> None:
 
 
 def apply_replacements(content: str, config: dict, progress_label: str = "") -> tuple[str, dict]:
-    stats = {"blocks": 0, "exact": 0, "missed_blocks": [], "missed_exact": []}
+    stats = {"blocks": 0, "exact": 0, "structured": 0, "missed_blocks": [], "missed_exact": [], "missed_structured": []}
 
     for block in config.get("blocks", []):
         src = block["from"]
@@ -104,6 +113,53 @@ def apply_replacements(content: str, config: dict, progress_label: str = "") -> 
     return content, stats
 
 
+def apply_structured_replacements(content: str, structured: dict) -> tuple[str, dict]:
+    """按对象字面量 key 锚定替换字符串值，降低压缩变量改名带来的失效。"""
+    stats = {"structured": 0, "missed_structured": []}
+    for item in structured.get("structuredReplacements", []):
+        if item.get("type") != "object-literal-values":
+            continue
+        values = item.get("values") or {}
+        required = item.get("requiredKeys") or []
+        optional = item.get("optional", True)
+        item_id = item.get("id", "structured")
+
+        # 在文件中找同时包含足够多 requiredKeys 的窗口，再逐 key 替换
+        # 简化实现：全局按 key:"source" / key:"target" 模式替换（仅当 source 仍存在）
+        hit_required = 0
+        for key in required:
+            # key 可能带引号或不带
+            if re.search(rf'(?:{re.escape(key)}|"{re.escape(key)}")\s*:', content):
+                hit_required += 1
+        if required and hit_required < max(1, len(required) // 2):
+            stats["missed_structured"].append(item_id)
+            continue
+
+        changed_here = 0
+        for key, mapping in values.items():
+            source = mapping.get("source")
+            target = mapping.get("target")
+            if not source or not target or source == target:
+                continue
+            # 匹配 key:"source" 或 "key":"source"
+            patterns = [
+                rf'({re.escape(key)}\s*:\s*)"{re.escape(source)}"',
+                rf'("{re.escape(key)}"\s*:\s*)"{re.escape(source)}"',
+            ]
+            for pat in patterns:
+                new_content, n = re.subn(pat, rf'\1"{target}"', content, count=1)
+                if n:
+                    content = new_content
+                    changed_here += n
+                    break
+        if changed_here:
+            stats["structured"] += changed_here
+        else:
+            stats["missed_structured"].append(item_id)
+
+    return content, stats
+
+
 def update_product_checksums(app_root: Path, changed_rel_paths: list[str], dry_run: bool = False) -> int:
     product_path = app_root / "product.json"
     product = json.loads(product_path.read_text(encoding="utf-8"))
@@ -131,7 +187,13 @@ def update_product_checksums(app_root: Path, changed_rel_paths: list[str], dry_r
     return updated
 
 
-def patch_file(app_root: Path, rel_path: str, config: dict, dry_run: bool = False) -> dict | None:
+def patch_file(
+    app_root: Path,
+    rel_path: str,
+    config: dict,
+    structured: dict | None = None,
+    dry_run: bool = False,
+) -> dict | None:
     target = app_root / rel_path
     if not target.exists():
         return None
@@ -143,6 +205,13 @@ def patch_file(app_root: Path, rel_path: str, config: dict, dry_run: bool = Fals
     log(f"    已读取 ({time.time() - t0:.1f}s)，开始替换（约 {len(config.get('exact', []))} 条）...")
 
     patched, stats = apply_replacements(original, config, progress_label=Path(rel_path).name)
+    if structured:
+        patched, struct_stats = apply_structured_replacements(patched, structured)
+        stats["structured"] = struct_stats.get("structured", 0)
+        stats["missed_structured"] = struct_stats.get("missed_structured", [])
+    else:
+        stats.setdefault("structured", 0)
+        stats.setdefault("missed_structured", [])
 
     if patched == original:
         log(f"    无变化 ({time.time() - t0:.1f}s)")
@@ -189,6 +258,9 @@ def main() -> int:
     log(f"Cursor app root: {app_root}")
 
     config = load_config()
+    structured = load_structured()
+    if structured:
+        log(f"已加载结构化补丁: {STRUCTURED_FILE.name}")
 
     if args.restore:
         try:
@@ -197,7 +269,15 @@ def main() -> int:
             log(f"错误: {exc}")
             return 1
         restored = 0
-        for target in config["targets"]:
+        targets = config.get("targets") or []
+        if structured and structured.get("targets"):
+            # 合并目标，去重
+            seen = {t["file"] for t in targets}
+            for t in structured["targets"]:
+                if t["file"] not in seen:
+                    targets.append(t)
+                    seen.add(t["file"])
+        for target in targets:
             rel = target["file"]
             filename = Path(rel).name
             if restore_file(filename, app_root, rel):
@@ -207,7 +287,7 @@ def main() -> int:
             log("已恢复 product.json")
             restored += 1
         if restored:
-            keys = [t["file"] for t in config["targets"]]
+            keys = [t["file"] for t in targets]
             update_product_checksums(app_root, keys, dry_run=False)
         if restored == 0:
             log("未找到可恢复的备份文件")
@@ -231,7 +311,7 @@ def main() -> int:
         rel = target["file"]
         required = target.get("required", True)
         try:
-            result = patch_file(app_root, rel, config, dry_run=args.dry_run)
+            result = patch_file(app_root, rel, config, structured=structured, dry_run=args.dry_run)
         except PermissionError as exc:
             log(f"错误: 写入失败 {rel}: {exc}")
             if is_windows() and "Program Files" in str(app_root):
@@ -256,8 +336,11 @@ def main() -> int:
             changed_files.append(rel)
             log(f"    - 块替换: {result['blocks']} 处")
             log(f"    - 精确替换: {result['exact']} 处")
+            log(f"    - 结构化替换: {result.get('structured', 0)} 处")
         if result["missed_blocks"]:
             log(f"    - 未命中块: {', '.join(result['missed_blocks'][:5])}")
+        if result.get("missed_structured"):
+            log(f"    - 未命中结构化项: {', '.join(result['missed_structured'][:5])}")
         if result["missed_exact"] and result["changed"]:
             missed = result["missed_exact"]
             log(f"    - 未命中条目: {len(missed)} 条")
