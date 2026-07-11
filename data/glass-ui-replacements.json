@@ -1,6 +1,6 @@
 {
-  "version": "1.1.0",
-  "description": "Cursor Glass/Settings UI 硬编码文案替换表（macOS）— 仅安全上下文/长句替换",
+  "version": "1.2.0",
+  "description": "Cursor Glass/Settings UI 硬编码文案替换表（macOS）— 安全上下文/长句 + 设置详情补漏",
   "targets": [
     {
       "file": "out/vs/workbench/workbench.glass.main.js",
@@ -3157,6 +3157,838 @@
     {
       "from": "title:\"Fun\"",
       "to": "title:\"趣味\""
+    },
+    {
+      "from": "Application User Persistent Storage",
+      "to": "应用用户持久化存储"
+    },
+    {
+      "from": "Worktree no longer available",
+      "to": "工作树已不可用"
+    },
+    {
+      "from": "Ignore branch difference",
+      "to": "忽略分支差异"
+    },
+    {
+      "from": "Apply to Specific Files",
+      "to": "应用到指定文件"
+    },
+    {
+      "from": "Blocked by branch rules",
+      "to": "被分支规则阻止"
+    },
+    {
+      "from": "New MCP Configuration",
+      "to": "新建 MCP 配置"
+    },
+    {
+      "from": "Status checks failing",
+      "to": "状态检查失败"
+    },
+    {
+      "from": "Merge status pending",
+      "to": "合并状态待定"
+    },
+    {
+      "from": "Checks still running",
+      "to": "检查仍在运行"
+    },
+    {
+      "from": "Apply Intelligently",
+      "to": "智能应用"
+    },
+    {
+      "from": "Enable Auto Refresh",
+      "to": "启用自动刷新"
+    },
+    {
+      "from": "Conflicts with base",
+      "to": "与基线冲突"
+    },
+    {
+      "from": "Marketplace Access",
+      "to": "市场访问权限"
+    },
+    {
+      "from": "Remove Marketplace",
+      "to": "移除市场"
+    },
+    {
+      "from": "Command Blocklist",
+      "to": "命令黑名单"
+    },
+    {
+      "from": "Plugin Repository",
+      "to": "插件仓库"
+    },
+    {
+      "from": "Allowlist options",
+      "to": "白名单选项"
+    },
+    {
+      "from": "Changes requested",
+      "to": "已请求更改"
+    },
+    {
+      "from": "Run Autonomously",
+      "to": "自主运行"
+    },
+    {
+      "from": "Cannot be merged",
+      "to": "无法合并"
+    },
+    {
+      "from": "Default Approach",
+      "to": "默认方式"
+    },
+    {
+      "from": "Smart Allowlist",
+      "to": "智能白名单"
+    },
+    {
+      "from": "Discard changes",
+      "to": "丢弃更改"
+    },
+    {
+      "from": "Discard Changes",
+      "to": "丢弃更改"
+    },
+    {
+      "from": "Storage Service",
+      "to": "存储服务"
+    },
+    {
+      "from": "Review required",
+      "to": "需要审查"
+    },
+    {
+      "from": "Open Customize",
+      "to": "打开自定义"
+    },
+    {
+      "from": "Edit & Reapply",
+      "to": "编辑并重新应用"
+    },
+    {
+      "from": "Apply Manually",
+      "to": "手动应用"
+    },
+    {
+      "from": "Always Apply",
+      "to": "始终应用"
+    },
+    {
+      "from": "Ask Every Time",
+      "to": "每次询问"
+    },
+    {
+      "from": "Commit Changes",
+      "to": "提交更改"
+    },
+    {
+      "from": "Commit changes",
+      "to": "提交更改"
+    },
+    {
+      "from": "Stash changes",
+      "to": "贮藏更改"
+    },
+    {
+      "from": "Stash Changes",
+      "to": "贮藏更改"
+    },
+    {
+      "from": "Agent Layout",
+      "to": "Agent 布局"
+    },
+    {
+      "from": "IDE Layout",
+      "to": "IDE 布局"
+    },
+    {
+      "from": "Auto Switch",
+      "to": "自动切换"
+    },
+    {
+      "from": "Speculative",
+      "to": "推测式"
+    },
+    {
+      "from": "Remote Host",
+      "to": "远程主机"
+    },
+    {
+      "from": "Full Local",
+      "to": "完整本地"
+    },
+    {
+      "from": "Hard Block",
+      "to": "强制拦截"
+    },
+    {
+      "from": "All Tasks",
+      "to": "全部任务"
+    },
+    {
+      "from": "Multitask",
+      "to": "多任务"
+    },
+    {
+      "from": "Base URL",
+      "to": "基础 URL"
+    },
+    {
+      "from": "HTTP/2 is recommended for low-latency streaming. In some corporate proxy and VPN environments, the compatibility mode may need to be lowered.",
+      "to": "推荐使用 HTTP/2 以获得低延迟流式传输。在部分企业代理或 VPN 环境中，可能需要降低兼容模式。"
+    },
+    {
+      "from": "Use AI-powered command classification to intelligently match commands against allowlist patterns and suggest sandbox modes",
+      "to": "使用 AI 命令分类，智能匹配白名单模式并建议沙箱模式"
+    },
+    {
+      "from": "Wait indefinitely to authenticate when prompted. When off, skip authentication prompts after 30 seconds.",
+      "to": "出现身份验证提示时无限期等待。关闭后，30 秒后跳过身份验证提示。"
+    },
+    {
+      "from": "You can configure Shell, MCP and Fetch allowlists for Auto mode. However, Auto works well without these.",
+      "to": "可为 Auto 模式配置 Shell、MCP 和 Fetch 白名单。不过不配置也能正常使用 Auto。"
+    },
+    {
+      "from": "Generates a robust implementation plan prior to writing code, asking clarifying questions when needed.",
+      "to": "在编写代码前生成稳健的实现计划，必要时会提出澄清问题。"
+    },
+    {
+      "from": "This marketplace and its access settings will be removed. The source repository won't be affected.",
+      "to": "将移除此市场及其访问设置。源仓库不会受到影响。"
+    },
+    {
+      "from": "Pinpoints the root cause of an issue by generating hypotheses and gathering runtime evidence.",
+      "to": "通过生成假设并收集运行时证据，定位问题根因。"
+    },
+    {
+      "from": "Commands that always require approval, even when Auto mode would run them automatically",
+      "to": "即使在 Auto 模式通常会自动执行时，也始终需要批准的命令"
+    },
+    {
+      "from": "Uses a fleet of subagents to parallelize requests, instead of adding them to a queue.",
+      "to": "使用一组子 Agent 并行处理请求，而不是加入队列。"
+    },
+    {
+      "from": "Show inline diff review controls in top level breadcrumbs or floating island",
+      "to": "在顶层面包屑或浮动岛中显示内联 diff 审阅控件"
+    },
+    {
+      "from": "Temporarily save uncommitted work, then check out the cloud agent branch.",
+      "to": "临时保存未提交的工作，然后检出云端 Agent 分支。"
+    },
+    {
+      "from": "Automatically update plugins when changes are pushed to the repository",
+      "to": "当更改推送到仓库时自动更新插件"
+    },
+    {
+      "from": "Create a checkpoint commit of your changes, then check out the branch.",
+      "to": "为当前更改创建检查点提交，然后检出该分支。"
+    },
+    {
+      "from": "Permanently discard your current changes before switching branches",
+      "to": "切换分支前永久丢弃当前更改"
+    },
+    {
+      "from": "The current value cannot be preserved and the field will be empty.",
+      "to": "当前值无法保留，该字段将为空。"
+    },
+    {
+      "from": "Choose the model used by the Explore subagent for initial research",
+      "to": "选择 Explore 子 Agent 用于初步调研的模型"
+    },
+    {
+      "from": "Select who can see and use plugins from this team marketplace",
+      "to": "选择谁可以查看并使用此团队市场中的插件"
+    },
+    {
+      "from": "Choose between quick or more thorough, higher-cost analysis",
+      "to": "在快速分析与更彻底但成本更高的分析之间选择"
+    },
+    {
+      "from": "This will remove the custom theme from your saved themes.",
+      "to": "这将从已保存的主题中移除该自定义主题。"
+    },
+    {
+      "from": "Delete your current uncommitted changes before switching",
+      "to": "切换前删除当前未提交的更改"
+    },
+    {
+      "from": "Merge blocked: required status checks are still running",
+      "to": "合并已阻止：必需的状态检查仍在运行"
+    },
+    {
+      "from": "The git worktree for this agent is no longer on disk.",
+      "to": "此 Agent 的 git 工作树已不在磁盘上。"
+    },
+    {
+      "from": "When Agent decides it's relevant based on description",
+      "to": "当 Agent 根据描述判断相关时"
+    },
+    {
+      "from": "Runs in the remote extension host for this workspace.",
+      "to": "在此工作区的远程扩展宿主中运行。"
+    },
+    {
+      "from": "Fetch marketplace plugins from the GitHub repository",
+      "to": "从 GitHub 仓库获取市场插件"
+    },
+    {
+      "from": "Creates a new MCP configuration with example servers",
+      "to": "创建包含示例服务器的新 MCP 配置"
+    },
+    {
+      "from": "Create a checkpoint commit with your current changes",
+      "to": "用当前更改创建检查点提交"
+    },
+    {
+      "from": "OpenAI-compatible API base URL for the local agent.",
+      "to": "本地 Agent 的 OpenAI 兼容 API 基础 URL。"
+    },
+    {
+      "from": "Save your changes to a stash and restore them later",
+      "to": "将更改保存到贮藏区，稍后恢复"
+    },
+    {
+      "from": "Use full local environment (non-VM running locally)",
+      "to": "使用完整本地环境（非虚拟机本地运行）"
+    },
+    {
+      "from": "Proceed anyway (changes might not apply correctly)",
+      "to": "仍要继续（更改可能无法正确应用）"
+    },
+    {
+      "from": "Your changes will be lost if you don't save them.",
+      "to": "若不保存，更改将会丢失。"
+    },
+    {
+      "from": "Merge blocked: required status checks are failing",
+      "to": "合并已阻止：必需的状态检查失败"
+    },
+    {
+      "from": "Save changes to a stash and restore them later",
+      "to": "将更改保存到贮藏区并稍后恢复"
+    },
+    {
+      "from": "Merging is blocked by branch protection rules",
+      "to": "合并被分支保护规则阻止"
+    },
+    {
+      "from": "Global storage across entire application",
+      "to": "跨整个应用的全局存储"
+    },
+    {
+      "from": "Cmd+K inline edit attached to prompt bar",
+      "to": "附加到提示栏的 Cmd+K 内联编辑"
+    },
+    {
+      "from": "Save your changes and restore them later",
+      "to": "保存更改并稍后恢复"
+    },
+    {
+      "from": "Apply to every chat and cmd-k session",
+      "to": "应用于每次聊天和 Cmd+K 会话"
+    },
+    {
+      "from": "When file matches a specified pattern",
+      "to": "当文件匹配指定模式时"
+    },
+    {
+      "from": "Merge status is being determined...",
+      "to": "正在确定合并状态…"
+    },
+    {
+      "from": "Merge status is being calculated...",
+      "to": "正在计算合并状态…"
+    },
+    {
+      "from": "Merge blocked: conflicts with base",
+      "to": "合并已阻止：与基线冲突"
+    },
+    {
+      "from": "This pull request cannot be merged",
+      "to": "此拉取请求无法合并"
+    },
+    {
+      "from": "Ready with dependencies satisfied",
+      "to": "已就绪，依赖已满足"
+    },
+    {
+      "from": "Merge blocked: changes requested",
+      "to": "合并已阻止：已请求更改"
+    },
+    {
+      "from": "Waiting on a dependency or cycle",
+      "to": "正在等待依赖或循环"
+    },
+    {
+      "from": "Anyone with the link can access",
+      "to": "任何有链接的人都可以访问"
+    },
+    {
+      "from": "Merge blocked: review required",
+      "to": "合并已阻止：需要审查"
+    },
+    {
+      "from": "Cancel the checkout operation",
+      "to": "取消检出操作"
+    },
+    {
+      "from": "Suggest tasks to be accepted",
+      "to": "建议要接受的任务"
+    },
+    {
+      "from": "All team members can access",
+      "to": "所有团队成员均可访问"
+    },
+    {
+      "from": "Use development environment",
+      "to": "使用开发环境"
+    },
+    {
+      "from": "Speculative full-file edit",
+      "to": "推测式整文件编辑"
+    },
+    {
+      "from": "Use production environment",
+      "to": "使用生产环境"
+    },
+    {
+      "from": "Drive the PR end-to-end",
+      "to": "端到端驱动 PR"
+    },
+    {
+      "from": "Cursor Tab completion",
+      "to": "Cursor Tab 补全"
+    },
+    {
+      "from": "Focus on Agent chats",
+      "to": "聚焦 Agent 对话"
+    },
+    {
+      "from": "Unknown diff source",
+      "to": "未知 diff 来源"
+    },
+    {
+      "from": "Abort the operation",
+      "to": "中止操作"
+    },
+    {
+      "from": "Files in workspace",
+      "to": "工作区中的文件"
+    },
+    {
+      "from": "Focus on files",
+      "to": "聚焦文件"
+    },
+    {
+      "from": "When @-mentioned",
+      "to": "当被 @ 提及时"
+    },
+    {
+      "from": "$400 usage credits",
+      "to": "$400 用量额度"
+    },
+    {
+      "from": "$20 usage credits",
+      "to": "$20 用量额度"
+    },
+    {
+      "from": "$70 usage credits",
+      "to": "$70 用量额度"
+    },
+    {
+      "from": "Code editor",
+      "to": "代码编辑器"
+    },
+    {
+      "from": "Cloud Agents Not Supported in Privacy Mode (Legacy)",
+      "to": "隐私模式（旧版）不支持云端 Agent"
+    },
+    {
+      "from": "Plugins give your agents important context",
+      "to": "插件可为 Agent 提供重要上下文"
+    },
+    {
+      "from": "Approve Pending Shell Tool and Allowlist",
+      "to": "批准待处理 Shell 工具并加入白名单"
+    },
+    {
+      "from": "Cloud Agent requires code storage",
+      "to": "云端 Agent 需要代码存储"
+    },
+    {
+      "from": "Cloud Agent Environment Required",
+      "to": "需要云端 Agent 环境"
+    },
+    {
+      "from": "Cloud Agents require a Git repo",
+      "to": "云端 Agent 需要 Git 仓库"
+    },
+    {
+      "from": "Connect External Tools with MCP",
+      "to": "通过 MCP 连接外部工具"
+    },
+    {
+      "from": "Failed to switch to Cloud Agent",
+      "to": "切换到云端 Agent 失败"
+    },
+    {
+      "from": "Failed to Send Prompt to Agent",
+      "to": "向 Agent 发送提示失败"
+    },
+    {
+      "from": "Modes, skills, MCPs and more",
+      "to": "模式、技能、MCP 等"
+    },
+    {
+      "from": "No Active Agent Conversation",
+      "to": "无活动 Agent 对话"
+    },
+    {
+      "from": "Failed to retry Cloud Agent",
+      "to": "重试云端 Agent 失败"
+    },
+    {
+      "from": "Failed to start Cloud Agent",
+      "to": "启动云端 Agent 失败"
+    },
+    {
+      "from": "Upgrade to use Cloud Agents",
+      "to": "升级以使用云端 Agent"
+    },
+    {
+      "from": "Approve Pending Shell Tool",
+      "to": "批准待处理 Shell 工具"
+    },
+    {
+      "from": "Extend Cursor with Plugins",
+      "to": "用插件扩展 Cursor"
+    },
+    {
+      "from": "Workspace Not at Git Root",
+      "to": "工作区不在 Git 根目录"
+    },
+    {
+      "from": "Connect GitHub to Cursor",
+      "to": "将 GitHub 连接到 Cursor"
+    },
+    {
+      "from": "Teach Cursor New Skills",
+      "to": "教 Cursor 新技能"
+    },
+    {
+      "from": "Confirm Plugin Removal",
+      "to": "确认移除插件"
+    },
+    {
+      "from": "Delete Codebase Index?",
+      "to": "删除代码库索引？"
+    },
+    {
+      "from": "Guide Agent with Rules",
+      "to": "用规则引导 Agent"
+    },
+    {
+      "from": "Checkout Agent Branch",
+      "to": "检出 Agent 分支"
+    },
+    {
+      "from": "Commit on Main Branch",
+      "to": "在主分支提交"
+    },
+    {
+      "from": "Could Not Load Skills",
+      "to": "无法加载技能"
+    },
+    {
+      "from": "Diff with Main Branch",
+      "to": "与主分支对比"
+    },
+    {
+      "from": "Open a Git repository",
+      "to": "打开 Git 仓库"
+    },
+    {
+      "from": "Could Not Load Rules",
+      "to": "无法加载规则"
+    },
+    {
+      "from": "Privacy Mode Enabled",
+      "to": "隐私模式已启用"
+    },
+    {
+      "from": "Switch Privacy Mode?",
+      "to": "切换隐私模式？"
+    },
+    {
+      "from": "System Notifications",
+      "to": "系统通知"
+    },
+    {
+      "from": "Automate with Hooks",
+      "to": "用钩子自动化"
+    },
+    {
+      "from": "Create Pull Request",
+      "to": "创建拉取请求"
+    },
+    {
+      "from": "Git Not Initialized",
+      "to": "Git 未初始化"
+    },
+    {
+      "from": "Link GitHub account",
+      "to": "关联 GitHub 账户"
+    },
+    {
+      "from": "Migrated User Rules",
+      "to": "已迁移的用户规则"
+    },
+    {
+      "from": "Delete MCP Server",
+      "to": "删除 MCP 服务器"
+    },
+    {
+      "from": "Open MCP Settings",
+      "to": "打开 MCP 设置"
+    },
+    {
+      "from": "Unsupported Model",
+      "to": "不支持的模型"
+    },
+    {
+      "from": "Incorrect Branch",
+      "to": "分支不正确"
+    },
+    {
+      "from": "Plan ending soon",
+      "to": "套餐即将到期"
+    },
+    {
+      "from": "Blocked by Hook",
+      "to": "被钩子阻止"
+    },
+    {
+      "from": "Plugin Settings",
+      "to": "插件设置"
+    },
+    {
+      "from": "Try Cloud Agent",
+      "to": "试用云端 Agent"
+    },
+    {
+      "from": "Agent Settings",
+      "to": "Agent 设置"
+    },
+    {
+      "from": "Connect GitHub",
+      "to": "连接 GitHub"
+    },
+    {
+      "from": "Current Branch",
+      "to": "当前分支"
+    },
+    {
+      "from": "Pause Indexing",
+      "to": "暂停索引"
+    },
+    {
+      "from": "Hooks let you run custom scripts at specific points during the agent's execution to modify behavior, enforce policies, or add custom logging.",
+      "to": "钩子可让你在 Agent 执行的特定节点运行自定义脚本，以修改行为、强制策略或添加自定义日志。"
+    },
+    {
+      "from": "Use Rules to guide agent behavior, like enforcing best practices or coding standards. Rules can be applied always, by file path, or manually.",
+      "to": "使用规则引导 Agent 行为，例如强制最佳实践或编码标准。规则可始终应用、按文件路径应用，或手动应用。"
+    },
+    {
+      "from": "When to display the usage summary at the bottom of the chat pane: automatically when approaching limits, always, or never.",
+      "to": "何时在聊天窗底部显示用量摘要：接近限额时自动显示、始终显示或从不显示。"
+    },
+    {
+      "from": "Path to a custom sound file (mp3, wav, ogg) to play when Agent finishes responding. Leave empty to use the default sound.",
+      "to": "Agent 完成回复时播放的自定义音效文件路径（mp3、wav、ogg）。留空则使用默认音效。"
+    },
+    {
+      "from": "Sign in to load cloud user and team MCP servers from the dashboard and manage which servers are enabled for cloud agents.",
+      "to": "登录后可从控制台加载云端用户与团队 MCP 服务器，并管理云端 Agent 启用的服务器。"
+    },
+    {
+      "from": "With Privacy Mode enabled, none of your questions or code will ever be stored or learned from by us or any third-party.",
+      "to": "启用隐私模式后，我们或任何第三方都不会存储或学习你的问题或代码。"
+    },
+    {
+      "from": "When enabled, translucent surfaces and vibrancy effects are replaced with opaque backgrounds for improved readability.",
+      "to": "启用后，半透明表面和振动效果将替换为不透明背景，以提高可读性。"
+    },
+    {
+      "from": "Create specialized agents for complex tasks. Subagents can be invoked by the agent to handle focused work in parallel.",
+      "to": "为复杂任务创建专用 Agent。子 Agent 可由 Agent 调用，以并行处理专注工作。"
+    },
+    {
+      "from": "Subagents are specialized assistants that run in their own context window so Agent can parallelize and stay focused.",
+      "to": "子 Agent 是在独立上下文窗口中运行的专用助手，使 Agent 可以并行处理并保持专注。"
+    },
+    {
+      "from": "Maximum total size in GB for the Cursor worktrees directory across all workspaces. Set to 0 to disable this limit.",
+      "to": "所有工作区中 Cursor 工作树目录的最大总大小（GB）。设为 0 可禁用此限制。"
+    },
+    {
+      "from": "Model Context Protocol servers connect Cursor to external tools and data sources like Linear, Figma, and Notion.",
+      "to": "模型上下文协议（MCP）服务器可将 Cursor 连接到 Linear、Figma、Notion 等外部工具与数据源。"
+    },
+    {
+      "from": "Show warning-level in-app notifications in Glass mode. Errors and informational notifications are always shown.",
+      "to": "在 Glass 模式中显示警告级别的应用内通知。错误与信息类通知始终显示。"
+    },
+    {
+      "from": "If you enable Privacy Mode, none of your questions or code will ever be stored by us or any third-party.",
+      "to": "若启用隐私模式，我们或任何第三方都不会存储你的问题或代码。"
+    },
+    {
+      "from": "Plugins bundle rules, skills, subagents, commands, MCP servers, and hooks into one installable package.",
+      "to": "插件将规则、技能、子 Agent、命令、MCP 服务器和钩子打包为一个可安装包。"
+    },
+    {
+      "from": "Skills package domain-specific knowledge and workflows that Agent applies automatically when relevant.",
+      "to": "技能封装领域知识与工作流，Agent 在相关时会自动应用。"
+    },
+    {
+      "from": "Controls how shell and edit-file tool calls are displayed and grouped in Editor Agent conversations.",
+      "to": "控制 Shell 与编辑文件工具调用在编辑器 Agent 对话中的显示与分组方式。"
+    },
+    {
+      "from": "Configure MCP servers in the dashboard to make them available in Cursor on desktop and in the cloud.",
+      "to": "在控制台配置 MCP 服务器，以便在桌面版 Cursor 与云端中可用。"
+    },
+    {
+      "from": "Controls how shell and edit-file tool calls are displayed and grouped in Glass Agent conversations.",
+      "to": "控制 Shell 与编辑文件工具调用在 Glass Agent 对话中的显示与分组方式。"
+    },
+    {
+      "from": "Add a hooks.json file to your user, project, or enterprise config to start running custom scripts.",
+      "to": "在用户、项目或企业配置中添加 hooks.json 文件以开始运行自定义脚本。"
+    },
+    {
+      "from": "Add documentation to use as context. You can also use @Add in Chat or while editing to add a doc.",
+      "to": "添加文档用作上下文。也可在聊天或编辑时使用 @Add 添加文档。"
+    },
+    {
+      "from": "Cursor periodically removes old worktrees to free disk space. Tune how aggressively cleanup runs.",
+      "to": "Cursor 会定期清理旧工作树以释放磁盘空间。可调整清理激进程度。"
+    },
+    {
+      "from": "Cloud Agents are not available when your privacy mode is set to disable data storage. To use Cloud Agents, please update your privacy settings to allow data storage.",
+      "to": "当隐私模式设置为禁用数据存储时，无法使用云端 Agent。若要使用，请更新隐私设置以允许数据存储。"
+    },
+    {
+      "from": "Enable hover-expanded state for the Cloud Agents sidebar. When disabled, the sidebar will not expand on hover and will be completely hidden when collapsed.",
+      "to": "启用云端 Agent 侧栏悬停展开。禁用后，侧栏不会在悬停时展开，折叠时将完全隐藏。"
+    },
+    {
+      "from": "Global list of files to always ignore in Cursor features, across all workspaces. Uses glob patterns. These patterns have the same effect as adding them to a .cursorignore file.",
+      "to": "在所有工作区中始终忽略的全局文件列表（用于 Cursor 功能）。使用 glob 模式，效果等同于写入 .cursorignore。"
+    },
+    {
+      "from": "Enable performance protection for inline diffs. When enabled, inline diff decorations will be suppressed if there are too many changes to prevent editor unresponsiveness.",
+      "to": "启用内联 diff 性能保护。启用后，若更改过多，将抑制内联 diff 装饰以防编辑器卡顿。"
+    },
+    {
+      "from": "Windows specific setup. Either an array of commands or a path to a script file relative to this JSON file. Takes precedence over setup-worktree on Windows.",
+      "to": "Windows 专用设置。可以是命令数组，或相对此 JSON 文件的脚本路径。在 Windows 上优先于 setup-worktree。"
+    },
+    {
+      "from": "Setup to run inside a newly created worktree (generic fallback). Either an array of shell commands or a path to a script file relative to this JSON file.",
+      "to": "在新创建的工作树中运行的设置（通用回退）。可以是 shell 命令数组，或相对此 JSON 文件的脚本路径。"
+    },
+    {
+      "from": "Enable partial accepts for Cursor Tab, using the editor.action.inlineSuggest.acceptNextWord keybinding",
+      "to": "启用 Cursor Tab 部分接受，使用 editor.action.inlineSuggest.acceptNextWord 快捷键"
+    },
+    {
+      "from": "Use preview box for terminal cmd-k. If turned off, responses are streamed directly into the shell.",
+      "to": "终端 Cmd+K 使用预览框。关闭后，回复将直接流入 shell。"
+    },
+    {
+      "from": "Move this agent to the Cloud to run longer without your computer open.",
+      "to": "将此 Agent 移至云端，即使电脑未开启也可长时间运行。"
+    },
+    {
+      "from": "Move to Cloud so the agent can keep running even if you disconnect.",
+      "to": "移至云端，即使断开连接 Agent 也可继续运行。"
+    },
+    {
+      "from": "The agent's machine is being prepared. This can take a few minutes.",
+      "to": "正在准备 Agent 机器，可能需要几分钟。"
+    },
+    {
+      "from": "The agent's machine may not be running. Send a message to restart.",
+      "to": "Agent 机器可能未运行。发送消息以重启。"
+    },
+    {
+      "from": "Move to Cloud to keep running longer without your computer open.",
+      "to": "移至云端，无需保持电脑开启即可更长时间运行。"
+    },
+    {
+      "from": "Rendering very large diffs can slow down or crash the window",
+      "to": "渲染超大 diff 可能导致窗口变慢或崩溃"
+    },
+    {
+      "from": "Please update your payment method to keep using Cursor.",
+      "to": "请更新付款方式以继续使用 Cursor。"
+    },
+    {
+      "from": "Balanced quality and speed, recommended for most tasks",
+      "to": "质量与速度均衡，推荐用于大多数任务"
+    },
+    {
+      "from": "You've hit your rate limit on your current plan",
+      "to": "你已达到当前套餐的速率限制"
+    },
+    {
+      "from": "Initialize a git repository to create worktrees.",
+      "to": "初始化 git 仓库以创建工作树。"
+    },
+    {
+      "from": "Enable usage-based pricing for premium models",
+      "to": "为高级模型启用按量计费"
+    },
+    {
+      "from": "You've hit your 200 Free requests this month",
+      "to": "你本月已用完 200 次免费请求"
+    },
+    {
+      "from": "I am fine with Cursor learning from my code!",
+      "to": "我同意 Cursor 从我的代码中学习！"
+    },
+    {
+      "from": "Visualize information in a custom interface",
+      "to": "在自定义界面中可视化信息"
+    },
+    {
+      "from": "Align on implementation before writing code",
+      "to": "在编写代码前对齐实现方案"
+    },
+    {
+      "from": "Your handle can't be changed once claimed",
+      "to": "用户名一经占用不可更改"
+    },
+    {
+      "from": "Discard all changes up to this checkpoint?",
+      "to": "丢弃至此检查点的所有更改？"
+    },
+    {
+      "from": "Set up usage billing for premium models",
+      "to": "为高级模型设置用量计费"
+    },
+    {
+      "from": "Discover what Cursor can do for your workflow",
+      "to": "了解 Cursor 能为你的工作流做什么"
     }
   ]
 }
