@@ -4329,6 +4329,14 @@
     {
       "from": "children:\"Total\"}),zg(\"span\",{className:rg(\"automations-overview__label--full\"),children:\"Total Automations\"",
       "to": "children:\"总计\"}),zg(\"span\",{className:rg(\"automations-overview__label--full\"),children:\"自动化总数\""
+    },
+    {
+      "from": "k=\"Failed \\xB7 7d\"",
+      "to": "k=\"失败 · 7 天\""
+    },
+    {
+      "from": "\"Failed \\xB7 7d\"",
+      "to": "\"失败 · 7 天\""
     }
   ]
 }
