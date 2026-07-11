@@ -1,6 +1,6 @@
 {
-  "version": "1.0.0",
-  "description": "Cursor Glass/Settings UI 硬编码文案替换表（macOS）",
+  "version": "1.1.0",
+  "description": "Cursor Glass/Settings UI 硬编码文案替换表（macOS）— 仅安全上下文/长句替换",
   "targets": [
     {
       "file": "out/vs/workbench/workbench.glass.main.js",
@@ -15,101 +15,3148 @@
     {
       "id": "settings-nav-labels",
       "from": "kci={general:\"General\",profile:\"Profile\",\"vscode-settings\":\"VS Code Settings\",appearance:\"Appearance\",fun:\"Fun\",\"plan-usage\":\"Plan & Usage\",chat:\"Agents\",browser:\"Browser & Network\",tab:\"Tab\",models:\"Models\",\"git-prs\":\"Git & PRs\",rules:\"Rules, Skills, Subagents\",plugins:\"Plugins\",customize:\"Customize\",indexing:\"Indexing & Docs\",mcp:\"Tools & MCPs\",hooks:\"Hooks\",beta:\"Beta\",network:\"Network\",\"background-composer\":\"Cloud Agents\",\"self-driving\":\"Self-driving PRs\",worktrees:\"Worktrees\",developer:\"Developer\"}",
-      "to": "kci={general:\"通用\",profile:\"个人资料\",\"vscode-settings\":\"VS Code 设置\",appearance:\"外观\",fun:\"趣味\",\"plan-usage\":\"套餐与用量\",chat:\"Agents\",browser:\"浏览器与网络\",tab:\"Tab\",models:\"模型\",\"git-prs\":\"Git 与 PR\",rules:\"规则、技能与子 Agent\",plugins:\"插件\",customize:\"自定义\",indexing:\"索引与文档\",mcp:\"工具与 MCP\",hooks:\"钩子\",beta:\"测试版\",network:\"网络\",\"background-composer\":\"云端 Agent\",\"self-driving\":\"自动驾驶 PR\",worktrees:\"工作树\",developer:\"开发者\"}"
+      "to": "kci={general:\"通用\",profile:\"个人资料\",\"vscode-settings\":\"VS Code 设置\",appearance:\"外观\",fun:\"趣味\",\"plan-usage\":\"套餐与用量\",chat:\"Agent\",browser:\"浏览器与网络\",tab:\"Tab 补全\",models:\"模型\",\"git-prs\":\"Git 与 PR\",rules:\"规则、技能与子 Agent\",plugins:\"插件\",customize:\"自定义\",indexing:\"索引与文档\",mcp:\"工具与 MCP\",hooks:\"钩子\",beta:\"测试版\",network:\"网络\",\"background-composer\":\"云端 Agent\",\"self-driving\":\"自动驾驶 PR\",worktrees:\"工作树\",developer:\"开发者\"}"
     },
     {
       "id": "settings-nav-labels-desktop",
       "from": "general:\"General\",profile:\"Profile\",\"vscode-settings\":\"VS Code Settings\",appearance:\"Appearance\",fun:\"Fun\",\"plan-usage\":\"Plan & Usage\",chat:\"Agents\",browser:\"Browser & Network\",tab:\"Tab\",models:\"Models\",\"git-prs\":\"Git & PRs\",rules:\"Rules, Skills, Subagents\",plugins:\"Plugins\",customize:\"Customize\",indexing:\"Indexing & Docs\",mcp:\"Tools & MCPs\",hooks:\"Hooks\",beta:\"Beta\",network:\"Network\",\"background-composer\":\"Cloud Agents\",\"self-driving\":\"Self-driving PRs\",worktrees:\"Worktrees\",developer:\"Developer\"",
-      "to": "general:\"通用\",profile:\"个人资料\",\"vscode-settings\":\"VS Code 设置\",appearance:\"外观\",fun:\"趣味\",\"plan-usage\":\"套餐与用量\",chat:\"Agents\",browser:\"浏览器与网络\",tab:\"Tab\",models:\"模型\",\"git-prs\":\"Git 与 PR\",rules:\"规则、技能与子 Agent\",plugins:\"插件\",customize:\"自定义\",indexing:\"索引与文档\",mcp:\"工具与 MCP\",hooks:\"钩子\",beta:\"测试版\",network:\"网络\",\"background-composer\":\"云端 Agent\",\"self-driving\":\"自动驾驶 PR\",worktrees:\"工作树\",developer:\"开发者\""
+      "to": "general:\"通用\",profile:\"个人资料\",\"vscode-settings\":\"VS Code 设置\",appearance:\"外观\",fun:\"趣味\",\"plan-usage\":\"套餐与用量\",chat:\"Agent\",browser:\"浏览器与网络\",tab:\"Tab 补全\",models:\"模型\",\"git-prs\":\"Git 与 PR\",rules:\"规则、技能与子 Agent\",plugins:\"插件\",customize:\"自定义\",indexing:\"索引与文档\",mcp:\"工具与 MCP\",hooks:\"钩子\",beta:\"测试版\",network:\"网络\",\"background-composer\":\"云端 Agent\",\"self-driving\":\"自动驾驶 PR\",worktrees:\"工作树\",developer:\"开发者\""
+    },
+    {
+      "id": "settings-nav-agents-tab-zh",
+      "from": "chat:\"Agents\",browser:\"浏览器与网络\",tab:\"Tab\",models:\"模型\"",
+      "to": "chat:\"Agent\",browser:\"浏览器与网络\",tab:\"Tab 补全\",models:\"模型\""
+    },
+    {
+      "id": "settings-nav-agents-tab-en",
+      "from": "chat:\"Agents\",browser:\"Browser & Network\",tab:\"Tab\",models:\"Models\"",
+      "to": "chat:\"Agent\",browser:\"浏览器与网络\",tab:\"Tab 补全\",models:\"模型\""
     }
   ],
   "exact": [
-    { "from": "Search Settings", "to": "搜索设置" },
-    { "from": "Open Agents Window on Startup", "to": "启动时打开 Agents 窗口" },
-    { "from": "Manage your account and billing", "to": "管理你的账户和账单" },
-    { "from": "Show rotating tips on the empty screen", "to": "在空白界面显示轮换提示" },
-    { "from": "Show system notifications when Agent completes or needs attention", "to": "当 Agent 完成或需要关注时显示系统通知" },
-    { "from": "Show warning-level in-app toasts", "to": "显示警告级别的应用内通知" },
-    { "from": "Show Cursor in menu bar", "to": "在菜单栏中显示 Cursor" },
-    { "from": "Play a sound when Agent finishes responding", "to": "Agent 完成回复时播放提示音" },
-    { "from": "Open the Agents Window by default when Cursor launches", "to": "Cursor 启动时默认打开 Agents 窗口" },
-    { "from": "Open Agents Window", "to": "打开 Agents 窗口" },
-    { "from": "Agents Window", "to": "Agents 窗口" },
-    { "from": "New Agents Window", "to": "新建 Agents 窗口" },
-    { "from": "Your agents now live in the Agents Window", "to": "你的 Agent 现已迁移至 Agents 窗口" },
-    { "from": "Your agent chats now live in the Agents\u00a0Window", "to": "你的 Agent 对话现已迁移至 Agents 窗口" },
-    { "from": "Continue working with agents in a simpler, more powerful interface.", "to": "在更简洁、更强大的界面中继续使用 Agent。" },
-    { "from": "Prefer the Agent layout? Try the new Agents Window.", "to": "更喜欢 Agent 布局？试试全新的 Agents 窗口。" },
-    { "from": "Meet the new Agents Window", "to": "认识全新的 Agents 窗口" },
-    { "from": "Search chats and cloud agents", "to": "搜索对话和云端 Agent" },
-    { "from": "Search chat history", "to": "搜索对话历史" },
-    { "from": "Switch between recently used agents", "to": "在最近使用的 Agent 之间切换" },
-    { "from": "Quick Open Previous Recently Used Agent", "to": "快速打开最近使用的 Agent" },
-    { "from": "Quick Open Least Recently Used Agent", "to": "快速打开最久未使用的 Agent" },
-    { "from": "All Agents", "to": "所有 Agent" },
-    { "from": "No chats available", "to": "没有可用的对话" },
-    { "from": "No recent agents", "to": "没有最近的 Agent" },
-    { "from": "Start a new agent to see it here", "to": "新建 Agent 后将显示在此处" },
-    { "from": "Try a different search query", "to": "尝试其他搜索关键词" },
-    { "from": "Untitled chat", "to": "未命名对话" },
-    { "from": "Cloud agents", "to": "云端 Agent" },
-    { "from": "Import Project Rules from GitHub/GitLab", "to": "从 GitHub/GitLab 导入项目规则" },
-    { "from": "Enter the GitHub/GitLab repository URL to import project rules", "to": "输入 GitHub/GitLab 仓库 URL 以导入项目规则" },
-    { "from": "Cannot create project rules without a workspace. Please open a folder first.", "to": "没有工作区无法创建项目规则。请先打开一个文件夹。" },
-    { "from": "Loading Cloud Agents settings...", "to": "正在加载云端 Agent 设置..." },
-    { "from": "Cursor Account", "to": "Cursor 账户" },
-    { "from": "Cursor Settings", "to": "Cursor 设置" },
-    { "from": "Open Cursor Settings", "to": "打开 Cursor 设置" },
-    { "from": "Search Cursor Settings", "to": "搜索 Cursor 设置" },
-    { "from": "Search Cursor settings\u2026", "to": "搜索 Cursor 设置\u2026" },
-    { "from": "Close Settings", "to": "关闭设置" },
-    { "from": "Go to Settings", "to": "前往设置" },
-    { "from": "Open Settings", "to": "打开设置" },
-    { "from": "Agent is still working", "to": "Agent 仍在运行" },
-    { "from": "Pro Plan", "to": "Pro 套餐" },
-    { "from": "Pro Trial", "to": "Pro 试用" },
-    { "from": "Search agents", "to": "搜索 Agent" },
-    { "from": "Customize your Cursor experience", "to": "自定义你的 Cursor 体验" },
-    { "from": "Customize is the new home for managing this page", "to": "自定义是管理此页面的新入口" },
-    { "from": "Customize Sidebar", "to": "自定义侧栏" },
-
-    { "from": "label:\"New Agent\"", "to": "label:\"新建 Agent\"" },
-    { "from": "label:\"Automations\"", "to": "label:\"自动化\"" },
-    { "from": "label:\"Customize\"", "to": "label:\"自定义\"" },
-    { "from": "label:\"Search\",placeholderContent:\"\",showsAgentSelector:!1", "to": "label:\"搜索\",placeholderContent:\"\",showsAgentSelector:!1" },
-    { "from": "children:\"Repositories\"", "to": "children:\"仓库\"" },
-    { "from": "children:\"New Agent\"", "to": "children:\"新建 Agent\"" },
-    { "from": "title:\"Startup\"", "to": "title:\"启动\"" },
-    { "from": "title:\"Notifications\"", "to": "title:\"通知\"" },
-    { "from": "title:\"Privacy\"", "to": "title:\"隐私\"" },
-    { "from": "label:\"System Notifications\"", "to": "label:\"系统通知\"" },
-    { "from": "label:\"Warning Notifications\"", "to": "label:\"警告通知\"" },
-    { "from": "label:\"Menu Bar Icon\"", "to": "label:\"菜单栏图标\"" },
-    { "from": "label:\"Completion Sound\"", "to": "label:\"完成提示音\"" },
-    { "from": "label:\"Tips\"", "to": "label:\"提示\"" },
-    { "from": "label:\"Open\"", "to": "label:\"打开\"" },
-    { "from": "label:\"Default\"", "to": "label:\"默认\"" },
-    { "from": "label:\"On\"", "to": "label:\"开启\"" },
-    { "from": "label:\"Off\"", "to": "label:\"关闭\"" },
-    { "from": "label:\"Update\"", "to": "label:\"更新\"" },
-    { "from": "label:\"Installing\"", "to": "label:\"正在安装\"" },
-    { "from": "label:\"Loading\"", "to": "label:\"正在加载\"" },
-    { "from": "label:\"Close\"", "to": "label:\"关闭\"" },
-    { "from": "title:\"Cloud Agents\"", "to": "title:\"云端 Agent\"" },
-    { "from": "title:\"Agents\"", "to": "title:\"Agents\"" },
-    { "from": "title:\"Models\"", "to": "title:\"模型\"" },
-    { "from": "title:\"Hooks\"", "to": "title:\"钩子\"" },
-    { "from": "title:\"Plugins\"", "to": "title:\"插件\"" },
-    { "from": "title:\"Indexing\"", "to": "title:\"索引\"" },
-    { "from": "title:\"Appearance\"", "to": "title:\"外观\"" },
-    { "from": "title:\"Profile\"", "to": "title:\"个人资料\"" },
-    { "from": "title:\"General\"", "to": "title:\"通用\"" },
-    { "from": "title:\"Beta\"", "to": "title:\"测试版\"" },
-    { "from": "title:\"Network\"", "to": "title:\"网络\"" },
-    { "from": "title:\"Worktrees\"", "to": "title:\"工作树\"" },
-    { "from": "title:\"Automations\"", "to": "title:\"自动化\"" },
-    { "from": "title:\"Customize\"", "to": "title:\"自定义\"" },
-    { "from": "description:\"Codebase, web\"", "to": "description:\"代码库、网络\"" },
-    { "from": "{id:\"search\",title:\"Search\"", "to": "{id:\"search\",title:\"搜索\"" }
+    {
+      "from": "Search Settings",
+      "to": "搜索设置"
+    },
+    {
+      "from": "Open Agents Window on Startup",
+      "to": "启动时打开 Agents 窗口"
+    },
+    {
+      "from": "Manage your account and billing",
+      "to": "管理你的账户和账单"
+    },
+    {
+      "from": "Show rotating tips on the empty screen",
+      "to": "在空白界面显示轮换提示"
+    },
+    {
+      "from": "Show system notifications when Agent completes or needs attention",
+      "to": "当 Agent 完成或需要关注时显示系统通知"
+    },
+    {
+      "from": "Show warning-level in-app toasts",
+      "to": "显示警告级别的应用内通知"
+    },
+    {
+      "from": "Show Cursor in menu bar",
+      "to": "在菜单栏中显示 Cursor"
+    },
+    {
+      "from": "Play a sound when Agent finishes responding",
+      "to": "Agent 完成回复时播放提示音"
+    },
+    {
+      "from": "Open the Agents Window by default when Cursor launches",
+      "to": "Cursor 启动时默认打开 Agents 窗口"
+    },
+    {
+      "from": "Open Agents Window",
+      "to": "打开 Agents 窗口"
+    },
+    {
+      "from": "Agents Window",
+      "to": "Agents 窗口"
+    },
+    {
+      "from": "New Agents Window",
+      "to": "新建 Agents 窗口"
+    },
+    {
+      "from": "Your agents now live in the Agents Window",
+      "to": "你的 Agent 现已迁移至 Agents 窗口"
+    },
+    {
+      "from": "Your agent chats now live in the Agents Window",
+      "to": "你的 Agent 对话现已迁移至 Agents 窗口"
+    },
+    {
+      "from": "Continue working with agents in a simpler, more powerful interface.",
+      "to": "在更简洁、更强大的界面中继续使用 Agent。"
+    },
+    {
+      "from": "Prefer the Agent layout? Try the new Agents Window.",
+      "to": "更喜欢 Agent 布局？试试全新的 Agents 窗口。"
+    },
+    {
+      "from": "Meet the new Agents Window",
+      "to": "认识全新的 Agents 窗口"
+    },
+    {
+      "from": "Search chats and cloud agents",
+      "to": "搜索对话和云端 Agent"
+    },
+    {
+      "from": "Search chat history",
+      "to": "搜索对话历史"
+    },
+    {
+      "from": "Switch between recently used agents",
+      "to": "在最近使用的 Agent 之间切换"
+    },
+    {
+      "from": "Quick Open Previous Recently Used Agent",
+      "to": "快速打开最近使用的 Agent"
+    },
+    {
+      "from": "Quick Open Least Recently Used Agent",
+      "to": "快速打开最久未使用的 Agent"
+    },
+    {
+      "from": "All Agents",
+      "to": "所有 Agent"
+    },
+    {
+      "from": "No chats available",
+      "to": "没有可用的对话"
+    },
+    {
+      "from": "No recent agents",
+      "to": "没有最近的 Agent"
+    },
+    {
+      "from": "Start a new agent to see it here",
+      "to": "新建 Agent 后将显示在此处"
+    },
+    {
+      "from": "Try a different search query",
+      "to": "尝试其他搜索关键词"
+    },
+    {
+      "from": "Untitled chat",
+      "to": "未命名对话"
+    },
+    {
+      "from": "Cloud agents",
+      "to": "云端 Agent"
+    },
+    {
+      "from": "Import Project Rules from GitHub/GitLab",
+      "to": "从 GitHub/GitLab 导入项目规则"
+    },
+    {
+      "from": "Enter the GitHub/GitLab repository URL to import project rules",
+      "to": "输入 GitHub/GitLab 仓库 URL 以导入项目规则"
+    },
+    {
+      "from": "Cannot create project rules without a workspace. Please open a folder first.",
+      "to": "没有工作区无法创建项目规则。请先打开一个文件夹。"
+    },
+    {
+      "from": "Loading Cloud Agents settings...",
+      "to": "正在加载云端 Agent 设置..."
+    },
+    {
+      "from": "Cursor Account",
+      "to": "Cursor 账户"
+    },
+    {
+      "from": "Cursor Settings",
+      "to": "Cursor 设置"
+    },
+    {
+      "from": "Open Cursor Settings",
+      "to": "打开 Cursor 设置"
+    },
+    {
+      "from": "Search Cursor Settings",
+      "to": "搜索 Cursor 设置"
+    },
+    {
+      "from": "Search Cursor settings…",
+      "to": "搜索 Cursor 设置…"
+    },
+    {
+      "from": "Close Settings",
+      "to": "关闭设置"
+    },
+    {
+      "from": "Go to Settings",
+      "to": "前往设置"
+    },
+    {
+      "from": "Open Settings",
+      "to": "打开设置"
+    },
+    {
+      "from": "Agent is still working",
+      "to": "Agent 仍在运行"
+    },
+    {
+      "from": "Search agents",
+      "to": "搜索 Agent"
+    },
+    {
+      "from": "Customize your Cursor experience",
+      "to": "自定义你的 Cursor 体验"
+    },
+    {
+      "from": "Customize is the new home for managing this page",
+      "to": "自定义是管理此页面的新入口"
+    },
+    {
+      "from": "Customize Sidebar",
+      "to": "自定义侧栏"
+    },
+    {
+      "from": "label:\"New Agent\"",
+      "to": "label:\"新建 Agent\""
+    },
+    {
+      "from": "label:\"Automations\"",
+      "to": "label:\"自动化\""
+    },
+    {
+      "from": "label:\"Customize\"",
+      "to": "label:\"自定义\""
+    },
+    {
+      "from": "label:\"Search\",placeholderContent:\"\",showsAgentSelector:!1",
+      "to": "label:\"搜索\",placeholderContent:\"\",showsAgentSelector:!1"
+    },
+    {
+      "from": "children:\"Repositories\"",
+      "to": "children:\"仓库\""
+    },
+    {
+      "from": "children:\"New Agent\"",
+      "to": "children:\"新建 Agent\""
+    },
+    {
+      "from": "title:\"Startup\"",
+      "to": "title:\"启动\""
+    },
+    {
+      "from": "title:\"Notifications\"",
+      "to": "title:\"通知\""
+    },
+    {
+      "from": "title:\"Privacy\"",
+      "to": "title:\"隐私\""
+    },
+    {
+      "from": "label:\"System Notifications\"",
+      "to": "label:\"系统通知\""
+    },
+    {
+      "from": "label:\"Warning Notifications\"",
+      "to": "label:\"警告通知\""
+    },
+    {
+      "from": "label:\"Menu Bar Icon\"",
+      "to": "label:\"菜单栏图标\""
+    },
+    {
+      "from": "label:\"Completion Sound\"",
+      "to": "label:\"完成提示音\""
+    },
+    {
+      "from": "label:\"Tips\"",
+      "to": "label:\"提示\""
+    },
+    {
+      "from": "label:\"Open\"",
+      "to": "label:\"打开\""
+    },
+    {
+      "from": "label:\"Default\"",
+      "to": "label:\"默认\""
+    },
+    {
+      "from": "label:\"On\"",
+      "to": "label:\"开启\""
+    },
+    {
+      "from": "label:\"Off\"",
+      "to": "label:\"关闭\""
+    },
+    {
+      "from": "label:\"Update\"",
+      "to": "label:\"更新\""
+    },
+    {
+      "from": "label:\"Installing\"",
+      "to": "label:\"正在安装\""
+    },
+    {
+      "from": "label:\"Loading\"",
+      "to": "label:\"正在加载\""
+    },
+    {
+      "from": "label:\"Close\"",
+      "to": "label:\"关闭\""
+    },
+    {
+      "from": "title:\"Cloud Agents\"",
+      "to": "title:\"云端 Agent\""
+    },
+    {
+      "from": "title:\"Agents\"",
+      "to": "title:\"Agents\""
+    },
+    {
+      "from": "title:\"Models\"",
+      "to": "title:\"模型\""
+    },
+    {
+      "from": "title:\"Hooks\"",
+      "to": "title:\"钩子\""
+    },
+    {
+      "from": "title:\"Plugins\"",
+      "to": "title:\"插件\""
+    },
+    {
+      "from": "title:\"Indexing\"",
+      "to": "title:\"索引\""
+    },
+    {
+      "from": "title:\"Appearance\"",
+      "to": "title:\"外观\""
+    },
+    {
+      "from": "title:\"Profile\"",
+      "to": "title:\"个人资料\""
+    },
+    {
+      "from": "title:\"General\"",
+      "to": "title:\"通用\""
+    },
+    {
+      "from": "title:\"Beta\"",
+      "to": "title:\"测试版\""
+    },
+    {
+      "from": "title:\"Network\"",
+      "to": "title:\"网络\""
+    },
+    {
+      "from": "title:\"Worktrees\"",
+      "to": "title:\"工作树\""
+    },
+    {
+      "from": "title:\"Automations\"",
+      "to": "title:\"自动化\""
+    },
+    {
+      "from": "title:\"Customize\"",
+      "to": "title:\"自定义\""
+    },
+    {
+      "from": "description:\"Codebase, web\"",
+      "to": "description:\"代码库、网络\""
+    },
+    {
+      "from": "{id:\"search\",title:\"Search\"",
+      "to": "{id:\"search\",title:\"搜索\""
+    },
+    {
+      "from": "name:\"New Agent\"",
+      "to": "name:\"新建 Agent\""
+    },
+    {
+      "from": "name:\"Customize\"",
+      "to": "name:\"自定义\""
+    },
+    {
+      "from": "fallback:\"New Agent\"",
+      "to": "fallback:\"新建 Agent\""
+    },
+    {
+      "from": "aria-label:\"New Agent\"",
+      "to": "aria-label:\"新建 Agent\""
+    },
+    {
+      "from": "title:\"New Agent\"",
+      "to": "title:\"新建 Agent\""
+    },
+    {
+      "from": "actionTitle:\"New Agent\"",
+      "to": "actionTitle:\"新建 Agent\""
+    },
+    {
+      "from": "title:\"Open Customize\"",
+      "to": "title:\"打开自定义\""
+    },
+    {
+      "from": "title:\"Open New Agent Chat\"",
+      "to": "title:\"打开新建 Agent 对话\""
+    },
+    {
+      "from": "original:\"Open New Agent Chat\"",
+      "to": "original:\"打开新建 Agent 对话\""
+    },
+    {
+      "from": "original:\"Open Customize\"",
+      "to": "original:\"打开自定义\""
+    },
+    {
+      "from": "===\"treatment\"?\"Customize\":\"Marketplace\"",
+      "to": "===\"treatment\"?\"自定义\":\"扩展市场\""
+    },
+    {
+      "from": "name:lt(9382,\"Repositories\")",
+      "to": "name:lt(9382,\"仓库\")"
+    },
+    {
+      "from": "collectionLabel:\"Repositories\"",
+      "to": "collectionLabel:\"仓库\""
+    },
+    {
+      "from": "\"aria-label\":\"Repositories and branches\"",
+      "to": "\"aria-label\":\"仓库与分支\""
+    },
+    {
+      "from": "children:\"Repositories:\"",
+      "to": "children:\"仓库：\""
+    },
+    {
+      "from": "ory=()=>\"Rules, Skills, Subagents\"",
+      "to": "ory=()=>\"规则、技能与子 Agent\""
+    },
+    {
+      "from": "yry={...kci,rules:\"Rules, Skills, Subagents\"}",
+      "to": "yry={...kci,rules:\"规则、技能与子 Agent\"}"
+    },
+    {
+      "from": "ary=t=>t.isGlass?\"Indexing\":\"Indexing & Docs\"",
+      "to": "ary=t=>t.isGlass?\"索引\":\"索引与文档\""
+    },
+    {
+      "from": "title:e?\"Indexing\":\"Indexing & Docs\"",
+      "to": "title:e?\"索引\":\"索引与文档\""
+    },
+    {
+      "from": "ae=\"Rules, Skills, Subagents\"",
+      "to": "ae=\"规则、技能与子 Agent\""
+    },
+    {
+      "from": "rules:\"Rules, Skills, Subagents\"",
+      "to": "rules:\"规则、技能与子 Agent\""
+    },
+    {
+      "from": "description:\"Choose between light, dark, or high contrast themes\",label:\"Theme\"",
+      "to": "description:\"在浅色、深色或高对比度主题之间选择\",label:\"主题\""
+    },
+    {
+      "from": "label:\"Theme\",surface:\"glass\"",
+      "to": "label:\"主题\",surface:\"glass\""
+    },
+    {
+      "from": "description:\"Choose which theme to use\"",
+      "to": "description:\"选择要使用的主题\""
+    },
+    {
+      "from": "label:\"Light Theme\"",
+      "to": "label:\"浅色主题\""
+    },
+    {
+      "from": "label:\"Dark Theme\"",
+      "to": "label:\"深色主题\""
+    },
+    {
+      "from": "description:\"Choose the theme used when your system is in light mode\"",
+      "to": "description:\"系统处于浅色模式时使用的主题\""
+    },
+    {
+      "from": "title:\"Agent Conversations\"",
+      "to": "title:\"Agent 对话\""
+    },
+    {
+      "from": "label:\"Agent Conversations\"",
+      "to": "label:\"Agent 对话\""
+    },
+    {
+      "from": "label:\"Tool Call Density\"",
+      "to": "label:\"工具调用密度\""
+    },
+    {
+      "from": "description:\"Adjust how much detail is shown for tool calls\"",
+      "to": "description:\"调整工具调用显示的详细程度\""
+    },
+    {
+      "from": "label:\"Code Block Word Wrap\"",
+      "to": "label:\"代码块自动换行\""
+    },
+    {
+      "from": "description:\"Wrap long lines in Agent conversation code blocks\"",
+      "to": "description:\"在 Agent 对话的代码块中对长行自动换行\""
+    },
+    {
+      "from": "label:\"Themed Diff Backgrounds\"",
+      "to": "label:\"主题化 Diff 背景\""
+    },
+    {
+      "from": "description:\"Use themed background colors for inline code diffs\"",
+      "to": "description:\"为行内代码差异使用主题化背景色\""
+    },
+    {
+      "from": "title:\"Colors\"",
+      "to": "title:\"颜色\""
+    },
+    {
+      "from": "label:\"Colors\"",
+      "to": "label:\"颜色\""
+    },
+    {
+      "from": "label:\"Hue\"",
+      "to": "label:\"色调\""
+    },
+    {
+      "from": "description:\"Choose a tint color\"",
+      "to": "description:\"选择着色颜色\""
+    },
+    {
+      "from": "label:\"Intensity\"",
+      "to": "label:\"强度\""
+    },
+    {
+      "from": "description:\"Control how strongly the tint is applied\"",
+      "to": "description:\"控制着色应用的强度\""
+    },
+    {
+      "from": "label:\"Reduce Transparency\"",
+      "to": "label:\"降低透明度\""
+    },
+    {
+      "from": "description:\"Replace translucent surfaces with opaque backgrounds\"",
+      "to": "description:\"用非透明背景替换半透明表面\""
+    },
+    {
+      "from": "title:\"Typography\"",
+      "to": "title:\"字体排印\""
+    },
+    {
+      "from": "label:\"Typography\"",
+      "to": "label:\"字体排印\""
+    },
+    {
+      "from": "label:\"Compact\"",
+      "to": "label:\"紧凑\""
+    },
+    {
+      "from": "label:\"Detailed\"",
+      "to": "label:\"详细\""
+    },
+    {
+      "from": "label:\"System\"",
+      "to": "label:\"跟随系统\""
+    },
+    {
+      "from": "title:\"Git & PRs\"",
+      "to": "title:\"Git 与 PR\""
+    },
+    {
+      "from": "title:\"Pull Requests\"",
+      "to": "title:\"拉取请求\""
+    },
+    {
+      "from": "title:\"Attribution\"",
+      "to": "title:\"署名\""
+    },
+    {
+      "from": "title:\"Branches\"",
+      "to": "title:\"分支\""
+    },
+    {
+      "from": "label:\"Review Provider\"",
+      "to": "label:\"审查提供方\""
+    },
+    {
+      "from": "label:\"PR Link Destination\"",
+      "to": "label:\"PR 链接打开位置\""
+    },
+    {
+      "from": "description:\"Open pull request links inside Cursor or in the default browser.\"",
+      "to": "description:\"在 Cursor 内或系统默认浏览器中打开拉取请求链接。\""
+    },
+    {
+      "from": "description:\"Open pull request links inside Cursor or the default browser.\"",
+      "to": "description:\"在 Cursor 内或系统默认浏览器中打开拉取请求链接。\""
+    },
+    {
+      "from": "label:\"Commit Attribution\"",
+      "to": "label:\"提交署名\""
+    },
+    {
+      "from": "description:\"Mark Agent commits as 'Made with Cursor'\"",
+      "to": "description:\"将 Agent 提交标记为「Made with Cursor」\""
+    },
+    {
+      "from": "label:\"PR Attribution\"",
+      "to": "label:\"PR 署名\""
+    },
+    {
+      "from": "description:\"Mark pull requests as made with Cursor\"",
+      "to": "description:\"将拉取请求标记为由 Cursor 创建\""
+    },
+    {
+      "from": "label:\"Branch Prefix\"",
+      "to": "label:\"分支前缀\""
+    },
+    {
+      "from": "description:\"Prefix for new branches created by Agent (e.g., cursor/, username/)\"",
+      "to": "description:\"Agent 创建新分支时使用的前缀（例如 cursor/、username/）\""
+    },
+    {
+      "from": "label:\"Inside Cursor\"",
+      "to": "label:\"在 Cursor 内\""
+    },
+    {
+      "from": "label:\"Default browser\"",
+      "to": "label:\"默认浏览器\""
+    },
+    {
+      "from": "label:\"Default Browser\"",
+      "to": "label:\"默认浏览器\""
+    },
+    {
+      "from": "title:\"Replace Agent\"",
+      "to": "title:\"替换 Agent\""
+    },
+    {
+      "from": "title:\"New Agent in Project\"",
+      "to": "title:\"在项目中新建 Agent\""
+    },
+    {
+      "from": "title:\"New Agent with Model\"",
+      "to": "title:\"使用指定模型新建 Agent\""
+    },
+    {
+      "from": "title:\"New Agent with Query\"",
+      "to": "title:\"使用查询新建 Agent\""
+    },
+    {
+      "from": "title:\"New Agent with Context\"",
+      "to": "title:\"带上下文新建 Agent\""
+    },
+    {
+      "from": "title:\"New Agent (preserve editor panel)\"",
+      "to": "title:\"新建 Agent（保留编辑器面板）\""
+    },
+    {
+      "from": "Build in New Agent",
+      "to": "在新建 Agent 中构建"
+    },
+    {
+      "from": "No agents yet",
+      "to": "暂无 Agent"
+    },
+    {
+      "from": "Create an agent to start working on tasks",
+      "to": "创建 Agent 以开始处理任务"
+    },
+    {
+      "from": "Mirror VS Code RPCs into the DevTools Network tab and record local performance marks. Adds overhead, so leave it off unless you're debugging.",
+      "to": "将 VS Code RPC 镜像到 DevTools Network 标签页并记录本地性能标记。会增加开销，仅在调试时开启。"
+    },
+    {
+      "from": "Control which network requests are allowed when commands run in the sandbox. Edit allowed/denied domains in sandbox.json in your workspace.",
+      "to": "控制沙箱中命令运行时允许的网络请求。可在工作区 sandbox.json 中编辑允许/拒绝的域名。"
+    },
+    {
+      "from": "Allow Agent to switch modes without asking first, such as Agent to Plan or Agent to Debug. When off, Cursor asks before switching.",
+      "to": "允许 Agent 无需询问即可切换模式，例如从 Agent 到 Plan 或 Debug。关闭后，Cursor 会在切换前询问。"
+    },
+    {
+      "from": "Log extension host RPC messages to JSON files viewable in Perfetto for performance analysis. Requires a restart to take effect.",
+      "to": "将扩展宿主 RPC 消息记录为可在 Perfetto 中查看的 JSON 文件，用于性能分析。需要重启后生效。"
+    },
+    {
+      "from": "Domains that Agent can fetch from automatically. Use '*' for all domains, '*.example.com' for wildcard subdomains.",
+      "to": "Agent 可自动抓取的域名。使用 '*' 表示所有域名，'*.example.com' 表示通配子域名。"
+    },
+    {
+      "from": "Maximum number of Cursor-managed worktrees to retain across all workspaces. Older worktrees are removed first.",
+      "to": "跨所有工作区保留的 Cursor 管理工作树最大数量。较旧的工作树会优先被移除。"
+    },
+    {
+      "from": "These domains must be accessible for Cursor to function. Add them to your firewall or proxy allowlist.",
+      "to": "这些域名必须可访问，Cursor 才能正常工作。请将其加入防火墙或代理白名单。"
+    },
+    {
+      "from": "Control tokens control how likely the model is to produce no-ops. Will be replaced with auto-selection",
+      "to": "控制 Token 决定模型输出空操作的可能性。将被自动选择替代"
+    },
+    {
+      "from": "Use the legacy terminal tool in agent mode, for use on systems with unsupported shell configurations",
+      "to": "在 Agent 模式使用旧版终端工具，适用于不受支持的 shell 配置"
+    },
+    {
+      "from": "Maximum total size in GB across all Cursor-managed worktrees. Set to 0 to disable the size limit.",
+      "to": "所有 Cursor 管理工作树的最大总大小（GB）。设为 0 可禁用大小限制。"
+    },
+    {
+      "from": "Show inline diff decorations in the editor instead of only showing changes in the review panel",
+      "to": "在编辑器中显示行内差异装饰，而不仅在审查面板中显示更改"
+    },
+    {
+      "from": "Enable on-demand usage to go beyond your plan's included usage. Requires a paid plan.",
+      "to": "启用按需用量以超出套餐包含用量。需要付费套餐。"
+    },
+    {
+      "from": "Connect GitHub/GitLab, manage team and user settings, and configure environments",
+      "to": "连接 GitHub/GitLab，管理团队与用户设置，并配置环境"
+    },
+    {
+      "from": "Select your preferred embedding model. Delete your index and reload to use it.",
+      "to": "选择你偏好的嵌入模型。删除索引并重新加载后生效。"
+    },
+    {
+      "from": "Context-aware, multi-line suggestions around your cursor based on recent edits",
+      "to": "基于近期编辑、在光标周围提供上下文感知的多行建议"
+    },
+    {
+      "from": "Custom words that submit a voice prompt. Spaces and punctuation are ignored.",
+      "to": "用于提交语音提示的自定义词。空格和标点将被忽略。"
+    },
+    {
+      "from": "Prevent sleep when this computer is plugged in and Remote Control is enabled",
+      "to": "此电脑接通电源且启用远程控制时防止休眠"
+    },
+    {
+      "from": "Suggest edits like new lines and indentation that modify whitespace only",
+      "to": "建议仅修改空白的编辑（如新行和缩进）"
+    },
+    {
+      "from": "Adjust the default behavior of sending a message while Agent is running",
+      "to": "调整 Agent 运行时发送消息的默认行为"
+    },
+    {
+      "from": "Posts Self-driving updates to Slack when there are suggestions for PRs.",
+      "to": "当有 PR 建议时，将自动驾驶更新发布到 Slack。"
+    },
+    {
+      "from": "Accelerate development, shared knowledge, and context across your team",
+      "to": "加速团队协作、知识共享与上下文同步"
+    },
+    {
+      "from": "Automatically run Review when Agent finishes and has made file changes",
+      "to": "当 Agent 完成并修改文件后自动运行审查"
+    },
+    {
+      "from": "Include untracked files (new files not yet added to Git) in the review",
+      "to": "在审查中包含未跟踪文件（尚未添加到 Git 的新文件）"
+    },
+    {
+      "from": "Choose whether automatically started agents suggest or apply changes",
+      "to": "选择自动启动的 Agent 是建议更改还是应用更改"
+    },
+    {
+      "from": "When all editors are closed, hide the editor area and maximize chat",
+      "to": "关闭所有编辑器时，隐藏编辑器区域并最大化对话"
+    },
+    {
+      "from": "Disable AI features in specific repositories based on file pattern",
+      "to": "根据文件模式在特定仓库中禁用 AI 功能"
+    },
+    {
+      "from": "Create your own themes, tweak the vibe, and import your favorites",
+      "to": "创建自定义主题、调整风格并导入你喜欢的主题"
+    },
+    {
+      "from": "Minimize interface animations. System follows your OS preference.",
+      "to": "尽量减少界面动画。跟随系统偏好设置。"
+    },
+    {
+      "from": "Choose how much detail Agent tool calls show in the conversation",
+      "to": "选择 Agent 工具调用在对话中显示的详细程度"
+    },
+    {
+      "from": "Partially mask your email address in the Cursor user interface",
+      "to": "在 Cursor 界面中部分遮罩你的邮箱地址"
+    },
+    {
+      "from": "Choose the model used by Explore subagent for initial research",
+      "to": "选择 Explore 子 Agent 用于初步研究的模型"
+    },
+    {
+      "from": "Automatically review your changes for issues after each commit",
+      "to": "每次提交后自动审查更改中的问题"
+    },
+    {
+      "from": "When to show the usage summary at the bottom of the chat pane",
+      "to": "何时在对话面板底部显示用量摘要"
+    },
+    {
+      "from": "Starts Self-driving when a PR opens on an enabled repository.",
+      "to": "在已启用仓库打开 PR 时启动自动驾驶。"
+    },
+    {
+      "from": "Open pull request links inside Cursor or the default browser",
+      "to": "在 Cursor 内或系统默认浏览器中打开拉取请求链接"
+    },
+    {
+      "from": "Enable or disable Self-driving for PRs owned by this account",
+      "to": "启用或禁用此账户拥有的 PR 的自动驾驶"
+    },
+    {
+      "from": "Choose whether the theme behaves like a light or dark theme",
+      "to": "选择主题表现为浅色还是深色"
+    },
+    {
+      "from": "Make escape focus editor instead of closing the prompt bar",
+      "to": "按 Escape 时聚焦编辑器，而不是关闭提示栏"
+    },
+    {
+      "from": "Wait indefinitely; otherwise skip prompts after 30 seconds",
+      "to": "无限等待；否则 30 秒后跳过提示"
+    },
+    {
+      "from": "Import settings, extensions, and keybindings from VS Code",
+      "to": "从 VS Code 导入设置、扩展和快捷键"
+    },
+    {
+      "from": "Show Add to Chat & Quick Edit buttons when selecting code",
+      "to": "选中代码时显示“添加到对话”和“快速编辑”按钮"
+    },
+    {
+      "from": "Glob patterns for files where Cursor Tab will not suggest",
+      "to": "Cursor Tab 不提供建议的文件 glob 模式"
+    },
+    {
+      "from": "Start Self-driving automatically for enabled repositories",
+      "to": "对已启用仓库自动启动自动驾驶"
+    },
+    {
+      "from": "Files to exclude from indexing in addition to .gitignore",
+      "to": "除 .gitignore 外还需从索引中排除的文件"
+    },
+    {
+      "from": "Off disables Self-driving for PRs owned by this account.",
+      "to": "关闭后将禁用此账户拥有的 PR 的自动驾驶。"
+    },
+    {
+      "from": "Optional folder for RPC logs (defaults to logs/exthost).",
+      "to": "RPC 日志的可选文件夹（默认 logs/exthost）。"
+    },
+    {
+      "from": "Choose the theme used when your system is in dark mode",
+      "to": "系统处于深色模式时使用的主题"
+    },
+    {
+      "from": "Allow the agent to celebrate with a shower of confetti",
+      "to": "允许 Agent 用彩带庆祝"
+    },
+    {
+      "from": "Allow Agent to search the web for relevant information",
+      "to": "允许 Agent 搜索网络以获取相关信息"
+    },
+    {
+      "from": "Include third-party Plugins, Skills, and other configs",
+      "to": "包含第三方插件、技能和其他配置"
+    },
+    {
+      "from": "Cmd+K: Escape focuses the editor when you have a diff",
+      "to": "Cmd+K：存在差异时 Escape 聚焦编辑器"
+    },
+    {
+      "from": "Match the active theme to your OS dark/light setting",
+      "to": "使活动主题与操作系统的深色/浅色设置匹配"
+    },
+    {
+      "from": "Set a fixed amount or make on-demand usage unlimited",
+      "to": "设置固定额度，或将按需用量设为无限制"
+    },
+    {
+      "from": "Automatically import agent configs from other tools",
+      "to": "自动从其他工具导入 Agent 配置"
+    },
+    {
+      "from": "Automatically format files when the agent finishes",
+      "to": "Agent 完成后自动格式化文件"
+    },
+    {
+      "from": "Show terminal commands in compact view by default",
+      "to": "默认以紧凑视图显示终端命令"
+    },
+    {
+      "from": "Include changes from Git submodules in the review",
+      "to": "在审查中包含 Git 子模块的更改"
+    },
+    {
+      "from": "Configure HTTP compatibility for proxies and VPNs",
+      "to": "为代理和 VPN 配置 HTTP 兼容性"
+    },
+    {
+      "from": "Check network connectivity to all Cursor services",
+      "to": "检查与所有 Cursor 服务的网络连通性"
+    },
+    {
+      "from": "Sign in to get started with Cursor's AI features",
+      "to": "登录以开始使用 Cursor 的 AI 功能"
+    },
+    {
+      "from": "Allow Agent to switch modes without asking first",
+      "to": "允许 Agent 无需询问即可切换模式"
+    },
+    {
+      "from": "Automatically parse links pasted into Quick Edit",
+      "to": "自动解析粘贴到快速编辑中的链接"
+    },
+    {
+      "from": "Show a view zone when the preview box is clipped",
+      "to": "预览框被裁剪时显示视图区域"
+    },
+    {
+      "from": "Embed the codebase for contextual understanding",
+      "to": "嵌入代码库以实现上下文理解"
+    },
+    {
+      "from": "Use legacy terminal tool on unsupported shells",
+      "to": "在不受支持的 shell 上使用旧版终端工具"
+    },
+    {
+      "from": "Automatically format files when Agent finishes",
+      "to": "Agent 完成后自动格式化文件"
+    },
+    {
+      "from": "Use the preview box instead of shell streaming",
+      "to": "使用预览框而不是 shell 流式输出"
+    },
+    {
+      "from": "Allow Tab to trigger while in a comment region",
+      "to": "在注释区域中也允许触发 Tab"
+    },
+    {
+      "from": "Force the display of view zones in the editor",
+      "to": "强制在编辑器中显示视图区域"
+    },
+    {
+      "from": "Configure font, formatting, minimap and more",
+      "to": "配置字体、格式化、缩略图等"
+    },
+    {
+      "from": "Override the font for code editors and diffs",
+      "to": "覆盖代码编辑器和差异对比的字体"
+    },
+    {
+      "from": "Limit how many chat tabs can be open at once",
+      "to": "限制可同时打开的对话标签页数量"
+    },
+    {
+      "from": "Contextual suggestions while prompting Agent",
+      "to": "向 Agent 提问时的上下文建议"
+    },
+    {
+      "from": "Change the base URL for OpenAI API requests.",
+      "to": "更改 OpenAI API 请求的基础 URL。"
+    },
+    {
+      "from": "Bring your Claude Code sessions into Cursor.",
+      "to": "将你的 Claude Code 会话导入 Cursor。"
+    },
+    {
+      "from": "Show status bar at the bottom of the window",
+      "to": "在窗口底部显示状态栏"
+    },
+    {
+      "from": "Override the Cursor user interface typeface",
+      "to": "覆盖 Cursor 用户界面字体"
+    },
+    {
+      "from": "Claim a handle for your public profile page",
+      "to": "为你的公开资料页领取用户名"
+    },
+    {
+      "from": "Apply .cursorignore files to subdirectories",
+      "to": "将 .cursorignore 应用到子目录"
+    },
+    {
+      "from": "Show inline diff decorations in the editor",
+      "to": "在编辑器中显示行内差异装饰"
+    },
+    {
+      "from": "Show view zone when preview box is clipped",
+      "to": "预览框被裁剪时显示视图区域"
+    },
+    {
+      "from": "API key used for requests to your gateway.",
+      "to": "用于向网关发起请求的 API 密钥。"
+    },
+    {
+      "from": "Maximum retained Cursor-managed worktrees",
+      "to": "保留的 Cursor 管理工作树最大数量"
+    },
+    {
+      "from": "Check connectivity to all Cursor services",
+      "to": "检查与所有 Cursor 服务的连通性"
+    },
+    {
+      "from": "Set a fixed amount or make it unlimited.",
+      "to": "设置固定额度，或设为无限制。"
+    },
+    {
+      "from": "Font size for the Cursor user interface",
+      "to": "Cursor 用户界面的字体大小"
+    },
+    {
+      "from": "Show Add to Chat and Quick Edit buttons",
+      "to": "显示“添加到对话”和“快速编辑”按钮"
+    },
+    {
+      "from": "Include Untracked Files in Agent Review",
+      "to": "在 Agent 审查中包含未跟踪文件"
+    },
+    {
+      "from": "Ignore Symlinks in Cursor Ignore Search",
+      "to": "在 Cursor Ignore 搜索中忽略符号链接"
+    },
+    {
+      "from": "Allow Agent to fetch content from URLs",
+      "to": "允许 Agent 从 URL 获取内容"
+    },
+    {
+      "from": "Bring Claude Code sessions into Cursor",
+      "to": "将 Claude Code 会话导入 Cursor"
+    },
+    {
+      "from": "Configure the local agent LLM gateway",
+      "to": "配置本地 Agent LLM 网关"
+    },
+    {
+      "from": "Automatically index small new folders",
+      "to": "自动索引较小的新文件夹"
+    },
+    {
+      "from": "Font size for code editors and diffs",
+      "to": "代码编辑器和差异对比的字体大小"
+    },
+    {
+      "from": "Use stronger derived contrast colors",
+      "to": "使用更强的派生对比色"
+    },
+    {
+      "from": "Show the Cmd/Ctrl+K hint in Terminal",
+      "to": "在终端中显示 Cmd/Ctrl+K 提示"
+    },
+    {
+      "from": "Enable leak detection console output",
+      "to": "启用泄漏检测控制台输出"
+    },
+    {
+      "from": "Use native macOS font anti-aliasing",
+      "to": "使用原生 macOS 字体抗锯齿"
+    },
+    {
+      "from": "Preview Box for Terminal Cmd/Ctrl+K",
+      "to": "终端 Cmd/Ctrl+K 预览框"
+    },
+    {
+      "from": "Include Submodules in Agent Review",
+      "to": "在 Agent 审查中包含子模块"
+    },
+    {
+      "from": "Post Self-driving updates to Slack",
+      "to": "将自动驾驶更新发布到 Slack"
+    },
+    {
+      "from": "Adjust the conversation text size",
+      "to": "调整对话文字大小"
+    },
+    {
+      "from": "Where new agents start by default",
+      "to": "新 Agent 默认从何处启动"
+    },
+    {
+      "from": "Suggest a follow-up for the Agent",
+      "to": "为 Agent 建议后续问题"
+    },
+    {
+      "from": "Work with Cloud Agents from Slack",
+      "to": "通过 Slack 使用云端 Agent"
+    },
+    {
+      "from": "Give the Agent a Confetti Cannon",
+      "to": "给 Agent 一个彩带炮"
+    },
+    {
+      "from": "Pick a Slack channel or use DMs.",
+      "to": "选择 Slack 频道或使用私信。"
+    },
+    {
+      "from": "Maximum aggregate worktree size",
+      "to": "工作树聚合大小上限"
+    },
+    {
+      "from": "Show Cursor in the system tray",
+      "to": "在系统托盘中显示 Cursor"
+    },
+    {
+      "from": "Name shown in the theme picker",
+      "to": "主题选择器中显示的名称"
+    },
+    {
+      "from": "Show title bar in agent layout",
+      "to": "在 Agent 布局中显示标题栏"
+    },
+    {
+      "from": "Skip symlinks during discovery",
+      "to": "发现过程中跳过符号链接"
+    },
+    {
+      "from": "Minimize interface animations",
+      "to": "尽量减少界面动画"
+    },
+    {
+      "from": "Auto-Approve Mode Transitions",
+      "to": "自动批准模式切换"
+    },
+    {
+      "from": "Prefix for new Agent branches",
+      "to": "新 Agent 分支的前缀"
+    },
+    {
+      "from": "Ignore Files in .cursorignore",
+      "to": "在 .cursorignore 中忽略文件"
+    },
+    {
+      "from": "Team-Level Repository Control",
+      "to": "团队级仓库控制"
+    },
+    {
+      "from": "Continuous RPC File Recording",
+      "to": "持续 RPC 文件录制"
+    },
+    {
+      "from": "Configure keyboard shortcuts",
+      "to": "配置键盘快捷键"
+    },
+    {
+      "from": "Import Settings from VS Code",
+      "to": "从 VS Code 导入设置"
+    },
+    {
+      "from": "Follow-Up Prompt Suggestions",
+      "to": "后续提示建议"
+    },
+    {
+      "from": "Start Agent Review on Commit",
+      "to": "提交时启动 Agent 审查"
+    },
+    {
+      "from": "Suggestions While Commenting",
+      "to": "注释时建议"
+    },
+    {
+      "from": "Auto-hide editor when empty",
+      "to": "编辑器为空时自动隐藏"
+    },
+    {
+      "from": "Show Cursor in the menu bar",
+      "to": "在菜单栏中显示 Cursor"
+    },
+    {
+      "from": "Verify Extension Signatures",
+      "to": "验证扩展签名"
+    },
+    {
+      "from": "Compact Terminal Tool Calls",
+      "to": "紧凑终端工具调用"
+    },
+    {
+      "from": "Auto Format on Agent Finish",
+      "to": "Agent 完成后自动格式化"
+    },
+    {
+      "from": "Wait for MCP Authentication",
+      "to": "等待 MCP 身份验证"
+    },
+    {
+      "from": "Domains required for Cursor",
+      "to": "Cursor 所需域名"
+    },
+    {
+      "from": "Whitespace-Only Suggestions",
+      "to": "仅空白建议"
+    },
+    {
+      "from": "Follow System Color Scheme",
+      "to": "跟随系统配色方案"
+    },
+    {
+      "from": "Hierarchical Cursor Ignore",
+      "to": "分层 Cursor Ignore"
+    },
+    {
+      "from": "Enable Disposable Tracking",
+      "to": "启用 Disposable 跟踪"
+    },
+    {
+      "from": "Import Claude Code agents",
+      "to": "导入 Claude Code agents"
+    },
+    {
+      "from": "Open chat as editor tabs",
+      "to": "以编辑器标签页打开对话"
+    },
+    {
+      "from": "Auto-Run On Agent Finish",
+      "to": "Agent 完成后自动运行"
+    },
+    {
+      "from": "Override OpenAI Base URL",
+      "to": "覆盖 OpenAI Base URL"
+    },
+    {
+      "from": "Cursor-managed worktrees",
+      "to": "Cursor 管理工作树"
+    },
+    {
+      "from": "Cloud Agents Unavailable",
+      "to": "云端 Agent 不可用"
+    },
+    {
+      "from": "Keep This Computer Awake",
+      "to": "保持此电脑唤醒"
+    },
+    {
+      "from": "Review Control Location",
+      "to": "审查控件位置"
+    },
+    {
+      "from": "Execution and Approvals",
+      "to": "执行与审批"
+    },
+    {
+      "from": "Auto-Run Network Access",
+      "to": "自动运行网络访问"
+    },
+    {
+      "from": "HTTP Compatibility Mode",
+      "to": "HTTP 兼容模式"
+    },
+    {
+      "from": "Fetch Domain Allowlist",
+      "to": "抓取域名白名单"
+    },
+    {
+      "from": "Explore Subagent Model",
+      "to": "Explore 子 Agent 模型"
+    },
+    {
+      "from": "Allow agents on my PRs",
+      "to": "允许在我的 PR 上使用 Agent"
+    },
+    {
+      "from": "Start when I open a PR",
+      "to": "打开 PR 时启动"
+    },
+    {
+      "from": "Enable Solid Dev Tools",
+      "to": "启用 Solid 开发工具"
+    },
+    {
+      "from": "Voice Submit Keywords",
+      "to": "语音提交关键词"
+    },
+    {
+      "from": "Installed MCP Servers",
+      "to": "已安装的 MCP 服务器"
+    },
+    {
+      "from": "Workspace MCP Servers",
+      "to": "工作区 MCP 服务器"
+    },
+    {
+      "from": "Conversation Density",
+      "to": "对话密度"
+    },
+    {
+      "from": "Terminal and Editing",
+      "to": "终端与编辑"
+    },
+    {
+      "from": "Legacy Terminal Tool",
+      "to": "旧版终端工具"
+    },
+    {
+      "from": "Toolbar on Selection",
+      "to": "选中时显示工具栏"
+    },
+    {
+      "from": "Configuration Errors",
+      "to": "配置错误"
+    },
+    {
+      "from": "Default Environment",
+      "to": "默认环境"
+    },
+    {
+      "from": "Invite Team Members",
+      "to": "邀请团队成员"
+    },
+    {
+      "from": "Max total size (GB)",
+      "to": "最大总大小 (GB)"
+    },
+    {
+      "from": "Third-party imports",
+      "to": "第三方导入"
+    },
+    {
+      "from": "Network Diagnostics",
+      "to": "网络诊断"
+    },
+    {
+      "from": "Disposable Tracking",
+      "to": "Disposable 跟踪"
+    },
+    {
+      "from": "Keyboard Shortcuts",
+      "to": "键盘快捷键"
+    },
+    {
+      "from": "Hide Email Address",
+      "to": "隐藏邮箱地址"
+    },
+    {
+      "from": "Agent Autocomplete",
+      "to": "Agent 自动补全"
+    },
+    {
+      "from": "Plugin MCP Servers",
+      "to": "插件 MCP 服务器"
+    },
+    {
+      "from": "Extension Security",
+      "to": "扩展安全"
+    },
+    {
+      "from": "Context and Tools",
+      "to": "上下文与工具"
+    },
+    {
+      "from": "Anthropic API Key",
+      "to": "Anthropic API 密钥"
+    },
+    {
+      "from": "Cloud MCP Servers",
+      "to": "云端 MCP 服务器"
+    },
+    {
+      "from": "Codebase Indexing",
+      "to": "代码库索引"
+    },
+    {
+      "from": "Index New Folders",
+      "to": "索引新文件夹"
+    },
+    {
+      "from": "Cpp Control Token",
+      "to": "Cpp 控制 Token"
+    },
+    {
+      "from": "System Tray Icon",
+      "to": "系统托盘图标"
+    },
+    {
+      "from": "Code Font Family",
+      "to": "代码字体"
+    },
+    {
+      "from": "Auto-Parse Links",
+      "to": "自动解析链接"
+    },
+    {
+      "from": "Applying Changes",
+      "to": "应用更改"
+    },
+    {
+      "from": "Force View Zones",
+      "to": "强制显示视图区域"
+    },
+    {
+      "from": "Home MCP Servers",
+      "to": "用户 MCP 服务器"
+    },
+    {
+      "from": "User MCP Servers",
+      "to": "用户 MCP 服务器"
+    },
+    {
+      "from": "Team MCP Servers",
+      "to": "团队 MCP 服务器"
+    },
+    {
+      "from": "Configured Hooks",
+      "to": "已配置钩子"
+    },
+    {
+      "from": "Required Domains",
+      "to": "必需域名"
+    },
+    {
+      "from": "Local Trace Mode",
+      "to": "本地跟踪模式"
+    },
+    {
+      "from": "Editor Settings",
+      "to": "编辑器设置"
+    },
+    {
+      "from": "Manage Settings",
+      "to": "管理设置"
+    },
+    {
+      "from": "Web Search Tool",
+      "to": "网页搜索工具"
+    },
+    {
+      "from": "On-Demand Usage",
+      "to": "按需用量"
+    },
+    {
+      "from": "Embedding Model",
+      "to": "嵌入模型"
+    },
+    {
+      "from": "Solid Dev Tools",
+      "to": "Solid 开发工具"
+    },
+    {
+      "from": "Code Font Size",
+      "to": "代码字体大小"
+    },
+    {
+      "from": "UI Font Family",
+      "to": "界面字体"
+    },
+    {
+      "from": "Font Smoothing",
+      "to": "字体平滑"
+    },
+    {
+      "from": "Queue Messages",
+      "to": "排队消息"
+    },
+    {
+      "from": "Web Fetch Tool",
+      "to": "网页抓取工具"
+    },
+    {
+      "from": "Personal Usage",
+      "to": "个人用量"
+    },
+    {
+      "from": "OpenAI API Key",
+      "to": "OpenAI API 密钥"
+    },
+    {
+      "from": "Google API Key",
+      "to": "Google API 密钥"
+    },
+    {
+      "from": "New MCP Server",
+      "to": "新建 MCP 服务器"
+    },
+    {
+      "from": "Remote Control",
+      "to": "远程控制"
+    },
+    {
+      "from": "RPC log folder",
+      "to": "RPC 日志文件夹"
+    },
+    {
+      "from": "Leak Detection",
+      "to": "泄漏检测"
+    },
+    {
+      "from": "Manage Themes",
+      "to": "管理主题"
+    },
+    {
+      "from": "Reduce Motion",
+      "to": "减少动效"
+    },
+    {
+      "from": "High Contrast",
+      "to": "高对比度"
+    },
+    {
+      "from": "Usage Summary",
+      "to": "用量摘要"
+    },
+    {
+      "from": "Max Tab Count",
+      "to": "最大标签页数量"
+    },
+    {
+      "from": "Terminal Hint",
+      "to": "终端提示"
+    },
+    {
+      "from": "Monthly Limit",
+      "to": "月度限额"
+    },
+    {
+      "from": "Pull Requests",
+      "to": "拉取请求"
+    },
+    {
+      "from": "Max worktrees",
+      "to": "最大工作树数量"
+    },
+    {
+      "from": "Execution Log",
+      "to": "执行日志"
+    },
+    {
+      "from": "Ignored Files",
+      "to": "已忽略文件"
+    },
+    {
+      "from": "Connect Slack",
+      "to": "连接 Slack"
+    },
+    {
+      "from": "Post to Slack",
+      "to": "发布到 Slack"
+    },
+    {
+      "from": "Slack channel",
+      "to": "Slack 频道"
+    },
+    {
+      "from": "Update Access",
+      "to": "更新通道"
+    },
+    {
+      "from": "UI Font Size",
+      "to": "界面字体大小"
+    },
+    {
+      "from": "Inline Diffs",
+      "to": "行内差异"
+    },
+    {
+      "from": "Plan & Usage",
+      "to": "套餐与用量"
+    },
+    {
+      "from": "Agent Review",
+      "to": "Agent 审查"
+    },
+    {
+      "from": "Ignore Files",
+      "to": "忽略文件"
+    },
+    {
+      "from": "Default Mode",
+      "to": "默认模式"
+    },
+    {
+      "from": "Get Started",
+      "to": "开始使用"
+    },
+    {
+      "from": "Status Bar",
+      "to": "状态栏"
+    },
+    {
+      "from": "Theme Name",
+      "to": "主题名称"
+    },
+    {
+      "from": "label:\"Theme\"",
+      "to": "label:\"主题\""
+    },
+    {
+      "from": "title:\"Theme\"",
+      "to": "title:\"主题\""
+    },
+    {
+      "from": "description:\"Theme\"",
+      "to": "description:\"主题\""
+    },
+    {
+      "from": "description:\"Colors\"",
+      "to": "description:\"颜色\""
+    },
+    {
+      "from": "title:\"Hue\"",
+      "to": "title:\"色调\""
+    },
+    {
+      "from": "description:\"Hue\"",
+      "to": "description:\"色调\""
+    },
+    {
+      "from": "title:\"Intensity\"",
+      "to": "title:\"强度\""
+    },
+    {
+      "from": "description:\"Intensity\"",
+      "to": "description:\"强度\""
+    },
+    {
+      "from": "description:\"Typography\"",
+      "to": "description:\"字体排印\""
+    },
+    {
+      "from": "label:\"Privacy\"",
+      "to": "label:\"隐私\""
+    },
+    {
+      "from": "description:\"Privacy\"",
+      "to": "description:\"隐私\""
+    },
+    {
+      "from": "label:\"Preferences\"",
+      "to": "label:\"偏好设置\""
+    },
+    {
+      "from": "title:\"Preferences\"",
+      "to": "title:\"偏好设置\""
+    },
+    {
+      "from": "description:\"Preferences\"",
+      "to": "description:\"偏好设置\""
+    },
+    {
+      "from": "label:\"Layout\"",
+      "to": "label:\"布局\""
+    },
+    {
+      "from": "title:\"Layout\"",
+      "to": "title:\"布局\""
+    },
+    {
+      "from": "description:\"Layout\"",
+      "to": "description:\"布局\""
+    },
+    {
+      "from": "label:\"Notifications\"",
+      "to": "label:\"通知\""
+    },
+    {
+      "from": "description:\"Notifications\"",
+      "to": "description:\"通知\""
+    },
+    {
+      "from": "label:\"Conversation\"",
+      "to": "label:\"对话\""
+    },
+    {
+      "from": "title:\"Conversation\"",
+      "to": "title:\"对话\""
+    },
+    {
+      "from": "description:\"Conversation\"",
+      "to": "description:\"对话\""
+    },
+    {
+      "from": "label:\"Skills\"",
+      "to": "label:\"技能\""
+    },
+    {
+      "from": "title:\"Skills\"",
+      "to": "title:\"技能\""
+    },
+    {
+      "from": "description:\"Skills\"",
+      "to": "description:\"技能\""
+    },
+    {
+      "from": "label:\"Subagents\"",
+      "to": "label:\"子 Agent\""
+    },
+    {
+      "from": "title:\"Subagents\"",
+      "to": "title:\"子 Agent\""
+    },
+    {
+      "from": "description:\"Subagents\"",
+      "to": "description:\"子 Agent\""
+    },
+    {
+      "from": "label:\"Rules\"",
+      "to": "label:\"规则\""
+    },
+    {
+      "from": "title:\"Rules\"",
+      "to": "title:\"规则\""
+    },
+    {
+      "from": "description:\"Rules\"",
+      "to": "description:\"规则\""
+    },
+    {
+      "from": "label:\"Docs\"",
+      "to": "label:\"文档\""
+    },
+    {
+      "from": "title:\"Docs\"",
+      "to": "title:\"文档\""
+    },
+    {
+      "from": "description:\"Docs\"",
+      "to": "description:\"文档\""
+    },
+    {
+      "from": "label:\"Codebase\"",
+      "to": "label:\"代码库\""
+    },
+    {
+      "from": "title:\"Codebase\"",
+      "to": "title:\"代码库\""
+    },
+    {
+      "from": "description:\"Codebase\"",
+      "to": "description:\"代码库\""
+    },
+    {
+      "from": "label:\"Cleanup\"",
+      "to": "label:\"清理\""
+    },
+    {
+      "from": "title:\"Cleanup\"",
+      "to": "title:\"清理\""
+    },
+    {
+      "from": "description:\"Cleanup\"",
+      "to": "description:\"清理\""
+    },
+    {
+      "from": "label:\"Gateway\"",
+      "to": "label:\"网关\""
+    },
+    {
+      "from": "title:\"Gateway\"",
+      "to": "title:\"网关\""
+    },
+    {
+      "from": "description:\"Gateway\"",
+      "to": "description:\"网关\""
+    },
+    {
+      "from": "label:\"Tools\"",
+      "to": "label:\"工具\""
+    },
+    {
+      "from": "title:\"Tools\"",
+      "to": "title:\"工具\""
+    },
+    {
+      "from": "description:\"Tools\"",
+      "to": "description:\"工具\""
+    },
+    {
+      "from": "label:\"Authentication\"",
+      "to": "label:\"身份验证\""
+    },
+    {
+      "from": "title:\"Authentication\"",
+      "to": "title:\"身份验证\""
+    },
+    {
+      "from": "description:\"Authentication\"",
+      "to": "description:\"身份验证\""
+    },
+    {
+      "from": "label:\"Motion\"",
+      "to": "label:\"动效\""
+    },
+    {
+      "from": "title:\"Motion\"",
+      "to": "title:\"动效\""
+    },
+    {
+      "from": "description:\"Motion\"",
+      "to": "description:\"动效\""
+    },
+    {
+      "from": "label:\"Celebrations\"",
+      "to": "label:\"庆祝效果\""
+    },
+    {
+      "from": "title:\"Celebrations\"",
+      "to": "title:\"庆祝效果\""
+    },
+    {
+      "from": "description:\"Celebrations\"",
+      "to": "description:\"庆祝效果\""
+    },
+    {
+      "from": "label:\"Status Bar\"",
+      "to": "label:\"状态栏\""
+    },
+    {
+      "from": "title:\"Status Bar\"",
+      "to": "title:\"状态栏\""
+    },
+    {
+      "from": "description:\"Status Bar\"",
+      "to": "description:\"状态栏\""
+    },
+    {
+      "from": "label:\"Title Bar\"",
+      "to": "label:\"标题栏\""
+    },
+    {
+      "from": "title:\"Title Bar\"",
+      "to": "title:\"标题栏\""
+    },
+    {
+      "from": "description:\"Title Bar\"",
+      "to": "description:\"标题栏\""
+    },
+    {
+      "from": "label:\"Ignore Files\"",
+      "to": "label:\"忽略文件\""
+    },
+    {
+      "from": "title:\"Ignore Files\"",
+      "to": "title:\"忽略文件\""
+    },
+    {
+      "from": "description:\"Ignore Files\"",
+      "to": "description:\"忽略文件\""
+    },
+    {
+      "from": "label:\"Ignored Files\"",
+      "to": "label:\"已忽略文件\""
+    },
+    {
+      "from": "title:\"Ignored Files\"",
+      "to": "title:\"已忽略文件\""
+    },
+    {
+      "from": "description:\"Ignored Files\"",
+      "to": "description:\"已忽略文件\""
+    },
+    {
+      "from": "label:\"Pull Requests\"",
+      "to": "label:\"拉取请求\""
+    },
+    {
+      "from": "description:\"Pull Requests\"",
+      "to": "description:\"拉取请求\""
+    },
+    {
+      "from": "label:\"Attribution\"",
+      "to": "label:\"署名\""
+    },
+    {
+      "from": "description:\"Attribution\"",
+      "to": "description:\"署名\""
+    },
+    {
+      "from": "label:\"Branches\"",
+      "to": "label:\"分支\""
+    },
+    {
+      "from": "description:\"Branches\"",
+      "to": "description:\"分支\""
+    },
+    {
+      "from": "label:\"Startup\"",
+      "to": "label:\"启动\""
+    },
+    {
+      "from": "description:\"Startup\"",
+      "to": "description:\"启动\""
+    },
+    {
+      "from": "label:\"Indexing\"",
+      "to": "label:\"索引\""
+    },
+    {
+      "from": "description:\"Indexing\"",
+      "to": "description:\"索引\""
+    },
+    {
+      "from": "label:\"Plugins\"",
+      "to": "label:\"插件\""
+    },
+    {
+      "from": "description:\"Plugins\"",
+      "to": "description:\"插件\""
+    },
+    {
+      "from": "label:\"Models\"",
+      "to": "label:\"模型\""
+    },
+    {
+      "from": "description:\"Models\"",
+      "to": "description:\"模型\""
+    },
+    {
+      "from": "label:\"Hooks\"",
+      "to": "label:\"钩子\""
+    },
+    {
+      "from": "description:\"Hooks\"",
+      "to": "description:\"钩子\""
+    },
+    {
+      "from": "label:\"Worktrees\"",
+      "to": "label:\"工作树\""
+    },
+    {
+      "from": "description:\"Worktrees\"",
+      "to": "description:\"工作树\""
+    },
+    {
+      "from": "label:\"Beta\"",
+      "to": "label:\"测试版\""
+    },
+    {
+      "from": "description:\"Beta\"",
+      "to": "description:\"测试版\""
+    },
+    {
+      "from": "label:\"Developer\"",
+      "to": "label:\"开发者\""
+    },
+    {
+      "from": "title:\"Developer\"",
+      "to": "title:\"开发者\""
+    },
+    {
+      "from": "description:\"Developer\"",
+      "to": "description:\"开发者\""
+    },
+    {
+      "from": "label:\"Network\"",
+      "to": "label:\"网络\""
+    },
+    {
+      "from": "description:\"Network\"",
+      "to": "description:\"网络\""
+    },
+    {
+      "from": "label:\"Browser\"",
+      "to": "label:\"浏览器\""
+    },
+    {
+      "from": "title:\"Browser\"",
+      "to": "title:\"浏览器\""
+    },
+    {
+      "from": "description:\"Browser\"",
+      "to": "description:\"浏览器\""
+    },
+    {
+      "from": "label:\"Profile\"",
+      "to": "label:\"个人资料\""
+    },
+    {
+      "from": "description:\"Profile\"",
+      "to": "description:\"个人资料\""
+    },
+    {
+      "from": "label:\"General\"",
+      "to": "label:\"通用\""
+    },
+    {
+      "from": "description:\"General\"",
+      "to": "description:\"通用\""
+    },
+    {
+      "from": "label:\"Agents\"",
+      "to": "label:\"Agent\""
+    },
+    {
+      "from": "description:\"Agents\"",
+      "to": "description:\"Agent\""
+    },
+    {
+      "from": "label:\"Tab\"",
+      "to": "label:\"Tab 补全\""
+    },
+    {
+      "from": "title:\"Tab\"",
+      "to": "title:\"Tab 补全\""
+    },
+    {
+      "from": "description:\"Tab\"",
+      "to": "description:\"Tab 补全\""
+    },
+    {
+      "from": "Prefix for new branches created by Agent (e.g., cursor/, username/)",
+      "to": "Agent 创建新分支时使用的前缀（例如 cursor/、username/）"
+    },
+    {
+      "from": "Open pull request links inside Cursor or in the default browser.",
+      "to": "在 Cursor 内或系统默认浏览器中打开拉取请求链接。"
+    },
+    {
+      "from": "Choose the theme used when your system is in light mode",
+      "to": "系统处于浅色模式时使用的主题"
+    },
+    {
+      "from": "Replace translucent surfaces with opaque backgrounds",
+      "to": "用非透明背景替换半透明表面"
+    },
+    {
+      "from": "Choose between light, dark, or high contrast themes",
+      "to": "在浅色、深色或高对比度主题之间选择"
+    },
+    {
+      "from": "Use themed background colors for inline code diffs",
+      "to": "为行内代码差异使用主题化背景色"
+    },
+    {
+      "from": "Wrap long lines in Agent conversation code blocks",
+      "to": "在 Agent 对话的代码块中对长行自动换行"
+    },
+    {
+      "from": "Adjust how much detail is shown for tool calls",
+      "to": "调整工具调用显示的详细程度"
+    },
+    {
+      "from": "Control how strongly the tint is applied",
+      "to": "控制着色应用的强度"
+    },
+    {
+      "from": "Mark Agent commits as 'Made with Cursor'",
+      "to": "将 Agent 提交标记为「Made with Cursor」"
+    },
+    {
+      "from": "Mark pull requests as made with Cursor",
+      "to": "将拉取请求标记为由 Cursor 创建"
+    },
+    {
+      "from": "Choose which theme to use",
+      "to": "选择要使用的主题"
+    },
+    {
+      "from": "Choose a tint color",
+      "to": "选择着色颜色"
+    },
+    {
+      "from": "label:\"Sign In\"",
+      "to": "label:\"登录\""
+    },
+    {
+      "from": "title:\"Sign In\"",
+      "to": "title:\"登录\""
+    },
+    {
+      "from": "label:\"Editor Settings\"",
+      "to": "label:\"编辑器设置\""
+    },
+    {
+      "from": "title:\"Editor Settings\"",
+      "to": "title:\"编辑器设置\""
+    },
+    {
+      "from": "label:\"Keyboard Shortcuts\"",
+      "to": "label:\"键盘快捷键\""
+    },
+    {
+      "from": "title:\"Keyboard Shortcuts\"",
+      "to": "title:\"键盘快捷键\""
+    },
+    {
+      "from": "label:\"Import Settings from VS Code\"",
+      "to": "label:\"从 VS Code 导入设置\""
+    },
+    {
+      "from": "title:\"Import Settings from VS Code\"",
+      "to": "title:\"从 VS Code 导入设置\""
+    },
+    {
+      "from": "label:\"Conversation Density\"",
+      "to": "label:\"对话密度\""
+    },
+    {
+      "from": "title:\"Conversation Density\"",
+      "to": "title:\"对话密度\""
+    },
+    {
+      "from": "label:\"Review Control Location\"",
+      "to": "label:\"审查控件位置\""
+    },
+    {
+      "from": "title:\"Review Control Location\"",
+      "to": "title:\"审查控件位置\""
+    },
+    {
+      "from": "label:\"Auto-hide editor when empty\"",
+      "to": "label:\"编辑器为空时自动隐藏\""
+    },
+    {
+      "from": "title:\"Auto-hide editor when empty\"",
+      "to": "title:\"编辑器为空时自动隐藏\""
+    },
+    {
+      "from": "label:\"Open chat as editor tabs\"",
+      "to": "label:\"以编辑器标签页打开对话\""
+    },
+    {
+      "from": "title:\"Open chat as editor tabs\"",
+      "to": "title:\"以编辑器标签页打开对话\""
+    },
+    {
+      "from": "label:\"System Tray Icon\"",
+      "to": "label:\"系统托盘图标\""
+    },
+    {
+      "from": "title:\"System Tray Icon\"",
+      "to": "title:\"系统托盘图标\""
+    },
+    {
+      "from": "label:\"Verify Extension Signatures\"",
+      "to": "label:\"验证扩展签名\""
+    },
+    {
+      "from": "title:\"Verify Extension Signatures\"",
+      "to": "title:\"验证扩展签名\""
+    },
+    {
+      "from": "label:\"Get Started\"",
+      "to": "label:\"开始使用\""
+    },
+    {
+      "from": "title:\"Get Started\"",
+      "to": "title:\"开始使用\""
+    },
+    {
+      "from": "label:\"Manage Settings\"",
+      "to": "label:\"管理设置\""
+    },
+    {
+      "from": "title:\"Manage Settings\"",
+      "to": "title:\"管理设置\""
+    },
+    {
+      "from": "label:\"Follow System Color Scheme\"",
+      "to": "label:\"跟随系统配色方案\""
+    },
+    {
+      "from": "title:\"Follow System Color Scheme\"",
+      "to": "title:\"跟随系统配色方案\""
+    },
+    {
+      "from": "label:\"Manage Themes\"",
+      "to": "label:\"管理主题\""
+    },
+    {
+      "from": "title:\"Manage Themes\"",
+      "to": "title:\"管理主题\""
+    },
+    {
+      "from": "label:\"Compact Terminal Tool Calls\"",
+      "to": "label:\"紧凑终端工具调用\""
+    },
+    {
+      "from": "title:\"Compact Terminal Tool Calls\"",
+      "to": "title:\"紧凑终端工具调用\""
+    },
+    {
+      "from": "label:\"UI Font Size\"",
+      "to": "label:\"界面字体大小\""
+    },
+    {
+      "from": "title:\"UI Font Size\"",
+      "to": "title:\"界面字体大小\""
+    },
+    {
+      "from": "label:\"Code Font Size\"",
+      "to": "label:\"代码字体大小\""
+    },
+    {
+      "from": "title:\"Code Font Size\"",
+      "to": "title:\"代码字体大小\""
+    },
+    {
+      "from": "label:\"UI Font Family\"",
+      "to": "label:\"界面字体\""
+    },
+    {
+      "from": "title:\"UI Font Family\"",
+      "to": "title:\"界面字体\""
+    },
+    {
+      "from": "label:\"Code Font Family\"",
+      "to": "label:\"代码字体\""
+    },
+    {
+      "from": "title:\"Code Font Family\"",
+      "to": "title:\"代码字体\""
+    },
+    {
+      "from": "label:\"Font Smoothing\"",
+      "to": "label:\"字体平滑\""
+    },
+    {
+      "from": "title:\"Font Smoothing\"",
+      "to": "title:\"字体平滑\""
+    },
+    {
+      "from": "label:\"Reduce Motion\"",
+      "to": "label:\"减少动效\""
+    },
+    {
+      "from": "title:\"Reduce Motion\"",
+      "to": "title:\"减少动效\""
+    },
+    {
+      "from": "label:\"Give the Agent a Confetti Cannon\"",
+      "to": "label:\"给 Agent 一个彩带炮\""
+    },
+    {
+      "from": "title:\"Give the Agent a Confetti Cannon\"",
+      "to": "title:\"给 Agent 一个彩带炮\""
+    },
+    {
+      "from": "label:\"Hide Email Address\"",
+      "to": "label:\"隐藏邮箱地址\""
+    },
+    {
+      "from": "title:\"Hide Email Address\"",
+      "to": "title:\"隐藏邮箱地址\""
+    },
+    {
+      "from": "label:\"Theme Name\"",
+      "to": "label:\"主题名称\""
+    },
+    {
+      "from": "title:\"Theme Name\"",
+      "to": "title:\"主题名称\""
+    },
+    {
+      "from": "label:\"High Contrast\"",
+      "to": "label:\"高对比度\""
+    },
+    {
+      "from": "title:\"High Contrast\"",
+      "to": "title:\"高对比度\""
+    },
+    {
+      "from": "label:\"Usage Summary\"",
+      "to": "label:\"用量摘要\""
+    },
+    {
+      "from": "title:\"Usage Summary\"",
+      "to": "title:\"用量摘要\""
+    },
+    {
+      "from": "label:\"Text Size\"",
+      "to": "label:\"文字大小\""
+    },
+    {
+      "from": "title:\"Text Size\"",
+      "to": "title:\"文字大小\""
+    },
+    {
+      "from": "label:\"Max Tab Count\"",
+      "to": "label:\"最大标签页数量\""
+    },
+    {
+      "from": "title:\"Max Tab Count\"",
+      "to": "title:\"最大标签页数量\""
+    },
+    {
+      "from": "label:\"Default Environment\"",
+      "to": "label:\"默认环境\""
+    },
+    {
+      "from": "title:\"Default Environment\"",
+      "to": "title:\"默认环境\""
+    },
+    {
+      "from": "label:\"Queue Messages\"",
+      "to": "label:\"排队消息\""
+    },
+    {
+      "from": "title:\"Queue Messages\"",
+      "to": "title:\"排队消息\""
+    },
+    {
+      "from": "label:\"Agent Autocomplete\"",
+      "to": "label:\"Agent 自动补全\""
+    },
+    {
+      "from": "title:\"Agent Autocomplete\"",
+      "to": "title:\"Agent 自动补全\""
+    },
+    {
+      "from": "label:\"Follow-Up Prompt Suggestions\"",
+      "to": "label:\"后续提示建议\""
+    },
+    {
+      "from": "title:\"Follow-Up Prompt Suggestions\"",
+      "to": "title:\"后续提示建议\""
+    },
+    {
+      "from": "label:\"Auto-Approve Mode Transitions\"",
+      "to": "label:\"自动批准模式切换\""
+    },
+    {
+      "from": "title:\"Auto-Approve Mode Transitions\"",
+      "to": "title:\"自动批准模式切换\""
+    },
+    {
+      "from": "label:\"Voice Submit Keywords\"",
+      "to": "label:\"语音提交关键词\""
+    },
+    {
+      "from": "title:\"Voice Submit Keywords\"",
+      "to": "title:\"语音提交关键词\""
+    },
+    {
+      "from": "label:\"Context and Tools\"",
+      "to": "label:\"上下文与工具\""
+    },
+    {
+      "from": "title:\"Context and Tools\"",
+      "to": "title:\"上下文与工具\""
+    },
+    {
+      "from": "label:\"Web Search Tool\"",
+      "to": "label:\"网页搜索工具\""
+    },
+    {
+      "from": "title:\"Web Search Tool\"",
+      "to": "title:\"网页搜索工具\""
+    },
+    {
+      "from": "label:\"Web Fetch Tool\"",
+      "to": "label:\"网页抓取工具\""
+    },
+    {
+      "from": "title:\"Web Fetch Tool\"",
+      "to": "title:\"网页抓取工具\""
+    },
+    {
+      "from": "label:\"Fetch Domain Allowlist\"",
+      "to": "label:\"抓取域名白名单\""
+    },
+    {
+      "from": "title:\"Fetch Domain Allowlist\"",
+      "to": "title:\"抓取域名白名单\""
+    },
+    {
+      "from": "label:\"Execution and Approvals\"",
+      "to": "label:\"执行与审批\""
+    },
+    {
+      "from": "title:\"Execution and Approvals\"",
+      "to": "title:\"执行与审批\""
+    },
+    {
+      "from": "label:\"Run Mode\"",
+      "to": "label:\"运行模式\""
+    },
+    {
+      "from": "title:\"Run Mode\"",
+      "to": "title:\"运行模式\""
+    },
+    {
+      "from": "label:\"Terminal and Editing\"",
+      "to": "label:\"终端与编辑\""
+    },
+    {
+      "from": "title:\"Terminal and Editing\"",
+      "to": "title:\"终端与编辑\""
+    },
+    {
+      "from": "label:\"Legacy Terminal Tool\"",
+      "to": "label:\"旧版终端工具\""
+    },
+    {
+      "from": "title:\"Legacy Terminal Tool\"",
+      "to": "title:\"旧版终端工具\""
+    },
+    {
+      "from": "label:\"Auto-Parse Links\"",
+      "to": "label:\"自动解析链接\""
+    },
+    {
+      "from": "title:\"Auto-Parse Links\"",
+      "to": "title:\"自动解析链接\""
+    },
+    {
+      "from": "label:\"Inline Diffs\"",
+      "to": "label:\"行内差异\""
+    },
+    {
+      "from": "title:\"Inline Diffs\"",
+      "to": "title:\"行内差异\""
+    },
+    {
+      "from": "label:\"Auto Format on Agent Finish\"",
+      "to": "label:\"Agent 完成后自动格式化\""
+    },
+    {
+      "from": "title:\"Auto Format on Agent Finish\"",
+      "to": "title:\"Agent 完成后自动格式化\""
+    },
+    {
+      "from": "label:\"Toolbar on Selection\"",
+      "to": "label:\"选中时显示工具栏\""
+    },
+    {
+      "from": "title:\"Toolbar on Selection\"",
+      "to": "title:\"选中时显示工具栏\""
+    },
+    {
+      "from": "label:\"Terminal Hint\"",
+      "to": "label:\"终端提示\""
+    },
+    {
+      "from": "title:\"Terminal Hint\"",
+      "to": "title:\"终端提示\""
+    },
+    {
+      "from": "label:\"Preview Box for Terminal Cmd/Ctrl+K\"",
+      "to": "label:\"终端 Cmd/Ctrl+K 预览框\""
+    },
+    {
+      "from": "title:\"Preview Box for Terminal Cmd/Ctrl+K\"",
+      "to": "title:\"终端 Cmd/Ctrl+K 预览框\""
+    },
+    {
+      "from": "label:\"Auto-Run On Agent Finish\"",
+      "to": "label:\"Agent 完成后自动运行\""
+    },
+    {
+      "from": "title:\"Auto-Run On Agent Finish\"",
+      "to": "title:\"Agent 完成后自动运行\""
+    },
+    {
+      "from": "label:\"Auto-Run Network Access\"",
+      "to": "label:\"自动运行网络访问\""
+    },
+    {
+      "from": "title:\"Auto-Run Network Access\"",
+      "to": "title:\"自动运行网络访问\""
+    },
+    {
+      "from": "label:\"Applying Changes\"",
+      "to": "label:\"应用更改\""
+    },
+    {
+      "from": "title:\"Applying Changes\"",
+      "to": "title:\"应用更改\""
+    },
+    {
+      "from": "label:\"Force View Zones\"",
+      "to": "label:\"强制显示视图区域\""
+    },
+    {
+      "from": "title:\"Force View Zones\"",
+      "to": "title:\"强制显示视图区域\""
+    },
+    {
+      "from": "label:\"Handle\"",
+      "to": "label:\"用户名\""
+    },
+    {
+      "from": "title:\"Handle\"",
+      "to": "title:\"用户名\""
+    },
+    {
+      "from": "label:\"Monthly Limit\"",
+      "to": "label:\"月度限额\""
+    },
+    {
+      "from": "title:\"Monthly Limit\"",
+      "to": "title:\"月度限额\""
+    },
+    {
+      "from": "label:\"On-Demand Usage\"",
+      "to": "label:\"按需用量\""
+    },
+    {
+      "from": "title:\"On-Demand Usage\"",
+      "to": "title:\"按需用量\""
+    },
+    {
+      "from": "label:\"Personal Usage\"",
+      "to": "label:\"个人用量\""
+    },
+    {
+      "from": "title:\"Personal Usage\"",
+      "to": "title:\"个人用量\""
+    },
+    {
+      "from": "label:\"Invite Team Members\"",
+      "to": "label:\"邀请团队成员\""
+    },
+    {
+      "from": "title:\"Invite Team Members\"",
+      "to": "title:\"邀请团队成员\""
+    },
+    {
+      "from": "label:\"Explore Subagent Model\"",
+      "to": "label:\"Explore 子 Agent 模型\""
+    },
+    {
+      "from": "title:\"Explore Subagent Model\"",
+      "to": "title:\"Explore 子 Agent 模型\""
+    },
+    {
+      "from": "label:\"API Key\"",
+      "to": "label:\"API 密钥\""
+    },
+    {
+      "from": "title:\"API Key\"",
+      "to": "title:\"API 密钥\""
+    },
+    {
+      "from": "label:\"Override OpenAI Base URL\"",
+      "to": "label:\"覆盖 OpenAI Base URL\""
+    },
+    {
+      "from": "title:\"Override OpenAI Base URL\"",
+      "to": "title:\"覆盖 OpenAI Base URL\""
+    },
+    {
+      "from": "label:\"OpenAI API Key\"",
+      "to": "label:\"OpenAI API 密钥\""
+    },
+    {
+      "from": "title:\"OpenAI API Key\"",
+      "to": "title:\"OpenAI API 密钥\""
+    },
+    {
+      "from": "label:\"Anthropic API Key\"",
+      "to": "label:\"Anthropic API 密钥\""
+    },
+    {
+      "from": "title:\"Anthropic API Key\"",
+      "to": "title:\"Anthropic API 密钥\""
+    },
+    {
+      "from": "label:\"Google API Key\"",
+      "to": "label:\"Google API 密钥\""
+    },
+    {
+      "from": "title:\"Google API Key\"",
+      "to": "title:\"Google API 密钥\""
+    },
+    {
+      "from": "label:\"Azure OpenAI\"",
+      "to": "label:\"Azure OpenAI\""
+    },
+    {
+      "from": "title:\"Azure OpenAI\"",
+      "to": "title:\"Azure OpenAI\""
+    },
+    {
+      "from": "label:\"AWS Bedrock\"",
+      "to": "label:\"AWS Bedrock\""
+    },
+    {
+      "from": "title:\"AWS Bedrock\"",
+      "to": "title:\"AWS Bedrock\""
+    },
+    {
+      "from": "label:\"Agent Review\"",
+      "to": "label:\"Agent 审查\""
+    },
+    {
+      "from": "title:\"Agent Review\"",
+      "to": "title:\"Agent 审查\""
+    },
+    {
+      "from": "label:\"Start Agent Review on Commit\"",
+      "to": "label:\"提交时启动 Agent 审查\""
+    },
+    {
+      "from": "title:\"Start Agent Review on Commit\"",
+      "to": "title:\"提交时启动 Agent 审查\""
+    },
+    {
+      "from": "label:\"Include Submodules in Agent Review\"",
+      "to": "label:\"在 Agent 审查中包含子模块\""
+    },
+    {
+      "from": "title:\"Include Submodules in Agent Review\"",
+      "to": "title:\"在 Agent 审查中包含子模块\""
+    },
+    {
+      "from": "label:\"Include Untracked Files in Agent Review\"",
+      "to": "label:\"在 Agent 审查中包含未跟踪文件\""
+    },
+    {
+      "from": "title:\"Include Untracked Files in Agent Review\"",
+      "to": "title:\"在 Agent 审查中包含未跟踪文件\""
+    },
+    {
+      "from": "label:\"Max worktrees\"",
+      "to": "label:\"最大工作树数量\""
+    },
+    {
+      "from": "title:\"Max worktrees\"",
+      "to": "title:\"最大工作树数量\""
+    },
+    {
+      "from": "label:\"Max total size (GB)\"",
+      "to": "label:\"最大总大小 (GB)\""
+    },
+    {
+      "from": "title:\"Max total size (GB)\"",
+      "to": "title:\"最大总大小 (GB)\""
+    },
+    {
+      "from": "label:\"Cursor-managed worktrees\"",
+      "to": "label:\"Cursor 管理工作树\""
+    },
+    {
+      "from": "title:\"Cursor-managed worktrees\"",
+      "to": "title:\"Cursor 管理工作树\""
+    },
+    {
+      "from": "label:\"Include third-party Plugins, Skills, and other configs\"",
+      "to": "label:\"包含第三方插件、技能和其他配置\""
+    },
+    {
+      "from": "title:\"Include third-party Plugins, Skills, and other configs\"",
+      "to": "title:\"包含第三方插件、技能和其他配置\""
+    },
+    {
+      "from": "label:\"Third-party imports\"",
+      "to": "label:\"第三方导入\""
+    },
+    {
+      "from": "title:\"Third-party imports\"",
+      "to": "title:\"第三方导入\""
+    },
+    {
+      "from": "label:\"Installed\"",
+      "to": "label:\"已安装\""
+    },
+    {
+      "from": "title:\"Installed\"",
+      "to": "title:\"已安装\""
+    },
+    {
+      "from": "label:\"Wait for MCP Authentication\"",
+      "to": "label:\"等待 MCP 身份验证\""
+    },
+    {
+      "from": "title:\"Wait for MCP Authentication\"",
+      "to": "title:\"等待 MCP 身份验证\""
+    },
+    {
+      "from": "label:\"New MCP Server\"",
+      "to": "label:\"新建 MCP 服务器\""
+    },
+    {
+      "from": "title:\"New MCP Server\"",
+      "to": "title:\"新建 MCP 服务器\""
+    },
+    {
+      "from": "label:\"Installed MCP Servers\"",
+      "to": "label:\"已安装的 MCP 服务器\""
+    },
+    {
+      "from": "title:\"Installed MCP Servers\"",
+      "to": "title:\"已安装的 MCP 服务器\""
+    },
+    {
+      "from": "label:\"Workspace MCP Servers\"",
+      "to": "label:\"工作区 MCP 服务器\""
+    },
+    {
+      "from": "title:\"Workspace MCP Servers\"",
+      "to": "title:\"工作区 MCP 服务器\""
+    },
+    {
+      "from": "label:\"Home MCP Servers\"",
+      "to": "label:\"用户 MCP 服务器\""
+    },
+    {
+      "from": "title:\"Home MCP Servers\"",
+      "to": "title:\"用户 MCP 服务器\""
+    },
+    {
+      "from": "label:\"User MCP Servers\"",
+      "to": "label:\"用户 MCP 服务器\""
+    },
+    {
+      "from": "title:\"User MCP Servers\"",
+      "to": "title:\"用户 MCP 服务器\""
+    },
+    {
+      "from": "label:\"Team MCP Servers\"",
+      "to": "label:\"团队 MCP 服务器\""
+    },
+    {
+      "from": "title:\"Team MCP Servers\"",
+      "to": "title:\"团队 MCP 服务器\""
+    },
+    {
+      "from": "label:\"Cloud MCP Servers\"",
+      "to": "label:\"云端 MCP 服务器\""
+    },
+    {
+      "from": "title:\"Cloud MCP Servers\"",
+      "to": "title:\"云端 MCP 服务器\""
+    },
+    {
+      "from": "label:\"Plugin MCP Servers\"",
+      "to": "label:\"插件 MCP 服务器\""
+    },
+    {
+      "from": "title:\"Plugin MCP Servers\"",
+      "to": "title:\"插件 MCP 服务器\""
+    },
+    {
+      "from": "label:\"Configuration Errors\"",
+      "to": "label:\"配置错误\""
+    },
+    {
+      "from": "title:\"Configuration Errors\"",
+      "to": "title:\"配置错误\""
+    },
+    {
+      "from": "label:\"Configured Hooks\"",
+      "to": "label:\"已配置钩子\""
+    },
+    {
+      "from": "title:\"Configured Hooks\"",
+      "to": "title:\"已配置钩子\""
+    },
+    {
+      "from": "label:\"Execution Log\"",
+      "to": "label:\"执行日志\""
+    },
+    {
+      "from": "title:\"Execution Log\"",
+      "to": "title:\"执行日志\""
+    },
+    {
+      "from": "label:\"HTTP Compatibility Mode\"",
+      "to": "label:\"HTTP 兼容模式\""
+    },
+    {
+      "from": "title:\"HTTP Compatibility Mode\"",
+      "to": "title:\"HTTP 兼容模式\""
+    },
+    {
+      "from": "label:\"Required Domains\"",
+      "to": "label:\"必需域名\""
+    },
+    {
+      "from": "title:\"Required Domains\"",
+      "to": "title:\"必需域名\""
+    },
+    {
+      "from": "label:\"Network Diagnostics\"",
+      "to": "label:\"网络诊断\""
+    },
+    {
+      "from": "title:\"Network Diagnostics\"",
+      "to": "title:\"网络诊断\""
+    },
+    {
+      "from": "label:\"Codebase Indexing\"",
+      "to": "label:\"代码库索引\""
+    },
+    {
+      "from": "title:\"Codebase Indexing\"",
+      "to": "title:\"代码库索引\""
+    },
+    {
+      "from": "label:\"Index New Folders\"",
+      "to": "label:\"索引新文件夹\""
+    },
+    {
+      "from": "title:\"Index New Folders\"",
+      "to": "title:\"索引新文件夹\""
+    },
+    {
+      "from": "label:\"Ignore Files in .cursorignore\"",
+      "to": "label:\"在 .cursorignore 中忽略文件\""
+    },
+    {
+      "from": "title:\"Ignore Files in .cursorignore\"",
+      "to": "title:\"在 .cursorignore 中忽略文件\""
+    },
+    {
+      "from": "label:\"Hierarchical Cursor Ignore\"",
+      "to": "label:\"分层 Cursor Ignore\""
+    },
+    {
+      "from": "title:\"Hierarchical Cursor Ignore\"",
+      "to": "title:\"分层 Cursor Ignore\""
+    },
+    {
+      "from": "label:\"Ignore Symlinks in Cursor Ignore Search\"",
+      "to": "label:\"在 Cursor Ignore 搜索中忽略符号链接\""
+    },
+    {
+      "from": "title:\"Ignore Symlinks in Cursor Ignore Search\"",
+      "to": "title:\"在 Cursor Ignore 搜索中忽略符号链接\""
+    },
+    {
+      "from": "label:\"Embedding Model\"",
+      "to": "label:\"嵌入模型\""
+    },
+    {
+      "from": "title:\"Embedding Model\"",
+      "to": "title:\"嵌入模型\""
+    },
+    {
+      "from": "label:\"Team-Level Repository Control\"",
+      "to": "label:\"团队级仓库控制\""
+    },
+    {
+      "from": "title:\"Team-Level Repository Control\"",
+      "to": "title:\"团队级仓库控制\""
+    },
+    {
+      "from": "label:\"Cursor Tab\"",
+      "to": "label:\"Cursor Tab\""
+    },
+    {
+      "from": "title:\"Cursor Tab\"",
+      "to": "title:\"Cursor Tab\""
+    },
+    {
+      "from": "label:\"Suggestions While Commenting\"",
+      "to": "label:\"注释时建议\""
+    },
+    {
+      "from": "title:\"Suggestions While Commenting\"",
+      "to": "title:\"注释时建议\""
+    },
+    {
+      "from": "label:\"Whitespace-Only Suggestions\"",
+      "to": "label:\"仅空白建议\""
+    },
+    {
+      "from": "title:\"Whitespace-Only Suggestions\"",
+      "to": "title:\"仅空白建议\""
+    },
+    {
+      "from": "label:\"Cloud Agents Unavailable\"",
+      "to": "label:\"云端 Agent 不可用\""
+    },
+    {
+      "from": "title:\"Cloud Agents Unavailable\"",
+      "to": "title:\"云端 Agent 不可用\""
+    },
+    {
+      "from": "label:\"Connect Slack\"",
+      "to": "label:\"连接 Slack\""
+    },
+    {
+      "from": "title:\"Connect Slack\"",
+      "to": "title:\"连接 Slack\""
+    },
+    {
+      "from": "label:\"Allow agents on my PRs\"",
+      "to": "label:\"允许在我的 PR 上使用 Agent\""
+    },
+    {
+      "from": "title:\"Allow agents on my PRs\"",
+      "to": "title:\"允许在我的 PR 上使用 Agent\""
+    },
+    {
+      "from": "label:\"Start when I open a PR\"",
+      "to": "label:\"打开 PR 时启动\""
+    },
+    {
+      "from": "title:\"Start when I open a PR\"",
+      "to": "title:\"打开 PR 时启动\""
+    },
+    {
+      "from": "label:\"Default Mode\"",
+      "to": "label:\"默认模式\""
+    },
+    {
+      "from": "title:\"Default Mode\"",
+      "to": "title:\"默认模式\""
+    },
+    {
+      "from": "label:\"Post to Slack\"",
+      "to": "label:\"发布到 Slack\""
+    },
+    {
+      "from": "title:\"Post to Slack\"",
+      "to": "title:\"发布到 Slack\""
+    },
+    {
+      "from": "label:\"Slack channel\"",
+      "to": "label:\"Slack 频道\""
+    },
+    {
+      "from": "title:\"Slack channel\"",
+      "to": "title:\"Slack 频道\""
+    },
+    {
+      "from": "label:\"Remote Control\"",
+      "to": "label:\"远程控制\""
+    },
+    {
+      "from": "title:\"Remote Control\"",
+      "to": "title:\"远程控制\""
+    },
+    {
+      "from": "label:\"Keep This Computer Awake\"",
+      "to": "label:\"保持此电脑唤醒\""
+    },
+    {
+      "from": "title:\"Keep This Computer Awake\"",
+      "to": "title:\"保持此电脑唤醒\""
+    },
+    {
+      "from": "label:\"Update Access\"",
+      "to": "label:\"更新通道\""
+    },
+    {
+      "from": "title:\"Update Access\"",
+      "to": "title:\"更新通道\""
+    },
+    {
+      "from": "label:\"Import Claude Code agents\"",
+      "to": "label:\"导入 Claude Code agents\""
+    },
+    {
+      "from": "title:\"Import Claude Code agents\"",
+      "to": "title:\"导入 Claude Code agents\""
+    },
+    {
+      "from": "label:\"Local Trace Mode\"",
+      "to": "label:\"本地跟踪模式\""
+    },
+    {
+      "from": "title:\"Local Trace Mode\"",
+      "to": "title:\"本地跟踪模式\""
+    },
+    {
+      "from": "label:\"Continuous RPC File Recording\"",
+      "to": "label:\"持续 RPC 文件录制\""
+    },
+    {
+      "from": "title:\"Continuous RPC File Recording\"",
+      "to": "title:\"持续 RPC 文件录制\""
+    },
+    {
+      "from": "label:\"RPC log folder\"",
+      "to": "label:\"RPC 日志文件夹\""
+    },
+    {
+      "from": "title:\"RPC log folder\"",
+      "to": "title:\"RPC 日志文件夹\""
+    },
+    {
+      "from": "label:\"Cpp Control Token\"",
+      "to": "label:\"Cpp 控制 Token\""
+    },
+    {
+      "from": "title:\"Cpp Control Token\"",
+      "to": "title:\"Cpp 控制 Token\""
+    },
+    {
+      "from": "label:\"Extension Security\"",
+      "to": "label:\"扩展安全\""
+    },
+    {
+      "from": "title:\"Extension Security\"",
+      "to": "title:\"扩展安全\""
+    },
+    {
+      "from": "label:\"Enable Disposable Tracking\"",
+      "to": "label:\"启用 Disposable 跟踪\""
+    },
+    {
+      "from": "title:\"Enable Disposable Tracking\"",
+      "to": "title:\"启用 Disposable 跟踪\""
+    },
+    {
+      "from": "label:\"Disposable Tracking\"",
+      "to": "label:\"Disposable 跟踪\""
+    },
+    {
+      "from": "title:\"Disposable Tracking\"",
+      "to": "title:\"Disposable 跟踪\""
+    },
+    {
+      "from": "label:\"Enable Solid Dev Tools\"",
+      "to": "label:\"启用 Solid 开发工具\""
+    },
+    {
+      "from": "title:\"Enable Solid Dev Tools\"",
+      "to": "title:\"启用 Solid 开发工具\""
+    },
+    {
+      "from": "label:\"Solid Dev Tools\"",
+      "to": "label:\"Solid 开发工具\""
+    },
+    {
+      "from": "title:\"Solid Dev Tools\"",
+      "to": "title:\"Solid 开发工具\""
+    },
+    {
+      "from": "label:\"Leak Detection\"",
+      "to": "label:\"泄漏检测\""
+    },
+    {
+      "from": "title:\"Leak Detection\"",
+      "to": "title:\"泄漏检测\""
+    },
+    {
+      "from": "title:\"Review Provider\"",
+      "to": "title:\"审查提供方\""
+    },
+    {
+      "from": "title:\"PR Link Destination\"",
+      "to": "title:\"PR 链接打开位置\""
+    },
+    {
+      "from": "title:\"Commit Attribution\"",
+      "to": "title:\"提交署名\""
+    },
+    {
+      "from": "title:\"PR Attribution\"",
+      "to": "title:\"PR 署名\""
+    },
+    {
+      "from": "title:\"Branch Prefix\"",
+      "to": "title:\"分支前缀\""
+    },
+    {
+      "from": "title:\"Inside Cursor\"",
+      "to": "title:\"在 Cursor 内\""
+    },
+    {
+      "from": "title:\"Default Browser\"",
+      "to": "title:\"默认浏览器\""
+    },
+    {
+      "from": "title:\"Default browser\"",
+      "to": "title:\"默认浏览器\""
+    },
+    {
+      "from": "title:\"Light Theme\"",
+      "to": "title:\"浅色主题\""
+    },
+    {
+      "from": "title:\"Dark Theme\"",
+      "to": "title:\"深色主题\""
+    },
+    {
+      "from": "title:\"Tool Call Density\"",
+      "to": "title:\"工具调用密度\""
+    },
+    {
+      "from": "title:\"Code Block Word Wrap\"",
+      "to": "title:\"代码块自动换行\""
+    },
+    {
+      "from": "title:\"Themed Diff Backgrounds\"",
+      "to": "title:\"主题化 Diff 背景\""
+    },
+    {
+      "from": "title:\"Reduce Transparency\"",
+      "to": "title:\"降低透明度\""
+    },
+    {
+      "from": "title:\"Compact\"",
+      "to": "title:\"紧凑\""
+    },
+    {
+      "from": "title:\"Detailed\"",
+      "to": "title:\"详细\""
+    },
+    {
+      "from": "title:\"System\"",
+      "to": "title:\"跟随系统\""
+    },
+    {
+      "from": "label:\"Appearance\"",
+      "to": "label:\"外观\""
+    },
+    {
+      "from": "label:\"Plan & Usage\"",
+      "to": "label:\"套餐与用量\""
+    },
+    {
+      "from": "title:\"Plan & Usage\"",
+      "to": "title:\"套餐与用量\""
+    },
+    {
+      "from": "label:\"Cloud Agents\"",
+      "to": "label:\"云端 Agent\""
+    },
+    {
+      "from": "label:\"Git & PRs\"",
+      "to": "label:\"Git 与 PR\""
+    },
+    {
+      "from": "label:\"Rules, Skills, Subagents\"",
+      "to": "label:\"规则、技能与子 Agent\""
+    },
+    {
+      "from": "title:\"Rules, Skills, Subagents\"",
+      "to": "title:\"规则、技能与子 Agent\""
+    },
+    {
+      "from": "label:\"Tools & MCPs\"",
+      "to": "label:\"工具与 MCP\""
+    },
+    {
+      "from": "title:\"Tools & MCPs\"",
+      "to": "title:\"工具与 MCP\""
+    },
+    {
+      "from": "label:\"Browser & Network\"",
+      "to": "label:\"浏览器与网络\""
+    },
+    {
+      "from": "title:\"Browser & Network\"",
+      "to": "title:\"浏览器与网络\""
+    },
+    {
+      "from": "label:\"VS Code Settings\"",
+      "to": "label:\"VS Code 设置\""
+    },
+    {
+      "from": "title:\"VS Code Settings\"",
+      "to": "title:\"VS Code 设置\""
+    },
+    {
+      "from": "label:\"Indexing & Docs\"",
+      "to": "label:\"索引与文档\""
+    },
+    {
+      "from": "title:\"Indexing & Docs\"",
+      "to": "title:\"索引与文档\""
+    },
+    {
+      "from": "label:\"Self-driving PRs\"",
+      "to": "label:\"自动驾驶 PR\""
+    },
+    {
+      "from": "title:\"Self-driving PRs\"",
+      "to": "title:\"自动驾驶 PR\""
+    },
+    {
+      "from": "label:\"Fun\"",
+      "to": "label:\"趣味\""
+    },
+    {
+      "from": "title:\"Fun\"",
+      "to": "title:\"趣味\""
+    }
   ]
 }

@@ -1,0 +1,1031 @@
+{
+  "labels": [
+    "Abort Agent and Restore Query",
+    "Activate Browser Tab",
+    "Add Models",
+    "Agent Autocomplete",
+    "Agent Exec: Toggle Simulate Temporary Unavailable",
+    "Agent Mode",
+    "Agent Review",
+    "Agent Settings",
+    "Agent 对话",
+    "Agents",
+    "All Plugins",
+    "Allow agents on my PRs",
+    "Approve Pending Shell Tool",
+    "Approve Pending Shell Tool and Allowlist",
+    "Authentication",
+    "Auto Format on Agent Finish",
+    "Auto-Approve Mode Transitions",
+    "Auto-Parse Links",
+    "Auto-hide editor when empty",
+    "Automate with Hooks",
+    "Background Colors",
+    "Blocked by Hook",
+    "Branch Name Unavailable",
+    "Branch Pull Requests",
+    "Browser",
+    "Browser Menu",
+    "Browser Navigation",
+    "Browser Tool Calls",
+    "Browser Tools",
+    "Build Plan",
+    "Cancel Branch Mismatch",
+    "Celebrations",
+    "Checkout Agent Branch",
+    "Cleanup",
+    "Close Browser Find",
+    "Close Browser Tab",
+    "Close Plan Find",
+    "Close Running Tab?",
+    "Close Tab",
+    "Cloud Agent",
+    "Cloud Agent Environment Required",
+    "Cloud Agent requires code storage",
+    "Cloud Agents Not Supported in Privacy Mode (Legacy)",
+    "Cloud Agents Unavailable",
+    "Cloud Agents require a Git repo",
+    "Cloud MCP Servers",
+    "Code Font Family",
+    "Code Font Size",
+    "Codebase Indexing",
+    "Color Tokens",
+    "Commit on Main Branch",
+    "Compact Terminal Tool Calls",
+    "Composer Ask Question Tool Call Block",
+    "Configured Hooks",
+    "Confirm Plugin Removal",
+    "Connect External Tools with MCP",
+    "Connect GitHub",
+    "Connect GitHub to Cursor",
+    "Context and Tools",
+    "Continuous RPC File Recording",
+    "Conversation",
+    "Conversation Density",
+    "Copy Agent Deeplink",
+    "Could Not Load Cloud MCP Servers",
+    "Could Not Load Rules",
+    "Could Not Load Skills",
+    "Could Not Load Workspace MCP Servers",
+    "Create New Tab",
+    "Create Pull Request",
+    "Current Branch",
+    "Cursor Semantic Color System",
+    "Cursor Tab",
+    "Cursor Tab UI",
+    "Cursor 账户",
+    "Cursor-managed worktrees",
+    "Cycle Model Parameter",
+    "Dark Theme",
+    "Default Environment",
+    "Default Mode",
+    "Delete Cloud-Agent Cache",
+    "Delete Codebase Index?",
+    "Delete Index",
+    "Delete MCP Server",
+    "Delete Rule",
+    "Delete Skill",
+    "Developer: New Additional Agents 窗口",
+    "Developer: Startup Performance",
+    "Diff with Main Branch",
+    "Docs",
+    "Edit Pull Request Title",
+    "Editor Settings",
+    "Empty Plan State",
+    "Execution Log",
+    "Execution and Approvals",
+    "Explore Subagent Model",
+    "Extend Cursor with Plugins",
+    "Failed to Send Prompt to Agent",
+    "Failed to retry Cloud Agent",
+    "Failed to start Cloud Agent",
+    "Failed to switch to Cloud Agent",
+    "Find Next in Browser Page",
+    "Find Next in Plan",
+    "Find Previous in Browser Page",
+    "Find Previous in Plan",
+    "Find in Browser Page",
+    "Find in Plan",
+    "Fix in Agent",
+    "Focus Browser Location Bar",
+    "Follow System Color Scheme",
+    "Follow-Up Prompt Suggestions",
+    "Font Smoothing",
+    "GC Agent KV Blobs",
+    "Gateway",
+    "Get Active File Tab URI",
+    "Git Not Initialized",
+    "Git Required",
+    "Git 与 PR",
+    "GitHub",
+    "Give the Agent a Confetti Cannon",
+    "Glass Startup Performance",
+    "Guide Agent with Rules",
+    "HTTP Compatibility Mode",
+    "Handle",
+    "Hard Reload Browser Tab",
+    "Hide Email Address",
+    "Hierarchical Cursor Ignore",
+    "High Contrast Theme",
+    "Home MCP Servers",
+    "Icon Colors",
+    "Ignore Files",
+    "Ignore Files in .cursorignore",
+    "Ignore Symlinks in Cursor Ignore Search",
+    "Import Claude Code agents",
+    "Import Settings from VS Code",
+    "Include third-party Plugins, Skills, and other configs",
+    "Incorrect Branch",
+    "Index Link \\u23CE",
+    "Index New Folders",
+    "Inline Diffs",
+    "Installed MCP Servers",
+    "Keyboard Shortcuts",
+    "Layout",
+    "Legacy Terminal Tool",
+    "Light Theme",
+    "Link GitHub account",
+    "Link Privacy",
+    "List Tabs",
+    "Local Trace Mode",
+    "MCP App",
+    "Manage Themes",
+    "Max Tab Count",
+    "Max total size (GB)",
+    "Max worktrees",
+    "Migrated User Rules",
+    "Model Name Display",
+    "Model Picker (React) - Parameterized Models",
+    "Model Status",
+    "Modes, skills, MCPs and more",
+    "Monthly Limit",
+    "Motion",
+    "Multiple Notifications",
+    "Network Diagnostics",
+    "New Browser",
+    "New Local Git Repo",
+    "New MCP Server",
+    "New Tab",
+    "New Tab Menu",
+    "New User Rule",
+    "New Worktree",
+    "Next Agent",
+    "Next Tab",
+    "No Active Agent Conversation",
+    "No Agent For This Task",
+    "No Git Remote",
+    "No Home MCP Tools",
+    "No MCP Tools",
+    "No Rules Yet",
+    "No Skills Yet",
+    "No Team MCP Servers",
+    "No User MCP Servers",
+    "Notifications",
+    "Open Agent by ID",
+    "Open Branch Selector",
+    "Open Browser Tab",
+    "Open Cloud Agent by ID",
+    "Open Developer Tools for Extension Host",
+    "Open Least Recent Agents",
+    "Open MCP Settings",
+    "Open Plan",
+    "Open Recent Agents",
+    "Open a Git repository",
+    "Open chat as editor tabs",
+    "Outline Model Playground",
+    "PR 链接打开位置",
+    "Pause Indexing",
+    "Pin / Unpin Agent",
+    "Plan",
+    "Plan & Usage",
+    "Plan Build Message",
+    "Plan Mode",
+    "Plan ending soon",
+    "Plugin MCP Servers",
+    "Plugin Settings",
+    "Plugin Tray Cancel",
+    "Plugin Tray Primary Action",
+    "Plugins give your agents important context",
+    "Post to Slack",
+    "Preferences",
+    "Preview Box for Terminal Cmd/Ctrl+K",
+    "Previous Agent",
+    "Previous Tab",
+    "Privacy",
+    "Privacy Mode",
+    "Privacy Mode Enabled",
+    "Pull Requests",
+    "Queue Messages",
+    "Reduce Motion",
+    "Register Close Tooltip",
+    "Reopen Last Closed Tab",
+    "Required Domains",
+    "Review Control Location",
+    "Rules",
+    "Run Mode",
+    "Scroll Agent Panel Down",
+    "Scroll Agent Panel Up",
+    "Search Agents",
+    "Select Model",
+    "Shadow Colors",
+    "Show Notification Progress Demo",
+    "Show Output Channel in Tab",
+    "Sign In",
+    "Sign In to View Cloud MCP Servers",
+    "Skills",
+    "Skip Pending Shell Tool",
+    "Start Extension Host CPU Profiler",
+    "Start Extension Host Heap Allocation Profiler",
+    "Start Extension Host RPC Profiler",
+    "Start Remote Server CPU Profiler",
+    "Start when I open a PR",
+    "Status Bar",
+    "Stroke Colors",
+    "Subagents",
+    "Switch Privacy Mode?",
+    "Switch Tab",
+    "Switch Theme",
+    "Switch to Model Slug",
+    "Switch to Model Slug In Glass",
+    "System Notifications",
+    "System Theme",
+    "System Tray Icon",
+    "Tab",
+    "Task Tool Call Block",
+    "Task/Subagent Tool Call Bubble",
+    "Teach Cursor New Skills",
+    "Team MCP Servers",
+    "Terminal Hint",
+    "Terminal and Editing",
+    "Text Colors",
+    "Text Size",
+    "Toggle Cursor Dev Tools",
+    "Toggle Developer Tools",
+    "Toggle Indexed Agent Search Dev Tools",
+    "Toggle Local / GitHub",
+    "Toolbar on Selection",
+    "Tools",
+    "Tooltips",
+    "Try Cloud Agent",
+    "UI Font Family",
+    "UI Font Size",
+    "Unsupported Model",
+    "Update Access",
+    "Upgrade to use Cloud Agents",
+    "Usage Summary",
+    "Use Current Branch",
+    "Use in Agents 窗口",
+    "User MCP Servers",
+    "Verify Extension Signatures",
+    "View Plan",
+    "Voice Submit Keywords",
+    "Wait for MCP Authentication",
+    "Web Fetch Tool",
+    "Web Search Tool",
+    "With Plan",
+    "Workspace MCP Servers",
+    "Workspace Not at Git Root",
+    "Worktree Composer",
+    "主题",
+    "分支前缀",
+    "启动时打开 Agents 窗口",
+    "字体排印",
+    "完成提示音",
+    "审查提供方",
+    "工具调用密度",
+    "强度",
+    "提示",
+    "浅色主题",
+    "深色主题",
+    "系统通知",
+    "色调",
+    "菜单栏图标",
+    "警告通知",
+    "降低透明度",
+    "颜色"
+  ],
+  "descriptions": [
+    "Adjust the conversation text size",
+    "Adjust the default behavior of sending a message while Agent is running",
+    "Agent 完成回复时播放提示音",
+    "Allow Agent to fetch content from URLs",
+    "Allow Agent to search the web for relevant information",
+    "Allow Agent to switch modes without asking first",
+    "Allow the agent to celebrate with a shower of confetti",
+    "Apply .cursorignore files to subdirectories",
+    "Automatically format files when Agent finishes",
+    "Automatically import agent configs from other tools",
+    "Automatically index small new folders",
+    "Automatically parse links pasted into Quick Edit",
+    "Bring Claude Code sessions into Cursor",
+    "Check connectivity to all Cursor services",
+    "Choose how much detail Agent tool calls show in the conversation",
+    "Choose the model used by Explore subagent for initial research",
+    "Choose the theme used when your system is in dark mode",
+    "Choose whether automatically started agents suggest or apply changes",
+    "Claim a handle for your public profile page",
+    "Configure HTTP compatibility for proxies and VPNs",
+    "Configure font, formatting, minimap and more",
+    "Configure keyboard shortcuts",
+    "Configure the local agent LLM gateway",
+    "Context-aware, multi-line suggestions around your cursor based on recent edits",
+    "Contextual suggestions while prompting Agent",
+    "Create your own themes, tweak the vibe, and import your favorites",
+    "Cursor 启动时默认打开 Agents 窗口",
+    "Domains required for Cursor",
+    "Embed the codebase for contextual understanding",
+    "Enable or disable Self-driving for PRs owned by this account",
+    "Files to exclude from indexing in addition to .gitignore",
+    "Font size for code editors and diffs",
+    "Font size for the Cursor user interface",
+    "Import settings, extensions, and keybindings from VS Code",
+    "Limit how many chat tabs can be open at once",
+    "Match the active theme to your OS dark/light setting",
+    "Maximum aggregate worktree size",
+    "Maximum retained Cursor-managed worktrees",
+    "Minimize interface animations",
+    "Open pull request links inside Cursor or the default browser",
+    "Override the Cursor user interface typeface",
+    "Override the font for code editors and diffs",
+    "Partially mask your email address in the Cursor user interface",
+    "Post Self-driving updates to Slack",
+    "Prefix for new Agent branches",
+    "Set a fixed amount or make on-demand usage unlimited",
+    "Show Add to Chat and Quick Edit buttons",
+    "Show Cursor in the menu bar",
+    "Show Cursor in the system tray",
+    "Show inline diff decorations in the editor",
+    "Show terminal commands in compact view by default",
+    "Show the Cmd/Ctrl+K hint in Terminal",
+    "Sign in to get started with Cursor's AI features",
+    "Skip symlinks during discovery",
+    "Start Self-driving automatically for enabled repositories",
+    "Suggest a follow-up for the Agent",
+    "Use legacy terminal tool on unsupported shells",
+    "Use native macOS font anti-aliasing",
+    "Use the preview box instead of shell streaming",
+    "Wait indefinitely; otherwise skip prompts after 30 seconds",
+    "When to show the usage summary at the bottom of the chat pane",
+    "Where new agents start by default",
+    "在空白界面显示轮换提示",
+    "当 Agent 完成或需要关注时显示系统通知",
+    "控制着色应用的强度",
+    "显示警告级别的应用内通知",
+    "用非透明背景替换半透明表面",
+    "管理你的账户和账单",
+    "系统处于浅色模式时使用的主题",
+    "调整工具调用显示的详细程度",
+    "选择着色颜色",
+    "选择要使用的主题"
+  ],
+  "items": [
+    {
+      "section": "general",
+      "id": "sign-in",
+      "label": "Sign In",
+      "description": "Sign in to get started with Cursor's AI features"
+    },
+    {
+      "section": "general",
+      "id": "cursor-account",
+      "label": "Cursor 账户",
+      "description": "管理你的账户和账单"
+    },
+    {
+      "section": "general",
+      "id": "preferences",
+      "label": "Preferences",
+      "description": ""
+    },
+    {
+      "section": "general",
+      "id": "editor-settings",
+      "label": "Editor Settings",
+      "description": "Configure font, formatting, minimap and more"
+    },
+    {
+      "section": "general",
+      "id": "keyboard-shortcuts",
+      "label": "Keyboard Shortcuts",
+      "description": "Configure keyboard shortcuts"
+    },
+    {
+      "section": "general",
+      "id": "import-vscode",
+      "label": "Import Settings from VS Code",
+      "description": "Import settings, extensions, and keybindings from VS Code"
+    },
+    {
+      "section": "general",
+      "id": "layout",
+      "label": "Layout",
+      "description": ""
+    },
+    {
+      "section": "general",
+      "id": "conversation-density",
+      "label": "Conversation Density",
+      "description": "Choose how much detail Agent tool calls show in the conversation"
+    },
+    {
+      "section": "general",
+      "id": "status-bar",
+      "label": "Status Bar",
+      "description": ""
+    },
+    {
+      "section": "general",
+      "id": "review-controls",
+      "label": "Review Control Location",
+      "description": ""
+    },
+    {
+      "section": "general",
+      "id": "auto-hide-editor",
+      "label": "Auto-hide editor when empty",
+      "description": ""
+    },
+    {
+      "section": "general",
+      "id": "chat-editor-tabs",
+      "label": "Open chat as editor tabs",
+      "description": ""
+    },
+    {
+      "section": "general",
+      "id": "tips",
+      "label": "提示",
+      "description": "在空白界面显示轮换提示"
+    },
+    {
+      "section": "general",
+      "id": "open-agents-on-startup",
+      "label": "启动时打开 Agents 窗口",
+      "description": "Cursor 启动时默认打开 Agents 窗口"
+    },
+    {
+      "section": "general",
+      "id": "notifications",
+      "label": "Notifications",
+      "description": ""
+    },
+    {
+      "section": "general",
+      "id": "system-notifications",
+      "label": "系统通知",
+      "description": "当 Agent 完成或需要关注时显示系统通知"
+    },
+    {
+      "section": "general",
+      "id": "warning-notifications",
+      "label": "警告通知",
+      "description": "显示警告级别的应用内通知"
+    },
+    {
+      "section": "general",
+      "id": "menu-bar-icon",
+      "label": "菜单栏图标",
+      "description": "Show Cursor in the menu bar"
+    },
+    {
+      "section": "general",
+      "id": "system-tray-icon",
+      "label": "System Tray Icon",
+      "description": "Show Cursor in the system tray"
+    },
+    {
+      "section": "general",
+      "id": "completion-sound",
+      "label": "完成提示音",
+      "description": "Agent 完成回复时播放提示音"
+    },
+    {
+      "section": "general",
+      "id": "verify-extension-signatures",
+      "label": "Verify Extension Signatures",
+      "description": ""
+    },
+    {
+      "section": "profile",
+      "id": "handle",
+      "label": "Handle",
+      "description": "Claim a handle for your public profile page"
+    },
+    {
+      "section": "appearance",
+      "id": "follow-system",
+      "label": "Follow System Color Scheme",
+      "description": "Match the active theme to your OS dark/light setting"
+    },
+    {
+      "section": "appearance",
+      "id": "theme",
+      "label": "主题",
+      "description": "选择要使用的主题"
+    },
+    {
+      "section": "appearance",
+      "id": "light-theme",
+      "label": "浅色主题",
+      "description": "系统处于浅色模式时使用的主题"
+    },
+    {
+      "section": "appearance",
+      "id": "dark-theme",
+      "label": "深色主题",
+      "description": "Choose the theme used when your system is in dark mode"
+    },
+    {
+      "section": "appearance",
+      "id": "manage-themes",
+      "label": "Manage Themes",
+      "description": "Create your own themes, tweak the vibe, and import your favorites"
+    },
+    {
+      "section": "appearance",
+      "id": "colors",
+      "label": "颜色",
+      "description": ""
+    },
+    {
+      "section": "appearance",
+      "id": "hue",
+      "label": "色调",
+      "description": "选择着色颜色"
+    },
+    {
+      "section": "appearance",
+      "id": "intensity",
+      "label": "强度",
+      "description": "控制着色应用的强度"
+    },
+    {
+      "section": "appearance",
+      "id": "reduce-transparency",
+      "label": "降低透明度",
+      "description": "用非透明背景替换半透明表面"
+    },
+    {
+      "section": "appearance",
+      "id": "agent-conversations",
+      "label": "Agent 对话",
+      "description": ""
+    },
+    {
+      "section": "appearance",
+      "id": "tool-call-density",
+      "label": "工具调用密度",
+      "description": "调整工具调用显示的详细程度"
+    },
+    {
+      "section": "appearance",
+      "id": "compact-terminal",
+      "label": "Compact Terminal Tool Calls",
+      "description": "Show terminal commands in compact view by default"
+    },
+    {
+      "section": "appearance",
+      "id": "typography",
+      "label": "字体排印",
+      "description": ""
+    },
+    {
+      "section": "appearance",
+      "id": "ui-font-size",
+      "label": "UI Font Size",
+      "description": "Font size for the Cursor user interface"
+    },
+    {
+      "section": "appearance",
+      "id": "code-font-size",
+      "label": "Code Font Size",
+      "description": "Font size for code editors and diffs"
+    },
+    {
+      "section": "appearance",
+      "id": "ui-font-family",
+      "label": "UI Font Family",
+      "description": "Override the Cursor user interface typeface"
+    },
+    {
+      "section": "appearance",
+      "id": "code-font-family",
+      "label": "Code Font Family",
+      "description": "Override the font for code editors and diffs"
+    },
+    {
+      "section": "appearance",
+      "id": "font-smoothing",
+      "label": "Font Smoothing",
+      "description": "Use native macOS font anti-aliasing"
+    },
+    {
+      "section": "appearance",
+      "id": "motion",
+      "label": "Motion",
+      "description": ""
+    },
+    {
+      "section": "appearance",
+      "id": "reduce-motion",
+      "label": "Reduce Motion",
+      "description": "Minimize interface animations"
+    },
+    {
+      "section": "appearance",
+      "id": "celebrations",
+      "label": "Celebrations",
+      "description": ""
+    },
+    {
+      "section": "appearance",
+      "id": "confetti",
+      "label": "Give the Agent a Confetti Cannon",
+      "description": "Allow the agent to celebrate with a shower of confetti"
+    },
+    {
+      "section": "appearance",
+      "id": "privacy",
+      "label": "Privacy",
+      "description": ""
+    },
+    {
+      "section": "appearance",
+      "id": "hide-email",
+      "label": "Hide Email Address",
+      "description": "Partially mask your email address in the Cursor user interface"
+    },
+    {
+      "section": "plan-usage",
+      "id": "monthly-limit",
+      "label": "Monthly Limit",
+      "description": "Set a fixed amount or make on-demand usage unlimited"
+    },
+    {
+      "section": "tab",
+      "id": "cursor-tab",
+      "label": "Cursor Tab",
+      "description": "Context-aware, multi-line suggestions around your cursor based on recent edits"
+    },
+    {
+      "section": "chat",
+      "id": "conversation",
+      "label": "Conversation",
+      "description": ""
+    },
+    {
+      "section": "chat",
+      "id": "usage-summary",
+      "label": "Usage Summary",
+      "description": "When to show the usage summary at the bottom of the chat pane"
+    },
+    {
+      "section": "chat",
+      "id": "text-size",
+      "label": "Text Size",
+      "description": "Adjust the conversation text size"
+    },
+    {
+      "section": "chat",
+      "id": "max-tab-count",
+      "label": "Max Tab Count",
+      "description": "Limit how many chat tabs can be open at once"
+    },
+    {
+      "section": "chat",
+      "id": "default-environment",
+      "label": "Default Environment",
+      "description": "Where new agents start by default"
+    },
+    {
+      "section": "chat",
+      "id": "queue-messages",
+      "label": "Queue Messages",
+      "description": "Adjust the default behavior of sending a message while Agent is running"
+    },
+    {
+      "section": "chat",
+      "id": "agent-autocomplete",
+      "label": "Agent Autocomplete",
+      "description": "Contextual suggestions while prompting Agent"
+    },
+    {
+      "section": "chat",
+      "id": "follow-up-prompt-suggestions",
+      "label": "Follow-Up Prompt Suggestions",
+      "description": "Suggest a follow-up for the Agent"
+    },
+    {
+      "section": "chat",
+      "id": "auto-approve-transitions",
+      "label": "Auto-Approve Mode Transitions",
+      "description": "Allow Agent to switch modes without asking first"
+    },
+    {
+      "section": "chat",
+      "id": "voice-submit-keywords",
+      "label": "Voice Submit Keywords",
+      "description": ""
+    },
+    {
+      "section": "chat",
+      "id": "compact-terminal",
+      "label": "Compact Terminal Tool Calls",
+      "description": "Show terminal commands in compact view by default"
+    },
+    {
+      "section": "chat",
+      "id": "context-tools",
+      "label": "Context and Tools",
+      "description": ""
+    },
+    {
+      "section": "chat",
+      "id": "web-search",
+      "label": "Web Search Tool",
+      "description": "Allow Agent to search the web for relevant information"
+    },
+    {
+      "section": "chat",
+      "id": "web-fetch",
+      "label": "Web Fetch Tool",
+      "description": "Allow Agent to fetch content from URLs"
+    },
+    {
+      "section": "chat",
+      "id": "execution-approvals",
+      "label": "Execution and Approvals",
+      "description": ""
+    },
+    {
+      "section": "chat",
+      "id": "run-mode",
+      "label": "Run Mode",
+      "description": ""
+    },
+    {
+      "section": "chat",
+      "id": "terminal-editing",
+      "label": "Terminal and Editing",
+      "description": ""
+    },
+    {
+      "section": "chat",
+      "id": "legacy-terminal",
+      "label": "Legacy Terminal Tool",
+      "description": "Use legacy terminal tool on unsupported shells"
+    },
+    {
+      "section": "chat",
+      "id": "auto-parse-links",
+      "label": "Auto-Parse Links",
+      "description": "Automatically parse links pasted into Quick Edit"
+    },
+    {
+      "section": "chat",
+      "id": "inline-diffs",
+      "label": "Inline Diffs",
+      "description": "Show inline diff decorations in the editor"
+    },
+    {
+      "section": "chat",
+      "id": "auto-format",
+      "label": "Auto Format on Agent Finish",
+      "description": "Automatically format files when Agent finishes"
+    },
+    {
+      "section": "chat",
+      "id": "toolbar-selection",
+      "label": "Toolbar on Selection",
+      "description": "Show Add to Chat and Quick Edit buttons"
+    },
+    {
+      "section": "chat",
+      "id": "terminal-hint",
+      "label": "Terminal Hint",
+      "description": "Show the Cmd/Ctrl+K hint in Terminal"
+    },
+    {
+      "section": "chat",
+      "id": "terminal-preview-box",
+      "label": "Preview Box for Terminal Cmd/Ctrl+K",
+      "description": "Use the preview box instead of shell streaming"
+    },
+    {
+      "section": "models",
+      "id": "explore-subagent-model",
+      "label": "Explore Subagent Model",
+      "description": "Choose the model used by Explore subagent for initial research"
+    },
+    {
+      "section": "models",
+      "id": "gateway",
+      "label": "Gateway",
+      "description": "Configure the local agent LLM gateway"
+    },
+    {
+      "section": "git-prs",
+      "id": "pull-requests",
+      "label": "Pull Requests",
+      "description": ""
+    },
+    {
+      "section": "git-prs",
+      "id": "review-provider",
+      "label": "审查提供方",
+      "description": ""
+    },
+    {
+      "section": "git-prs",
+      "id": "pr-link-destination",
+      "label": "PR 链接打开位置",
+      "description": "Open pull request links inside Cursor or the default browser"
+    },
+    {
+      "section": "git-prs",
+      "id": "branch-prefix",
+      "label": "分支前缀",
+      "description": "Prefix for new Agent branches"
+    },
+    {
+      "section": "rules",
+      "id": "third-party-configs",
+      "label": "Include third-party Plugins, Skills, and other configs",
+      "description": "Automatically import agent configs from other tools"
+    },
+    {
+      "section": "rules",
+      "id": "skills",
+      "label": "Skills",
+      "description": ""
+    },
+    {
+      "section": "rules",
+      "id": "subagents",
+      "label": "Subagents",
+      "description": ""
+    },
+    {
+      "section": "mcp",
+      "id": "authentication",
+      "label": "Authentication",
+      "description": ""
+    },
+    {
+      "section": "mcp",
+      "id": "wait-auth",
+      "label": "Wait for MCP Authentication",
+      "description": "Wait indefinitely; otherwise skip prompts after 30 seconds"
+    },
+    {
+      "section": "mcp",
+      "id": "new-server",
+      "label": "New MCP Server",
+      "description": ""
+    },
+    {
+      "section": "hooks",
+      "id": "configured-hooks",
+      "label": "Configured Hooks",
+      "description": ""
+    },
+    {
+      "section": "hooks",
+      "id": "execution-log",
+      "label": "Execution Log",
+      "description": ""
+    },
+    {
+      "section": "indexing",
+      "id": "codebase-indexing",
+      "label": "Codebase Indexing",
+      "description": "Embed the codebase for contextual understanding"
+    },
+    {
+      "section": "indexing",
+      "id": "index-new-folders",
+      "label": "Index New Folders",
+      "description": "Automatically index small new folders"
+    },
+    {
+      "section": "indexing",
+      "id": "cursorignore-files",
+      "label": "Ignore Files in .cursorignore",
+      "description": "Files to exclude from indexing in addition to .gitignore"
+    },
+    {
+      "section": "indexing",
+      "id": "ignore-files",
+      "label": "Ignore Files",
+      "description": ""
+    },
+    {
+      "section": "indexing",
+      "id": "hierarchical-ignore",
+      "label": "Hierarchical Cursor Ignore",
+      "description": "Apply .cursorignore files to subdirectories"
+    },
+    {
+      "section": "indexing",
+      "id": "ignore-symlinks",
+      "label": "Ignore Symlinks in Cursor Ignore Search",
+      "description": "Skip symlinks during discovery"
+    },
+    {
+      "section": "indexing",
+      "id": "docs",
+      "label": "Docs",
+      "description": ""
+    },
+    {
+      "section": "browser",
+      "id": "http-compatibility",
+      "label": "HTTP Compatibility Mode",
+      "description": "Configure HTTP compatibility for proxies and VPNs"
+    },
+    {
+      "section": "browser",
+      "id": "required-domains",
+      "label": "Required Domains",
+      "description": "Domains required for Cursor"
+    },
+    {
+      "section": "browser",
+      "id": "diagnostics",
+      "label": "Network Diagnostics",
+      "description": "Check connectivity to all Cursor services"
+    },
+    {
+      "section": "beta",
+      "id": "update-access",
+      "label": "Update Access",
+      "description": ""
+    },
+    {
+      "section": "beta",
+      "id": "import-claude-agents",
+      "label": "Import Claude Code agents",
+      "description": "Bring Claude Code sessions into Cursor"
+    },
+    {
+      "section": "self-driving",
+      "id": "allow-agents",
+      "label": "Allow agents on my PRs",
+      "description": "Enable or disable Self-driving for PRs owned by this account"
+    },
+    {
+      "section": "self-driving",
+      "id": "auto-start",
+      "label": "Start when I open a PR",
+      "description": "Start Self-driving automatically for enabled repositories"
+    },
+    {
+      "section": "self-driving",
+      "id": "default-mode",
+      "label": "Default Mode",
+      "description": "Choose whether automatically started agents suggest or apply changes"
+    },
+    {
+      "section": "self-driving",
+      "id": "post-slack",
+      "label": "Post to Slack",
+      "description": "Post Self-driving updates to Slack"
+    },
+    {
+      "section": "worktrees",
+      "id": "cleanup",
+      "label": "Cleanup",
+      "description": ""
+    },
+    {
+      "section": "worktrees",
+      "id": "max-count",
+      "label": "Max worktrees",
+      "description": "Maximum retained Cursor-managed worktrees"
+    },
+    {
+      "section": "worktrees",
+      "id": "max-size",
+      "label": "Max total size (GB)",
+      "description": "Maximum aggregate worktree size"
+    },
+    {
+      "section": "worktrees",
+      "id": "managed",
+      "label": "Cursor-managed worktrees",
+      "description": ""
+    },
+    {
+      "section": "developer",
+      "id": "local-trace",
+      "label": "Local Trace Mode",
+      "description": ""
+    },
+    {
+      "section": "developer",
+      "id": "continuous-rpc",
+      "label": "Continuous RPC File Recording",
+      "description": ""
+    }
+  ]
+}
