@@ -1,5 +1,5 @@
 {
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Cursor Glass/Settings/Automations UI 硬编码文案替换表（macOS）",
   "targets": [
     {
@@ -4337,6 +4337,30 @@
     {
       "from": "\"Failed \\xB7 7d\"",
       "to": "\"失败 · 7 天\""
+    },
+    {
+      "from": "children:\"Create Profile\"",
+      "to": "children:\"创建个人资料\""
+    },
+    {
+      "from": "children:\"Docs\"",
+      "to": "children:\"文档\""
+    },
+    {
+      "from": "children:\"Shortcuts\"",
+      "to": "children:\"快捷键\""
+    },
+    {
+      "from": "children:\"Contact Us\"",
+      "to": "children:\"联系我们\""
+    },
+    {
+      "from": "children:\"Log Out\"",
+      "to": "children:\"退出登录\""
+    },
+    {
+      "from": "title:\"Log Out\"",
+      "to": "title:\"退出登录\""
     }
   ]
 }
