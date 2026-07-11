@@ -1,6 +1,6 @@
 {
-  "version": "1.3.0",
-  "description": "Cursor Glass/Settings UI 硬编码文案替换表（macOS）— 安全上下文/长句 + 设置详情补漏",
+  "version": "1.4.0",
+  "description": "Cursor Glass/Settings/Automations UI 硬编码文案替换表（macOS）",
   "targets": [
     {
       "file": "out/vs/workbench/workbench.glass.main.js",
@@ -8,6 +8,10 @@
     },
     {
       "file": "out/vs/workbench/workbench.desktop.main.js",
+      "required": false
+    },
+    {
+      "file": "out/vs/workbench/workbench.anysphere-ui-automations.js",
       "required": false
     }
   ],
@@ -41,6 +45,16 @@
       "id": "run-mode-html-description",
       "from": "dPy=De('<div class=cursor-settings-auto-run-description><p>Choose how Agents run tools like command execution, MCP, and file writes.</p><p><a class=cursor-settings-auto-run-docs-link href=https://cursor.com/docs/agent/security/run-modes target=_blank rel=\"noopener noreferrer\">Learn more')",
       "to": "dPy=De('<div class=cursor-settings-auto-run-description><p>选择 Agent 如何运行命令执行、MCP 和文件写入等工具。</p><p><a class=cursor-settings-auto-run-docs-link href=https://cursor.com/docs/agent/security/run-modes target=_blank rel=\"noopener noreferrer\">了解更多')"
+    },
+    {
+      "id": "automations-template-filters",
+      "from": "nXi=[{value:\"popular\",label:\"Popular\",matches:r(i=>i.featuredIndex!==void 0&&i.featuredIndex!==0,\"matches\")},{value:\"code-review\",label:\"Code Review\",matches:r(i=>$Y(i,yDr)||eXi(i,wDr),\"matches\")},{value:\"security\",label:\"Security\",matches:r(i=>$Y(i,_Dr)||/\\b(security|vulnerab)\\b/.test(tXi(i)),\"matches\")},{value:\"incidents-triage\",label:\"Incidents & Triage\",matches:r(i=>$Y(i,kDr),\"matches\")},{value:\"data-research\",label:\"Data & Research\",matches:r(i=>$Y(i,vDr),\"matches\")}],iXi={value:\"environment\",label:\"Environment\",matches:r(i=>$Y(i,xDr),\"matches\")}",
+      "to": "nXi=[{value:\"popular\",label:\"热门\",matches:r(i=>i.featuredIndex!==void 0&&i.featuredIndex!==0,\"matches\")},{value:\"code-review\",label:\"代码审查\",matches:r(i=>$Y(i,yDr)||eXi(i,wDr),\"matches\")},{value:\"security\",label:\"安全\",matches:r(i=>$Y(i,_Dr)||/\\b(security|vulnerab)\\b/.test(tXi(i)),\"matches\")},{value:\"incidents-triage\",label:\"事故与分诊\",matches:r(i=>$Y(i,kDr),\"matches\")},{value:\"data-research\",label:\"数据与研究\",matches:r(i=>$Y(i,vDr),\"matches\")}],iXi={value:\"environment\",label:\"环境\",matches:r(i=>$Y(i,xDr),\"matches\")}"
+    },
+    {
+      "id": "automations-mine-team-tabs",
+      "from": "options:[{value:\"mine\",label:\"Mine\",secondaryLabel:String(C)},{value:\"team\",label:\"Team\",secondaryLabel:String(y.length)}]",
+      "to": "options:[{value:\"mine\",label:\"我的\",secondaryLabel:String(C)},{value:\"team\",label:\"团队\",secondaryLabel:String(y.length)}]"
     }
   ],
   "exact": [
@@ -4211,6 +4225,110 @@
     {
       "from": "),\" \",\"files\"]}",
       "to": "),\" \",\"个文件的新文件夹\"]}"
+    },
+    {
+      "from": "Automate repetitive tasks with always-on cloud agents that respond to environment triggers.",
+      "to": "使用始终在线的云端 Agent，根据环境触发器自动完成重复任务。"
+    },
+    {
+      "from": "Mcw=\"Automate repetitive tasks with always-on cloud agents that respond to environment triggers.\"",
+      "to": "Mcw=\"使用始终在线的云端 Agent，根据环境触发器自动完成重复任务。\""
+    },
+    {
+      "from": "children:\"Automations\"",
+      "to": "children:\"自动化\""
+    },
+    {
+      "from": "name:\"Automations\"",
+      "to": "name:\"自动化\""
+    },
+    {
+      "from": "label:\"Successful \\xB7 7d\"",
+      "to": "label:\"成功 · 7 天\""
+    },
+    {
+      "from": "label:\"Failed \\xB7 7d\"",
+      "to": "label:\"失败 · 7 天\""
+    },
+    {
+      "from": "children:[\"Run History\",\" \"",
+      "to": "children:[\"运行历史\",\" \""
+    },
+    {
+      "from": "Run History",
+      "to": "运行历史"
+    },
+    {
+      "from": "New Automation",
+      "to": "新建自动化"
+    },
+    {
+      "from": "No Automations Yet",
+      "to": "暂无自动化"
+    },
+    {
+      "from": "No Results Found",
+      "to": "未找到结果"
+    },
+    {
+      "from": "Run agents on a schedule or automatically in response to events. Billed at plan rates.",
+      "to": "按计划运行 Agent，或根据事件自动响应。按套餐费率计费。"
+    },
+    {
+      "from": "label:\"Popular\"",
+      "to": "label:\"热门\""
+    },
+    {
+      "from": "label:\"Code Review\"",
+      "to": "label:\"代码审查\""
+    },
+    {
+      "from": "label:\"Security\"",
+      "to": "label:\"安全\""
+    },
+    {
+      "from": "label:\"Incidents & Triage\"",
+      "to": "label:\"事故与分诊\""
+    },
+    {
+      "from": "label:\"Data & Research\"",
+      "to": "label:\"数据与研究\""
+    },
+    {
+      "from": "label:\"Environment\"",
+      "to": "label:\"环境\""
+    },
+    {
+      "from": "Find critical bugs",
+      "to": "查找严重缺陷"
+    },
+    {
+      "from": "Summarize changes daily",
+      "to": "每日变更摘要"
+    },
+    {
+      "from": "Scan codebase for vulnerabilities",
+      "to": "扫描代码库漏洞"
+    },
+    {
+      "from": "Investigate top Datadog errors",
+      "to": "排查主要 Datadog 错误"
+    },
+    {
+      "from": "children:\"Add\"",
+      "to": "children:\"添加\""
+    },
+    {
+      "from": "e?.suggested??\"Suggested\"",
+      "to": "e?.suggested??\"推荐\""
+    },
+    {
+      "from": "e?.more??\"More\"",
+      "to": "e?.more??\"更多\""
+    },
+    {
+      "from": "children:\"Total\"}),zg(\"span\",{className:rg(\"automations-overview__label--full\"),children:\"Total Automations\"",
+      "to": "children:\"总计\"}),zg(\"span\",{className:rg(\"automations-overview__label--full\"),children:\"自动化总数\""
     }
   ]
 }
