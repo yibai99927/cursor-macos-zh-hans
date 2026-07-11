@@ -1,5 +1,5 @@
 {
-  "version": "1.4.1",
+  "version": "1.5.0",
   "description": "Cursor Glass/Settings/Automations UI 硬编码文案替换表（macOS / Windows）",
   "targets": [
     {
@@ -336,7 +336,7 @@
     },
     {
       "from": "title:\"Agents\"",
-      "to": "title:\"Agents\""
+      "to": "title:\"Agent\""
     },
     {
       "from": "title:\"Models\"",
@@ -2848,11 +2848,11 @@
     },
     {
       "from": "label:\"Cursor Tab\"",
-      "to": "label:\"Cursor Tab\""
+      "to": "label:\"Cursor Tab 补全\""
     },
     {
       "from": "title:\"Cursor Tab\"",
-      "to": "title:\"Cursor Tab\""
+      "to": "title:\"Cursor Tab 补全\""
     },
     {
       "from": "label:\"Suggestions While Commenting\"",
@@ -4361,6 +4361,2182 @@
     {
       "from": "title:\"Log Out\"",
       "to": "title:\"退出登录\""
+    },
+    {
+      "from": "Close Tab",
+      "to": "关闭标签页"
+    },
+    {
+      "from": "label:\"Close Tab\"",
+      "to": "label:\"关闭标签页\""
+    },
+    {
+      "from": "title:\"Close Tab\"",
+      "to": "title:\"关闭标签页\""
+    },
+    {
+      "from": "description:\"Close Tab\"",
+      "to": "description:\"关闭标签页\""
+    },
+    {
+      "from": "children:\"Close Tab\"",
+      "to": "children:\"关闭标签页\""
+    },
+    {
+      "from": "Close Running Tab?",
+      "to": "关闭正在运行的标签页？"
+    },
+    {
+      "from": "label:\"Close Running Tab?\"",
+      "to": "label:\"关闭正在运行的标签页？\""
+    },
+    {
+      "from": "title:\"Close Running Tab?\"",
+      "to": "title:\"关闭正在运行的标签页？\""
+    },
+    {
+      "from": "description:\"Close Running Tab?\"",
+      "to": "description:\"关闭正在运行的标签页？\""
+    },
+    {
+      "from": "children:\"Close Running Tab?\"",
+      "to": "children:\"关闭正在运行的标签页？\""
+    },
+    {
+      "from": "New Tab",
+      "to": "新建标签页"
+    },
+    {
+      "from": "label:\"New Tab\"",
+      "to": "label:\"新建标签页\""
+    },
+    {
+      "from": "title:\"New Tab\"",
+      "to": "title:\"新建标签页\""
+    },
+    {
+      "from": "description:\"New Tab\"",
+      "to": "description:\"新建标签页\""
+    },
+    {
+      "from": "children:\"New Tab\"",
+      "to": "children:\"新建标签页\""
+    },
+    {
+      "from": "Create New Tab",
+      "to": "创建新标签页"
+    },
+    {
+      "from": "label:\"Create New Tab\"",
+      "to": "label:\"创建新标签页\""
+    },
+    {
+      "from": "title:\"Create New Tab\"",
+      "to": "title:\"创建新标签页\""
+    },
+    {
+      "from": "description:\"Create New Tab\"",
+      "to": "description:\"创建新标签页\""
+    },
+    {
+      "from": "children:\"Create New Tab\"",
+      "to": "children:\"创建新标签页\""
+    },
+    {
+      "from": "Next Tab",
+      "to": "下一个标签页"
+    },
+    {
+      "from": "label:\"Next Tab\"",
+      "to": "label:\"下一个标签页\""
+    },
+    {
+      "from": "title:\"Next Tab\"",
+      "to": "title:\"下一个标签页\""
+    },
+    {
+      "from": "description:\"Next Tab\"",
+      "to": "description:\"下一个标签页\""
+    },
+    {
+      "from": "children:\"Next Tab\"",
+      "to": "children:\"下一个标签页\""
+    },
+    {
+      "from": "Previous Tab",
+      "to": "上一个标签页"
+    },
+    {
+      "from": "label:\"Previous Tab\"",
+      "to": "label:\"上一个标签页\""
+    },
+    {
+      "from": "title:\"Previous Tab\"",
+      "to": "title:\"上一个标签页\""
+    },
+    {
+      "from": "description:\"Previous Tab\"",
+      "to": "description:\"上一个标签页\""
+    },
+    {
+      "from": "children:\"Previous Tab\"",
+      "to": "children:\"上一个标签页\""
+    },
+    {
+      "from": "Switch Tab",
+      "to": "切换标签页"
+    },
+    {
+      "from": "label:\"Switch Tab\"",
+      "to": "label:\"切换标签页\""
+    },
+    {
+      "from": "title:\"Switch Tab\"",
+      "to": "title:\"切换标签页\""
+    },
+    {
+      "from": "description:\"Switch Tab\"",
+      "to": "description:\"切换标签页\""
+    },
+    {
+      "from": "children:\"Switch Tab\"",
+      "to": "children:\"切换标签页\""
+    },
+    {
+      "from": "List Tabs",
+      "to": "列出标签页"
+    },
+    {
+      "from": "label:\"List Tabs\"",
+      "to": "label:\"列出标签页\""
+    },
+    {
+      "from": "title:\"List Tabs\"",
+      "to": "title:\"列出标签页\""
+    },
+    {
+      "from": "description:\"List Tabs\"",
+      "to": "description:\"列出标签页\""
+    },
+    {
+      "from": "children:\"List Tabs\"",
+      "to": "children:\"列出标签页\""
+    },
+    {
+      "from": "Reopen Last Closed Tab",
+      "to": "重新打开上次关闭的标签页"
+    },
+    {
+      "from": "label:\"Reopen Last Closed Tab\"",
+      "to": "label:\"重新打开上次关闭的标签页\""
+    },
+    {
+      "from": "title:\"Reopen Last Closed Tab\"",
+      "to": "title:\"重新打开上次关闭的标签页\""
+    },
+    {
+      "from": "description:\"Reopen Last Closed Tab\"",
+      "to": "description:\"重新打开上次关闭的标签页\""
+    },
+    {
+      "from": "children:\"Reopen Last Closed Tab\"",
+      "to": "children:\"重新打开上次关闭的标签页\""
+    },
+    {
+      "from": "New Tab Menu",
+      "to": "新建标签页菜单"
+    },
+    {
+      "from": "label:\"New Tab Menu\"",
+      "to": "label:\"新建标签页菜单\""
+    },
+    {
+      "from": "title:\"New Tab Menu\"",
+      "to": "title:\"新建标签页菜单\""
+    },
+    {
+      "from": "description:\"New Tab Menu\"",
+      "to": "description:\"新建标签页菜单\""
+    },
+    {
+      "from": "children:\"New Tab Menu\"",
+      "to": "children:\"新建标签页菜单\""
+    },
+    {
+      "from": "Activate Browser Tab",
+      "to": "激活浏览器标签页"
+    },
+    {
+      "from": "label:\"Activate Browser Tab\"",
+      "to": "label:\"激活浏览器标签页\""
+    },
+    {
+      "from": "title:\"Activate Browser Tab\"",
+      "to": "title:\"激活浏览器标签页\""
+    },
+    {
+      "from": "description:\"Activate Browser Tab\"",
+      "to": "description:\"激活浏览器标签页\""
+    },
+    {
+      "from": "children:\"Activate Browser Tab\"",
+      "to": "children:\"激活浏览器标签页\""
+    },
+    {
+      "from": "Close Browser Tab",
+      "to": "关闭浏览器标签页"
+    },
+    {
+      "from": "label:\"Close Browser Tab\"",
+      "to": "label:\"关闭浏览器标签页\""
+    },
+    {
+      "from": "title:\"Close Browser Tab\"",
+      "to": "title:\"关闭浏览器标签页\""
+    },
+    {
+      "from": "description:\"Close Browser Tab\"",
+      "to": "description:\"关闭浏览器标签页\""
+    },
+    {
+      "from": "children:\"Close Browser Tab\"",
+      "to": "children:\"关闭浏览器标签页\""
+    },
+    {
+      "from": "Hard Reload Browser Tab",
+      "to": "强制重新加载浏览器标签页"
+    },
+    {
+      "from": "label:\"Hard Reload Browser Tab\"",
+      "to": "label:\"强制重新加载浏览器标签页\""
+    },
+    {
+      "from": "title:\"Hard Reload Browser Tab\"",
+      "to": "title:\"强制重新加载浏览器标签页\""
+    },
+    {
+      "from": "description:\"Hard Reload Browser Tab\"",
+      "to": "description:\"强制重新加载浏览器标签页\""
+    },
+    {
+      "from": "children:\"Hard Reload Browser Tab\"",
+      "to": "children:\"强制重新加载浏览器标签页\""
+    },
+    {
+      "from": "Browser Menu",
+      "to": "浏览器菜单"
+    },
+    {
+      "from": "label:\"Browser Menu\"",
+      "to": "label:\"浏览器菜单\""
+    },
+    {
+      "from": "title:\"Browser Menu\"",
+      "to": "title:\"浏览器菜单\""
+    },
+    {
+      "from": "description:\"Browser Menu\"",
+      "to": "description:\"浏览器菜单\""
+    },
+    {
+      "from": "children:\"Browser Menu\"",
+      "to": "children:\"浏览器菜单\""
+    },
+    {
+      "from": "Browser Navigation",
+      "to": "浏览器导航"
+    },
+    {
+      "from": "label:\"Browser Navigation\"",
+      "to": "label:\"浏览器导航\""
+    },
+    {
+      "from": "title:\"Browser Navigation\"",
+      "to": "title:\"浏览器导航\""
+    },
+    {
+      "from": "description:\"Browser Navigation\"",
+      "to": "description:\"浏览器导航\""
+    },
+    {
+      "from": "children:\"Browser Navigation\"",
+      "to": "children:\"浏览器导航\""
+    },
+    {
+      "from": "Browser Tools",
+      "to": "浏览器工具"
+    },
+    {
+      "from": "label:\"Browser Tools\"",
+      "to": "label:\"浏览器工具\""
+    },
+    {
+      "from": "title:\"Browser Tools\"",
+      "to": "title:\"浏览器工具\""
+    },
+    {
+      "from": "description:\"Browser Tools\"",
+      "to": "description:\"浏览器工具\""
+    },
+    {
+      "from": "children:\"Browser Tools\"",
+      "to": "children:\"浏览器工具\""
+    },
+    {
+      "from": "Browser Tool Calls",
+      "to": "浏览器工具调用"
+    },
+    {
+      "from": "label:\"Browser Tool Calls\"",
+      "to": "label:\"浏览器工具调用\""
+    },
+    {
+      "from": "title:\"Browser Tool Calls\"",
+      "to": "title:\"浏览器工具调用\""
+    },
+    {
+      "from": "description:\"Browser Tool Calls\"",
+      "to": "description:\"浏览器工具调用\""
+    },
+    {
+      "from": "children:\"Browser Tool Calls\"",
+      "to": "children:\"浏览器工具调用\""
+    },
+    {
+      "from": "New Browser",
+      "to": "新建浏览器"
+    },
+    {
+      "from": "label:\"New Browser\"",
+      "to": "label:\"新建浏览器\""
+    },
+    {
+      "from": "title:\"New Browser\"",
+      "to": "title:\"新建浏览器\""
+    },
+    {
+      "from": "description:\"New Browser\"",
+      "to": "description:\"新建浏览器\""
+    },
+    {
+      "from": "children:\"New Browser\"",
+      "to": "children:\"新建浏览器\""
+    },
+    {
+      "from": "Find in Browser Page",
+      "to": "在浏览器页面中查找"
+    },
+    {
+      "from": "label:\"Find in Browser Page\"",
+      "to": "label:\"在浏览器页面中查找\""
+    },
+    {
+      "from": "title:\"Find in Browser Page\"",
+      "to": "title:\"在浏览器页面中查找\""
+    },
+    {
+      "from": "description:\"Find in Browser Page\"",
+      "to": "description:\"在浏览器页面中查找\""
+    },
+    {
+      "from": "children:\"Find in Browser Page\"",
+      "to": "children:\"在浏览器页面中查找\""
+    },
+    {
+      "from": "Find Next in Browser Page",
+      "to": "查找下一处（浏览器）"
+    },
+    {
+      "from": "label:\"Find Next in Browser Page\"",
+      "to": "label:\"查找下一处（浏览器）\""
+    },
+    {
+      "from": "title:\"Find Next in Browser Page\"",
+      "to": "title:\"查找下一处（浏览器）\""
+    },
+    {
+      "from": "description:\"Find Next in Browser Page\"",
+      "to": "description:\"查找下一处（浏览器）\""
+    },
+    {
+      "from": "children:\"Find Next in Browser Page\"",
+      "to": "children:\"查找下一处（浏览器）\""
+    },
+    {
+      "from": "Find Previous in Browser Page",
+      "to": "查找上一处（浏览器）"
+    },
+    {
+      "from": "label:\"Find Previous in Browser Page\"",
+      "to": "label:\"查找上一处（浏览器）\""
+    },
+    {
+      "from": "title:\"Find Previous in Browser Page\"",
+      "to": "title:\"查找上一处（浏览器）\""
+    },
+    {
+      "from": "description:\"Find Previous in Browser Page\"",
+      "to": "description:\"查找上一处（浏览器）\""
+    },
+    {
+      "from": "children:\"Find Previous in Browser Page\"",
+      "to": "children:\"查找上一处（浏览器）\""
+    },
+    {
+      "from": "Close Browser Find",
+      "to": "关闭浏览器查找"
+    },
+    {
+      "from": "label:\"Close Browser Find\"",
+      "to": "label:\"关闭浏览器查找\""
+    },
+    {
+      "from": "title:\"Close Browser Find\"",
+      "to": "title:\"关闭浏览器查找\""
+    },
+    {
+      "from": "description:\"Close Browser Find\"",
+      "to": "description:\"关闭浏览器查找\""
+    },
+    {
+      "from": "children:\"Close Browser Find\"",
+      "to": "children:\"关闭浏览器查找\""
+    },
+    {
+      "from": "Abort Agent and Restore Query",
+      "to": "中止 Agent 并恢复查询"
+    },
+    {
+      "from": "label:\"Abort Agent and Restore Query\"",
+      "to": "label:\"中止 Agent 并恢复查询\""
+    },
+    {
+      "from": "title:\"Abort Agent and Restore Query\"",
+      "to": "title:\"中止 Agent 并恢复查询\""
+    },
+    {
+      "from": "description:\"Abort Agent and Restore Query\"",
+      "to": "description:\"中止 Agent 并恢复查询\""
+    },
+    {
+      "from": "children:\"Abort Agent and Restore Query\"",
+      "to": "children:\"中止 Agent 并恢复查询\""
+    },
+    {
+      "from": "Agent Mode",
+      "to": "Agent 模式"
+    },
+    {
+      "from": "label:\"Agent Mode\"",
+      "to": "label:\"Agent 模式\""
+    },
+    {
+      "from": "title:\"Agent Mode\"",
+      "to": "title:\"Agent 模式\""
+    },
+    {
+      "from": "description:\"Agent Mode\"",
+      "to": "description:\"Agent 模式\""
+    },
+    {
+      "from": "children:\"Agent Mode\"",
+      "to": "children:\"Agent 模式\""
+    },
+    {
+      "from": "Cloud Agent",
+      "to": "云端 Agent"
+    },
+    {
+      "from": "label:\"Cloud Agent\"",
+      "to": "label:\"云端 Agent\""
+    },
+    {
+      "from": "title:\"Cloud Agent\"",
+      "to": "title:\"云端 Agent\""
+    },
+    {
+      "from": "description:\"Cloud Agent\"",
+      "to": "description:\"云端 Agent\""
+    },
+    {
+      "from": "children:\"Cloud Agent\"",
+      "to": "children:\"云端 Agent\""
+    },
+    {
+      "from": "Search Agents",
+      "to": "搜索 Agent"
+    },
+    {
+      "from": "label:\"Search Agents\"",
+      "to": "label:\"搜索 Agent\""
+    },
+    {
+      "from": "title:\"Search Agents\"",
+      "to": "title:\"搜索 Agent\""
+    },
+    {
+      "from": "description:\"Search Agents\"",
+      "to": "description:\"搜索 Agent\""
+    },
+    {
+      "from": "children:\"Search Agents\"",
+      "to": "children:\"搜索 Agent\""
+    },
+    {
+      "from": "Next Agent",
+      "to": "下一个 Agent"
+    },
+    {
+      "from": "label:\"Next Agent\"",
+      "to": "label:\"下一个 Agent\""
+    },
+    {
+      "from": "title:\"Next Agent\"",
+      "to": "title:\"下一个 Agent\""
+    },
+    {
+      "from": "description:\"Next Agent\"",
+      "to": "description:\"下一个 Agent\""
+    },
+    {
+      "from": "children:\"Next Agent\"",
+      "to": "children:\"下一个 Agent\""
+    },
+    {
+      "from": "Previous Agent",
+      "to": "上一个 Agent"
+    },
+    {
+      "from": "label:\"Previous Agent\"",
+      "to": "label:\"上一个 Agent\""
+    },
+    {
+      "from": "title:\"Previous Agent\"",
+      "to": "title:\"上一个 Agent\""
+    },
+    {
+      "from": "description:\"Previous Agent\"",
+      "to": "description:\"上一个 Agent\""
+    },
+    {
+      "from": "children:\"Previous Agent\"",
+      "to": "children:\"上一个 Agent\""
+    },
+    {
+      "from": "Pin / Unpin Agent",
+      "to": "固定 / 取消固定 Agent"
+    },
+    {
+      "from": "label:\"Pin / Unpin Agent\"",
+      "to": "label:\"固定 / 取消固定 Agent\""
+    },
+    {
+      "from": "title:\"Pin / Unpin Agent\"",
+      "to": "title:\"固定 / 取消固定 Agent\""
+    },
+    {
+      "from": "description:\"Pin / Unpin Agent\"",
+      "to": "description:\"固定 / 取消固定 Agent\""
+    },
+    {
+      "from": "children:\"Pin / Unpin Agent\"",
+      "to": "children:\"固定 / 取消固定 Agent\""
+    },
+    {
+      "from": "Fix in Agent",
+      "to": "在 Agent 中修复"
+    },
+    {
+      "from": "label:\"Fix in Agent\"",
+      "to": "label:\"在 Agent 中修复\""
+    },
+    {
+      "from": "title:\"Fix in Agent\"",
+      "to": "title:\"在 Agent 中修复\""
+    },
+    {
+      "from": "description:\"Fix in Agent\"",
+      "to": "description:\"在 Agent 中修复\""
+    },
+    {
+      "from": "children:\"Fix in Agent\"",
+      "to": "children:\"在 Agent 中修复\""
+    },
+    {
+      "from": "No Agent For This Task",
+      "to": "此任务没有可用 Agent"
+    },
+    {
+      "from": "label:\"No Agent For This Task\"",
+      "to": "label:\"此任务没有可用 Agent\""
+    },
+    {
+      "from": "title:\"No Agent For This Task\"",
+      "to": "title:\"此任务没有可用 Agent\""
+    },
+    {
+      "from": "description:\"No Agent For This Task\"",
+      "to": "description:\"此任务没有可用 Agent\""
+    },
+    {
+      "from": "children:\"No Agent For This Task\"",
+      "to": "children:\"此任务没有可用 Agent\""
+    },
+    {
+      "from": "Scroll Agent Panel Down",
+      "to": "向下滚动 Agent 面板"
+    },
+    {
+      "from": "label:\"Scroll Agent Panel Down\"",
+      "to": "label:\"向下滚动 Agent 面板\""
+    },
+    {
+      "from": "title:\"Scroll Agent Panel Down\"",
+      "to": "title:\"向下滚动 Agent 面板\""
+    },
+    {
+      "from": "description:\"Scroll Agent Panel Down\"",
+      "to": "description:\"向下滚动 Agent 面板\""
+    },
+    {
+      "from": "children:\"Scroll Agent Panel Down\"",
+      "to": "children:\"向下滚动 Agent 面板\""
+    },
+    {
+      "from": "Scroll Agent Panel Up",
+      "to": "向上滚动 Agent 面板"
+    },
+    {
+      "from": "label:\"Scroll Agent Panel Up\"",
+      "to": "label:\"向上滚动 Agent 面板\""
+    },
+    {
+      "from": "title:\"Scroll Agent Panel Up\"",
+      "to": "title:\"向上滚动 Agent 面板\""
+    },
+    {
+      "from": "description:\"Scroll Agent Panel Up\"",
+      "to": "description:\"向上滚动 Agent 面板\""
+    },
+    {
+      "from": "children:\"Scroll Agent Panel Up\"",
+      "to": "children:\"向上滚动 Agent 面板\""
+    },
+    {
+      "from": "Skip Pending Shell Tool",
+      "to": "跳过待处理的 Shell 工具"
+    },
+    {
+      "from": "label:\"Skip Pending Shell Tool\"",
+      "to": "label:\"跳过待处理的 Shell 工具\""
+    },
+    {
+      "from": "title:\"Skip Pending Shell Tool\"",
+      "to": "title:\"跳过待处理的 Shell 工具\""
+    },
+    {
+      "from": "description:\"Skip Pending Shell Tool\"",
+      "to": "description:\"跳过待处理的 Shell 工具\""
+    },
+    {
+      "from": "children:\"Skip Pending Shell Tool\"",
+      "to": "children:\"跳过待处理的 Shell 工具\""
+    },
+    {
+      "from": "Copy Agent Deeplink",
+      "to": "复制 Agent 深度链接"
+    },
+    {
+      "from": "label:\"Copy Agent Deeplink\"",
+      "to": "label:\"复制 Agent 深度链接\""
+    },
+    {
+      "from": "title:\"Copy Agent Deeplink\"",
+      "to": "title:\"复制 Agent 深度链接\""
+    },
+    {
+      "from": "description:\"Copy Agent Deeplink\"",
+      "to": "description:\"复制 Agent 深度链接\""
+    },
+    {
+      "from": "children:\"Copy Agent Deeplink\"",
+      "to": "children:\"复制 Agent 深度链接\""
+    },
+    {
+      "from": "Plan Mode",
+      "to": "计划模式"
+    },
+    {
+      "from": "label:\"Plan Mode\"",
+      "to": "label:\"计划模式\""
+    },
+    {
+      "from": "title:\"Plan Mode\"",
+      "to": "title:\"计划模式\""
+    },
+    {
+      "from": "description:\"Plan Mode\"",
+      "to": "description:\"计划模式\""
+    },
+    {
+      "from": "children:\"Plan Mode\"",
+      "to": "children:\"计划模式\""
+    },
+    {
+      "from": "Build Plan",
+      "to": "生成计划"
+    },
+    {
+      "from": "label:\"Build Plan\"",
+      "to": "label:\"生成计划\""
+    },
+    {
+      "from": "title:\"Build Plan\"",
+      "to": "title:\"生成计划\""
+    },
+    {
+      "from": "description:\"Build Plan\"",
+      "to": "description:\"生成计划\""
+    },
+    {
+      "from": "children:\"Build Plan\"",
+      "to": "children:\"生成计划\""
+    },
+    {
+      "from": "View Plan",
+      "to": "查看计划"
+    },
+    {
+      "from": "label:\"View Plan\"",
+      "to": "label:\"查看计划\""
+    },
+    {
+      "from": "title:\"View Plan\"",
+      "to": "title:\"查看计划\""
+    },
+    {
+      "from": "description:\"View Plan\"",
+      "to": "description:\"查看计划\""
+    },
+    {
+      "from": "children:\"View Plan\"",
+      "to": "children:\"查看计划\""
+    },
+    {
+      "from": "With Plan",
+      "to": "使用计划"
+    },
+    {
+      "from": "label:\"With Plan\"",
+      "to": "label:\"使用计划\""
+    },
+    {
+      "from": "title:\"With Plan\"",
+      "to": "title:\"使用计划\""
+    },
+    {
+      "from": "description:\"With Plan\"",
+      "to": "description:\"使用计划\""
+    },
+    {
+      "from": "children:\"With Plan\"",
+      "to": "children:\"使用计划\""
+    },
+    {
+      "from": "Empty Plan State",
+      "to": "空计划状态"
+    },
+    {
+      "from": "label:\"Empty Plan State\"",
+      "to": "label:\"空计划状态\""
+    },
+    {
+      "from": "title:\"Empty Plan State\"",
+      "to": "title:\"空计划状态\""
+    },
+    {
+      "from": "description:\"Empty Plan State\"",
+      "to": "description:\"空计划状态\""
+    },
+    {
+      "from": "children:\"Empty Plan State\"",
+      "to": "children:\"空计划状态\""
+    },
+    {
+      "from": "Find in Plan",
+      "to": "在计划中查找"
+    },
+    {
+      "from": "label:\"Find in Plan\"",
+      "to": "label:\"在计划中查找\""
+    },
+    {
+      "from": "title:\"Find in Plan\"",
+      "to": "title:\"在计划中查找\""
+    },
+    {
+      "from": "description:\"Find in Plan\"",
+      "to": "description:\"在计划中查找\""
+    },
+    {
+      "from": "children:\"Find in Plan\"",
+      "to": "children:\"在计划中查找\""
+    },
+    {
+      "from": "Find Next in Plan",
+      "to": "查找下一处（计划）"
+    },
+    {
+      "from": "label:\"Find Next in Plan\"",
+      "to": "label:\"查找下一处（计划）\""
+    },
+    {
+      "from": "title:\"Find Next in Plan\"",
+      "to": "title:\"查找下一处（计划）\""
+    },
+    {
+      "from": "description:\"Find Next in Plan\"",
+      "to": "description:\"查找下一处（计划）\""
+    },
+    {
+      "from": "children:\"Find Next in Plan\"",
+      "to": "children:\"查找下一处（计划）\""
+    },
+    {
+      "from": "Find Previous in Plan",
+      "to": "查找上一处（计划）"
+    },
+    {
+      "from": "label:\"Find Previous in Plan\"",
+      "to": "label:\"查找上一处（计划）\""
+    },
+    {
+      "from": "title:\"Find Previous in Plan\"",
+      "to": "title:\"查找上一处（计划）\""
+    },
+    {
+      "from": "description:\"Find Previous in Plan\"",
+      "to": "description:\"查找上一处（计划）\""
+    },
+    {
+      "from": "children:\"Find Previous in Plan\"",
+      "to": "children:\"查找上一处（计划）\""
+    },
+    {
+      "from": "Close Plan Find",
+      "to": "关闭计划查找"
+    },
+    {
+      "from": "label:\"Close Plan Find\"",
+      "to": "label:\"关闭计划查找\""
+    },
+    {
+      "from": "title:\"Close Plan Find\"",
+      "to": "title:\"关闭计划查找\""
+    },
+    {
+      "from": "description:\"Close Plan Find\"",
+      "to": "description:\"关闭计划查找\""
+    },
+    {
+      "from": "children:\"Close Plan Find\"",
+      "to": "children:\"关闭计划查找\""
+    },
+    {
+      "from": "Plan Build Message",
+      "to": "计划生成消息"
+    },
+    {
+      "from": "label:\"Plan Build Message\"",
+      "to": "label:\"计划生成消息\""
+    },
+    {
+      "from": "title:\"Plan Build Message\"",
+      "to": "title:\"计划生成消息\""
+    },
+    {
+      "from": "description:\"Plan Build Message\"",
+      "to": "description:\"计划生成消息\""
+    },
+    {
+      "from": "children:\"Plan Build Message\"",
+      "to": "children:\"计划生成消息\""
+    },
+    {
+      "from": "Add Models",
+      "to": "添加模型"
+    },
+    {
+      "from": "label:\"Add Models\"",
+      "to": "label:\"添加模型\""
+    },
+    {
+      "from": "title:\"Add Models\"",
+      "to": "title:\"添加模型\""
+    },
+    {
+      "from": "description:\"Add Models\"",
+      "to": "description:\"添加模型\""
+    },
+    {
+      "from": "children:\"Add Models\"",
+      "to": "children:\"添加模型\""
+    },
+    {
+      "from": "Select Model",
+      "to": "选择模型"
+    },
+    {
+      "from": "label:\"Select Model\"",
+      "to": "label:\"选择模型\""
+    },
+    {
+      "from": "title:\"Select Model\"",
+      "to": "title:\"选择模型\""
+    },
+    {
+      "from": "description:\"Select Model\"",
+      "to": "description:\"选择模型\""
+    },
+    {
+      "from": "children:\"Select Model\"",
+      "to": "children:\"选择模型\""
+    },
+    {
+      "from": "Model Status",
+      "to": "模型状态"
+    },
+    {
+      "from": "label:\"Model Status\"",
+      "to": "label:\"模型状态\""
+    },
+    {
+      "from": "title:\"Model Status\"",
+      "to": "title:\"模型状态\""
+    },
+    {
+      "from": "description:\"Model Status\"",
+      "to": "description:\"模型状态\""
+    },
+    {
+      "from": "children:\"Model Status\"",
+      "to": "children:\"模型状态\""
+    },
+    {
+      "from": "Model Name Display",
+      "to": "模型名称显示"
+    },
+    {
+      "from": "label:\"Model Name Display\"",
+      "to": "label:\"模型名称显示\""
+    },
+    {
+      "from": "title:\"Model Name Display\"",
+      "to": "title:\"模型名称显示\""
+    },
+    {
+      "from": "description:\"Model Name Display\"",
+      "to": "description:\"模型名称显示\""
+    },
+    {
+      "from": "children:\"Model Name Display\"",
+      "to": "children:\"模型名称显示\""
+    },
+    {
+      "from": "Cycle Model Parameter",
+      "to": "循环切换模型参数"
+    },
+    {
+      "from": "label:\"Cycle Model Parameter\"",
+      "to": "label:\"循环切换模型参数\""
+    },
+    {
+      "from": "title:\"Cycle Model Parameter\"",
+      "to": "title:\"循环切换模型参数\""
+    },
+    {
+      "from": "description:\"Cycle Model Parameter\"",
+      "to": "description:\"循环切换模型参数\""
+    },
+    {
+      "from": "children:\"Cycle Model Parameter\"",
+      "to": "children:\"循环切换模型参数\""
+    },
+    {
+      "from": "Switch to Model Slug",
+      "to": "切换到模型标识"
+    },
+    {
+      "from": "label:\"Switch to Model Slug\"",
+      "to": "label:\"切换到模型标识\""
+    },
+    {
+      "from": "title:\"Switch to Model Slug\"",
+      "to": "title:\"切换到模型标识\""
+    },
+    {
+      "from": "description:\"Switch to Model Slug\"",
+      "to": "description:\"切换到模型标识\""
+    },
+    {
+      "from": "children:\"Switch to Model Slug\"",
+      "to": "children:\"切换到模型标识\""
+    },
+    {
+      "from": "Switch to Model Slug In Glass",
+      "to": "在 Glass 中切换到模型标识"
+    },
+    {
+      "from": "label:\"Switch to Model Slug In Glass\"",
+      "to": "label:\"在 Glass 中切换到模型标识\""
+    },
+    {
+      "from": "title:\"Switch to Model Slug In Glass\"",
+      "to": "title:\"在 Glass 中切换到模型标识\""
+    },
+    {
+      "from": "description:\"Switch to Model Slug In Glass\"",
+      "to": "description:\"在 Glass 中切换到模型标识\""
+    },
+    {
+      "from": "children:\"Switch to Model Slug In Glass\"",
+      "to": "children:\"在 Glass 中切换到模型标识\""
+    },
+    {
+      "from": "All Plugins",
+      "to": "所有插件"
+    },
+    {
+      "from": "label:\"All Plugins\"",
+      "to": "label:\"所有插件\""
+    },
+    {
+      "from": "title:\"All Plugins\"",
+      "to": "title:\"所有插件\""
+    },
+    {
+      "from": "description:\"All Plugins\"",
+      "to": "description:\"所有插件\""
+    },
+    {
+      "from": "children:\"All Plugins\"",
+      "to": "children:\"所有插件\""
+    },
+    {
+      "from": "Delete Rule",
+      "to": "删除规则"
+    },
+    {
+      "from": "label:\"Delete Rule\"",
+      "to": "label:\"删除规则\""
+    },
+    {
+      "from": "title:\"Delete Rule\"",
+      "to": "title:\"删除规则\""
+    },
+    {
+      "from": "description:\"Delete Rule\"",
+      "to": "description:\"删除规则\""
+    },
+    {
+      "from": "children:\"Delete Rule\"",
+      "to": "children:\"删除规则\""
+    },
+    {
+      "from": "Delete Skill",
+      "to": "删除技能"
+    },
+    {
+      "from": "label:\"Delete Skill\"",
+      "to": "label:\"删除技能\""
+    },
+    {
+      "from": "title:\"Delete Skill\"",
+      "to": "title:\"删除技能\""
+    },
+    {
+      "from": "description:\"Delete Skill\"",
+      "to": "description:\"删除技能\""
+    },
+    {
+      "from": "children:\"Delete Skill\"",
+      "to": "children:\"删除技能\""
+    },
+    {
+      "from": "No Rules Yet",
+      "to": "暂无规则"
+    },
+    {
+      "from": "label:\"No Rules Yet\"",
+      "to": "label:\"暂无规则\""
+    },
+    {
+      "from": "title:\"No Rules Yet\"",
+      "to": "title:\"暂无规则\""
+    },
+    {
+      "from": "description:\"No Rules Yet\"",
+      "to": "description:\"暂无规则\""
+    },
+    {
+      "from": "children:\"No Rules Yet\"",
+      "to": "children:\"暂无规则\""
+    },
+    {
+      "from": "No Skills Yet",
+      "to": "暂无技能"
+    },
+    {
+      "from": "label:\"No Skills Yet\"",
+      "to": "label:\"暂无技能\""
+    },
+    {
+      "from": "title:\"No Skills Yet\"",
+      "to": "title:\"暂无技能\""
+    },
+    {
+      "from": "description:\"No Skills Yet\"",
+      "to": "description:\"暂无技能\""
+    },
+    {
+      "from": "children:\"No Skills Yet\"",
+      "to": "children:\"暂无技能\""
+    },
+    {
+      "from": "New User Rule",
+      "to": "新建用户规则"
+    },
+    {
+      "from": "label:\"New User Rule\"",
+      "to": "label:\"新建用户规则\""
+    },
+    {
+      "from": "title:\"New User Rule\"",
+      "to": "title:\"新建用户规则\""
+    },
+    {
+      "from": "description:\"New User Rule\"",
+      "to": "description:\"新建用户规则\""
+    },
+    {
+      "from": "children:\"New User Rule\"",
+      "to": "children:\"新建用户规则\""
+    },
+    {
+      "from": "Could Not Load Cloud MCP Servers",
+      "to": "无法加载云端 MCP 服务器"
+    },
+    {
+      "from": "label:\"Could Not Load Cloud MCP Servers\"",
+      "to": "label:\"无法加载云端 MCP 服务器\""
+    },
+    {
+      "from": "title:\"Could Not Load Cloud MCP Servers\"",
+      "to": "title:\"无法加载云端 MCP 服务器\""
+    },
+    {
+      "from": "description:\"Could Not Load Cloud MCP Servers\"",
+      "to": "description:\"无法加载云端 MCP 服务器\""
+    },
+    {
+      "from": "children:\"Could Not Load Cloud MCP Servers\"",
+      "to": "children:\"无法加载云端 MCP 服务器\""
+    },
+    {
+      "from": "Could Not Load Workspace MCP Servers",
+      "to": "无法加载工作区 MCP 服务器"
+    },
+    {
+      "from": "label:\"Could Not Load Workspace MCP Servers\"",
+      "to": "label:\"无法加载工作区 MCP 服务器\""
+    },
+    {
+      "from": "title:\"Could Not Load Workspace MCP Servers\"",
+      "to": "title:\"无法加载工作区 MCP 服务器\""
+    },
+    {
+      "from": "description:\"Could Not Load Workspace MCP Servers\"",
+      "to": "description:\"无法加载工作区 MCP 服务器\""
+    },
+    {
+      "from": "children:\"Could Not Load Workspace MCP Servers\"",
+      "to": "children:\"无法加载工作区 MCP 服务器\""
+    },
+    {
+      "from": "Sign In to View Cloud MCP Servers",
+      "to": "登录以查看云端 MCP 服务器"
+    },
+    {
+      "from": "label:\"Sign In to View Cloud MCP Servers\"",
+      "to": "label:\"登录以查看云端 MCP 服务器\""
+    },
+    {
+      "from": "title:\"Sign In to View Cloud MCP Servers\"",
+      "to": "title:\"登录以查看云端 MCP 服务器\""
+    },
+    {
+      "from": "description:\"Sign In to View Cloud MCP Servers\"",
+      "to": "description:\"登录以查看云端 MCP 服务器\""
+    },
+    {
+      "from": "children:\"Sign In to View Cloud MCP Servers\"",
+      "to": "children:\"登录以查看云端 MCP 服务器\""
+    },
+    {
+      "from": "No MCP Tools",
+      "to": "没有 MCP 工具"
+    },
+    {
+      "from": "label:\"No MCP Tools\"",
+      "to": "label:\"没有 MCP 工具\""
+    },
+    {
+      "from": "title:\"No MCP Tools\"",
+      "to": "title:\"没有 MCP 工具\""
+    },
+    {
+      "from": "description:\"No MCP Tools\"",
+      "to": "description:\"没有 MCP 工具\""
+    },
+    {
+      "from": "children:\"No MCP Tools\"",
+      "to": "children:\"没有 MCP 工具\""
+    },
+    {
+      "from": "No Home MCP Tools",
+      "to": "没有 Home MCP 工具"
+    },
+    {
+      "from": "label:\"No Home MCP Tools\"",
+      "to": "label:\"没有 Home MCP 工具\""
+    },
+    {
+      "from": "title:\"No Home MCP Tools\"",
+      "to": "title:\"没有 Home MCP 工具\""
+    },
+    {
+      "from": "description:\"No Home MCP Tools\"",
+      "to": "description:\"没有 Home MCP 工具\""
+    },
+    {
+      "from": "children:\"No Home MCP Tools\"",
+      "to": "children:\"没有 Home MCP 工具\""
+    },
+    {
+      "from": "No Team MCP Servers",
+      "to": "没有团队 MCP 服务器"
+    },
+    {
+      "from": "label:\"No Team MCP Servers\"",
+      "to": "label:\"没有团队 MCP 服务器\""
+    },
+    {
+      "from": "title:\"No Team MCP Servers\"",
+      "to": "title:\"没有团队 MCP 服务器\""
+    },
+    {
+      "from": "description:\"No Team MCP Servers\"",
+      "to": "description:\"没有团队 MCP 服务器\""
+    },
+    {
+      "from": "children:\"No Team MCP Servers\"",
+      "to": "children:\"没有团队 MCP 服务器\""
+    },
+    {
+      "from": "No User MCP Servers",
+      "to": "没有用户 MCP 服务器"
+    },
+    {
+      "from": "label:\"No User MCP Servers\"",
+      "to": "label:\"没有用户 MCP 服务器\""
+    },
+    {
+      "from": "title:\"No User MCP Servers\"",
+      "to": "title:\"没有用户 MCP 服务器\""
+    },
+    {
+      "from": "description:\"No User MCP Servers\"",
+      "to": "description:\"没有用户 MCP 服务器\""
+    },
+    {
+      "from": "children:\"No User MCP Servers\"",
+      "to": "children:\"没有用户 MCP 服务器\""
+    },
+    {
+      "from": "MCP App",
+      "to": "MCP 应用"
+    },
+    {
+      "from": "label:\"MCP App\"",
+      "to": "label:\"MCP 应用\""
+    },
+    {
+      "from": "title:\"MCP App\"",
+      "to": "title:\"MCP 应用\""
+    },
+    {
+      "from": "description:\"MCP App\"",
+      "to": "description:\"MCP 应用\""
+    },
+    {
+      "from": "children:\"MCP App\"",
+      "to": "children:\"MCP 应用\""
+    },
+    {
+      "from": "Branch Pull Requests",
+      "to": "分支 Pull Request"
+    },
+    {
+      "from": "label:\"Branch Pull Requests\"",
+      "to": "label:\"分支 Pull Request\""
+    },
+    {
+      "from": "title:\"Branch Pull Requests\"",
+      "to": "title:\"分支 Pull Request\""
+    },
+    {
+      "from": "description:\"Branch Pull Requests\"",
+      "to": "description:\"分支 Pull Request\""
+    },
+    {
+      "from": "children:\"Branch Pull Requests\"",
+      "to": "children:\"分支 Pull Request\""
+    },
+    {
+      "from": "Edit Pull Request Title",
+      "to": "编辑 Pull Request 标题"
+    },
+    {
+      "from": "label:\"Edit Pull Request Title\"",
+      "to": "label:\"编辑 Pull Request 标题\""
+    },
+    {
+      "from": "title:\"Edit Pull Request Title\"",
+      "to": "title:\"编辑 Pull Request 标题\""
+    },
+    {
+      "from": "description:\"Edit Pull Request Title\"",
+      "to": "description:\"编辑 Pull Request 标题\""
+    },
+    {
+      "from": "children:\"Edit Pull Request Title\"",
+      "to": "children:\"编辑 Pull Request 标题\""
+    },
+    {
+      "from": "Cancel Branch Mismatch",
+      "to": "取消分支不匹配"
+    },
+    {
+      "from": "label:\"Cancel Branch Mismatch\"",
+      "to": "label:\"取消分支不匹配\""
+    },
+    {
+      "from": "title:\"Cancel Branch Mismatch\"",
+      "to": "title:\"取消分支不匹配\""
+    },
+    {
+      "from": "description:\"Cancel Branch Mismatch\"",
+      "to": "description:\"取消分支不匹配\""
+    },
+    {
+      "from": "children:\"Cancel Branch Mismatch\"",
+      "to": "children:\"取消分支不匹配\""
+    },
+    {
+      "from": "Use Current Branch",
+      "to": "使用当前分支"
+    },
+    {
+      "from": "label:\"Use Current Branch\"",
+      "to": "label:\"使用当前分支\""
+    },
+    {
+      "from": "title:\"Use Current Branch\"",
+      "to": "title:\"使用当前分支\""
+    },
+    {
+      "from": "description:\"Use Current Branch\"",
+      "to": "description:\"使用当前分支\""
+    },
+    {
+      "from": "children:\"Use Current Branch\"",
+      "to": "children:\"使用当前分支\""
+    },
+    {
+      "from": "Git Required",
+      "to": "需要 Git"
+    },
+    {
+      "from": "label:\"Git Required\"",
+      "to": "label:\"需要 Git\""
+    },
+    {
+      "from": "title:\"Git Required\"",
+      "to": "title:\"需要 Git\""
+    },
+    {
+      "from": "description:\"Git Required\"",
+      "to": "description:\"需要 Git\""
+    },
+    {
+      "from": "children:\"Git Required\"",
+      "to": "children:\"需要 Git\""
+    },
+    {
+      "from": "No Git Remote",
+      "to": "没有 Git 远程仓库"
+    },
+    {
+      "from": "label:\"No Git Remote\"",
+      "to": "label:\"没有 Git 远程仓库\""
+    },
+    {
+      "from": "title:\"No Git Remote\"",
+      "to": "title:\"没有 Git 远程仓库\""
+    },
+    {
+      "from": "description:\"No Git Remote\"",
+      "to": "description:\"没有 Git 远程仓库\""
+    },
+    {
+      "from": "children:\"No Git Remote\"",
+      "to": "children:\"没有 Git 远程仓库\""
+    },
+    {
+      "from": "New Local Git Repo",
+      "to": "新建本地 Git 仓库"
+    },
+    {
+      "from": "label:\"New Local Git Repo\"",
+      "to": "label:\"新建本地 Git 仓库\""
+    },
+    {
+      "from": "title:\"New Local Git Repo\"",
+      "to": "title:\"新建本地 Git 仓库\""
+    },
+    {
+      "from": "description:\"New Local Git Repo\"",
+      "to": "description:\"新建本地 Git 仓库\""
+    },
+    {
+      "from": "children:\"New Local Git Repo\"",
+      "to": "children:\"新建本地 Git 仓库\""
+    },
+    {
+      "from": "New Worktree",
+      "to": "新建工作树"
+    },
+    {
+      "from": "label:\"New Worktree\"",
+      "to": "label:\"新建工作树\""
+    },
+    {
+      "from": "title:\"New Worktree\"",
+      "to": "title:\"新建工作树\""
+    },
+    {
+      "from": "description:\"New Worktree\"",
+      "to": "description:\"新建工作树\""
+    },
+    {
+      "from": "children:\"New Worktree\"",
+      "to": "children:\"新建工作树\""
+    },
+    {
+      "from": "Worktree Composer",
+      "to": "工作树 Composer"
+    },
+    {
+      "from": "label:\"Worktree Composer\"",
+      "to": "label:\"工作树 Composer\""
+    },
+    {
+      "from": "title:\"Worktree Composer\"",
+      "to": "title:\"工作树 Composer\""
+    },
+    {
+      "from": "description:\"Worktree Composer\"",
+      "to": "description:\"工作树 Composer\""
+    },
+    {
+      "from": "children:\"Worktree Composer\"",
+      "to": "children:\"工作树 Composer\""
+    },
+    {
+      "from": "Delete Cloud-Agent Cache",
+      "to": "删除云端 Agent 缓存"
+    },
+    {
+      "from": "label:\"Delete Cloud-Agent Cache\"",
+      "to": "label:\"删除云端 Agent 缓存\""
+    },
+    {
+      "from": "title:\"Delete Cloud-Agent Cache\"",
+      "to": "title:\"删除云端 Agent 缓存\""
+    },
+    {
+      "from": "description:\"Delete Cloud-Agent Cache\"",
+      "to": "description:\"删除云端 Agent 缓存\""
+    },
+    {
+      "from": "children:\"Delete Cloud-Agent Cache\"",
+      "to": "children:\"删除云端 Agent 缓存\""
+    },
+    {
+      "from": "Background Colors",
+      "to": "背景色"
+    },
+    {
+      "from": "label:\"Background Colors\"",
+      "to": "label:\"背景色\""
+    },
+    {
+      "from": "title:\"Background Colors\"",
+      "to": "title:\"背景色\""
+    },
+    {
+      "from": "description:\"Background Colors\"",
+      "to": "description:\"背景色\""
+    },
+    {
+      "from": "children:\"Background Colors\"",
+      "to": "children:\"背景色\""
+    },
+    {
+      "from": "Color Tokens",
+      "to": "颜色令牌"
+    },
+    {
+      "from": "label:\"Color Tokens\"",
+      "to": "label:\"颜色令牌\""
+    },
+    {
+      "from": "title:\"Color Tokens\"",
+      "to": "title:\"颜色令牌\""
+    },
+    {
+      "from": "description:\"Color Tokens\"",
+      "to": "description:\"颜色令牌\""
+    },
+    {
+      "from": "children:\"Color Tokens\"",
+      "to": "children:\"颜色令牌\""
+    },
+    {
+      "from": "Icon Colors",
+      "to": "图标颜色"
+    },
+    {
+      "from": "label:\"Icon Colors\"",
+      "to": "label:\"图标颜色\""
+    },
+    {
+      "from": "title:\"Icon Colors\"",
+      "to": "title:\"图标颜色\""
+    },
+    {
+      "from": "description:\"Icon Colors\"",
+      "to": "description:\"图标颜色\""
+    },
+    {
+      "from": "children:\"Icon Colors\"",
+      "to": "children:\"图标颜色\""
+    },
+    {
+      "from": "Shadow Colors",
+      "to": "阴影颜色"
+    },
+    {
+      "from": "label:\"Shadow Colors\"",
+      "to": "label:\"阴影颜色\""
+    },
+    {
+      "from": "title:\"Shadow Colors\"",
+      "to": "title:\"阴影颜色\""
+    },
+    {
+      "from": "description:\"Shadow Colors\"",
+      "to": "description:\"阴影颜色\""
+    },
+    {
+      "from": "children:\"Shadow Colors\"",
+      "to": "children:\"阴影颜色\""
+    },
+    {
+      "from": "Stroke Colors",
+      "to": "描边颜色"
+    },
+    {
+      "from": "label:\"Stroke Colors\"",
+      "to": "label:\"描边颜色\""
+    },
+    {
+      "from": "title:\"Stroke Colors\"",
+      "to": "title:\"描边颜色\""
+    },
+    {
+      "from": "description:\"Stroke Colors\"",
+      "to": "description:\"描边颜色\""
+    },
+    {
+      "from": "children:\"Stroke Colors\"",
+      "to": "children:\"描边颜色\""
+    },
+    {
+      "from": "Text Colors",
+      "to": "文本颜色"
+    },
+    {
+      "from": "label:\"Text Colors\"",
+      "to": "label:\"文本颜色\""
+    },
+    {
+      "from": "title:\"Text Colors\"",
+      "to": "title:\"文本颜色\""
+    },
+    {
+      "from": "description:\"Text Colors\"",
+      "to": "description:\"文本颜色\""
+    },
+    {
+      "from": "children:\"Text Colors\"",
+      "to": "children:\"文本颜色\""
+    },
+    {
+      "from": "High Contrast Theme",
+      "to": "高对比度主题"
+    },
+    {
+      "from": "label:\"High Contrast Theme\"",
+      "to": "label:\"高对比度主题\""
+    },
+    {
+      "from": "title:\"High Contrast Theme\"",
+      "to": "title:\"高对比度主题\""
+    },
+    {
+      "from": "description:\"High Contrast Theme\"",
+      "to": "description:\"高对比度主题\""
+    },
+    {
+      "from": "children:\"High Contrast Theme\"",
+      "to": "children:\"高对比度主题\""
+    },
+    {
+      "from": "System Theme",
+      "to": "系统主题"
+    },
+    {
+      "from": "label:\"System Theme\"",
+      "to": "label:\"系统主题\""
+    },
+    {
+      "from": "title:\"System Theme\"",
+      "to": "title:\"系统主题\""
+    },
+    {
+      "from": "description:\"System Theme\"",
+      "to": "description:\"系统主题\""
+    },
+    {
+      "from": "children:\"System Theme\"",
+      "to": "children:\"系统主题\""
+    },
+    {
+      "from": "Switch Theme",
+      "to": "切换主题"
+    },
+    {
+      "from": "label:\"Switch Theme\"",
+      "to": "label:\"切换主题\""
+    },
+    {
+      "from": "title:\"Switch Theme\"",
+      "to": "title:\"切换主题\""
+    },
+    {
+      "from": "description:\"Switch Theme\"",
+      "to": "description:\"切换主题\""
+    },
+    {
+      "from": "children:\"Switch Theme\"",
+      "to": "children:\"切换主题\""
+    },
+    {
+      "from": "Cursor Semantic Color System",
+      "to": "Cursor 语义颜色系统"
+    },
+    {
+      "from": "label:\"Cursor Semantic Color System\"",
+      "to": "label:\"Cursor 语义颜色系统\""
+    },
+    {
+      "from": "title:\"Cursor Semantic Color System\"",
+      "to": "title:\"Cursor 语义颜色系统\""
+    },
+    {
+      "from": "description:\"Cursor Semantic Color System\"",
+      "to": "description:\"Cursor 语义颜色系统\""
+    },
+    {
+      "from": "children:\"Cursor Semantic Color System\"",
+      "to": "children:\"Cursor 语义颜色系统\""
+    },
+    {
+      "from": "Cursor Tab UI",
+      "to": "Cursor Tab 界面"
+    },
+    {
+      "from": "label:\"Cursor Tab UI\"",
+      "to": "label:\"Cursor Tab 界面\""
+    },
+    {
+      "from": "title:\"Cursor Tab UI\"",
+      "to": "title:\"Cursor Tab 界面\""
+    },
+    {
+      "from": "description:\"Cursor Tab UI\"",
+      "to": "description:\"Cursor Tab 界面\""
+    },
+    {
+      "from": "children:\"Cursor Tab UI\"",
+      "to": "children:\"Cursor Tab 界面\""
+    },
+    {
+      "from": "Tooltips",
+      "to": "工具提示"
+    },
+    {
+      "from": "label:\"Tooltips\"",
+      "to": "label:\"工具提示\""
+    },
+    {
+      "from": "title:\"Tooltips\"",
+      "to": "title:\"工具提示\""
+    },
+    {
+      "from": "description:\"Tooltips\"",
+      "to": "description:\"工具提示\""
+    },
+    {
+      "from": "children:\"Tooltips\"",
+      "to": "children:\"工具提示\""
+    },
+    {
+      "from": "Multiple Notifications",
+      "to": "多条通知"
+    },
+    {
+      "from": "label:\"Multiple Notifications\"",
+      "to": "label:\"多条通知\""
+    },
+    {
+      "from": "title:\"Multiple Notifications\"",
+      "to": "title:\"多条通知\""
+    },
+    {
+      "from": "description:\"Multiple Notifications\"",
+      "to": "description:\"多条通知\""
+    },
+    {
+      "from": "children:\"Multiple Notifications\"",
+      "to": "children:\"多条通知\""
+    },
+    {
+      "from": "Link Privacy",
+      "to": "链接隐私"
+    },
+    {
+      "from": "label:\"Link Privacy\"",
+      "to": "label:\"链接隐私\""
+    },
+    {
+      "from": "title:\"Link Privacy\"",
+      "to": "title:\"链接隐私\""
+    },
+    {
+      "from": "description:\"Link Privacy\"",
+      "to": "description:\"链接隐私\""
+    },
+    {
+      "from": "children:\"Link Privacy\"",
+      "to": "children:\"链接隐私\""
+    },
+    {
+      "from": "Privacy Mode",
+      "to": "隐私模式"
+    },
+    {
+      "from": "label:\"Privacy Mode\"",
+      "to": "label:\"隐私模式\""
+    },
+    {
+      "from": "title:\"Privacy Mode\"",
+      "to": "title:\"隐私模式\""
+    },
+    {
+      "from": "description:\"Privacy Mode\"",
+      "to": "description:\"隐私模式\""
+    },
+    {
+      "from": "children:\"Privacy Mode\"",
+      "to": "children:\"隐私模式\""
+    },
+    {
+      "from": "Delete Index",
+      "to": "删除索引"
+    },
+    {
+      "from": "label:\"Delete Index\"",
+      "to": "label:\"删除索引\""
+    },
+    {
+      "from": "title:\"Delete Index\"",
+      "to": "title:\"删除索引\""
+    },
+    {
+      "from": "description:\"Delete Index\"",
+      "to": "description:\"删除索引\""
+    },
+    {
+      "from": "children:\"Delete Index\"",
+      "to": "children:\"删除索引\""
+    },
+    {
+      "from": "Index Link ⏎",
+      "to": "索引链接 ⏎"
+    },
+    {
+      "from": "label:\"Index Link ⏎\"",
+      "to": "label:\"索引链接 ⏎\""
+    },
+    {
+      "from": "title:\"Index Link ⏎\"",
+      "to": "title:\"索引链接 ⏎\""
+    },
+    {
+      "from": "description:\"Index Link ⏎\"",
+      "to": "description:\"索引链接 ⏎\""
+    },
+    {
+      "from": "children:\"Index Link ⏎\"",
+      "to": "children:\"索引链接 ⏎\""
+    },
+    {
+      "from": "Glass Startup Performance",
+      "to": "Glass 启动性能"
+    },
+    {
+      "from": "label:\"Glass Startup Performance\"",
+      "to": "label:\"Glass 启动性能\""
+    },
+    {
+      "from": "title:\"Glass Startup Performance\"",
+      "to": "title:\"Glass 启动性能\""
+    },
+    {
+      "from": "description:\"Glass Startup Performance\"",
+      "to": "description:\"Glass 启动性能\""
+    },
+    {
+      "from": "children:\"Glass Startup Performance\"",
+      "to": "children:\"Glass 启动性能\""
+    },
+    {
+      "from": "Branch Name Unavailable",
+      "to": "分支名称不可用"
+    },
+    {
+      "from": "label:\"Branch Name Unavailable\"",
+      "to": "label:\"分支名称不可用\""
+    },
+    {
+      "from": "title:\"Branch Name Unavailable\"",
+      "to": "title:\"分支名称不可用\""
+    },
+    {
+      "from": "description:\"Branch Name Unavailable\"",
+      "to": "description:\"分支名称不可用\""
+    },
+    {
+      "from": "children:\"Branch Name Unavailable\"",
+      "to": "children:\"分支名称不可用\""
+    },
+    {
+      "from": "Focus Browser Location Bar",
+      "to": "聚焦浏览器地址栏"
+    },
+    {
+      "from": "label:\"Focus Browser Location Bar\"",
+      "to": "label:\"聚焦浏览器地址栏\""
+    },
+    {
+      "from": "title:\"Focus Browser Location Bar\"",
+      "to": "title:\"聚焦浏览器地址栏\""
+    },
+    {
+      "from": "description:\"Focus Browser Location Bar\"",
+      "to": "description:\"聚焦浏览器地址栏\""
+    },
+    {
+      "from": "children:\"Focus Browser Location Bar\"",
+      "to": "children:\"聚焦浏览器地址栏\""
+    },
+    {
+      "from": "Open Agent by ID",
+      "to": "按 ID 打开 Agent"
+    },
+    {
+      "from": "label:\"Open Agent by ID\"",
+      "to": "label:\"按 ID 打开 Agent\""
+    },
+    {
+      "from": "title:\"Open Agent by ID\"",
+      "to": "title:\"按 ID 打开 Agent\""
+    },
+    {
+      "from": "description:\"Open Agent by ID\"",
+      "to": "description:\"按 ID 打开 Agent\""
+    },
+    {
+      "from": "children:\"Open Agent by ID\"",
+      "to": "children:\"按 ID 打开 Agent\""
+    },
+    {
+      "from": "Open Branch Selector",
+      "to": "打开分支选择器"
+    },
+    {
+      "from": "label:\"Open Branch Selector\"",
+      "to": "label:\"打开分支选择器\""
+    },
+    {
+      "from": "title:\"Open Branch Selector\"",
+      "to": "title:\"打开分支选择器\""
+    },
+    {
+      "from": "description:\"Open Branch Selector\"",
+      "to": "description:\"打开分支选择器\""
+    },
+    {
+      "from": "children:\"Open Branch Selector\"",
+      "to": "children:\"打开分支选择器\""
+    },
+    {
+      "from": "Open Browser Tab",
+      "to": "打开浏览器标签页"
+    },
+    {
+      "from": "label:\"Open Browser Tab\"",
+      "to": "label:\"打开浏览器标签页\""
+    },
+    {
+      "from": "title:\"Open Browser Tab\"",
+      "to": "title:\"打开浏览器标签页\""
+    },
+    {
+      "from": "description:\"Open Browser Tab\"",
+      "to": "description:\"打开浏览器标签页\""
+    },
+    {
+      "from": "children:\"Open Browser Tab\"",
+      "to": "children:\"打开浏览器标签页\""
+    },
+    {
+      "from": "Open Cloud Agent by ID",
+      "to": "按 ID 打开云端 Agent"
+    },
+    {
+      "from": "label:\"Open Cloud Agent by ID\"",
+      "to": "label:\"按 ID 打开云端 Agent\""
+    },
+    {
+      "from": "title:\"Open Cloud Agent by ID\"",
+      "to": "title:\"按 ID 打开云端 Agent\""
+    },
+    {
+      "from": "description:\"Open Cloud Agent by ID\"",
+      "to": "description:\"按 ID 打开云端 Agent\""
+    },
+    {
+      "from": "children:\"Open Cloud Agent by ID\"",
+      "to": "children:\"按 ID 打开云端 Agent\""
+    },
+    {
+      "from": "Open Least Recent Agents",
+      "to": "打开最久未使用的 Agent"
+    },
+    {
+      "from": "label:\"Open Least Recent Agents\"",
+      "to": "label:\"打开最久未使用的 Agent\""
+    },
+    {
+      "from": "title:\"Open Least Recent Agents\"",
+      "to": "title:\"打开最久未使用的 Agent\""
+    },
+    {
+      "from": "description:\"Open Least Recent Agents\"",
+      "to": "description:\"打开最久未使用的 Agent\""
+    },
+    {
+      "from": "children:\"Open Least Recent Agents\"",
+      "to": "children:\"打开最久未使用的 Agent\""
+    },
+    {
+      "from": "Open Plan",
+      "to": "打开计划"
+    },
+    {
+      "from": "label:\"Open Plan\"",
+      "to": "label:\"打开计划\""
+    },
+    {
+      "from": "title:\"Open Plan\"",
+      "to": "title:\"打开计划\""
+    },
+    {
+      "from": "description:\"Open Plan\"",
+      "to": "description:\"打开计划\""
+    },
+    {
+      "from": "children:\"Open Plan\"",
+      "to": "children:\"打开计划\""
+    },
+    {
+      "from": "Open Recent Agents",
+      "to": "打开最近的 Agent"
+    },
+    {
+      "from": "label:\"Open Recent Agents\"",
+      "to": "label:\"打开最近的 Agent\""
+    },
+    {
+      "from": "title:\"Open Recent Agents\"",
+      "to": "title:\"打开最近的 Agent\""
+    },
+    {
+      "from": "description:\"Open Recent Agents\"",
+      "to": "description:\"打开最近的 Agent\""
+    },
+    {
+      "from": "children:\"Open Recent Agents\"",
+      "to": "children:\"打开最近的 Agent\""
+    },
+    {
+      "from": "Show Output Channel in Tab",
+      "to": "在标签页中显示输出通道"
+    },
+    {
+      "from": "label:\"Show Output Channel in Tab\"",
+      "to": "label:\"在标签页中显示输出通道\""
+    },
+    {
+      "from": "title:\"Show Output Channel in Tab\"",
+      "to": "title:\"在标签页中显示输出通道\""
+    },
+    {
+      "from": "description:\"Show Output Channel in Tab\"",
+      "to": "description:\"在标签页中显示输出通道\""
+    },
+    {
+      "from": "children:\"Show Output Channel in Tab\"",
+      "to": "children:\"在标签页中显示输出通道\""
+    },
+    {
+      "from": "Task Tool Call Block",
+      "to": "任务工具调用块"
+    },
+    {
+      "from": "label:\"Task Tool Call Block\"",
+      "to": "label:\"任务工具调用块\""
+    },
+    {
+      "from": "title:\"Task Tool Call Block\"",
+      "to": "title:\"任务工具调用块\""
+    },
+    {
+      "from": "description:\"Task Tool Call Block\"",
+      "to": "description:\"任务工具调用块\""
+    },
+    {
+      "from": "children:\"Task Tool Call Block\"",
+      "to": "children:\"任务工具调用块\""
+    },
+    {
+      "from": "Task/Subagent Tool Call Bubble",
+      "to": "任务/子 Agent 工具调用气泡"
+    },
+    {
+      "from": "label:\"Task/Subagent Tool Call Bubble\"",
+      "to": "label:\"任务/子 Agent 工具调用气泡\""
+    },
+    {
+      "from": "title:\"Task/Subagent Tool Call Bubble\"",
+      "to": "title:\"任务/子 Agent 工具调用气泡\""
+    },
+    {
+      "from": "description:\"Task/Subagent Tool Call Bubble\"",
+      "to": "description:\"任务/子 Agent 工具调用气泡\""
+    },
+    {
+      "from": "children:\"Task/Subagent Tool Call Bubble\"",
+      "to": "children:\"任务/子 Agent 工具调用气泡\""
+    },
+    {
+      "from": "Toggle Local / GitHub",
+      "to": "切换本地 / GitHub"
+    },
+    {
+      "from": "label:\"Toggle Local / GitHub\"",
+      "to": "label:\"切换本地 / GitHub\""
+    },
+    {
+      "from": "title:\"Toggle Local / GitHub\"",
+      "to": "title:\"切换本地 / GitHub\""
+    },
+    {
+      "from": "description:\"Toggle Local / GitHub\"",
+      "to": "description:\"切换本地 / GitHub\""
+    },
+    {
+      "from": "children:\"Toggle Local / GitHub\"",
+      "to": "children:\"切换本地 / GitHub\""
+    },
+    {
+      "from": "label:\"Plan\"",
+      "to": "label:\"计划\""
+    },
+    {
+      "from": "title:\"Plan\"",
+      "to": "title:\"计划\""
+    },
+    {
+      "from": "description:\"Plan\"",
+      "to": "description:\"计划\""
+    },
+    {
+      "from": "children:\"Plan\"",
+      "to": "children:\"计划\""
+    },
+    {
+      "from": "Index Link \\u23CE",
+      "to": "索引链接 \\u23CE"
+    },
+    {
+      "from": "label:\"Index Link \\u23CE\"",
+      "to": "label:\"索引链接 \\u23CE\""
+    },
+    {
+      "from": "title:\"Index Link \\u23CE\"",
+      "to": "title:\"索引链接 \\u23CE\""
+    },
+    {
+      "from": "description:\"Index Link \\u23CE\"",
+      "to": "description:\"索引链接 \\u23CE\""
+    },
+    {
+      "from": "children:\"Index Link \\u23CE\"",
+      "to": "children:\"索引链接 \\u23CE\""
     }
   ]
 }

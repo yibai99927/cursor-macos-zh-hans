@@ -224,7 +224,7 @@
       "browserContextMenu.inspectElement": "检查元素"
     },
     "vs/workbench/contrib/cursorBlame/browser/aiBlameHover.contribution": {
-      "cursorBlameConfigurationTitle": "Cursor Blame",
+      "cursorBlameConfigurationTitle": "Cursor 代码追溯",
       "andXMore": "以及另外 {0} 个",
       "addLineToChat": "在对话中引用此行",
       "showFileBlame": "显示文件 Blame",
@@ -235,10 +235,10 @@
       "cursor.blame.hoverDelay": "控制 Cursor Blame 悬停提示出现前的延迟（毫秒）。如果未设置，则使用 `#editor.hover.delay#`，最小为 500 毫秒。"
     },
     "vs/workbench/contrib/cursorBlame/browser/cursorBlame.contribution": {
-      "cursorBlame.category": "Cursor Blame",
-      "cursorBlame.explorerContextMenu": "Cursor Blame",
-      "cursorBlameSubmenu": "Cursor Blame",
-      "cursorBlameConfigurationTitle": "Cursor Blame",
+      "cursorBlame.category": "Cursor 代码追溯",
+      "cursorBlame.explorerContextMenu": "Cursor 代码追溯",
+      "cursorBlameSubmenu": "Cursor 代码追溯",
+      "cursorBlameConfigurationTitle": "Cursor 代码追溯",
       "cursorBlame.openFileBlameTitle": "打开文件 Blame",
       "cursorBlame.openCommitTitle": "查看提交",
       "cursorBlame.pasteCommitHash": "粘贴提交哈希",
@@ -251,7 +251,7 @@
       "cursorBlame.editorDecoration.forceDisabled": "启用后，强制禁用 Git Blame 编辑器装饰，覆盖任何工作区级别设置。这是应用程序级别设置。"
     },
     "vs/workbench/contrib/cursorBlame/browser/cursorBlameFileDecoration": {
-      "cursorBlame": "Cursor Blame",
+      "cursorBlame": "Cursor 代码追溯",
       "cursorBlame.toggleEditorDecoration": "切换编辑器装饰"
     },
     "vs/workbench/contrib/cursorOrigin/browser/cursorOrigin.contribution": {
