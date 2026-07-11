@@ -1,6 +1,6 @@
 {
   "version": "1.4.1",
-  "description": "Cursor Glass/Settings/Automations UI 硬编码文案替换表（macOS）",
+  "description": "Cursor Glass/Settings/Automations UI 硬编码文案替换表（macOS / Windows）",
   "targets": [
     {
       "file": "out/vs/workbench/workbench.glass.main.js",

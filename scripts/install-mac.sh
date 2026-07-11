@@ -50,11 +50,13 @@ python3 "$ROOT/scripts/merge-overlay.py"
 
 # 4. 打 Glass UI 补丁（并同步 product.json 校验和，避免安装完整性报错）
 echo "==> 应用 Glass UI 中文补丁..."
-python3 "$ROOT/scripts/patch-glass-ui.py"
+APP_ROOT="$(python3 "$ROOT/scripts/paths.py" --app-root)"
+echo "    Cursor app root: $APP_ROOT"
+python3 "$ROOT/scripts/patch-glass-ui.py" --app-root "$APP_ROOT"
 
 # 5. 提取当前版本字符串（供维护者参考，不影响安装）
 echo "==> 提取当前版本待翻译字符串..."
-python3 "$ROOT/scripts/extract.py" || true
+python3 "$ROOT/scripts/extract.py" "$APP_ROOT" || true
 
 echo ""
 echo "✅ 安装完成！"
@@ -63,3 +65,4 @@ echo "请完全退出 Cursor（Cmd+Q），然后重新打开。"
 echo "若界面未切换，可在 Cursor 中执行命令: Configure Display Language → 选择 zh-cn"
 echo ""
 echo "卸载汉化: $ROOT/scripts/uninstall-mac.sh"
+echo "Windows 用户请使用: scripts/install-win.ps1"

@@ -3,20 +3,22 @@
 
 from __future__ import annotations
 
+import argparse
 import json
 import shutil
 from datetime import datetime
 from pathlib import Path
 
+from paths import cursor_extensions_dir
+
 ROOT = Path(__file__).resolve().parent.parent
 OVERLAY_PATH = ROOT / "data/cursor-overlay.zh-cn.json"
-EXTENSIONS_DIR = Path.home() / ".cursor/extensions"
 BACKUP_DIR = ROOT / "backups"
 
 
-def find_language_pack() -> Path:
+def find_language_pack(extensions_dir: Path) -> Path:
     candidates = sorted(
-        EXTENSIONS_DIR.glob("ms-ceintl.vscode-language-pack-zh-hans-*"),
+        extensions_dir.glob("ms-ceintl.vscode-language-pack-zh-hans-*"),
         key=lambda p: p.stat().st_mtime,
         reverse=True,
     )
@@ -40,13 +42,22 @@ def merge_overlay(main_i18n: dict, overlay: dict) -> tuple[dict, int]:
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description="Merge Cursor overlay into zh-hans language pack")
+    parser.add_argument(
+        "--extensions-dir",
+        default=None,
+        help="Cursor extensions directory (default: ~/.cursor/extensions)",
+    )
+    args = parser.parse_args()
+
     if not OVERLAY_PATH.exists():
         raise FileNotFoundError(f"未找到翻译文件: {OVERLAY_PATH}")
 
     with OVERLAY_PATH.open(encoding="utf-8") as f:
         overlay = json.load(f)
 
-    pack_dir = find_language_pack()
+    extensions_dir = Path(args.extensions_dir) if args.extensions_dir else cursor_extensions_dir()
+    pack_dir = find_language_pack(extensions_dir)
     main_path = pack_dir / "translations/main.i18n.json"
     if not main_path.exists():
         raise FileNotFoundError(f"语言包中未找到 main.i18n.json: {main_path}")

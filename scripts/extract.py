@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
-"""从 macOS 版 Cursor.app 提取 Cursor 专有英文字符串。"""
+"""从 Cursor 安装目录提取 Cursor 专有英文字符串。"""
 
 from __future__ import annotations
 
+import argparse
 import json
-import re
-import sys
 from pathlib import Path
+
+from paths import find_cursor_app_root
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
-CURSOR_APP = Path("/Applications/Cursor.app/Contents/Resources/app")
 
 PRODUCT_MODULE_PREFIXES = (
     "vs/workbench/contrib/cursor",
@@ -100,7 +100,9 @@ def load_nls(app_root: Path) -> tuple[list, list]:
     keys_path = app_root / "out/nls.keys.json"
     msgs_path = app_root / "out/nls.messages.json"
     if not keys_path.exists() or not msgs_path.exists():
-        raise FileNotFoundError(f"未找到 NLS 文件，请确认 Cursor 安装在 {CURSOR_APP.parent.parent.parent}")
+        raise FileNotFoundError(
+            f"未找到 NLS 文件，请确认 Cursor 安装正确: {app_root}"
+        )
     with keys_path.open(encoding="utf-8") as f:
         keys = json.load(f)
     with msgs_path.open(encoding="utf-8") as f:
@@ -108,7 +110,7 @@ def load_nls(app_root: Path) -> tuple[list, list]:
     return keys, messages
 
 
-def extract(app_root: Path = CURSOR_APP) -> list[dict]:
+def extract(app_root: Path) -> list[dict]:
     keys, messages = load_nls(app_root)
     items: list[dict] = []
     idx = 0
@@ -122,9 +124,17 @@ def extract(app_root: Path = CURSOR_APP) -> list[dict]:
 
 
 def main() -> int:
-    app_root = CURSOR_APP
-    if len(sys.argv) > 1:
-        app_root = Path(sys.argv[1])
+    parser = argparse.ArgumentParser(description="Extract Cursor-specific English strings")
+    parser.add_argument(
+        "app_root",
+        nargs="?",
+        default=None,
+        help="Cursor resources/app path (auto-detect if omitted)",
+    )
+    args = parser.parse_args()
+
+    app_root = find_cursor_app_root(args.app_root)
+    print(f"Cursor app root: {app_root}")
 
     items = extract(app_root)
     DATA_DIR.mkdir(parents=True, exist_ok=True)

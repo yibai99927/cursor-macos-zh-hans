@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""为 Cursor Glass UI / Settings 界面打中文补丁（macOS）。
+"""为 Cursor Glass UI / Settings 界面打中文补丁。
 
-会修改 Cursor.app 内的 JS，并同步更新 product.json 中的 SHA256 校验和，
+会修改 Cursor 安装目录内的 JS，并同步更新 product.json 中的 SHA256 校验和，
 避免触发 “Installation has been modified on disk”。
+支持 macOS / Windows / Linux。
 """
 
 from __future__ import annotations
@@ -15,10 +16,11 @@ import shutil
 from datetime import datetime
 from pathlib import Path
 
+from paths import find_cursor_app_root, platform_display_name, quit_hint
+
 ROOT = Path(__file__).resolve().parent.parent
 DATA_FILE = ROOT / "data/glass-ui-replacements.json"
 BACKUP_DIR = ROOT / "backups"
-DEFAULT_CURSOR_APP = Path("/Applications/Cursor.app/Contents/Resources/app")
 
 
 def load_config() -> dict:
@@ -127,15 +129,23 @@ def restore_file(filename: str, app_root: Path, rel_path: str) -> bool:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Patch Cursor Glass UI strings for zh-cn")
-    parser.add_argument("--app-root", default=str(DEFAULT_CURSOR_APP), help="Cursor app resources path")
+    parser.add_argument(
+        "--app-root",
+        default=None,
+        help="Cursor resources/app path (auto-detect if omitted)",
+    )
     parser.add_argument("--dry-run", action="store_true", help="Preview without writing")
     parser.add_argument("--restore", action="store_true", help="Restore latest backups")
     args = parser.parse_args()
 
-    app_root = Path(args.app_root)
-    if not app_root.exists():
-        print(f"错误: 未找到 Cursor 应用目录: {app_root}")
+    try:
+        app_root = find_cursor_app_root(args.app_root)
+    except FileNotFoundError as exc:
+        print(f"错误: {exc}")
         return 1
+
+    print(f"平台: {platform_display_name()}")
+    print(f"Cursor app root: {app_root}")
 
     config = load_config()
 
@@ -152,7 +162,6 @@ def main() -> int:
             restored += 1
         # After restoring JS, recompute checksums to match restored files if product wasn't restored
         if restored:
-            # Ensure checksums match restored files
             keys = []
             for target in config["targets"]:
                 keys.append(target["file"])
@@ -161,6 +170,7 @@ def main() -> int:
             print("未找到可恢复的备份文件")
             return 1
         print(f"共恢复 {restored} 个文件")
+        print(quit_hint())
         return 0
 
     print("==> 应用 Glass UI 中文补丁（并同步 product.json 校验和）")
