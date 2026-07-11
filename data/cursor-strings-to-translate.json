@@ -1,0 +1,1352 @@
+[
+  {
+    "module": "vs/code/electron-main/main",
+    "key": "localModeDataImportError",
+    "en": "Cursor Data Import Failed"
+  },
+  {
+    "module": "vs/code/electron-main/main",
+    "key": "mainLog",
+    "en": "Main"
+  },
+  {
+    "module": "vs/code/electron-main/main",
+    "key": "secondInstanceAdmin",
+    "en": "Another instance of {0} is already running as administrator."
+  },
+  {
+    "module": "vs/code/electron-main/main",
+    "key": "secondInstanceAdminDetail",
+    "en": "Please close the other instance and try again."
+  },
+  {
+    "module": "vs/code/electron-main/main",
+    "key": "secondInstanceNoResponse",
+    "en": "Another instance of {0} is running but not responding"
+  },
+  {
+    "module": "vs/code/electron-main/main",
+    "key": "secondInstanceNoResponseDetail",
+    "en": "Please close all other instances and try again."
+  },
+  {
+    "module": "vs/code/electron-main/main",
+    "key": "statusWarning",
+    "en": "Warning: The --status argument can only be used if {0} is already running. Please run it again after {0} has started."
+  },
+  {
+    "module": "vs/code/electron-main/main",
+    "key": "startupDataDirError",
+    "en": "Unable to write program user data."
+  },
+  {
+    "module": "vs/code/electron-main/main",
+    "key": "startupUserDataAndExtensionsDirErrorDetail",
+    "en": "{0}\n\nPlease make sure the following directories are writeable:\n\n{1}"
+  },
+  {
+    "module": "vs/code/electron-main/main",
+    "key": "close",
+    "en": "&&Close"
+  },
+  {
+    "module": "vs/code/electron-utility/mcpProcess/mcpProcessMain",
+    "key": "mcpProcessLog",
+    "en": "MCP Process"
+  },
+  {
+    "module": "vs/platform/action/common/actionCommonCategories",
+    "key": "cursor",
+    "en": "Cursor"
+  },
+  {
+    "module": "vs/platform/contextkey/common/contextkeys",
+    "key": "isDevUser",
+    "en": "Whether the user is a Cursor developer/employee"
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "optionsUpperCase",
+    "en": "Options"
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "extensionsManagement",
+    "en": "Extensions Management"
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "troubleshooting",
+    "en": "Troubleshooting"
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "cliDataDir",
+    "en": "Directory where CLI metadata should be stored."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "diff",
+    "en": "Compare two files with each other."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "merge",
+    "en": "Perform a three-way merge by providing paths for two modified versions of a file, the common origin of both modified versions and the output file to save merge results."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "add",
+    "en": "Add folder(s) to the last active window."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "remove",
+    "en": "Remove folder(s) from the last active window."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "goto",
+    "en": "Open a file at the path on the specified line and character position."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "newWindow",
+    "en": "Force to open a new window."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "reuseWindow",
+    "en": "Force to open a file or folder in an already opened window."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "suppressPopupsOnStartup",
+    "en": "Suppress notification popups on startup."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "webWorkerExthost",
+    "en": "Run all web-capable extensions in a web worker extension host."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "glass",
+    "en": "Enable the multi-workbench architecture (dev-only)."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "classic",
+    "en": "Disable glass mode and force classic windows (dev-only)."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "wait",
+    "en": "Wait for the files to be closed before returning."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "locale",
+    "en": "The locale to use (e.g. en-US or zh-TW)."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "userDataDir",
+    "en": "Specifies the directory that user data is kept in. Can be used to open multiple distinct instances of Code."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "profileName",
+    "en": "Opens the provided folder or workspace with the given profile and associates the profile with the workspace. If the profile does not exist, a new empty one is created."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "help",
+    "en": "Print usage."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "extensionHomePath",
+    "en": "Set the root path for extensions."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "listExtensions",
+    "en": "List the installed extensions."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "showVersions",
+    "en": "Show versions of installed extensions, when using --list-extensions."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "category",
+    "en": "Filters installed extensions by provided category, when using --list-extensions."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "installExtension",
+    "en": "Installs or updates an extension. The argument is either an extension id or a path to a VSIX. The identifier of an extension is '${publisher}.${name}'. Use '--force' argument to update to latest version. To install a specific version provide '@${version}'. For example: 'vscode.csharp@1.2.3'."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "install prerelease",
+    "en": "Installs the pre-release version of the extension, when using --install-extension"
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "uninstallExtension",
+    "en": "Uninstalls an extension."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "updateExtensions",
+    "en": "Update the installed extensions."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "experimentalApis",
+    "en": "Enables proposed API features for extensions. Can receive one or more extension IDs to enable individually."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "addMcp",
+    "en": "Adds a Model Context Protocol server definition to the user profile, or workspace or folder when used with --mcp-workspace. Accepts JSON input in the form '{\"name\":\"server-name\",\"command\":...}'"
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "version",
+    "en": "Print version."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "verbose",
+    "en": "Print verbose output (implies --wait)."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "log",
+    "en": "Log level to use. Default is 'info'. Allowed values are 'critical', 'error', 'warn', 'info', 'debug', 'trace', 'off'. You can also configure the log level of an extension by passing extension id and log level in the following format: '${publisher}.${name}:${logLevel}'. For example: 'vscode.csharp:trace'. Can receive one or more such entries."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "status",
+    "en": "Print process usage and diagnostics information."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "prof-startup",
+    "en": "Run CPU profiler during startup."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "disableExtensions",
+    "en": "Disable all installed extensions. This option is not persisted and is effective only when the command opens a new window."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "disableExtension",
+    "en": "Disable the provided extension. This option is not persisted and is effective only when the command opens a new window."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "turn sync",
+    "en": "Turn sync on or off."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "inspect-extensions",
+    "en": "Allow debugging and profiling of extensions. Check the developer tools for the connection URI."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "inspect-brk-extensions",
+    "en": "Allow debugging and profiling of extensions with the extension host being paused after start. Check the developer tools for the connection URI."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "disableLCDText",
+    "en": "Disable LCD font rendering."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "disableGPU",
+    "en": "Disable GPU hardware acceleration."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "disableChromiumSandbox",
+    "en": "Use this option only when there is requirement to launch the application as sudo user on Linux or when running as an elevated user in an applocker environment on Windows."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "locateShellIntegrationPath",
+    "en": "Print the path to a terminal shell integration script. Allowed values are 'bash', 'pwsh', 'zsh' or 'fish'."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "telemetry",
+    "en": "Shows all telemetry events which VS code collects."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "chat",
+    "en": "Open a standalone chat window without the full IDE."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "deprecated.useInstead",
+    "en": "Use {0} instead."
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "paths",
+    "en": "paths"
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "usage",
+    "en": "Usage"
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "options",
+    "en": "options"
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "stdinWindows",
+    "en": "To read output from another program, append '-' (e.g. 'echo Hello World | {0} -')"
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "stdinUnix",
+    "en": "To read from stdin, append '-' (e.g. 'ps aux | grep code | {0} -')"
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "subcommands",
+    "en": "Subcommands"
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "unknownVersion",
+    "en": "Unknown version"
+  },
+  {
+    "module": "vs/platform/environment/node/argv",
+    "key": "unknownCommit",
+    "en": "Unknown commit"
+  },
+  {
+    "module": "vs/platform/environment/node/argvHelper",
+    "key": "multipleValues",
+    "en": "Option '{0}' is defined more than once. Using value '{1}'."
+  },
+  {
+    "module": "vs/platform/environment/node/argvHelper",
+    "key": "emptyValue",
+    "en": "Option '{0}' requires a non empty value. Ignoring the option."
+  },
+  {
+    "module": "vs/platform/environment/node/argvHelper",
+    "key": "deprecatedArgument",
+    "en": "Option '{0}' is deprecated: {1}"
+  },
+  {
+    "module": "vs/platform/environment/node/argvHelper",
+    "key": "unknownSubCommandOption",
+    "en": "Warning: '{0}' is not in the list of known options for subcommand '{1}'"
+  },
+  {
+    "module": "vs/platform/environment/node/argvHelper",
+    "key": "unknownOption",
+    "en": "Warning: '{0}' is not in the list of known options, but still passed to Electron/Chromium."
+  },
+  {
+    "module": "vs/platform/environment/node/argvHelper",
+    "key": "gotoValidation",
+    "en": "Arguments in `--goto` mode should be in the format of `FILE(:LINE(:CHARACTER))`."
+  },
+  {
+    "module": "vs/platform/mcpProcess/electron-main/mcpProcess",
+    "key": "mcpProcessLog",
+    "en": "MCP Process"
+  },
+  {
+    "module": "vs/platform/native/electron-main/nativeHostMainService",
+    "key": "cantRemoveVSCodeFromPath",
+    "en": "Unable to replace `code` with `Cursor` on the path."
+  },
+  {
+    "module": "vs/platform/native/electron-main/nativeHostMainService",
+    "key": "sourceMissing",
+    "en": "Unable to find shell script in '{0}'"
+  },
+  {
+    "module": "vs/platform/native/electron-main/nativeHostMainService",
+    "key": "warnEscalation",
+    "en": "{0} will now prompt with 'osascript' for Administrator privileges to install the shell command."
+  },
+  {
+    "module": "vs/platform/native/electron-main/nativeHostMainService",
+    "key": "ok",
+    "en": "&&OK"
+  },
+  {
+    "module": "vs/platform/native/electron-main/nativeHostMainService",
+    "key": "cancel",
+    "en": "Cancel"
+  },
+  {
+    "module": "vs/platform/native/electron-main/nativeHostMainService",
+    "key": "cantCreateBinFolder",
+    "en": "Unable to install the shell command '{0}'."
+  },
+  {
+    "module": "vs/platform/native/electron-main/nativeHostMainService",
+    "key": "warnEscalation",
+    "en": "{0} will now prompt with 'osascript' for Administrator privileges to install the shell command."
+  },
+  {
+    "module": "vs/platform/native/electron-main/nativeHostMainService",
+    "key": "ok",
+    "en": "&&OK"
+  },
+  {
+    "module": "vs/platform/native/electron-main/nativeHostMainService",
+    "key": "cancel",
+    "en": "Cancel"
+  },
+  {
+    "module": "vs/platform/native/electron-main/nativeHostMainService",
+    "key": "cantCreateBinFolder",
+    "en": "Unable to install the shell command '{0}'."
+  },
+  {
+    "module": "vs/platform/native/electron-main/nativeHostMainService",
+    "key": "warnEscalationUninstall",
+    "en": "{0} will now prompt with 'osascript' for Administrator privileges to uninstall the shell command."
+  },
+  {
+    "module": "vs/platform/native/electron-main/nativeHostMainService",
+    "key": "ok",
+    "en": "&&OK"
+  },
+  {
+    "module": "vs/platform/native/electron-main/nativeHostMainService",
+    "key": "cancel",
+    "en": "Cancel"
+  },
+  {
+    "module": "vs/platform/native/electron-main/nativeHostMainService",
+    "key": "cantUninstall",
+    "en": "Unable to uninstall the shell command '{0}'."
+  },
+  {
+    "module": "vs/platform/native/electron-main/nativeHostMainService",
+    "key": "sourceMissing",
+    "en": "Unable to find shell script in '{0}'"
+  },
+  {
+    "module": "vs/platform/storage/electron-main/storageMainService",
+    "key": "storageError.title",
+    "en": "Storage Error"
+  },
+  {
+    "module": "vs/platform/storage/electron-main/storageMainService",
+    "key": "storageError.message",
+    "en": "Cursor was unable to open local storage. Please reload or contact support."
+  },
+  {
+    "module": "vs/platform/storage/electron-main/storageMainService",
+    "key": "storageError.detail",
+    "en": "This can happen if the storage file is corrupted, moved, or there are permission issues.\n\nStorage path: {0}"
+  },
+  {
+    "module": "vs/platform/storage/electron-main/storageMainService",
+    "key": "storageError.restart",
+    "en": "Restart"
+  },
+  {
+    "module": "vs/platform/storage/electron-main/storageMainService",
+    "key": "storageError.quit",
+    "en": "Quit"
+  },
+  {
+    "module": "vs/platform/telemetry/common/telemetryService",
+    "key": "telemetry.telemetryLevelMd",
+    "en": "Controls {0} crash-reporting telemetry. Crash-reporting helps us better understand how {0} is performing, and debug crashes."
+  },
+  {
+    "module": "vs/platform/telemetry/common/telemetryService",
+    "key": "telemetry.docsStatement",
+    "en": "Read more about the [Cursor's privacy posture]({0}) and [Cursor's security posture]({1})."
+  },
+  {
+    "module": "vs/platform/telemetry/common/telemetryService",
+    "key": "telemetry.restart",
+    "en": "A full restart of the application is necessary for crash reporting changes to take effect."
+  },
+  {
+    "module": "vs/platform/telemetry/common/telemetryService",
+    "key": "telemetry.feedback.enabled",
+    "en": "Enable feedback mechanisms such as the issue reporter and feedback options in features like Copilot Chat."
+  },
+  {
+    "module": "vs/platform/telemetry/common/telemetryService",
+    "key": "telemetry.enableTelemetry",
+    "en": "Enable diagnostic data to be collected. This helps us to better understand how {0} is performing and where improvements need to be made."
+  },
+  {
+    "module": "vs/platform/telemetry/common/telemetryService",
+    "key": "telemetry.enableTelemetryMd",
+    "en": "Enable diagnostic data to be collected. This helps us to better understand how {0} is performing and where improvements need to be made. [Read more]({1}) about what we collect and our privacy statement."
+  },
+  {
+    "module": "vs/platform/telemetry/common/telemetryService",
+    "key": "enableTelemetryDeprecated",
+    "en": "If this setting is false, no telemetry will be sent regardless of the new setting's value. Deprecated in favor of the {0} setting."
+  },
+  {
+    "module": "vs/workbench/api/browser/mainThreadCursor",
+    "key": "extensionHostTimeoutTitle",
+    "en": "Workspace Disconnected"
+  },
+  {
+    "module": "vs/workbench/api/browser/mainThreadCursor",
+    "key": "extensionHostTimeoutTitle",
+    "en": "Agent Stream Start Timeout"
+  },
+  {
+    "module": "vs/workbench/api/browser/mainThreadCursor",
+    "key": "extensionHostTimeoutDetail",
+    "en": "Cursor lost connection to the workspace while starting tool execution. Reload the window and try again."
+  },
+  {
+    "module": "vs/workbench/api/browser/mainThreadCursor",
+    "key": "extensionHostTimeoutDetail",
+    "en": "The extension host did not respond in time. Please reload the window to continue."
+  },
+  {
+    "module": "vs/workbench/api/browser/mainThreadCursor",
+    "key": "sessionInitFailedTitle",
+    "en": "Agent Session Initialization Failed"
+  },
+  {
+    "module": "vs/workbench/api/browser/mainThreadCursor",
+    "key": "sessionInitFailedDetail",
+    "en": "Failed to initialize the agent execution session. Please reload the window to continue."
+  },
+  {
+    "module": "vs/workbench/api/browser/mainThreadCursor",
+    "key": "sessionNotFoundTitle",
+    "en": "Agent Session Not Found"
+  },
+  {
+    "module": "vs/workbench/api/browser/mainThreadCursor",
+    "key": "sessionNotFoundDetail",
+    "en": "The agent execution session was lost. Please reload the window to continue."
+  },
+  {
+    "module": "vs/workbench/api/browser/mainThreadCursor",
+    "key": "streamStartFailedTitle",
+    "en": "Agent Stream Start Failed"
+  },
+  {
+    "module": "vs/workbench/api/browser/mainThreadCursor",
+    "key": "streamStartFailedDetail",
+    "en": "Failed to start the agent execution stream. Please reload the window to continue."
+  },
+  {
+    "module": "vs/workbench/api/browser/mainThreadCursor",
+    "key": "reloadWindow",
+    "en": "Reload Window"
+  },
+  {
+    "module": "vs/workbench/api/common/configurationExtensionPoint",
+    "key": "workspaceConfig.mcp.description",
+    "en": "Model Context Protocol server configurations"
+  },
+  {
+    "module": "vs/workbench/browser/actions/exportCustomModesAction",
+    "key": "hasCustomModes",
+    "en": "Whether the user has legacy custom composer modes"
+  },
+  {
+    "module": "vs/workbench/browser/actions/helpActions",
+    "key": "setupBugBot",
+    "en": "Setup Bugbot"
+  },
+  {
+    "module": "vs/workbench/browser/actions/layoutActions",
+    "key": "openAgentLayoutQuickMenu",
+    "en": "Open Cursor Settings"
+  },
+  {
+    "module": "vs/workbench/browser/parts/auxiliarybar/auxiliaryBarPart",
+    "key": "auxiliaryBarNewAgent",
+    "en": "New Agent"
+  },
+  {
+    "module": "vs/workbench/browser/parts/editor/editorActions.cursor",
+    "key": "evenEditorGroupsExcludingAgent",
+    "en": "Reset Editor Group Sizes (Excluding Agent)"
+  },
+  {
+    "module": "vs/workbench/browser/parts/editor/editorGroupWatermark",
+    "key": "watermark.openChat",
+    "en": "New Agent"
+  },
+  {
+    "module": "vs/workbench/browser/parts/titlebar/titlebarActions",
+    "key": "toggle.agentsWindow",
+    "en": "Agents Window Button"
+  },
+  {
+    "module": "vs/workbench/browser/parts/titlebar/titlebarActions",
+    "key": "toggle.agentsWindowDescription",
+    "en": "Toggle visibility of the Agents Window button in the title bar"
+  },
+  {
+    "module": "vs/workbench/browser/parts/titlebar/titlebarPart",
+    "key": "newAgentShort",
+    "en": "New Agent"
+  },
+  {
+    "module": "vs/workbench/browser/parts/titlebar/titlebarPart",
+    "key": "openAgentsWindowTitlebar",
+    "en": "Open Agents Window"
+  },
+  {
+    "module": "vs/workbench/browser/parts/titlebar/titlebarPart",
+    "key": "titlebarOpenCursorSettings",
+    "en": "Open Cursor Settings"
+  },
+  {
+    "module": "vs/workbench/browser/parts/titlebar/titlebarPart",
+    "key": "cursorSettings",
+    "en": "Cursor Settings"
+  },
+  {
+    "module": "vs/workbench/browser/windowQuitConfirmation",
+    "key": "shutdownChatStreamingTitle",
+    "en": "Agent is still working"
+  },
+  {
+    "module": "vs/workbench/browser/workbench.contribution",
+    "key": "agentsWindowButtonEnabled",
+    "en": "Controls whether the Agents Window button in the title bar is shown."
+  },
+  {
+    "module": "vs/workbench/contrib/agents/browser/agents.contribution",
+    "key": "removeAgentLayoutIde.notice",
+    "en": "Prefer the Agent layout? Try the new Agents Window."
+  },
+  {
+    "module": "vs/workbench/contrib/agents/browser/agents.contribution",
+    "key": "removeAgentLayoutIde.openAgentsWindow",
+    "en": "Open Agents Window"
+  },
+  {
+    "module": "vs/workbench/contrib/agents/browser/agentsActions",
+    "key": "quickOpenPreviousRecentlyUsedAgent",
+    "en": "Quick Open Previous Recently Used Agent"
+  },
+  {
+    "module": "vs/workbench/contrib/agents/browser/agentsActions",
+    "key": "quickOpenLeastRecentlyUsedAgent",
+    "en": "Quick Open Least Recently Used Agent"
+  },
+  {
+    "module": "vs/workbench/contrib/agents/browser/agentsQuickAccess",
+    "key": "agents.chatHistory.section.chats",
+    "en": "Chats"
+  },
+  {
+    "module": "vs/workbench/contrib/agents/browser/agentsQuickAccess",
+    "key": "agents.chatHistory.section.cloudAgents",
+    "en": "Cloud agents"
+  },
+  {
+    "module": "vs/workbench/contrib/agents/browser/agentsQuickAccess",
+    "key": "agents.chatHistory.noResults",
+    "en": "No chats available"
+  },
+  {
+    "module": "vs/workbench/contrib/agents/browser/agentsQuickAccess",
+    "key": "agents.chatHistory.noResults.filter",
+    "en": "Try a different search query"
+  },
+  {
+    "module": "vs/workbench/contrib/agents/browser/agentsQuickAccess",
+    "key": "agents.chatHistory.noResults.empty",
+    "en": "Start a new agent to see it here"
+  },
+  {
+    "module": "vs/workbench/contrib/agents/browser/agentsQuickAccess",
+    "key": "agents.chatHistory.noResults.aria",
+    "en": "No chats available"
+  },
+  {
+    "module": "vs/workbench/contrib/agents/browser/agentsQuickAccess",
+    "key": "agents.chatHistory.composerAria",
+    "en": "Chat {0}"
+  },
+  {
+    "module": "vs/workbench/contrib/agents/browser/agentsQuickAccess",
+    "key": "agents.chatHistory.backgroundAria",
+    "en": "Cloud agent {0}"
+  },
+  {
+    "module": "vs/workbench/contrib/agents/browser/agentsQuickAccess",
+    "key": "agents.chatHistory.untitledChat",
+    "en": "Untitled chat"
+  },
+  {
+    "module": "vs/workbench/contrib/agents/browser/agentsQuickAccess",
+    "key": "agents.chatHistory.placeholder",
+    "en": "Search chats and cloud agents"
+  },
+  {
+    "module": "vs/workbench/contrib/agents/browser/agentsQuickAccess",
+    "key": "agents.chatHistory.help",
+    "en": "Search chat history"
+  },
+  {
+    "module": "vs/workbench/contrib/agents/browser/agentsQuickAccess",
+    "key": "agents.mru.noResults",
+    "en": "No recent agents"
+  },
+  {
+    "module": "vs/workbench/contrib/agents/browser/agentsQuickAccess",
+    "key": "agents.mru.composerAria",
+    "en": "Agent {0}"
+  },
+  {
+    "module": "vs/workbench/contrib/agents/browser/agentsQuickAccess",
+    "key": "agents.mru.composerAria",
+    "en": "Agent {0}"
+  },
+  {
+    "module": "vs/workbench/contrib/agents/browser/agentsQuickAccess",
+    "key": "agents.mru.backgroundAria",
+    "en": "Cloud agent {0}"
+  },
+  {
+    "module": "vs/workbench/contrib/agents/browser/agentsQuickAccess",
+    "key": "agents.ctrlTab.draft",
+    "en": "Draft"
+  },
+  {
+    "module": "vs/workbench/contrib/agents/browser/agentsQuickAccess",
+    "key": "agents.mru.placeholder",
+    "en": "Switch between recently used agents"
+  },
+  {
+    "module": "vs/workbench/contrib/agents/browser/agentsQuickAccess",
+    "key": "agents.mru.help",
+    "en": "Switch between recently used agents"
+  },
+  {
+    "module": "vs/workbench/contrib/agents/browser/agentsViewPane",
+    "key": "all-agents",
+    "en": "All Agents"
+  },
+  {
+    "module": "vs/workbench/contrib/agents/browser/components/AgentsFreeIdePromoModal",
+    "key": "agentsFreeIde.promoTitle",
+    "en": "Your agents now live in the Agents Window"
+  },
+  {
+    "module": "vs/workbench/contrib/agents/browser/components/AgentsFreeIdePromoModal",
+    "key": "agentsFreeIde.promoDescription",
+    "en": "Continue working with agents in a simpler, more powerful interface."
+  },
+  {
+    "module": "vs/workbench/contrib/agents/browser/components/AgentsFreeIdePromoModal",
+    "key": "agentsFreeIde.promoClose",
+    "en": "Close"
+  },
+  {
+    "module": "vs/workbench/contrib/agents/browser/components/AgentsFreeIdePromoModal",
+    "key": "agentsFreeIde.openAgentsWindow",
+    "en": "Open Agents Window"
+  },
+  {
+    "module": "vs/workbench/contrib/agents/browser/components/AgentsFreeIdeRedirect",
+    "key": "agentsFreeIde.redirectMessage",
+    "en": "Your agent chats now live in the Agents Window"
+  },
+  {
+    "module": "vs/workbench/contrib/agents/browser/components/AgentsFreeIdeRedirect",
+    "key": "agentsFreeIde.openAgentsWindow",
+    "en": "Open Agents Window"
+  },
+  {
+    "module": "vs/workbench/contrib/agents/browser/components/AgentSidebarUpdateButton",
+    "key": "agentSidebarUpdateButton.tooltip",
+    "en": "Restart Cursor to install the pending update."
+  },
+  {
+    "module": "vs/workbench/contrib/agents/browser/components/AgentSidebarUpdateButton",
+    "key": "agentSidebarUpdateButton.tooltipWithVersion",
+    "en": "Restart Cursor to install the pending update to {0}."
+  },
+  {
+    "module": "vs/workbench/contrib/agents/browser/components/AgentSidebarUpdateButton",
+    "key": "agentSidebarUpdateButton.installingTooltip",
+    "en": "Installing update — Cursor will close and reopen automatically."
+  },
+  {
+    "module": "vs/workbench/contrib/agents/browser/components/AgentSidebarUpdateButton",
+    "key": "agentSidebarUpdateButton.label",
+    "en": "Update"
+  },
+  {
+    "module": "vs/workbench/contrib/agents/browser/components/AgentSidebarUpdateButton",
+    "key": "agentSidebarUpdateButton.installingLabel",
+    "en": "Installing"
+  },
+  {
+    "module": "vs/workbench/contrib/agents/common/agentsContextKeys",
+    "key": "agentsPaneFocused",
+    "en": "Whether the Agents view pane currently contains keyboard focus."
+  },
+  {
+    "module": "vs/workbench/contrib/agents/common/agentsContextKeys",
+    "key": "agentNavigationMode",
+    "en": "Whether currently in agent navigation mode (hold-and-release to switch)."
+  },
+  {
+    "module": "vs/workbench/contrib/aiSettings/browser/components/settings/settingsRulesTab",
+    "key": "importGithubRule",
+    "en": "Import Project Rules from GitHub/GitLab"
+  },
+  {
+    "module": "vs/workbench/contrib/aiSettings/browser/components/settings/settingsRulesTab",
+    "key": "githubUrlPrompt",
+    "en": "Enter the GitHub/GitLab repository URL to import project rules"
+  },
+  {
+    "module": "vs/workbench/contrib/aiSettings/browser/components/settings/settingsRulesTab",
+    "key": "ruleAlreadyExists",
+    "en": "Imported rules for \"{0}\" already exist in `.cursor/rules/imported/{0}`."
+  },
+  {
+    "module": "vs/workbench/contrib/aiSettings/browser/components/settings/settingsRulesTab",
+    "key": "rulesImported",
+    "en": "Imported {1} project rule file(s) from \"{0}\" into `.cursor/rules/imported/{0}`."
+  },
+  {
+    "module": "vs/workbench/contrib/aiSettings/browser/components/settings/settingsRulesTab",
+    "key": "noWorkspaceForProjectRule",
+    "en": "Cannot create project rules without a workspace. Please open a folder first."
+  },
+  {
+    "module": "vs/workbench/contrib/appLayout/common/agentsWindowOrFocusMenuRegistrations",
+    "key": "cursor.agentsWindowNew",
+    "en": "New Agents Window"
+  },
+  {
+    "module": "vs/workbench/contrib/appLayout/electron-sandbox/glassModeActions",
+    "key": "switchToModelSlug.noAgentsWindow",
+    "en": "Couldn't open the Agents window to switch the model. Open the Agents window and try again."
+  },
+  {
+    "module": "vs/workbench/contrib/appLayout/electron-sandbox/glassModeActions",
+    "key": "switchToModelSlug.agentsWindowRoutingFailed",
+    "en": "Couldn't switch the model in the Agents window. Try again."
+  },
+  {
+    "module": "vs/workbench/contrib/appLayout/electron-sandbox/glassModeActions",
+    "key": "cursor.newAgentsWindow",
+    "en": "New Agents Window"
+  },
+  {
+    "module": "vs/workbench/contrib/appLayout/electron-sandbox/glassModeActions",
+    "key": "cursor.newAdditionalAgentsWindowDev",
+    "en": "Developer: New Additional Agents Window"
+  },
+  {
+    "module": "vs/workbench/contrib/composer/browser/__experimental-react-transcript-dont-read-unless-jais-agent/composerTranscriptToolRuntime",
+    "key": "composerTranscript.openFileFailed",
+    "en": "Unable to open {0}"
+  },
+  {
+    "module": "vs/workbench/contrib/composer/browser/browserEditor.contribution",
+    "key": "closeBrowserTab.message",
+    "en": "Close Browser Tab"
+  },
+  {
+    "module": "vs/workbench/contrib/composer/browser/browserEditor.contribution",
+    "key": "closeBrowserTab.detail",
+    "en": "This browser was created by an Agent. Closing it may impact a running chat."
+  },
+  {
+    "module": "vs/workbench/contrib/composer/browser/browserEditor.contribution",
+    "key": "closeBrowserTab.hide",
+    "en": "&&Hide"
+  },
+  {
+    "module": "vs/workbench/contrib/composer/browser/browserEditor.contribution",
+    "key": "closeBrowserTab.close",
+    "en": "&&Close"
+  },
+  {
+    "module": "vs/workbench/contrib/composer/browser/browserEditor.contribution",
+    "key": "openBrowser",
+    "en": "Open Browser"
+  },
+  {
+    "module": "vs/workbench/contrib/composer/browser/browserEditor.contribution",
+    "key": "focusOrOpenBrowser",
+    "en": "Focus or Open Browser"
+  },
+  {
+    "module": "vs/workbench/contrib/composer/browser/browserEditor.contribution",
+    "key": "newBrowserTab",
+    "en": "New Browser Tab"
+  },
+  {
+    "module": "vs/workbench/contrib/composer/browser/browserEditor.contribution",
+    "key": "reloadBrowserTab",
+    "en": "Reload Browser Tab"
+  },
+  {
+    "module": "vs/workbench/contrib/composer/browser/browserEditor.contribution",
+    "key": "focusBrowserLocationBar",
+    "en": "Focus Browser Location Bar"
+  },
+  {
+    "module": "vs/workbench/contrib/composer/browser/browserEditor.contribution",
+    "key": "openCursorWebsite",
+    "en": "Open cursor.com in Browser"
+  },
+  {
+    "module": "vs/workbench/contrib/composer/browser/browserEditor.contribution",
+    "key": "openYearInReview",
+    "en": "Open Year in Review"
+  },
+  {
+    "module": "vs/workbench/contrib/composer/browser/capabilities/chimes",
+    "key": "chimes.unsafePath.unc",
+    "en": "Custom chime sound path cannot be a network (UNC) path for security reasons. Please use a local file path."
+  },
+  {
+    "module": "vs/workbench/contrib/composer/browser/capabilities/chimes",
+    "key": "chimes.unsafePath.url",
+    "en": "Custom chime sound path cannot be a URL. Please use a local file path."
+  },
+  {
+    "module": "vs/workbench/contrib/composer/browser/capabilities/chimes",
+    "key": "chimes.untrustedWorkspace",
+    "en": "Custom chime sound is configured in workspace settings but the workspace is not trusted. The custom sound will be ignored."
+  },
+  {
+    "module": "vs/workbench/contrib/composer/browser/capabilities/chimes",
+    "key": "chimes.source",
+    "en": "Cursor Chimes"
+  },
+  {
+    "module": "vs/workbench/contrib/composer/browser/composer.contribution",
+    "key": "cursor ai",
+    "en": "Cursor AI"
+  },
+  {
+    "module": "vs/workbench/contrib/composer/browser/composerMessageStorageService",
+    "key": "checkpointHydrationErrorTitle",
+    "en": "Failed to Load Conversation"
+  },
+  {
+    "module": "vs/workbench/contrib/composer/browser/composerMessageStorageService",
+    "key": "checkpointHydrationErrorDetail",
+    "en": "The conversation checkpoint data may be corrupted. You can start a new conversation or try reloading the window."
+  },
+  {
+    "module": "vs/workbench/contrib/composer/electron-sandbox/browserAutomation.contribution",
+    "key": "crashBrowserWebviewRenderer",
+    "en": "Developer: Crash Browser Webview Renderer"
+  },
+  {
+    "module": "vs/workbench/contrib/composer/electron-sandbox/browserAutomation.contribution",
+    "key": "orphanBrowserViewEntry",
+    "en": "Developer: Orphan Browser View Entry"
+  },
+  {
+    "module": "vs/workbench/contrib/composer/electron-sandbox/webviewBrowserManager",
+    "key": "passkeyRequestStalled",
+    "en": "This security key or passkey request is taking longer than expected in the Cursor browser."
+  },
+  {
+    "module": "vs/workbench/contrib/composer/electron-sandbox/webviewBrowserManager",
+    "key": "browserContextMenu.openLinkExternalBrowser",
+    "en": "Open Link in Browser"
+  },
+  {
+    "module": "vs/workbench/contrib/composer/electron-sandbox/webviewBrowserManager",
+    "key": "browserContextMenu.openLinkNewTab",
+    "en": "Open Link in New Tab"
+  },
+  {
+    "module": "vs/workbench/contrib/composer/electron-sandbox/webviewBrowserManager",
+    "key": "browserContextMenu.openLinkBackgroundTab",
+    "en": "Open Link in Background Tab"
+  },
+  {
+    "module": "vs/workbench/contrib/composer/electron-sandbox/webviewBrowserManager",
+    "key": "browserContextMenu.copyLinkAddress",
+    "en": "Copy Link Address"
+  },
+  {
+    "module": "vs/workbench/contrib/composer/electron-sandbox/webviewBrowserManager",
+    "key": "browserContextMenu.openMediaExternalBrowser",
+    "en": "Open Media in Browser"
+  },
+  {
+    "module": "vs/workbench/contrib/composer/electron-sandbox/webviewBrowserManager",
+    "key": "browserContextMenu.openMediaNewTab",
+    "en": "Open Media in New Tab"
+  },
+  {
+    "module": "vs/workbench/contrib/composer/electron-sandbox/webviewBrowserManager",
+    "key": "browserContextMenu.copyMediaAddress",
+    "en": "Copy Media Address"
+  },
+  {
+    "module": "vs/workbench/contrib/composer/electron-sandbox/webviewBrowserManager",
+    "key": "browserContextMenu.copyImage",
+    "en": "Copy Image"
+  },
+  {
+    "module": "vs/workbench/contrib/composer/electron-sandbox/webviewBrowserManager",
+    "key": "browserContextMenu.back",
+    "en": "Back"
+  },
+  {
+    "module": "vs/workbench/contrib/composer/electron-sandbox/webviewBrowserManager",
+    "key": "browserContextMenu.forward",
+    "en": "Forward"
+  },
+  {
+    "module": "vs/workbench/contrib/composer/electron-sandbox/webviewBrowserManager",
+    "key": "browserContextMenu.reload",
+    "en": "Reload"
+  },
+  {
+    "module": "vs/workbench/contrib/composer/electron-sandbox/webviewBrowserManager",
+    "key": "browserContextMenu.undo",
+    "en": "Undo"
+  },
+  {
+    "module": "vs/workbench/contrib/composer/electron-sandbox/webviewBrowserManager",
+    "key": "browserContextMenu.redo",
+    "en": "Redo"
+  },
+  {
+    "module": "vs/workbench/contrib/composer/electron-sandbox/webviewBrowserManager",
+    "key": "browserContextMenu.cut",
+    "en": "Cut"
+  },
+  {
+    "module": "vs/workbench/contrib/composer/electron-sandbox/webviewBrowserManager",
+    "key": "browserContextMenu.copy",
+    "en": "Copy"
+  },
+  {
+    "module": "vs/workbench/contrib/composer/electron-sandbox/webviewBrowserManager",
+    "key": "browserContextMenu.paste",
+    "en": "Paste"
+  },
+  {
+    "module": "vs/workbench/contrib/composer/electron-sandbox/webviewBrowserManager",
+    "key": "browserContextMenu.selectAll",
+    "en": "Select All"
+  },
+  {
+    "module": "vs/workbench/contrib/composer/electron-sandbox/webviewBrowserManager",
+    "key": "browserContextMenu.inspectElement",
+    "en": "Inspect Element"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorBlame/browser/aiBlameHover.contribution",
+    "key": "andXMore",
+    "en": "and {0} more"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorBlame/browser/aiBlameHover.contribution",
+    "key": "addLineToChat",
+    "en": "Reference Line in Chat"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorBlame/browser/aiBlameHover.contribution",
+    "key": "showFileBlame",
+    "en": "Show File Blame"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorBlame/browser/aiBlameHover.contribution",
+    "key": "copyCommitSha",
+    "en": "Copy SHA"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorBlame/browser/aiBlameHover.contribution",
+    "key": "copyCommitLink",
+    "en": "Copy Link"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorBlame/browser/aiBlameHover.contribution",
+    "key": "viewCommit",
+    "en": "View Commit"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorBlame/browser/aiBlameHover.contribution",
+    "key": "viewCommit",
+    "en": "View Commit"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorBlame/browser/aiBlameHover.contribution",
+    "key": "viewPullRequest",
+    "en": "View PR"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorBlame/browser/aiBlameHover.contribution",
+    "key": "cursorBlameConfigurationTitle",
+    "en": "Cursor Blame"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorBlame/browser/aiBlameHover.contribution",
+    "key": "cursor.blame.hoverDelay",
+    "en": "Controls the delay in milliseconds before the cursor blame hover appears. If not set, uses `#editor.hover.delay#` with a minimum of 500ms."
+  },
+  {
+    "module": "vs/workbench/contrib/cursorBlame/browser/cursorBlame.contribution",
+    "key": "cursorBlame.openFileBlameTitle",
+    "en": "Open File Blame"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorBlame/browser/cursorBlame.contribution",
+    "key": "cursorBlame.category",
+    "en": "Cursor Blame"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorBlame/browser/cursorBlame.contribution",
+    "key": "cursorBlame.openCommitTitle",
+    "en": "View Commit"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorBlame/browser/cursorBlame.contribution",
+    "key": "cursorBlame.category",
+    "en": "Cursor Blame"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorBlame/browser/cursorBlame.contribution",
+    "key": "cursorBlame.pasteCommitHash",
+    "en": "Paste commit hash"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorBlame/browser/cursorBlame.contribution",
+    "key": "cursorBlame.viewCommitTitle",
+    "en": "View commit"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorBlame/browser/cursorBlame.contribution",
+    "key": "cursorBlame.category",
+    "en": "Cursor Blame"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorBlame/browser/cursorBlame.contribution",
+    "key": "cursorBlame.noGit",
+    "en": "No git repository found"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorBlame/browser/cursorBlame.contribution",
+    "key": "cursorBlame.uncommittedLine",
+    "en": "This line has not been committed yet"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorBlame/browser/cursorBlame.contribution",
+    "key": "cursorBlame.explorerContextMenu",
+    "en": "Cursor Blame"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorBlame/browser/cursorBlame.contribution",
+    "key": "cursorBlameSubmenu",
+    "en": "Cursor Blame"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorBlame/browser/cursorBlame.contribution",
+    "key": "toggleFileBlame",
+    "en": "Toggle file blame"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorBlame/browser/cursorBlame.contribution",
+    "key": "cursorBlame.viewCommitTitle",
+    "en": "View commit"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorBlame/browser/cursorBlame.contribution",
+    "key": "cursorBlame.viewCommitUncommittedTitle",
+    "en": "View commit (uncommitted)"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorBlame/browser/cursorBlame.contribution",
+    "key": "cursorBlameConfigurationTitle",
+    "en": "Cursor Blame"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorBlame/browser/cursorBlame.contribution",
+    "key": "cursorBlame.editorDecoration.enabled",
+    "en": "Controls whether to show blame information in the editor using editor decorations."
+  },
+  {
+    "module": "vs/workbench/contrib/cursorBlame/browser/cursorBlame.contribution",
+    "key": "cursorBlame.editorDecoration.forceDisabled",
+    "en": "When enabled, forcibly disables the git blame editor decoration, overriding any workspace-level settings. This is an application-level setting."
+  },
+  {
+    "module": "vs/workbench/contrib/cursorBlame/browser/cursorBlameFileDecoration",
+    "key": "cursorBlame.toggleEditorDecoration",
+    "en": "Toggle Editor Decoration"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorBlame/browser/cursorBlameFileDecoration",
+    "key": "cursorBlame",
+    "en": "Cursor Blame"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorLocalTrace/browser/cursorLocalTrace.contribution",
+    "key": "cursorLocalTraceModeConfigurationTitle",
+    "en": "Local Trace Mode"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorLocalTrace/browser/cursorLocalTrace.contribution",
+    "key": "cursorLocalTraceMode.settingTitle",
+    "en": "Local Trace Mode"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorLocalTrace/browser/cursorLocalTrace.contribution",
+    "key": "cursorLocalTraceMode",
+    "en": "When enabled, records performance marks and measures locally (for example in Chrome DevTools Performance) and mirrors VS Code RPCs into the DevTools Network tab."
+  },
+  {
+    "module": "vs/workbench/contrib/cursorOrigin/browser/cursorOrigin.contribution",
+    "key": "cursorOrigin.category",
+    "en": "Cursor Origin"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorOrigin/browser/cursorOrigin.contribution",
+    "key": "cursorOrigin.noFile",
+    "en": "No file is currently open."
+  },
+  {
+    "module": "vs/workbench/contrib/cursorOrigin/browser/cursorOrigin.contribution",
+    "key": "cursorOrigin.noLink",
+    "en": "Could not build a cursor.com link. Open a file in a git repository with an eligible remote."
+  },
+  {
+    "module": "vs/workbench/contrib/cursorOrigin/browser/cursorOrigin.contribution",
+    "key": "cursorOrigin.copyCodeLink",
+    "en": "Copy cursor.com link (with selection)"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorOrigin/browser/cursorOrigin.contribution",
+    "key": "cursorOrigin.copyCodeLinkWithoutRange",
+    "en": "Copy cursor.com link (file only)"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorOrigin/browser/cursorOrigin.contribution",
+    "key": "cursorOrigin.copyCodeLink.menu",
+    "en": "Copy cursor.com link"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorOrigin/browser/cursorOrigin.contribution",
+    "key": "cursorOrigin.copyCodeLinkExplorer.menu",
+    "en": "Copy cursor.com link"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorOrigin/browser/cursorOrigin.contribution",
+    "key": "cursorOrigin.copyCodeLinkEditorTitle.menu",
+    "en": "Copy cursor.com link"
+  },
+  {
+    "module": "vs/workbench/contrib/cursorOrigin/browser/cursorOrigin.contribution",
+    "key": "cursorOrigin.copyCodeLinkLineNumber.menu",
+    "en": "Copy cursor.com link"
+  },
+  {
+    "module": "vs/workbench/contrib/mcp/common/mcpConfiguration",
+    "key": "app.mcp.json.title",
+    "en": "Model Context Protocol Servers"
+  },
+  {
+    "module": "vs/workbench/contrib/mcp/common/mcpConfiguration",
+    "key": "vscode.extension.contributes.mcp",
+    "en": "Contributes Model Context Protocol servers. Users of this should also use `vscode.lm.registerMcpConfigurationProvider`."
+  },
+  {
+    "module": "vs/workbench/contrib/mcp/common/mcpRegistry",
+    "key": "trustTitleWithOrigin",
+    "en": "Trust MCP servers from {0}?"
+  },
+  {
+    "module": "vs/workbench/contrib/mcp/common/mcpRegistry",
+    "key": "mcp.trust.details",
+    "en": "{0} discovered Model Context Protocol servers from {1} (`{2}`). {0} can use their capabilities in Chat.\n\nDo you want to allow running MCP servers from {3}?"
+  },
+  {
+    "module": "vs/workbench/contrib/mcp/common/mcpRegistry",
+    "key": "runTrust",
+    "en": "This MCP server definition is defined in your workspace files."
+  },
+  {
+    "module": "vs/workbench/contrib/mcp/common/mcpServer",
+    "key": "mcpBadSchema",
+    "en": "MCP server `{0}` has tools with invalid parameters which will be omitted."
+  },
+  {
+    "module": "vs/workbench/contrib/mcp/common/mcpService",
+    "key": "mcp.tool.warning",
+    "en": "{0} This tool is from '{1}' (MCP Server). Note that MCP servers or malicious conversation content may attempt to misuse '{2}' through tools. Please carefully review any requested actions."
+  },
+  {
+    "module": "vs/workbench/contrib/ui/browser/buttons/AgentsWindowButton",
+    "key": "agentsWindowButtonLabel",
+    "en": "Agents Window"
+  },
+  {
+    "module": "vs/workbench/electron-sandbox/actions/developerActions.cursor",
+    "key": "startInfiniteComposerSession",
+    "en": "Start Infinite Composer Session"
+  },
+  {
+    "module": "vs/workbench/electron-sandbox/actions/developerActions.cursor",
+    "key": "stopInfiniteComposerSession",
+    "en": "Stop Infinite Composer Session"
+  },
+  {
+    "module": "vs/workbench/electron-sandbox/actions/developerActions.cursor",
+    "key": "devSetComposerModeAutoRun",
+    "en": "Dev Set Composer Mode AutoRun (For Testing)"
+  },
+  {
+    "module": "vs/workbench/electron-sandbox/actions/developerActions.cursor",
+    "key": "devGetComposerDataForTesting",
+    "en": "Dev Get Composer Data (For Testing)"
+  },
+  {
+    "module": "vs/workbench/services/agent/browser/agentExecProviderService",
+    "key": "agentExecSimulatedStreamStartTimeoutTitle",
+    "en": "Agent Stream Start Timeout"
+  },
+  {
+    "module": "vs/workbench/services/experiment/browser/featureFlagOverrideActions",
+    "key": "statsigDummyConsoleLoopProductionWarning",
+    "en": "This command is only available for Cursor developers."
+  },
+  {
+    "module": "vs/workbench/services/extensions/common/extensionsRegistry",
+    "key": "vscode.extension.activationEvents.onMcpCollection",
+    "en": "An activation event emitted whenver a tool from the MCP server is requested."
+  }
+]

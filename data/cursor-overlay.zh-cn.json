@@ -1,0 +1,369 @@
+{
+  "version": "1.0.0",
+  "contents": {
+    "vs/code/electron-main/main": {
+      "localModeDataImportError": "Cursor 数据导入失败",
+      "mainLog": "主进程",
+      "secondInstanceAdmin": "{0} 的另一个实例已在以管理员身份运行。",
+      "secondInstanceAdminDetail": "请先关闭另一个实例，然后重试。",
+      "secondInstanceNoResponse": "{0} 的另一实例正在运行但没有响应",
+      "secondInstanceNoResponseDetail": "请先关闭其他所有实例，然后重试。",
+      "statusWarning": "警告: --status 参数只能在已运行 {0} 时使用。请在启动 {0} 后再次运行它。",
+      "startupDataDirError": "无法写入程序用户数据。",
+      "startupUserDataAndExtensionsDirErrorDetail": "{0}\r\n\r\n请确保以下目录是可写的:\r\n\r\n{1}",
+      "close": "关闭(&C)"
+    },
+    "vs/code/electron-utility/mcpProcess/mcpProcessMain": {
+      "mcpProcessLog": "MCP 进程"
+    },
+    "vs/platform/action/common/actionCommonCategories": {
+      "cursor": "Cursor"
+    },
+    "vs/platform/contextkey/common/contextkeys": {
+      "isDevUser": "用户是否为 Cursor 开发者/员工"
+    },
+    "vs/platform/environment/node/argv": {
+      "addMcp": "向用户配置、工作区或文件夹（配合 --mcp-workspace 使用时）添加 Model Context Protocol 服务器定义。接受 JSON 输入，格式为 '{\"name\":\"server-name\",\"command\":...}'",
+      "optionsUpperCase": "选项",
+      "extensionsManagement": "扩展管理",
+      "troubleshooting": "故障排查",
+      "cliDataDir": "应在其中存储 CLI 元数据的目录。",
+      "diff": "将两个文件相互比较。",
+      "merge": "通过提供文件的两个修改版本的路径、两个修改版本的共同来源，以及保存合并结果的输出文件来执行三向合并。",
+      "add": "将文件夹添加到上一个活动窗口。",
+      "remove": "从上一个活动窗口中删除文件夹()。",
+      "goto": "打开路径下的文件并定位到特定行和特定列。",
+      "newWindow": "强制打开新窗口。",
+      "reuseWindow": "强制在已打开的窗口中打开文件或文件夹。",
+      "suppressPopupsOnStartup": "抑制启动时的通知弹窗。",
+      "webWorkerExthost": "在 Web Worker 扩展宿主中运行所有支持 Web 的扩展。",
+      "glass": "启用多工作台架构（仅开发模式）。",
+      "classic": "禁用 Glass 模式并强制使用经典窗口（仅开发模式）。",
+      "wait": "等文件关闭后再返回。",
+      "locale": "要使用的区域设置(例如 en-US 或 zh-TW)。",
+      "userDataDir": "指定保存用户数据的目录。可用于打开多个不同的 Code 实例。",
+      "profileName": "使用给定的配置文件打开所提供的文件夹或工作区，并将配置文件与工作区相关联。如果配置文件不存在，则会创建一个新的空配置文件。",
+      "help": "打印使用情况。",
+      "extensionHomePath": "设置扩展的根路径。",
+      "listExtensions": "列出已安装的扩展。",
+      "showVersions": "使用 --list-extensions 时，显示已安装扩展的版本。",
+      "category": "使用 --list-extensions 时，按提供的类别筛选已安装的扩展。",
+      "installExtension": "安装或更新扩展。参数是 VSIX 的扩展 ID 或路径。扩展的标识符为 '${publisher}.${name}'。使用 '--force' 参数更新到最新版本。若要安装特定版本，请提供 '@${version}'。例如:'vscode.csharp@1.2.3'。",
+      "install prerelease": "使用 --install-extension 时安装扩展的预发行版本",
+      "uninstallExtension": "卸载扩展。",
+      "updateExtensions": "更新已安装的扩展。",
+      "experimentalApis": "为扩展启用实验性 API 功能。可以输入一个或多个扩展的 ID 来进行单独启用。",
+      "version": "打印版本。",
+      "verbose": "打印详细输出(表示 - 等待)。",
+      "log": "要使用的日志级别。默认值为 \"info\"。允许的值为 \"critical\"、\"error\"、\"warn\"、\"info\"、\"debug\"、\"trace\"、\"off\"。还可以通过以下格式传递扩展 ID 和日志级别以配置扩展的日志级别: \"${publisher}.${name}:${logLevel}\"。例如: \"vscode.csharp:trace\"。可以接收一个或多个此类条目。",
+      "status": "打印进程使用情况和诊断信息。",
+      "prof-startup": "启动期间运行 CPU 探查器。",
+      "disableExtensions": "禁用所有已安装的扩展。此选项不会持久化，并且仅在命令打开新窗口时有效。",
+      "disableExtension": "禁用提供的扩展。此选项不会持久化，并且仅在命令打开新窗口时有效。",
+      "turn sync": "打开或关闭同步。",
+      "inspect-extensions": "允许调试和分析扩展。您可以在开发人员工具中找到连接 URI。",
+      "inspect-brk-extensions": "允许扩展宿主在启动后暂停时进行扩展的调试和分析。您可以在开发人员工具中找到连接 URI。",
+      "disableLCDText": "禁用 LCD 字体呈现。",
+      "disableGPU": "禁用 GPU 硬件加速。",
+      "disableChromiumSandbox": "仅当需要在 Linux 上以 sudo 用户身份启动应用程序或在 Windows 上的 applocker 环境中以提升的用户身份运行时，才使用此选项。",
+      "locateShellIntegrationPath": "打印终端 shell 集成脚本的路径。允许的值为 'bash'、'pwsh'、'zsh' 或 'fish'。",
+      "telemetry": "显示 VS Code 收集的所有遥测事件。",
+      "chat": "打开独立对话窗口，无需完整 IDE。",
+      "deprecated.useInstead": "请改用 {0}。",
+      "paths": "路径",
+      "usage": "使用情况",
+      "options": "选项",
+      "stdinWindows": "要从其他程序读取输出，请追加 '-'（例如 'echo Hello World | {0} -'）",
+      "stdinUnix": "要从标准输入读取，请追加 '-'（例如 'ps aux | grep code | {0} -'）",
+      "subcommands": "子命令",
+      "unknownVersion": "未知版本",
+      "unknownCommit": "未知提交"
+    },
+    "vs/platform/mcpProcess/electron-main/mcpProcess": {
+      "mcpProcessLog": "MCP 进程"
+    },
+    "vs/platform/native/electron-main/nativeHostMainService": {
+      "cantRemoveVSCodeFromPath": "无法在 PATH 中将 `code` 替换为 `Cursor`。",
+      "sourceMissing": "无法在 '{0}' 中找到 Shell 脚本",
+      "warnEscalation": "{0} 将使用 'osascript' 提示获取管理员权限以安装 Shell 命令。",
+      "ok": "确定(&&O)",
+      "cancel": "取消",
+      "cantCreateBinFolder": "无法安装 Shell 命令 '{0}'。",
+      "warnEscalationUninstall": "{0} 将使用 'osascript' 提示获取管理员权限以卸载 Shell 命令。",
+      "cantUninstall": "无法卸载 Shell 命令 '{0}'。"
+    },
+    "vs/platform/storage/electron-main/storageMainService": {
+      "storageError.message": "Cursor 无法打开本地存储。请重新加载或联系支持。",
+      "storageError.title": "存储错误",
+      "storageError.detail": "这可能是因为存储文件已损坏、被移动或存在权限问题。\n\n存储路径：{0}",
+      "storageError.restart": "重启",
+      "storageError.quit": "退出"
+    },
+    "vs/platform/telemetry/common/telemetryService": {
+      "telemetry.docsStatement": "了解更多关于 [Cursor 隐私政策]({0}) 和 [Cursor 安全政策]({1}) 的信息。",
+      "telemetry.telemetryLevelMd": "控制 {0} 遥测、第一方扩展遥测和参与的第三方扩展遥测。一些第三方扩展可能不遵守此设置。请查阅特定扩展的文档以确定。遥测有助于我们更好地了解 {0} 的执行情况、需要改进的地方以及功能的使用方式。",
+      "telemetry.restart": "若要使崩溃报告更改生效，必须完全重新启动应用程序。",
+      "telemetry.feedback.enabled": "启用反馈机制，例如问题报告器、调查和其他反馈选项。",
+      "telemetry.enableTelemetry": "启用要收集的诊断数据。这有助于我们更好地了解 {0} 的执行情况以及哪里需要改进。",
+      "telemetry.enableTelemetryMd": "启用要收集的诊断数据。这有助于我们更好地了解 {0} 的执行情况以及哪里需要改进。[阅读详细信息]({1})关于我们收集的内容和隐私声明。",
+      "enableTelemetryDeprecated": "如果此设置为 false，则无论新设置的值如何，都不会发送遥测数据。已弃用，推荐使用 {0} 设置。"
+    },
+    "vs/workbench/api/browser/mainThreadCursor": {
+      "extensionHostTimeoutTitle": "连接超时",
+      "extensionHostTimeoutDetail": "连接已断开或扩展宿主未及时响应。请重新加载窗口以继续。",
+      "sessionInitFailedTitle": "Agent 会话初始化失败",
+      "sessionInitFailedDetail": "无法初始化 Agent 执行会话。请重新加载窗口以继续。",
+      "sessionNotFoundTitle": "未找到 Agent 会话",
+      "sessionNotFoundDetail": "Agent 执行会话已丢失。请重新加载窗口以继续。",
+      "streamStartFailedTitle": "Agent 流启动失败",
+      "streamStartFailedDetail": "无法启动 Agent 执行流。请重新加载窗口以继续。",
+      "reloadWindow": "重新加载窗口"
+    },
+    "vs/workbench/api/common/configurationExtensionPoint": {
+      "workspaceConfig.mcp.description": "Model Context Protocol 服务器配置"
+    },
+    "vs/workbench/browser/actions/helpActions": {
+      "setupBugBot": "设置 Bugbot"
+    },
+    "vs/workbench/browser/actions/layoutActions": {
+      "openAgentLayoutQuickMenu": "打开 Cursor 设置"
+    },
+    "vs/workbench/browser/parts/auxiliarybar/auxiliaryBarPart": {
+      "auxiliaryBarNewAgent": "新建 Agent"
+    },
+    "vs/workbench/browser/parts/editor/editorActions.cursor": {
+      "evenEditorGroupsExcludingAgent": "重置编辑器组大小（不含 Agent）"
+    },
+    "vs/workbench/browser/parts/editor/editorGroupWatermark": {
+      "watermark.openChat": "新建 Agent"
+    },
+    "vs/workbench/browser/parts/titlebar/titlebarPart": {
+      "newAgentShort": "新建 Agent",
+      "titlebarOpenCursorSettings": "打开 Cursor 设置",
+      "cursorSettings": "Cursor 设置",
+      "openAgentsWindowTitlebar": "打开 Agents 窗口"
+    },
+    "vs/workbench/browser/windowQuitConfirmation": {
+      "shutdownChatStreamingTitle": "Agent 仍在运行"
+    },
+    "vs/workbench/contrib/agents/browser/agents.contribution": {
+      "removeAgentLayoutIde.notice": "更喜欢 Agent 布局？试试全新的 Agents 窗口。",
+      "removeAgentLayoutIde.openAgentsWindow": "打开 Agents 窗口"
+    },
+    "vs/workbench/contrib/agents/browser/agentsActions": {
+      "quickOpenPreviousRecentlyUsedAgent": "快速打开最近使用的 Agent",
+      "quickOpenLeastRecentlyUsedAgent": "快速打开最久未使用的 Agent"
+    },
+    "vs/workbench/contrib/agents/browser/agentsQuickAccess": {
+      "agents.mru.composerAria": "Agent {0}",
+      "agents.chatHistory.section.chats": "对话",
+      "agents.chatHistory.section.cloudAgents": "云端 Agent",
+      "agents.chatHistory.noResults": "没有可用的对话",
+      "agents.chatHistory.noResults.filter": "尝试其他搜索关键词",
+      "agents.chatHistory.noResults.empty": "新建 Agent 后将显示在此处",
+      "agents.chatHistory.noResults.aria": "没有可用的对话",
+      "agents.chatHistory.composerAria": "对话 {0}",
+      "agents.chatHistory.backgroundAria": "云端 Agent {0}",
+      "agents.chatHistory.untitledChat": "未命名对话",
+      "agents.chatHistory.placeholder": "搜索对话和云端 Agent",
+      "agents.chatHistory.help": "搜索对话历史",
+      "agents.mru.noResults": "没有最近的 Agent",
+      "agents.mru.backgroundAria": "云端 Agent {0}",
+      "agents.ctrlTab.draft": "草稿",
+      "agents.mru.placeholder": "在最近使用的 Agent 之间切换",
+      "agents.mru.help": "在最近使用的 Agent 之间切换"
+    },
+    "vs/workbench/contrib/agents/browser/components/AgentSidebarUpdateButton": {
+      "agentSidebarUpdateButton.tooltip": "重启 Cursor 以安装待处理的更新。",
+      "agentSidebarUpdateButton.tooltipWithVersion": "重启 Cursor 以安装待处理的更新至 {0}。",
+      "agentSidebarUpdateButton.installingTooltip": "正在安装更新 — Cursor 将自动关闭并重新打开。",
+      "agentSidebarUpdateButton.label": "更新",
+      "agentSidebarUpdateButton.installingLabel": "正在安装"
+    },
+    "vs/workbench/contrib/composer/browser/browserEditor.contribution": {
+      "closeBrowserTab.detail": "此浏览器由 Agent 创建。关闭它可能会影响正在进行的对话。",
+      "closeBrowserTab.message": "关闭浏览器标签页",
+      "closeBrowserTab.hide": "隐藏(&&H)",
+      "closeBrowserTab.close": "关闭(&&C)",
+      "openBrowser": "打开浏览器",
+      "focusOrOpenBrowser": "聚焦或打开浏览器",
+      "newBrowserTab": "新建浏览器标签页",
+      "reloadBrowserTab": "重新加载浏览器标签页",
+      "focusBrowserLocationBar": "聚焦浏览器地址栏",
+      "openCursorWebsite": "在浏览器中打开 cursor.com",
+      "openYearInReview": "打开年度回顾"
+    },
+    "vs/workbench/contrib/composer/browser/capabilities/chimes": {
+      "chimes.source": "Cursor 提示音",
+      "chimes.unsafePath.unc": "出于安全原因，自定义提示音路径不能是网络 (UNC) 路径。请使用本地文件路径。",
+      "chimes.unsafePath.url": "自定义提示音路径不能是 URL。请使用本地文件路径。",
+      "chimes.untrustedWorkspace": "自定义提示音已在工作区设置中配置，但工作区不受信任。自定义提示音将被忽略。"
+    },
+    "vs/workbench/contrib/composer/browser/composer.contribution": {
+      "cursor ai": "Cursor AI"
+    },
+    "vs/workbench/contrib/composer/electron-sandbox/webviewBrowserManager": {
+      "passkeyRequestStalled": "Cursor 浏览器中的安全密钥或通行密钥请求耗时超出预期。",
+      "browserContextMenu.openLinkExternalBrowser": "在浏览器中打开链接",
+      "browserContextMenu.openLinkNewTab": "在新标签页中打开链接",
+      "browserContextMenu.openLinkBackgroundTab": "在后台标签页中打开链接",
+      "browserContextMenu.copyLinkAddress": "复制链接地址",
+      "browserContextMenu.openMediaExternalBrowser": "在浏览器中打开媒体",
+      "browserContextMenu.openMediaNewTab": "在新标签页中打开媒体",
+      "browserContextMenu.copyMediaAddress": "复制媒体地址",
+      "browserContextMenu.copyImage": "复制图片",
+      "browserContextMenu.back": "后退",
+      "browserContextMenu.forward": "前进",
+      "browserContextMenu.reload": "重新加载",
+      "browserContextMenu.undo": "撤消",
+      "browserContextMenu.redo": "重做",
+      "browserContextMenu.cut": "剪切",
+      "browserContextMenu.copy": "复制",
+      "browserContextMenu.paste": "粘贴",
+      "browserContextMenu.selectAll": "全选",
+      "browserContextMenu.inspectElement": "检查元素"
+    },
+    "vs/workbench/contrib/cursorBlame/browser/aiBlameHover.contribution": {
+      "cursorBlameConfigurationTitle": "Cursor Blame",
+      "andXMore": "以及另外 {0} 个",
+      "addLineToChat": "在对话中引用此行",
+      "showFileBlame": "显示文件 Blame",
+      "copyCommitSha": "复制 SHA",
+      "copyCommitLink": "复制链接",
+      "viewCommit": "查看提交",
+      "viewPullRequest": "查看 PR",
+      "cursor.blame.hoverDelay": "控制 Cursor Blame 悬停提示出现前的延迟（毫秒）。如果未设置，则使用 `#editor.hover.delay#`，最小为 500 毫秒。"
+    },
+    "vs/workbench/contrib/cursorBlame/browser/cursorBlame.contribution": {
+      "cursorBlame.category": "Cursor Blame",
+      "cursorBlame.explorerContextMenu": "Cursor Blame",
+      "cursorBlameSubmenu": "Cursor Blame",
+      "cursorBlameConfigurationTitle": "Cursor Blame",
+      "cursorBlame.openFileBlameTitle": "打开文件 Blame",
+      "cursorBlame.openCommitTitle": "查看提交",
+      "cursorBlame.pasteCommitHash": "粘贴提交哈希",
+      "cursorBlame.viewCommitTitle": "查看提交",
+      "cursorBlame.noGit": "未找到 Git 仓库",
+      "cursorBlame.uncommittedLine": "此行尚未提交",
+      "toggleFileBlame": "切换文件 Blame",
+      "cursorBlame.viewCommitUncommittedTitle": "查看提交（未提交）",
+      "cursorBlame.editorDecoration.enabled": "控制是否在编辑器中使用编辑器装饰显示 Blame 信息。",
+      "cursorBlame.editorDecoration.forceDisabled": "启用后，强制禁用 Git Blame 编辑器装饰，覆盖任何工作区级别设置。这是应用程序级别设置。"
+    },
+    "vs/workbench/contrib/cursorBlame/browser/cursorBlameFileDecoration": {
+      "cursorBlame": "Cursor Blame",
+      "cursorBlame.toggleEditorDecoration": "切换编辑器装饰"
+    },
+    "vs/workbench/contrib/cursorOrigin/browser/cursorOrigin.contribution": {
+      "cursorOrigin.category": "Cursor 来源",
+      "cursorOrigin.noFile": "当前没有打开的文件。",
+      "cursorOrigin.noLink": "无法构建 cursor.com 链接。请在具有符合条件远程仓库的 Git 仓库中打开文件。",
+      "cursorOrigin.copyCodeLink": "复制 cursor.com 链接（含选中内容）",
+      "cursorOrigin.copyCodeLinkWithoutRange": "复制 cursor.com 链接（仅文件）",
+      "cursorOrigin.copyCodeLink.menu": "复制 cursor.com 链接",
+      "cursorOrigin.copyCodeLinkExplorer.menu": "复制 cursor.com 链接",
+      "cursorOrigin.copyCodeLinkEditorTitle.menu": "复制 cursor.com 链接",
+      "cursorOrigin.copyCodeLinkLineNumber.menu": "复制 cursor.com 链接"
+    },
+    "vs/workbench/contrib/mcp/common/mcpConfiguration": {
+      "app.mcp.json.title": "Model Context Protocol 服务器",
+      "vscode.extension.contributes.mcp": "贡献 Model Context Protocol 服务器。使用者还应使用 `vscode.lm.registerMcpConfigurationProvider`。"
+    },
+    "vs/workbench/contrib/mcp/common/mcpRegistry": {
+      "trustTitleWithOrigin": "信任来自 {0} 的 MCP 服务器？",
+      "mcp.trust.details": "{0} 从 {1}（`{2}`）发现了 Model Context Protocol 服务器。{0} 可在对话中使用其功能。\n\n是否允许运行来自 {3} 的 MCP 服务器？",
+      "runTrust": "此 MCP 服务器定义位于你的工作区文件中。"
+    },
+    "vs/workbench/contrib/mcp/common/mcpServer": {
+      "mcpBadSchema": "MCP 服务器 `{0}` 包含参数无效的工具，这些工具将被忽略。"
+    },
+    "vs/workbench/contrib/mcp/common/mcpService": {
+      "mcp.tool.warning": "{0} 此工具来自 '{1}'（MCP 服务器）。请注意，MCP 服务器或恶意对话内容可能试图通过工具滥用 '{2}'。请仔细审查所有请求的操作。"
+    },
+    "vs/workbench/electron-sandbox/actions/developerActions.cursor": {
+      "startInfiniteComposerSession": "启动无限 Composer 会话",
+      "stopInfiniteComposerSession": "停止无限 Composer 会话",
+      "devSetComposerModeAutoRun": "开发：设置 Composer 模式自动运行（测试用）",
+      "devGetComposerDataForTesting": "开发：获取 Composer 数据（测试用）"
+    },
+    "vs/workbench/services/agent/browser/agentExecProviderService": {
+      "agentExecSimulatedStreamStartTimeoutTitle": "Agent 流启动超时"
+    },
+    "vs/workbench/services/experiment/browser/featureFlagOverrideActions": {
+      "statsigDummyConsoleLoopProductionWarning": "此命令仅对 Cursor 开发者可用。"
+    },
+    "vs/workbench/services/extensions/common/extensionsRegistry": {
+      "vscode.extension.activationEvents.onMcpCollection": "当请求 MCP 服务器的工具时触发的激活事件。"
+    },
+    "vs/platform/environment/node/argvHelper": {
+      "multipleValues": "对选项“{0}”进行了多次定义。使用值“{1}”。",
+      "emptyValue": "选项“{0}”需要非空值。忽略该选项。",
+      "deprecatedArgument": "已弃用选项“{0}”: {1}",
+      "unknownSubCommandOption": "警告:“{0}”不在子命令“{1}”的已知选项列表中",
+      "unknownOption": "警告: \"{0}\"不在已知选项列表中，但仍传递给 Electron/Chromium。",
+      "gotoValidation": "\"--goto\" 模式中的参数格式应为 \"FILE(:LINE(:CHARACTER))\"。"
+    },
+    "vs/workbench/browser/actions/exportCustomModesAction": {
+      "hasCustomModes": "用户是否有旧版自定义 Composer 模式"
+    },
+    "vs/workbench/browser/parts/titlebar/titlebarActions": {
+      "toggle.agentsWindow": "Agents 窗口按钮",
+      "toggle.agentsWindowDescription": "切换标题栏中 Agents 窗口按钮的可见性"
+    },
+    "vs/workbench/browser/workbench.contribution": {
+      "agentsWindowButtonEnabled": "控制是否在标题栏中显示 Agents 窗口按钮。"
+    },
+    "vs/workbench/contrib/agents/browser/agentsViewPane": {
+      "all-agents": "所有 Agent"
+    },
+    "vs/workbench/contrib/agents/browser/components/AgentsFreeIdePromoModal": {
+      "agentsFreeIde.promoTitle": "你的 Agent 现已迁移至 Agents 窗口",
+      "agentsFreeIde.promoDescription": "在更简洁、更强大的界面中继续使用 Agent。",
+      "agentsFreeIde.promoClose": "关闭",
+      "agentsFreeIde.openAgentsWindow": "打开 Agents 窗口"
+    },
+    "vs/workbench/contrib/agents/browser/components/AgentsFreeIdeRedirect": {
+      "agentsFreeIde.redirectMessage": "你的 Agent 对话现已迁移至 Agents 窗口",
+      "agentsFreeIde.openAgentsWindow": "打开 Agents 窗口"
+    },
+    "vs/workbench/contrib/agents/common/agentsContextKeys": {
+      "agentsPaneFocused": "Agents 视图面板当前是否包含键盘焦点。",
+      "agentNavigationMode": "当前是否处于 Agent 导航模式（按住并释放以切换）。"
+    },
+    "vs/workbench/contrib/aiSettings/browser/components/settings/settingsRulesTab": {
+      "importGithubRule": "从 GitHub/GitLab 导入项目规则",
+      "githubUrlPrompt": "输入 GitHub/GitLab 仓库 URL 以导入项目规则",
+      "ruleAlreadyExists": "「{0}」的导入规则已存在于 `.cursor/rules/imported/{0}` 中。",
+      "rulesImported": "已从「{0}」导入 {1} 个项目规则文件到 `.cursor/rules/imported/{0}`。",
+      "noWorkspaceForProjectRule": "没有工作区无法创建项目规则。请先打开一个文件夹。"
+    },
+    "vs/workbench/contrib/appLayout/common/agentsWindowOrFocusMenuRegistrations": {
+      "cursor.agentsWindowNew": "新建 Agents 窗口"
+    },
+    "vs/workbench/contrib/appLayout/electron-sandbox/glassModeActions": {
+      "switchToModelSlug.noAgentsWindow": "无法打开 Agents 窗口以切换模型。请打开 Agents 窗口后重试。",
+      "switchToModelSlug.agentsWindowRoutingFailed": "无法在 Agents 窗口中切换模型。请重试。",
+      "cursor.newAgentsWindow": "新建 Agents 窗口",
+      "cursor.newAdditionalAgentsWindowDev": "开发者：新建额外 Agents 窗口"
+    },
+    "vs/workbench/contrib/composer/browser/__experimental-react-transcript-dont-read-unless-jais-agent/composerTranscriptToolRuntime": {
+      "composerTranscript.openFileFailed": "无法打开 {0}"
+    },
+    "vs/workbench/contrib/composer/browser/composerMessageStorageService": {
+      "checkpointHydrationErrorTitle": "加载对话失败",
+      "checkpointHydrationErrorDetail": "对话检查点数据可能已损坏。你可以开始新对话或尝试重新加载窗口。"
+    },
+    "vs/workbench/contrib/composer/electron-sandbox/browserAutomation.contribution": {
+      "crashBrowserWebviewRenderer": "开发者：崩溃浏览器 Webview 渲染器",
+      "orphanBrowserViewEntry": "开发者：孤立浏览器视图条目"
+    },
+    "vs/workbench/contrib/cursorLocalTrace/browser/cursorLocalTrace.contribution": {
+      "cursorLocalTraceModeConfigurationTitle": "本地跟踪模式",
+      "cursorLocalTraceMode.settingTitle": "本地跟踪模式",
+      "cursorLocalTraceMode": "启用后，在本地记录性能标记和测量（例如在 Chrome DevTools Performance 中），并将 VS Code RPC 镜像到 DevTools Network 标签页。"
+    },
+    "vs/workbench/contrib/ui/browser/buttons/AgentsWindowButton": {
+      "agentsWindowButtonLabel": "Agents 窗口"
+    }
+  }
+}
