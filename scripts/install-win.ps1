@@ -63,6 +63,22 @@ try {
     exit 1
 }
 
+# Program Files 需要管理员权限才能打 Glass UI 补丁
+if ($AppRoot -match '(?i)Program Files') {
+    $identity = [Security.Principal.WindowsIdentity]::GetCurrent()
+    $principal = New-Object Security.Principal.WindowsPrincipal($identity)
+    $isAdmin = $principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+    if (-not $isAdmin) {
+        Write-Host ""
+        Write-Host "错误: Cursor 安装在 Program Files，当前 PowerShell 不是管理员。" -ForegroundColor Red
+        Write-Host "请右键「以管理员身份运行」PowerShell，然后重新执行:" -ForegroundColor Yellow
+        Write-Host "  cd `"$Root`""
+        Write-Host "  powershell -ExecutionPolicy Bypass -File .\scripts\install-win.ps1"
+        exit 1
+    }
+    Write-Host "    已检测到管理员权限（Program Files 可写）"
+}
+
 New-Item -ItemType Directory -Force -Path $UserData | Out-Null
 New-Item -ItemType Directory -Force -Path $BackupDir | Out-Null
 

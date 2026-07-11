@@ -12,15 +12,22 @@ import argparse
 import base64
 import hashlib
 import json
+import os
 import shutil
+import sys
+import time
 from datetime import datetime
 from pathlib import Path
 
-from paths import find_cursor_app_root, platform_display_name, quit_hint
+from paths import find_cursor_app_root, is_windows, platform_display_name, quit_hint
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_FILE = ROOT / "data/glass-ui-replacements.json"
 BACKUP_DIR = ROOT / "backups"
+
+
+def log(msg: str = "") -> None:
+    print(msg, flush=True)
 
 
 def load_config() -> dict:
@@ -45,7 +52,25 @@ def find_latest_backup(filename: str) -> Path | None:
     return candidates[0] if candidates else None
 
 
-def apply_replacements(content: str, config: dict) -> tuple[str, dict]:
+def ensure_writable(app_root: Path) -> None:
+    """提前检查是否有写权限，避免读完大文件后才失败。"""
+    probe = app_root / f".cursor-i18n-write-test-{os.getpid()}"
+    try:
+        probe.write_text("ok", encoding="utf-8")
+        probe.unlink(missing_ok=True)
+    except OSError as exc:
+        hint = ""
+        if is_windows() and "Program Files" in str(app_root):
+            hint = (
+                "\n提示: Cursor 安装在 Program Files，请以管理员身份重新打开 PowerShell，"
+                "再运行 install-win.ps1。"
+            )
+        raise PermissionError(
+            f"无法写入 Cursor 安装目录: {app_root}\n原因: {exc}{hint}"
+        ) from exc
+
+
+def apply_replacements(content: str, config: dict, progress_label: str = "") -> tuple[str, dict]:
     stats = {"blocks": 0, "exact": 0, "missed_blocks": [], "missed_exact": []}
 
     for block in config.get("blocks", []):
@@ -58,15 +83,23 @@ def apply_replacements(content: str, config: dict) -> tuple[str, dict]:
             stats["missed_blocks"].append(block.get("id", src[:40]))
 
     exact_items = sorted(config.get("exact", []), key=lambda x: len(x["from"]), reverse=True)
-    for item in exact_items:
+    total = len(exact_items)
+    report_every = max(50, total // 10) if total else 1
+    started = time.time()
+
+    for i, item in enumerate(exact_items, start=1):
         src = item["from"]
         dst = item["to"]
+        # 避免额外的 count() 全表扫描；命中即替换
         if src in content:
-            count = content.count(src)
             content = content.replace(src, dst)
-            stats["exact"] += count
+            stats["exact"] += 1
         else:
             stats["missed_exact"].append(src)
+
+        if progress_label and (i % report_every == 0 or i == total):
+            elapsed = time.time() - started
+            log(f"    {progress_label}: 精确替换进度 {i}/{total} ({elapsed:.1f}s)")
 
     return content, stats
 
@@ -85,8 +118,8 @@ def update_product_checksums(app_root: Path, changed_rel_paths: list[str], dry_r
         data = (app_root / "out" / key).read_bytes()
         new_sum = sha256_checksum(data)
         if checksums[key] != new_sum:
-            print(f"  更新校验和: {key}")
-            print(f"    {checksums[key]} -> {new_sum}")
+            log(f"  更新校验和: {key}")
+            log(f"    {checksums[key]} -> {new_sum}")
             checksums[key] = new_sum
             updated += 1
 
@@ -103,16 +136,24 @@ def patch_file(app_root: Path, rel_path: str, config: dict, dry_run: bool = Fals
     if not target.exists():
         return None
 
+    size_mb = target.stat().st_size / (1024 * 1024)
+    log(f"  处理: {rel_path} ({size_mb:.1f} MB) ...")
+    t0 = time.time()
     original = target.read_text(encoding="utf-8")
-    patched, stats = apply_replacements(original, config)
+    log(f"    已读取 ({time.time() - t0:.1f}s)，开始替换（约 {len(config.get('exact', []))} 条）...")
+
+    patched, stats = apply_replacements(original, config, progress_label=Path(rel_path).name)
 
     if patched == original:
+        log(f"    无变化 ({time.time() - t0:.1f}s)")
         return {"file": rel_path, "changed": False, **stats}
 
     if not dry_run:
+        log("    正在备份并写入...")
         backup_file(target)
         target.write_text(patched, encoding="utf-8")
 
+    log(f"    完成 ({time.time() - t0:.1f}s)")
     return {"file": rel_path, "changed": True, **stats}
 
 
@@ -141,76 +182,96 @@ def main() -> int:
     try:
         app_root = find_cursor_app_root(args.app_root)
     except FileNotFoundError as exc:
-        print(f"错误: {exc}")
+        log(f"错误: {exc}")
         return 1
 
-    print(f"平台: {platform_display_name()}")
-    print(f"Cursor app root: {app_root}")
+    log(f"平台: {platform_display_name()}")
+    log(f"Cursor app root: {app_root}")
 
     config = load_config()
 
     if args.restore:
+        try:
+            ensure_writable(app_root)
+        except PermissionError as exc:
+            log(f"错误: {exc}")
+            return 1
         restored = 0
         for target in config["targets"]:
             rel = target["file"]
             filename = Path(rel).name
             if restore_file(filename, app_root, rel):
-                print(f"已恢复 {rel}")
+                log(f"已恢复 {rel}")
                 restored += 1
         if restore_file("product.json", app_root, "product.json"):
-            print("已恢复 product.json")
+            log("已恢复 product.json")
             restored += 1
-        # After restoring JS, recompute checksums to match restored files if product wasn't restored
         if restored:
-            keys = []
-            for target in config["targets"]:
-                keys.append(target["file"])
+            keys = [t["file"] for t in config["targets"]]
             update_product_checksums(app_root, keys, dry_run=False)
         if restored == 0:
-            print("未找到可恢复的备份文件")
+            log("未找到可恢复的备份文件")
             return 1
-        print(f"共恢复 {restored} 个文件")
-        print(quit_hint())
+        log(f"共恢复 {restored} 个文件")
+        log(quit_hint())
         return 0
 
-    print("==> 应用 Glass UI 中文补丁（并同步 product.json 校验和）")
+    if not args.dry_run:
+        try:
+            ensure_writable(app_root)
+        except PermissionError as exc:
+            log(f"错误: {exc}")
+            return 1
+
+    log("==> 应用 Glass UI 中文补丁（并同步 product.json 校验和）")
+    log("    提示: workbench JS 体积较大，首次可能需要 1–3 分钟，请耐心等待。")
     total_changed = 0
     changed_files: list[str] = []
     for target in config["targets"]:
         rel = target["file"]
         required = target.get("required", True)
-        result = patch_file(app_root, rel, config, dry_run=args.dry_run)
+        try:
+            result = patch_file(app_root, rel, config, dry_run=args.dry_run)
+        except PermissionError as exc:
+            log(f"错误: 写入失败 {rel}: {exc}")
+            if is_windows() and "Program Files" in str(app_root):
+                log("请以管理员身份重新打开 PowerShell，再运行安装脚本。")
+            return 1
+        except OSError as exc:
+            log(f"错误: 处理失败 {rel}: {exc}")
+            return 1
+
         if result is None:
             msg = f"跳过（文件不存在）: {rel}"
             if required:
-                print(f"警告: {msg}")
+                log(f"警告: {msg}")
             else:
-                print(msg)
+                log(msg)
             continue
 
         status = "已更新" if result["changed"] else "无变化"
-        print(f"  {rel}: {status}")
+        log(f"  {rel}: {status}")
         if result["changed"]:
             total_changed += 1
             changed_files.append(rel)
-            print(f"    - 块替换: {result['blocks']} 处")
-            print(f"    - 精确替换: {result['exact']} 处")
+            log(f"    - 块替换: {result['blocks']} 处")
+            log(f"    - 精确替换: {result['exact']} 处")
         if result["missed_blocks"]:
-            print(f"    - 未命中块: {', '.join(result['missed_blocks'][:5])}")
+            log(f"    - 未命中块: {', '.join(result['missed_blocks'][:5])}")
         if result["missed_exact"] and result["changed"]:
             missed = result["missed_exact"]
-            print(f"    - 未命中条目: {len(missed)} 条")
+            log(f"    - 未命中条目: {len(missed)} 条")
 
     if changed_files:
         updated = update_product_checksums(app_root, changed_files, dry_run=args.dry_run)
-        print(f"  product.json 校验和更新: {updated} 项")
+        log(f"  product.json 校验和更新: {updated} 项")
 
     if args.dry_run:
-        print("预览模式，未写入任何文件")
+        log("预览模式，未写入任何文件")
     elif total_changed == 0:
-        print("没有文件被修改（可能已打过补丁或版本不匹配）")
+        log("没有文件被修改（可能已打过补丁或版本不匹配）")
     else:
-        print(f"完成，共修改 {total_changed} 个文件")
+        log(f"完成，共修改 {total_changed} 个文件")
 
     return 0
 
