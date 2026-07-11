@@ -3989,6 +3989,14 @@
     {
       "from": "Discover what Cursor can do for your workflow",
       "to": "了解 Cursor 能为你的工作流做什么"
+    },
+    {
+      "from": "Performance & safety focused",
+      "to": "注重性能与安全"
+    },
+    {
+      "from": "Diff with hidden decorations",
+      "to": "带隐藏装饰的 Diff"
     }
   ]
 }
