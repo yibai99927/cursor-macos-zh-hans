@@ -3,36 +3,44 @@
   "updatedAt": "2026-07-11",
   "entries": [
     [
-      "Dismiss",
-      "关闭"
+      "Waiting for callback...",
+      "等待回调…"
     ],
     [
-      "Learn more",
-      "了解更多"
+      "Copy cursor.com link",
+      "复制 cursor.com 链接"
     ],
     [
-      "Learn More",
-      "了解更多"
+      "New Update Available",
+      "有可用更新"
     ],
     [
-      "Try again",
-      "重试"
+      "Exchanging token...",
+      "正在交换令牌…"
     ],
     [
-      "Got it",
-      "知道了"
+      "No request ID found",
+      "未找到请求 ID"
+    ],
+    [
+      "Restart to Update",
+      "重启以更新"
     ],
     [
       "Don't show again",
       "不再显示"
     ],
     [
-      "Not now",
-      "暂时不要"
+      "Reload to Update",
+      "重新加载以更新"
     ],
     [
-      "Maybe later",
-      "稍后再说"
+      "Copy Request ID",
+      "复制请求 ID"
+    ],
+    [
+      "Get More Usage",
+      "获取更多用量"
     ],
     [
       "Upgrade to Pro",
@@ -43,20 +51,36 @@
       "升级套餐"
     ],
     [
+      "Maybe later",
+      "稍后再说"
+    ],
+    [
+      "Learn more",
+      "了解更多"
+    ],
+    [
+      "Learn More",
+      "了解更多"
+    ],
+    [
       "View Usage",
       "查看用量"
     ],
     [
-      "New Update Available",
-      "有可用更新"
+      "Try again",
+      "重试"
     ],
     [
-      "Reload to Update",
-      "重新加载以更新"
+      "Dismiss",
+      "关闭"
     ],
     [
-      "Restart to Update",
-      "重启以更新"
+      "Not now",
+      "暂时不要"
+    ],
+    [
+      "Got it",
+      "知道了"
     ]
   ]
 }

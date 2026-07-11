@@ -103,6 +103,10 @@
       "搜索对话和云端 Agent"
     ],
     [
+      "Accept Cursor Tab Suggestion",
+      "接受 Cursor Tab 建议"
+    ],
+    [
       "Try a different search query",
       "尝试其他搜索关键词"
     ],
@@ -147,6 +151,10 @@
       "此任务没有可用 Agent"
     ],
     [
+      "Open in Prompt Quality",
+      "在 Prompt Quality 中打开"
+    ],
+    [
       "Reopen Last Closed Tab",
       "重新打开上次关闭的标签页"
     ],
@@ -171,6 +179,10 @@
       "在浏览器页面中查找"
     ],
     [
+      "Markdown Plan Editor",
+      "Markdown 计划编辑器"
+    ],
+    [
       "Open Cursor Settings",
       "打开 Cursor 设置"
     ],
@@ -179,8 +191,16 @@
       "系统通知"
     ],
     [
+      "Waiting for approval",
+      "等待批准"
+    ],
+    [
       "Copy Agent Deeplink",
       "复制 Agent 深度链接"
+    ],
+    [
+      "Planning next moves",
+      "规划下一步"
     ],
     [
       "Search chat history",
@@ -243,6 +263,10 @@
       "没有最近的 Agent"
     ],
     [
+      "Refactor Preview",
+      "重构预览"
+    ],
+    [
       "Self-driving PRs",
       "自动驾驶 PR"
     ],
@@ -251,20 +275,40 @@
       "VS Code 设置"
     ],
     [
+      "Checkout Branch",
+      "检出分支"
+    ],
+    [
       "Cursor Settings",
       "Cursor 设置"
+    ],
+    [
+      "Generated image",
+      "生成的图片"
     ],
     [
       "Indexing & Docs",
       "索引与文档"
     ],
     [
+      "Needs attention",
+      "需要关注"
+    ],
+    [
       "Search Settings",
       "搜索设置"
     ],
     [
+      "Add to Project",
+      "添加到项目"
+    ],
+    [
       "Close Settings",
       "关闭设置"
+    ],
+    [
+      "Completed task",
+      "已完成任务"
     ],
     [
       "Create New Tab",
@@ -275,8 +319,16 @@
       "Cursor 账户"
     ],
     [
+      "Fix with Agent",
+      "用 Agent 修复"
+    ],
+    [
       "Go to Settings",
       "前往设置"
+    ],
+    [
+      "Open Workspace",
+      "打开工作区"
     ],
     [
       "Previous Agent",
@@ -295,8 +347,16 @@
       "代码库、网络"
     ],
     [
+      "Give Feedback",
+      "提供反馈"
+    ],
+    [
       "Menu Bar Icon",
       "菜单栏图标"
+    ],
+    [
+      "Move to Local",
+      "移至本地"
     ],
     [
       "Notifications",
@@ -307,6 +367,10 @@
       "打开设置"
     ],
     [
+      "Reload Window",
+      "重新加载窗口"
+    ],
+    [
       "Search Agents",
       "搜索 Agent"
     ],
@@ -315,8 +379,24 @@
       "搜索 Agent"
     ],
     [
+      "Search models",
+      "搜索模型"
+    ],
+    [
       "Untitled chat",
       "未命名对话"
+    ],
+    [
+      "Untitled Chat",
+      "未命名对话"
+    ],
+    [
+      "Untitled Plan",
+      "未命名计划"
+    ],
+    [
+      "Browse Files",
+      "浏览文件"
     ],
     [
       "Browser Menu",
@@ -331,8 +411,24 @@
       "云端 Agent"
     ],
     [
+      "Copy Message",
+      "复制消息"
+    ],
+    [
+      "Cursor Blame",
+      "Cursor 追溯"
+    ],
+    [
       "Fix in Agent",
       "在 Agent 中修复"
+    ],
+    [
+      "More actions",
+      "更多操作"
+    ],
+    [
+      "More options",
+      "更多选项"
     ],
     [
       "New Tab Menu",
@@ -351,8 +447,16 @@
       "仓库"
     ],
     [
+      "Send message",
+      "发送消息"
+    ],
+    [
       "Tools & MCPs",
       "工具与 MCP"
+    ],
+    [
+      "Add to Chat",
+      "添加到对话"
     ],
     [
       "Automations",
@@ -371,12 +475,32 @@
       "新建浏览器"
     ],
     [
+      "New Project",
+      "新建项目"
+    ],
+    [
+      "Open in Web",
+      "在网页中打开"
+    ],
+    [
+      "Rename Chat",
+      "重命名对话"
+    ],
+    [
+      "Try in Chat",
+      "在对话中试用"
+    ],
+    [
       "Agent Mode",
       "Agent 模式"
     ],
     [
       "All Agents",
       "所有 Agent"
+    ],
+    [
+      "Always run",
+      "始终运行"
     ],
     [
       "Appearance",
@@ -387,20 +511,52 @@
       "生成计划"
     ],
     [
+      "Generating",
+      "生成中"
+    ],
+    [
       "Next Agent",
       "下一个 Agent"
+    ],
+    [
+      "No changes",
+      "无更改"
     ],
     [
       "Switch Tab",
       "切换标签页"
     ],
     [
+      "Undo Apply",
+      "撤销应用"
+    ],
+    [
+      "View image",
+      "查看图片"
+    ],
+    [
       "Close Tab",
       "关闭标签页"
     ],
     [
+      "Copy code",
+      "复制代码"
+    ],
+    [
+      "Create PR",
+      "创建 PR"
+    ],
+    [
       "Customize",
       "自定义"
+    ],
+    [
+      "Edit file",
+      "编辑文件"
+    ],
+    [
+      "Fork Chat",
+      "派生对话"
     ],
     [
       "Git & PRs",
@@ -415,12 +571,28 @@
       "新建 Agent"
     ],
     [
+      "Open Chat",
+      "打开对话"
+    ],
+    [
       "Plan Mode",
       "计划模式"
     ],
     [
       "Pro Trial",
       "Pro 试用"
+    ],
+    [
+      "Show more",
+      "显示更多"
+    ],
+    [
+      "Side Chat",
+      "侧边对话"
+    ],
+    [
+      "User Rule",
+      "用户规则"
     ],
     [
       "View Plan",
@@ -431,12 +603,32 @@
       "使用计划"
     ],
     [
+      "Keep All",
+      "全部保留"
+    ],
+    [
+      "MAX Mode",
+      "MAX 模式"
+    ],
+    [
+      "New Chat",
+      "新建对话"
+    ],
+    [
       "Next Tab",
       "下一个标签页"
     ],
     [
       "Pro Plan",
       "Pro 套餐"
+    ],
+    [
+      "Thinking",
+      "思考中"
+    ],
+    [
+      "Undo All",
+      "全部撤销"
     ],
     [
       "General",
@@ -455,8 +647,24 @@
       "启动"
     ],
     [
+      "Accept",
+      "接受"
+    ],
+    [
       "Agents",
       "Agent"
+    ],
+    [
+      "Reject",
+      "拒绝"
+    ],
+    [
+      "Review",
+      "审阅"
+    ],
+    [
+      "Apply",
+      "应用"
     ],
     [
       "Fun",

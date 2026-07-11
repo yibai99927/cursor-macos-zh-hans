@@ -6537,6 +6537,1578 @@
     {
       "from": "children:\"Index Link \\u23CE\"",
       "to": "children:\"索引链接 \\u23CE\""
+    },
+    {
+      "from": "New Chat",
+      "to": "新建对话"
+    },
+    {
+      "from": "label:\"New Chat\"",
+      "to": "label:\"新建对话\""
+    },
+    {
+      "from": "title:\"New Chat\"",
+      "to": "title:\"新建对话\""
+    },
+    {
+      "from": "children:\"New Chat\"",
+      "to": "children:\"新建对话\""
+    },
+    {
+      "from": "description:\"New Chat\"",
+      "to": "description:\"新建对话\""
+    },
+    {
+      "from": "aria-label:\"New Chat\"",
+      "to": "aria-label:\"新建对话\""
+    },
+    {
+      "from": "Open Chat",
+      "to": "打开对话"
+    },
+    {
+      "from": "label:\"Open Chat\"",
+      "to": "label:\"打开对话\""
+    },
+    {
+      "from": "title:\"Open Chat\"",
+      "to": "title:\"打开对话\""
+    },
+    {
+      "from": "children:\"Open Chat\"",
+      "to": "children:\"打开对话\""
+    },
+    {
+      "from": "description:\"Open Chat\"",
+      "to": "description:\"打开对话\""
+    },
+    {
+      "from": "aria-label:\"Open Chat\"",
+      "to": "aria-label:\"打开对话\""
+    },
+    {
+      "from": "Fork Chat",
+      "to": "派生对话"
+    },
+    {
+      "from": "label:\"Fork Chat\"",
+      "to": "label:\"派生对话\""
+    },
+    {
+      "from": "title:\"Fork Chat\"",
+      "to": "title:\"派生对话\""
+    },
+    {
+      "from": "children:\"Fork Chat\"",
+      "to": "children:\"派生对话\""
+    },
+    {
+      "from": "description:\"Fork Chat\"",
+      "to": "description:\"派生对话\""
+    },
+    {
+      "from": "aria-label:\"Fork Chat\"",
+      "to": "aria-label:\"派生对话\""
+    },
+    {
+      "from": "Rename Chat",
+      "to": "重命名对话"
+    },
+    {
+      "from": "label:\"Rename Chat\"",
+      "to": "label:\"重命名对话\""
+    },
+    {
+      "from": "title:\"Rename Chat\"",
+      "to": "title:\"重命名对话\""
+    },
+    {
+      "from": "children:\"Rename Chat\"",
+      "to": "children:\"重命名对话\""
+    },
+    {
+      "from": "description:\"Rename Chat\"",
+      "to": "description:\"重命名对话\""
+    },
+    {
+      "from": "aria-label:\"Rename Chat\"",
+      "to": "aria-label:\"重命名对话\""
+    },
+    {
+      "from": "Side Chat",
+      "to": "侧边对话"
+    },
+    {
+      "from": "label:\"Side Chat\"",
+      "to": "label:\"侧边对话\""
+    },
+    {
+      "from": "title:\"Side Chat\"",
+      "to": "title:\"侧边对话\""
+    },
+    {
+      "from": "children:\"Side Chat\"",
+      "to": "children:\"侧边对话\""
+    },
+    {
+      "from": "description:\"Side Chat\"",
+      "to": "description:\"侧边对话\""
+    },
+    {
+      "from": "aria-label:\"Side Chat\"",
+      "to": "aria-label:\"侧边对话\""
+    },
+    {
+      "from": "Untitled Chat",
+      "to": "未命名对话"
+    },
+    {
+      "from": "label:\"Untitled Chat\"",
+      "to": "label:\"未命名对话\""
+    },
+    {
+      "from": "title:\"Untitled Chat\"",
+      "to": "title:\"未命名对话\""
+    },
+    {
+      "from": "children:\"Untitled Chat\"",
+      "to": "children:\"未命名对话\""
+    },
+    {
+      "from": "description:\"Untitled Chat\"",
+      "to": "description:\"未命名对话\""
+    },
+    {
+      "from": "aria-label:\"Untitled Chat\"",
+      "to": "aria-label:\"未命名对话\""
+    },
+    {
+      "from": "Add to Chat",
+      "to": "添加到对话"
+    },
+    {
+      "from": "label:\"Add to Chat\"",
+      "to": "label:\"添加到对话\""
+    },
+    {
+      "from": "title:\"Add to Chat\"",
+      "to": "title:\"添加到对话\""
+    },
+    {
+      "from": "children:\"Add to Chat\"",
+      "to": "children:\"添加到对话\""
+    },
+    {
+      "from": "description:\"Add to Chat\"",
+      "to": "description:\"添加到对话\""
+    },
+    {
+      "from": "aria-label:\"Add to Chat\"",
+      "to": "aria-label:\"添加到对话\""
+    },
+    {
+      "from": "Try in Chat",
+      "to": "在对话中试用"
+    },
+    {
+      "from": "label:\"Try in Chat\"",
+      "to": "label:\"在对话中试用\""
+    },
+    {
+      "from": "title:\"Try in Chat\"",
+      "to": "title:\"在对话中试用\""
+    },
+    {
+      "from": "children:\"Try in Chat\"",
+      "to": "children:\"在对话中试用\""
+    },
+    {
+      "from": "description:\"Try in Chat\"",
+      "to": "description:\"在对话中试用\""
+    },
+    {
+      "from": "aria-label:\"Try in Chat\"",
+      "to": "aria-label:\"在对话中试用\""
+    },
+    {
+      "from": "Send message",
+      "to": "发送消息"
+    },
+    {
+      "from": "label:\"Send message\"",
+      "to": "label:\"发送消息\""
+    },
+    {
+      "from": "title:\"Send message\"",
+      "to": "title:\"发送消息\""
+    },
+    {
+      "from": "children:\"Send message\"",
+      "to": "children:\"发送消息\""
+    },
+    {
+      "from": "description:\"Send message\"",
+      "to": "description:\"发送消息\""
+    },
+    {
+      "from": "aria-label:\"Send message\"",
+      "to": "aria-label:\"发送消息\""
+    },
+    {
+      "from": "Copy Message",
+      "to": "复制消息"
+    },
+    {
+      "from": "label:\"Copy Message\"",
+      "to": "label:\"复制消息\""
+    },
+    {
+      "from": "title:\"Copy Message\"",
+      "to": "title:\"复制消息\""
+    },
+    {
+      "from": "children:\"Copy Message\"",
+      "to": "children:\"复制消息\""
+    },
+    {
+      "from": "description:\"Copy Message\"",
+      "to": "description:\"复制消息\""
+    },
+    {
+      "from": "aria-label:\"Copy Message\"",
+      "to": "aria-label:\"复制消息\""
+    },
+    {
+      "from": "Thinking",
+      "to": "思考中"
+    },
+    {
+      "from": "label:\"Thinking\"",
+      "to": "label:\"思考中\""
+    },
+    {
+      "from": "title:\"Thinking\"",
+      "to": "title:\"思考中\""
+    },
+    {
+      "from": "children:\"Thinking\"",
+      "to": "children:\"思考中\""
+    },
+    {
+      "from": "description:\"Thinking\"",
+      "to": "description:\"思考中\""
+    },
+    {
+      "from": "aria-label:\"Thinking\"",
+      "to": "aria-label:\"思考中\""
+    },
+    {
+      "from": "Planning next moves",
+      "to": "规划下一步"
+    },
+    {
+      "from": "label:\"Planning next moves\"",
+      "to": "label:\"规划下一步\""
+    },
+    {
+      "from": "title:\"Planning next moves\"",
+      "to": "title:\"规划下一步\""
+    },
+    {
+      "from": "children:\"Planning next moves\"",
+      "to": "children:\"规划下一步\""
+    },
+    {
+      "from": "description:\"Planning next moves\"",
+      "to": "description:\"规划下一步\""
+    },
+    {
+      "from": "aria-label:\"Planning next moves\"",
+      "to": "aria-label:\"规划下一步\""
+    },
+    {
+      "from": "Generating",
+      "to": "生成中"
+    },
+    {
+      "from": "label:\"Generating\"",
+      "to": "label:\"生成中\""
+    },
+    {
+      "from": "title:\"Generating\"",
+      "to": "title:\"生成中\""
+    },
+    {
+      "from": "children:\"Generating\"",
+      "to": "children:\"生成中\""
+    },
+    {
+      "from": "description:\"Generating\"",
+      "to": "description:\"生成中\""
+    },
+    {
+      "from": "aria-label:\"Generating\"",
+      "to": "aria-label:\"生成中\""
+    },
+    {
+      "from": "Waiting for approval",
+      "to": "等待批准"
+    },
+    {
+      "from": "label:\"Waiting for approval\"",
+      "to": "label:\"等待批准\""
+    },
+    {
+      "from": "title:\"Waiting for approval\"",
+      "to": "title:\"等待批准\""
+    },
+    {
+      "from": "children:\"Waiting for approval\"",
+      "to": "children:\"等待批准\""
+    },
+    {
+      "from": "description:\"Waiting for approval\"",
+      "to": "description:\"等待批准\""
+    },
+    {
+      "from": "aria-label:\"Waiting for approval\"",
+      "to": "aria-label:\"等待批准\""
+    },
+    {
+      "from": "Needs attention",
+      "to": "需要关注"
+    },
+    {
+      "from": "label:\"Needs attention\"",
+      "to": "label:\"需要关注\""
+    },
+    {
+      "from": "title:\"Needs attention\"",
+      "to": "title:\"需要关注\""
+    },
+    {
+      "from": "children:\"Needs attention\"",
+      "to": "children:\"需要关注\""
+    },
+    {
+      "from": "description:\"Needs attention\"",
+      "to": "description:\"需要关注\""
+    },
+    {
+      "from": "aria-label:\"Needs attention\"",
+      "to": "aria-label:\"需要关注\""
+    },
+    {
+      "from": "Fix with Agent",
+      "to": "用 Agent 修复"
+    },
+    {
+      "from": "label:\"Fix with Agent\"",
+      "to": "label:\"用 Agent 修复\""
+    },
+    {
+      "from": "title:\"Fix with Agent\"",
+      "to": "title:\"用 Agent 修复\""
+    },
+    {
+      "from": "children:\"Fix with Agent\"",
+      "to": "children:\"用 Agent 修复\""
+    },
+    {
+      "from": "description:\"Fix with Agent\"",
+      "to": "description:\"用 Agent 修复\""
+    },
+    {
+      "from": "aria-label:\"Fix with Agent\"",
+      "to": "aria-label:\"用 Agent 修复\""
+    },
+    {
+      "from": "Move to Local",
+      "to": "移至本地"
+    },
+    {
+      "from": "label:\"Move to Local\"",
+      "to": "label:\"移至本地\""
+    },
+    {
+      "from": "title:\"Move to Local\"",
+      "to": "title:\"移至本地\""
+    },
+    {
+      "from": "children:\"Move to Local\"",
+      "to": "children:\"移至本地\""
+    },
+    {
+      "from": "description:\"Move to Local\"",
+      "to": "description:\"移至本地\""
+    },
+    {
+      "from": "aria-label:\"Move to Local\"",
+      "to": "aria-label:\"移至本地\""
+    },
+    {
+      "from": "MAX Mode",
+      "to": "MAX 模式"
+    },
+    {
+      "from": "label:\"MAX Mode\"",
+      "to": "label:\"MAX 模式\""
+    },
+    {
+      "from": "title:\"MAX Mode\"",
+      "to": "title:\"MAX 模式\""
+    },
+    {
+      "from": "children:\"MAX Mode\"",
+      "to": "children:\"MAX 模式\""
+    },
+    {
+      "from": "description:\"MAX Mode\"",
+      "to": "description:\"MAX 模式\""
+    },
+    {
+      "from": "aria-label:\"MAX Mode\"",
+      "to": "aria-label:\"MAX 模式\""
+    },
+    {
+      "from": "Search models",
+      "to": "搜索模型"
+    },
+    {
+      "from": "label:\"Search models\"",
+      "to": "label:\"搜索模型\""
+    },
+    {
+      "from": "title:\"Search models\"",
+      "to": "title:\"搜索模型\""
+    },
+    {
+      "from": "children:\"Search models\"",
+      "to": "children:\"搜索模型\""
+    },
+    {
+      "from": "description:\"Search models\"",
+      "to": "description:\"搜索模型\""
+    },
+    {
+      "from": "aria-label:\"Search models\"",
+      "to": "aria-label:\"搜索模型\""
+    },
+    {
+      "from": "Always run",
+      "to": "始终运行"
+    },
+    {
+      "from": "label:\"Always run\"",
+      "to": "label:\"始终运行\""
+    },
+    {
+      "from": "title:\"Always run\"",
+      "to": "title:\"始终运行\""
+    },
+    {
+      "from": "children:\"Always run\"",
+      "to": "children:\"始终运行\""
+    },
+    {
+      "from": "description:\"Always run\"",
+      "to": "description:\"始终运行\""
+    },
+    {
+      "from": "aria-label:\"Always run\"",
+      "to": "aria-label:\"始终运行\""
+    },
+    {
+      "from": "User Rule",
+      "to": "用户规则"
+    },
+    {
+      "from": "label:\"User Rule\"",
+      "to": "label:\"用户规则\""
+    },
+    {
+      "from": "title:\"User Rule\"",
+      "to": "title:\"用户规则\""
+    },
+    {
+      "from": "children:\"User Rule\"",
+      "to": "children:\"用户规则\""
+    },
+    {
+      "from": "description:\"User Rule\"",
+      "to": "description:\"用户规则\""
+    },
+    {
+      "from": "aria-label:\"User Rule\"",
+      "to": "aria-label:\"用户规则\""
+    },
+    {
+      "from": "Completed task",
+      "to": "已完成任务"
+    },
+    {
+      "from": "label:\"Completed task\"",
+      "to": "label:\"已完成任务\""
+    },
+    {
+      "from": "title:\"Completed task\"",
+      "to": "title:\"已完成任务\""
+    },
+    {
+      "from": "children:\"Completed task\"",
+      "to": "children:\"已完成任务\""
+    },
+    {
+      "from": "description:\"Completed task\"",
+      "to": "description:\"已完成任务\""
+    },
+    {
+      "from": "aria-label:\"Completed task\"",
+      "to": "aria-label:\"已完成任务\""
+    },
+    {
+      "from": "Give Feedback",
+      "to": "提供反馈"
+    },
+    {
+      "from": "label:\"Give Feedback\"",
+      "to": "label:\"提供反馈\""
+    },
+    {
+      "from": "title:\"Give Feedback\"",
+      "to": "title:\"提供反馈\""
+    },
+    {
+      "from": "children:\"Give Feedback\"",
+      "to": "children:\"提供反馈\""
+    },
+    {
+      "from": "description:\"Give Feedback\"",
+      "to": "description:\"提供反馈\""
+    },
+    {
+      "from": "aria-label:\"Give Feedback\"",
+      "to": "aria-label:\"提供反馈\""
+    },
+    {
+      "from": "Accept",
+      "to": "接受"
+    },
+    {
+      "from": "label:\"Accept\"",
+      "to": "label:\"接受\""
+    },
+    {
+      "from": "title:\"Accept\"",
+      "to": "title:\"接受\""
+    },
+    {
+      "from": "children:\"Accept\"",
+      "to": "children:\"接受\""
+    },
+    {
+      "from": "description:\"Accept\"",
+      "to": "description:\"接受\""
+    },
+    {
+      "from": "aria-label:\"Accept\"",
+      "to": "aria-label:\"接受\""
+    },
+    {
+      "from": "Reject",
+      "to": "拒绝"
+    },
+    {
+      "from": "label:\"Reject\"",
+      "to": "label:\"拒绝\""
+    },
+    {
+      "from": "title:\"Reject\"",
+      "to": "title:\"拒绝\""
+    },
+    {
+      "from": "children:\"Reject\"",
+      "to": "children:\"拒绝\""
+    },
+    {
+      "from": "description:\"Reject\"",
+      "to": "description:\"拒绝\""
+    },
+    {
+      "from": "aria-label:\"Reject\"",
+      "to": "aria-label:\"拒绝\""
+    },
+    {
+      "from": "Apply",
+      "to": "应用"
+    },
+    {
+      "from": "label:\"Apply\"",
+      "to": "label:\"应用\""
+    },
+    {
+      "from": "title:\"Apply\"",
+      "to": "title:\"应用\""
+    },
+    {
+      "from": "children:\"Apply\"",
+      "to": "children:\"应用\""
+    },
+    {
+      "from": "description:\"Apply\"",
+      "to": "description:\"应用\""
+    },
+    {
+      "from": "aria-label:\"Apply\"",
+      "to": "aria-label:\"应用\""
+    },
+    {
+      "from": "Review",
+      "to": "审阅"
+    },
+    {
+      "from": "label:\"Review\"",
+      "to": "label:\"审阅\""
+    },
+    {
+      "from": "title:\"Review\"",
+      "to": "title:\"审阅\""
+    },
+    {
+      "from": "children:\"Review\"",
+      "to": "children:\"审阅\""
+    },
+    {
+      "from": "description:\"Review\"",
+      "to": "description:\"审阅\""
+    },
+    {
+      "from": "aria-label:\"Review\"",
+      "to": "aria-label:\"审阅\""
+    },
+    {
+      "from": "Undo All",
+      "to": "全部撤销"
+    },
+    {
+      "from": "label:\"Undo All\"",
+      "to": "label:\"全部撤销\""
+    },
+    {
+      "from": "title:\"Undo All\"",
+      "to": "title:\"全部撤销\""
+    },
+    {
+      "from": "children:\"Undo All\"",
+      "to": "children:\"全部撤销\""
+    },
+    {
+      "from": "description:\"Undo All\"",
+      "to": "description:\"全部撤销\""
+    },
+    {
+      "from": "aria-label:\"Undo All\"",
+      "to": "aria-label:\"全部撤销\""
+    },
+    {
+      "from": "Keep All",
+      "to": "全部保留"
+    },
+    {
+      "from": "label:\"Keep All\"",
+      "to": "label:\"全部保留\""
+    },
+    {
+      "from": "title:\"Keep All\"",
+      "to": "title:\"全部保留\""
+    },
+    {
+      "from": "children:\"Keep All\"",
+      "to": "children:\"全部保留\""
+    },
+    {
+      "from": "description:\"Keep All\"",
+      "to": "description:\"全部保留\""
+    },
+    {
+      "from": "aria-label:\"Keep All\"",
+      "to": "aria-label:\"全部保留\""
+    },
+    {
+      "from": "Undo Apply",
+      "to": "撤销应用"
+    },
+    {
+      "from": "label:\"Undo Apply\"",
+      "to": "label:\"撤销应用\""
+    },
+    {
+      "from": "title:\"Undo Apply\"",
+      "to": "title:\"撤销应用\""
+    },
+    {
+      "from": "children:\"Undo Apply\"",
+      "to": "children:\"撤销应用\""
+    },
+    {
+      "from": "description:\"Undo Apply\"",
+      "to": "description:\"撤销应用\""
+    },
+    {
+      "from": "aria-label:\"Undo Apply\"",
+      "to": "aria-label:\"撤销应用\""
+    },
+    {
+      "from": "No changes",
+      "to": "无更改"
+    },
+    {
+      "from": "label:\"No changes\"",
+      "to": "label:\"无更改\""
+    },
+    {
+      "from": "title:\"No changes\"",
+      "to": "title:\"无更改\""
+    },
+    {
+      "from": "children:\"No changes\"",
+      "to": "children:\"无更改\""
+    },
+    {
+      "from": "description:\"No changes\"",
+      "to": "description:\"无更改\""
+    },
+    {
+      "from": "aria-label:\"No changes\"",
+      "to": "aria-label:\"无更改\""
+    },
+    {
+      "from": "Accept Cursor Tab Suggestion",
+      "to": "接受 Cursor Tab 建议"
+    },
+    {
+      "from": "label:\"Accept Cursor Tab Suggestion\"",
+      "to": "label:\"接受 Cursor Tab 建议\""
+    },
+    {
+      "from": "title:\"Accept Cursor Tab Suggestion\"",
+      "to": "title:\"接受 Cursor Tab 建议\""
+    },
+    {
+      "from": "children:\"Accept Cursor Tab Suggestion\"",
+      "to": "children:\"接受 Cursor Tab 建议\""
+    },
+    {
+      "from": "description:\"Accept Cursor Tab Suggestion\"",
+      "to": "description:\"接受 Cursor Tab 建议\""
+    },
+    {
+      "from": "aria-label:\"Accept Cursor Tab Suggestion\"",
+      "to": "aria-label:\"接受 Cursor Tab 建议\""
+    },
+    {
+      "from": "Untitled Plan",
+      "to": "未命名计划"
+    },
+    {
+      "from": "label:\"Untitled Plan\"",
+      "to": "label:\"未命名计划\""
+    },
+    {
+      "from": "title:\"Untitled Plan\"",
+      "to": "title:\"未命名计划\""
+    },
+    {
+      "from": "children:\"Untitled Plan\"",
+      "to": "children:\"未命名计划\""
+    },
+    {
+      "from": "description:\"Untitled Plan\"",
+      "to": "description:\"未命名计划\""
+    },
+    {
+      "from": "aria-label:\"Untitled Plan\"",
+      "to": "aria-label:\"未命名计划\""
+    },
+    {
+      "from": "Markdown Plan Editor",
+      "to": "Markdown 计划编辑器"
+    },
+    {
+      "from": "label:\"Markdown Plan Editor\"",
+      "to": "label:\"Markdown 计划编辑器\""
+    },
+    {
+      "from": "title:\"Markdown Plan Editor\"",
+      "to": "title:\"Markdown 计划编辑器\""
+    },
+    {
+      "from": "children:\"Markdown Plan Editor\"",
+      "to": "children:\"Markdown 计划编辑器\""
+    },
+    {
+      "from": "description:\"Markdown Plan Editor\"",
+      "to": "description:\"Markdown 计划编辑器\""
+    },
+    {
+      "from": "aria-label:\"Markdown Plan Editor\"",
+      "to": "aria-label:\"Markdown 计划编辑器\""
+    },
+    {
+      "from": "Create PR",
+      "to": "创建 PR"
+    },
+    {
+      "from": "label:\"Create PR\"",
+      "to": "label:\"创建 PR\""
+    },
+    {
+      "from": "title:\"Create PR\"",
+      "to": "title:\"创建 PR\""
+    },
+    {
+      "from": "children:\"Create PR\"",
+      "to": "children:\"创建 PR\""
+    },
+    {
+      "from": "description:\"Create PR\"",
+      "to": "description:\"创建 PR\""
+    },
+    {
+      "from": "aria-label:\"Create PR\"",
+      "to": "aria-label:\"创建 PR\""
+    },
+    {
+      "from": "Checkout Branch",
+      "to": "检出分支"
+    },
+    {
+      "from": "label:\"Checkout Branch\"",
+      "to": "label:\"检出分支\""
+    },
+    {
+      "from": "title:\"Checkout Branch\"",
+      "to": "title:\"检出分支\""
+    },
+    {
+      "from": "children:\"Checkout Branch\"",
+      "to": "children:\"检出分支\""
+    },
+    {
+      "from": "description:\"Checkout Branch\"",
+      "to": "description:\"检出分支\""
+    },
+    {
+      "from": "aria-label:\"Checkout Branch\"",
+      "to": "aria-label:\"检出分支\""
+    },
+    {
+      "from": "Add to Project",
+      "to": "添加到项目"
+    },
+    {
+      "from": "label:\"Add to Project\"",
+      "to": "label:\"添加到项目\""
+    },
+    {
+      "from": "title:\"Add to Project\"",
+      "to": "title:\"添加到项目\""
+    },
+    {
+      "from": "children:\"Add to Project\"",
+      "to": "children:\"添加到项目\""
+    },
+    {
+      "from": "description:\"Add to Project\"",
+      "to": "description:\"添加到项目\""
+    },
+    {
+      "from": "aria-label:\"Add to Project\"",
+      "to": "aria-label:\"添加到项目\""
+    },
+    {
+      "from": "Refactor Preview",
+      "to": "重构预览"
+    },
+    {
+      "from": "label:\"Refactor Preview\"",
+      "to": "label:\"重构预览\""
+    },
+    {
+      "from": "title:\"Refactor Preview\"",
+      "to": "title:\"重构预览\""
+    },
+    {
+      "from": "children:\"Refactor Preview\"",
+      "to": "children:\"重构预览\""
+    },
+    {
+      "from": "description:\"Refactor Preview\"",
+      "to": "description:\"重构预览\""
+    },
+    {
+      "from": "aria-label:\"Refactor Preview\"",
+      "to": "aria-label:\"重构预览\""
+    },
+    {
+      "from": "Open in Web",
+      "to": "在网页中打开"
+    },
+    {
+      "from": "label:\"Open in Web\"",
+      "to": "label:\"在网页中打开\""
+    },
+    {
+      "from": "title:\"Open in Web\"",
+      "to": "title:\"在网页中打开\""
+    },
+    {
+      "from": "children:\"Open in Web\"",
+      "to": "children:\"在网页中打开\""
+    },
+    {
+      "from": "description:\"Open in Web\"",
+      "to": "description:\"在网页中打开\""
+    },
+    {
+      "from": "aria-label:\"Open in Web\"",
+      "to": "aria-label:\"在网页中打开\""
+    },
+    {
+      "from": "Browse Files",
+      "to": "浏览文件"
+    },
+    {
+      "from": "label:\"Browse Files\"",
+      "to": "label:\"浏览文件\""
+    },
+    {
+      "from": "title:\"Browse Files\"",
+      "to": "title:\"浏览文件\""
+    },
+    {
+      "from": "children:\"Browse Files\"",
+      "to": "children:\"浏览文件\""
+    },
+    {
+      "from": "description:\"Browse Files\"",
+      "to": "description:\"浏览文件\""
+    },
+    {
+      "from": "aria-label:\"Browse Files\"",
+      "to": "aria-label:\"浏览文件\""
+    },
+    {
+      "from": "Open Workspace",
+      "to": "打开工作区"
+    },
+    {
+      "from": "label:\"Open Workspace\"",
+      "to": "label:\"打开工作区\""
+    },
+    {
+      "from": "title:\"Open Workspace\"",
+      "to": "title:\"打开工作区\""
+    },
+    {
+      "from": "children:\"Open Workspace\"",
+      "to": "children:\"打开工作区\""
+    },
+    {
+      "from": "description:\"Open Workspace\"",
+      "to": "description:\"打开工作区\""
+    },
+    {
+      "from": "aria-label:\"Open Workspace\"",
+      "to": "aria-label:\"打开工作区\""
+    },
+    {
+      "from": "New Project",
+      "to": "新建项目"
+    },
+    {
+      "from": "label:\"New Project\"",
+      "to": "label:\"新建项目\""
+    },
+    {
+      "from": "title:\"New Project\"",
+      "to": "title:\"新建项目\""
+    },
+    {
+      "from": "children:\"New Project\"",
+      "to": "children:\"新建项目\""
+    },
+    {
+      "from": "description:\"New Project\"",
+      "to": "description:\"新建项目\""
+    },
+    {
+      "from": "aria-label:\"New Project\"",
+      "to": "aria-label:\"新建项目\""
+    },
+    {
+      "from": "Get More Usage",
+      "to": "获取更多用量"
+    },
+    {
+      "from": "label:\"Get More Usage\"",
+      "to": "label:\"获取更多用量\""
+    },
+    {
+      "from": "title:\"Get More Usage\"",
+      "to": "title:\"获取更多用量\""
+    },
+    {
+      "from": "children:\"Get More Usage\"",
+      "to": "children:\"获取更多用量\""
+    },
+    {
+      "from": "description:\"Get More Usage\"",
+      "to": "description:\"获取更多用量\""
+    },
+    {
+      "from": "aria-label:\"Get More Usage\"",
+      "to": "aria-label:\"获取更多用量\""
+    },
+    {
+      "from": "Copy Request ID",
+      "to": "复制请求 ID"
+    },
+    {
+      "from": "label:\"Copy Request ID\"",
+      "to": "label:\"复制请求 ID\""
+    },
+    {
+      "from": "title:\"Copy Request ID\"",
+      "to": "title:\"复制请求 ID\""
+    },
+    {
+      "from": "children:\"Copy Request ID\"",
+      "to": "children:\"复制请求 ID\""
+    },
+    {
+      "from": "description:\"Copy Request ID\"",
+      "to": "description:\"复制请求 ID\""
+    },
+    {
+      "from": "aria-label:\"Copy Request ID\"",
+      "to": "aria-label:\"复制请求 ID\""
+    },
+    {
+      "from": "No request ID found",
+      "to": "未找到请求 ID"
+    },
+    {
+      "from": "label:\"No request ID found\"",
+      "to": "label:\"未找到请求 ID\""
+    },
+    {
+      "from": "title:\"No request ID found\"",
+      "to": "title:\"未找到请求 ID\""
+    },
+    {
+      "from": "children:\"No request ID found\"",
+      "to": "children:\"未找到请求 ID\""
+    },
+    {
+      "from": "description:\"No request ID found\"",
+      "to": "description:\"未找到请求 ID\""
+    },
+    {
+      "from": "aria-label:\"No request ID found\"",
+      "to": "aria-label:\"未找到请求 ID\""
+    },
+    {
+      "from": "Copy cursor.com link",
+      "to": "复制 cursor.com 链接"
+    },
+    {
+      "from": "label:\"Copy cursor.com link\"",
+      "to": "label:\"复制 cursor.com 链接\""
+    },
+    {
+      "from": "title:\"Copy cursor.com link\"",
+      "to": "title:\"复制 cursor.com 链接\""
+    },
+    {
+      "from": "children:\"Copy cursor.com link\"",
+      "to": "children:\"复制 cursor.com 链接\""
+    },
+    {
+      "from": "description:\"Copy cursor.com link\"",
+      "to": "description:\"复制 cursor.com 链接\""
+    },
+    {
+      "from": "aria-label:\"Copy cursor.com link\"",
+      "to": "aria-label:\"复制 cursor.com 链接\""
+    },
+    {
+      "from": "Exchanging token...",
+      "to": "正在交换令牌…"
+    },
+    {
+      "from": "label:\"Exchanging token...\"",
+      "to": "label:\"正在交换令牌…\""
+    },
+    {
+      "from": "title:\"Exchanging token...\"",
+      "to": "title:\"正在交换令牌…\""
+    },
+    {
+      "from": "children:\"Exchanging token...\"",
+      "to": "children:\"正在交换令牌…\""
+    },
+    {
+      "from": "description:\"Exchanging token...\"",
+      "to": "description:\"正在交换令牌…\""
+    },
+    {
+      "from": "aria-label:\"Exchanging token...\"",
+      "to": "aria-label:\"正在交换令牌…\""
+    },
+    {
+      "from": "Waiting for callback...",
+      "to": "等待回调…"
+    },
+    {
+      "from": "label:\"Waiting for callback...\"",
+      "to": "label:\"等待回调…\""
+    },
+    {
+      "from": "title:\"Waiting for callback...\"",
+      "to": "title:\"等待回调…\""
+    },
+    {
+      "from": "children:\"Waiting for callback...\"",
+      "to": "children:\"等待回调…\""
+    },
+    {
+      "from": "description:\"Waiting for callback...\"",
+      "to": "description:\"等待回调…\""
+    },
+    {
+      "from": "aria-label:\"Waiting for callback...\"",
+      "to": "aria-label:\"等待回调…\""
+    },
+    {
+      "from": "Open Browser",
+      "to": "打开浏览器"
+    },
+    {
+      "from": "label:\"Open Browser\"",
+      "to": "label:\"打开浏览器\""
+    },
+    {
+      "from": "title:\"Open Browser\"",
+      "to": "title:\"打开浏览器\""
+    },
+    {
+      "from": "children:\"Open Browser\"",
+      "to": "children:\"打开浏览器\""
+    },
+    {
+      "from": "description:\"Open Browser\"",
+      "to": "description:\"打开浏览器\""
+    },
+    {
+      "from": "aria-label:\"Open Browser\"",
+      "to": "aria-label:\"打开浏览器\""
+    },
+    {
+      "from": "Plugins",
+      "to": "插件"
+    },
+    {
+      "from": "children:\"Plugins\"",
+      "to": "children:\"插件\""
+    },
+    {
+      "from": "aria-label:\"Plugins\"",
+      "to": "aria-label:\"插件\""
+    },
+    {
+      "from": "Run MCP tool",
+      "to": "运行 MCP 工具"
+    },
+    {
+      "from": "label:\"Run MCP tool\"",
+      "to": "label:\"运行 MCP 工具\""
+    },
+    {
+      "from": "title:\"Run MCP tool\"",
+      "to": "title:\"运行 MCP 工具\""
+    },
+    {
+      "from": "children:\"Run MCP tool\"",
+      "to": "children:\"运行 MCP 工具\""
+    },
+    {
+      "from": "description:\"Run MCP tool\"",
+      "to": "description:\"运行 MCP 工具\""
+    },
+    {
+      "from": "aria-label:\"Run MCP tool\"",
+      "to": "aria-label:\"运行 MCP 工具\""
+    },
+    {
+      "from": "MCP server",
+      "to": "MCP 服务器"
+    },
+    {
+      "from": "label:\"MCP server\"",
+      "to": "label:\"MCP 服务器\""
+    },
+    {
+      "from": "title:\"MCP server\"",
+      "to": "title:\"MCP 服务器\""
+    },
+    {
+      "from": "children:\"MCP server\"",
+      "to": "children:\"MCP 服务器\""
+    },
+    {
+      "from": "description:\"MCP server\"",
+      "to": "description:\"MCP 服务器\""
+    },
+    {
+      "from": "aria-label:\"MCP server\"",
+      "to": "aria-label:\"MCP 服务器\""
+    },
+    {
+      "from": "No browser view available",
+      "to": "无可用浏览器视图"
+    },
+    {
+      "from": "label:\"No browser view available\"",
+      "to": "label:\"无可用浏览器视图\""
+    },
+    {
+      "from": "title:\"No browser view available\"",
+      "to": "title:\"无可用浏览器视图\""
+    },
+    {
+      "from": "children:\"No browser view available\"",
+      "to": "children:\"无可用浏览器视图\""
+    },
+    {
+      "from": "description:\"No browser view available\"",
+      "to": "description:\"无可用浏览器视图\""
+    },
+    {
+      "from": "aria-label:\"No browser view available\"",
+      "to": "aria-label:\"无可用浏览器视图\""
+    },
+    {
+      "from": "Browser view not found",
+      "to": "未找到浏览器视图"
+    },
+    {
+      "from": "label:\"Browser view not found\"",
+      "to": "label:\"未找到浏览器视图\""
+    },
+    {
+      "from": "title:\"Browser view not found\"",
+      "to": "title:\"未找到浏览器视图\""
+    },
+    {
+      "from": "children:\"Browser view not found\"",
+      "to": "children:\"未找到浏览器视图\""
+    },
+    {
+      "from": "description:\"Browser view not found\"",
+      "to": "description:\"未找到浏览器视图\""
+    },
+    {
+      "from": "aria-label:\"Browser view not found\"",
+      "to": "aria-label:\"未找到浏览器视图\""
+    },
+    {
+      "from": "Connection stalled",
+      "to": "连接停滞"
+    },
+    {
+      "from": "label:\"Connection stalled\"",
+      "to": "label:\"连接停滞\""
+    },
+    {
+      "from": "title:\"Connection stalled\"",
+      "to": "title:\"连接停滞\""
+    },
+    {
+      "from": "children:\"Connection stalled\"",
+      "to": "children:\"连接停滞\""
+    },
+    {
+      "from": "description:\"Connection stalled\"",
+      "to": "description:\"连接停滞\""
+    },
+    {
+      "from": "aria-label:\"Connection stalled\"",
+      "to": "aria-label:\"连接停滞\""
+    },
+    {
+      "from": "Connection Failed",
+      "to": "连接失败"
+    },
+    {
+      "from": "label:\"Connection Failed\"",
+      "to": "label:\"连接失败\""
+    },
+    {
+      "from": "title:\"Connection Failed\"",
+      "to": "title:\"连接失败\""
+    },
+    {
+      "from": "children:\"Connection Failed\"",
+      "to": "children:\"连接失败\""
+    },
+    {
+      "from": "description:\"Connection Failed\"",
+      "to": "description:\"连接失败\""
+    },
+    {
+      "from": "aria-label:\"Connection Failed\"",
+      "to": "aria-label:\"连接失败\""
+    },
+    {
+      "from": "More actions",
+      "to": "更多操作"
+    },
+    {
+      "from": "label:\"More actions\"",
+      "to": "label:\"更多操作\""
+    },
+    {
+      "from": "title:\"More actions\"",
+      "to": "title:\"更多操作\""
+    },
+    {
+      "from": "children:\"More actions\"",
+      "to": "children:\"更多操作\""
+    },
+    {
+      "from": "description:\"More actions\"",
+      "to": "description:\"更多操作\""
+    },
+    {
+      "from": "aria-label:\"More actions\"",
+      "to": "aria-label:\"更多操作\""
+    },
+    {
+      "from": "More options",
+      "to": "更多选项"
+    },
+    {
+      "from": "label:\"More options\"",
+      "to": "label:\"更多选项\""
+    },
+    {
+      "from": "title:\"More options\"",
+      "to": "title:\"更多选项\""
+    },
+    {
+      "from": "children:\"More options\"",
+      "to": "children:\"更多选项\""
+    },
+    {
+      "from": "description:\"More options\"",
+      "to": "description:\"更多选项\""
+    },
+    {
+      "from": "aria-label:\"More options\"",
+      "to": "aria-label:\"更多选项\""
+    },
+    {
+      "from": "Show more",
+      "to": "显示更多"
+    },
+    {
+      "from": "label:\"Show more\"",
+      "to": "label:\"显示更多\""
+    },
+    {
+      "from": "title:\"Show more\"",
+      "to": "title:\"显示更多\""
+    },
+    {
+      "from": "children:\"Show more\"",
+      "to": "children:\"显示更多\""
+    },
+    {
+      "from": "description:\"Show more\"",
+      "to": "description:\"显示更多\""
+    },
+    {
+      "from": "aria-label:\"Show more\"",
+      "to": "aria-label:\"显示更多\""
+    },
+    {
+      "from": "Reload Window",
+      "to": "重新加载窗口"
+    },
+    {
+      "from": "label:\"Reload Window\"",
+      "to": "label:\"重新加载窗口\""
+    },
+    {
+      "from": "title:\"Reload Window\"",
+      "to": "title:\"重新加载窗口\""
+    },
+    {
+      "from": "children:\"Reload Window\"",
+      "to": "children:\"重新加载窗口\""
+    },
+    {
+      "from": "description:\"Reload Window\"",
+      "to": "description:\"重新加载窗口\""
+    },
+    {
+      "from": "aria-label:\"Reload Window\"",
+      "to": "aria-label:\"重新加载窗口\""
+    },
+    {
+      "from": "Copy code",
+      "to": "复制代码"
+    },
+    {
+      "from": "label:\"Copy code\"",
+      "to": "label:\"复制代码\""
+    },
+    {
+      "from": "title:\"Copy code\"",
+      "to": "title:\"复制代码\""
+    },
+    {
+      "from": "children:\"Copy code\"",
+      "to": "children:\"复制代码\""
+    },
+    {
+      "from": "description:\"Copy code\"",
+      "to": "description:\"复制代码\""
+    },
+    {
+      "from": "aria-label:\"Copy code\"",
+      "to": "aria-label:\"复制代码\""
+    },
+    {
+      "from": "View image",
+      "to": "查看图片"
+    },
+    {
+      "from": "label:\"View image\"",
+      "to": "label:\"查看图片\""
+    },
+    {
+      "from": "title:\"View image\"",
+      "to": "title:\"查看图片\""
+    },
+    {
+      "from": "children:\"View image\"",
+      "to": "children:\"查看图片\""
+    },
+    {
+      "from": "description:\"View image\"",
+      "to": "description:\"查看图片\""
+    },
+    {
+      "from": "aria-label:\"View image\"",
+      "to": "aria-label:\"查看图片\""
+    },
+    {
+      "from": "Generated image",
+      "to": "生成的图片"
+    },
+    {
+      "from": "label:\"Generated image\"",
+      "to": "label:\"生成的图片\""
+    },
+    {
+      "from": "title:\"Generated image\"",
+      "to": "title:\"生成的图片\""
+    },
+    {
+      "from": "children:\"Generated image\"",
+      "to": "children:\"生成的图片\""
+    },
+    {
+      "from": "description:\"Generated image\"",
+      "to": "description:\"生成的图片\""
+    },
+    {
+      "from": "aria-label:\"Generated image\"",
+      "to": "aria-label:\"生成的图片\""
+    },
+    {
+      "from": "Edit file",
+      "to": "编辑文件"
+    },
+    {
+      "from": "label:\"Edit file\"",
+      "to": "label:\"编辑文件\""
+    },
+    {
+      "from": "title:\"Edit file\"",
+      "to": "title:\"编辑文件\""
+    },
+    {
+      "from": "children:\"Edit file\"",
+      "to": "children:\"编辑文件\""
+    },
+    {
+      "from": "description:\"Edit file\"",
+      "to": "description:\"编辑文件\""
+    },
+    {
+      "from": "aria-label:\"Edit file\"",
+      "to": "aria-label:\"编辑文件\""
+    },
+    {
+      "from": "Open in Prompt Quality",
+      "to": "在 Prompt Quality 中打开"
+    },
+    {
+      "from": "label:\"Open in Prompt Quality\"",
+      "to": "label:\"在 Prompt Quality 中打开\""
+    },
+    {
+      "from": "title:\"Open in Prompt Quality\"",
+      "to": "title:\"在 Prompt Quality 中打开\""
+    },
+    {
+      "from": "children:\"Open in Prompt Quality\"",
+      "to": "children:\"在 Prompt Quality 中打开\""
+    },
+    {
+      "from": "description:\"Open in Prompt Quality\"",
+      "to": "description:\"在 Prompt Quality 中打开\""
+    },
+    {
+      "from": "aria-label:\"Open in Prompt Quality\"",
+      "to": "aria-label:\"在 Prompt Quality 中打开\""
+    },
+    {
+      "from": "Cursor Blame",
+      "to": "Cursor 追溯"
+    },
+    {
+      "from": "label:\"Cursor Blame\"",
+      "to": "label:\"Cursor 追溯\""
+    },
+    {
+      "from": "title:\"Cursor Blame\"",
+      "to": "title:\"Cursor 追溯\""
+    },
+    {
+      "from": "children:\"Cursor Blame\"",
+      "to": "children:\"Cursor 追溯\""
+    },
+    {
+      "from": "description:\"Cursor Blame\"",
+      "to": "description:\"Cursor 追溯\""
+    },
+    {
+      "from": "aria-label:\"Cursor Blame\"",
+      "to": "aria-label:\"Cursor 追溯\""
     }
   ]
 }

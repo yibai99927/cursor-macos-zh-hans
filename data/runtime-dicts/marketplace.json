@@ -3,68 +3,40 @@
   "updatedAt": "2026-07-11",
   "entries": [
     [
-      "Marketplace",
-      "市场"
+      "No browser view available",
+      "无可用浏览器视图"
+    ],
+    [
+      "Browser view not found",
+      "未找到浏览器视图"
     ],
     [
       "Browse Marketplace",
       "浏览市场"
     ],
     [
+      "Connection stalled",
+      "连接停滞"
+    ],
+    [
       "Search Marketplace",
       "搜索市场"
     ],
     [
-      "Install",
-      "安装"
+      "Connection Failed",
+      "连接失败"
     ],
     [
-      "Installed",
-      "已安装"
-    ],
-    [
-      "Uninstall",
-      "卸载"
-    ],
-    [
-      "Disable",
-      "禁用"
-    ],
-    [
-      "Enable",
-      "启用"
-    ],
-    [
-      "Extension",
-      "扩展"
-    ],
-    [
-      "Extensions",
-      "扩展"
-    ],
-    [
-      "Publisher",
-      "发布者"
-    ],
-    [
-      "Featured",
-      "精选"
-    ],
-    [
-      "Popular",
-      "热门"
-    ],
-    [
-      "Recently Updated",
-      "最近更新"
+      "Install Extension",
+      "安装扩展"
     ],
     [
       "No results found",
       "未找到结果"
     ],
     [
-      "Install Extension",
-      "安装扩展"
+      "Recently Updated",
+      "最近更新"
     ],
     [
       "View Extension",
@@ -73,6 +45,66 @@
     [
       "More Actions",
       "更多操作"
+    ],
+    [
+      "Open Browser",
+      "打开浏览器"
+    ],
+    [
+      "Run MCP tool",
+      "运行 MCP 工具"
+    ],
+    [
+      "Marketplace",
+      "市场"
+    ],
+    [
+      "Extensions",
+      "扩展"
+    ],
+    [
+      "MCP server",
+      "MCP 服务器"
+    ],
+    [
+      "Extension",
+      "扩展"
+    ],
+    [
+      "Installed",
+      "已安装"
+    ],
+    [
+      "Publisher",
+      "发布者"
+    ],
+    [
+      "Uninstall",
+      "卸载"
+    ],
+    [
+      "Featured",
+      "精选"
+    ],
+    [
+      "Disable",
+      "禁用"
+    ],
+    [
+      "Install",
+      "安装"
+    ],
+    [
+      "Plugins",
+      "插件"
+    ],
+    [
+      "Popular",
+      "热门"
+    ],
+    [
+      "Enable",
+      "启用"
     ]
   ]
 }
