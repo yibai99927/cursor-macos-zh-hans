@@ -203,19 +203,12 @@
     var observer = new MutationObserver(onMutations);
     observer.observe(target, { childList: true, subtree: true, characterData: true });
     setTimeout(translateNow, 400);
-    var ticks = 0;
-    var timer = setInterval(function () {
-      ticks += 1;
-      translateNow();
-      if (ticks >= 10) {
-        clearInterval(timer);
-      }
-    }, 3000);
+    setTimeout(translateNow, 1500);
   }
 
   window.CursorZhHans = {
     translateNow: translateNow,
-    version: '1.0.0'
+    version: '1.1.0'
   };
 
   if (document.readyState === 'loading') {

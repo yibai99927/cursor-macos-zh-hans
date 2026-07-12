@@ -59,190 +59,6 @@
   ],
   "exact": [
     {
-      "from": "Search Settings",
-      "to": "搜索设置"
-    },
-    {
-      "from": "Open Agents Window on Startup",
-      "to": "启动时打开 Agents 窗口"
-    },
-    {
-      "from": "Manage your account and billing",
-      "to": "管理你的账户和账单"
-    },
-    {
-      "from": "Show rotating tips on the empty screen",
-      "to": "在空白界面显示轮换提示"
-    },
-    {
-      "from": "Show system notifications when Agent completes or needs attention",
-      "to": "当 Agent 完成或需要关注时显示系统通知"
-    },
-    {
-      "from": "Show warning-level in-app toasts",
-      "to": "显示警告级别的应用内通知"
-    },
-    {
-      "from": "Show Cursor in menu bar",
-      "to": "在菜单栏中显示 Cursor"
-    },
-    {
-      "from": "Play a sound when Agent finishes responding",
-      "to": "Agent 完成回复时播放提示音"
-    },
-    {
-      "from": "Open the Agents Window by default when Cursor launches",
-      "to": "Cursor 启动时默认打开 Agents 窗口"
-    },
-    {
-      "from": "Open Agents Window",
-      "to": "打开 Agents 窗口"
-    },
-    {
-      "from": "Agents Window",
-      "to": "Agents 窗口"
-    },
-    {
-      "from": "New Agents Window",
-      "to": "新建 Agents 窗口"
-    },
-    {
-      "from": "Your agents now live in the Agents Window",
-      "to": "你的 Agent 现已迁移至 Agents 窗口"
-    },
-    {
-      "from": "Your agent chats now live in the Agents Window",
-      "to": "你的 Agent 对话现已迁移至 Agents 窗口"
-    },
-    {
-      "from": "Continue working with agents in a simpler, more powerful interface.",
-      "to": "在更简洁、更强大的界面中继续使用 Agent。"
-    },
-    {
-      "from": "Prefer the Agent layout? Try the new Agents Window.",
-      "to": "更喜欢 Agent 布局？试试全新的 Agents 窗口。"
-    },
-    {
-      "from": "Meet the new Agents Window",
-      "to": "认识全新的 Agents 窗口"
-    },
-    {
-      "from": "Search chats and cloud agents",
-      "to": "搜索对话和云端 Agent"
-    },
-    {
-      "from": "Search chat history",
-      "to": "搜索对话历史"
-    },
-    {
-      "from": "Switch between recently used agents",
-      "to": "在最近使用的 Agent 之间切换"
-    },
-    {
-      "from": "Quick Open Previous Recently Used Agent",
-      "to": "快速打开最近使用的 Agent"
-    },
-    {
-      "from": "Quick Open Least Recently Used Agent",
-      "to": "快速打开最久未使用的 Agent"
-    },
-    {
-      "from": "All Agents",
-      "to": "所有 Agent"
-    },
-    {
-      "from": "No chats available",
-      "to": "没有可用的对话"
-    },
-    {
-      "from": "No recent agents",
-      "to": "没有最近的 Agent"
-    },
-    {
-      "from": "Start a new agent to see it here",
-      "to": "新建 Agent 后将显示在此处"
-    },
-    {
-      "from": "Try a different search query",
-      "to": "尝试其他搜索关键词"
-    },
-    {
-      "from": "Untitled chat",
-      "to": "未命名对话"
-    },
-    {
-      "from": "Cloud agents",
-      "to": "云端 Agent"
-    },
-    {
-      "from": "Import Project Rules from GitHub/GitLab",
-      "to": "从 GitHub/GitLab 导入项目规则"
-    },
-    {
-      "from": "Enter the GitHub/GitLab repository URL to import project rules",
-      "to": "输入 GitHub/GitLab 仓库 URL 以导入项目规则"
-    },
-    {
-      "from": "Cannot create project rules without a workspace. Please open a folder first.",
-      "to": "没有工作区无法创建项目规则。请先打开一个文件夹。"
-    },
-    {
-      "from": "Loading Cloud Agents settings...",
-      "to": "正在加载云端 Agent 设置..."
-    },
-    {
-      "from": "Cursor Account",
-      "to": "Cursor 账户"
-    },
-    {
-      "from": "Cursor Settings",
-      "to": "Cursor 设置"
-    },
-    {
-      "from": "Open Cursor Settings",
-      "to": "打开 Cursor 设置"
-    },
-    {
-      "from": "Search Cursor Settings",
-      "to": "搜索 Cursor 设置"
-    },
-    {
-      "from": "Search Cursor settings…",
-      "to": "搜索 Cursor 设置…"
-    },
-    {
-      "from": "Close Settings",
-      "to": "关闭设置"
-    },
-    {
-      "from": "Go to Settings",
-      "to": "前往设置"
-    },
-    {
-      "from": "Open Settings",
-      "to": "打开设置"
-    },
-    {
-      "from": "Agent is still working",
-      "to": "Agent 仍在运行"
-    },
-    {
-      "from": "Search agents",
-      "to": "搜索 Agent"
-    },
-    {
-      "from": "Customize your Cursor experience",
-      "to": "自定义你的 Cursor 体验"
-    },
-    {
-      "from": "Customize is the new home for managing this page",
-      "to": "自定义是管理此页面的新入口"
-    },
-    {
-      "from": "Customize Sidebar",
-      "to": "自定义侧栏"
-    },
-    {
       "from": "label:\"New Agent\"",
       "to": "label:\"新建 Agent\""
     },
@@ -1573,10 +1389,6 @@
     {
       "from": "Inline Diffs",
       "to": "行内差异"
-    },
-    {
-      "from": "Plan & Usage",
-      "to": "套餐与用量"
     },
     {
       "from": "Agent Review",
@@ -3751,10 +3563,6 @@
       "to": "切换隐私模式？"
     },
     {
-      "from": "System Notifications",
-      "to": "系统通知"
-    },
-    {
       "from": "Automate with Hooks",
       "to": "用钩子自动化"
     },
@@ -4091,10 +3899,6 @@
       "to": "阻止 Agent 自动在工作区外创建或修改文件"
     },
     {
-      "from": "Browser Automation",
-      "to": "浏览器自动化"
-    },
-    {
       "from": "Configure browser automation",
       "to": "配置浏览器自动化"
     },
@@ -4103,24 +3907,8 @@
       "to": "已连接到浏览器标签页"
     },
     {
-      "from": "Browser Protection",
-      "to": "浏览器保护"
-    },
-    {
-      "from": "Prevent Agent from automatically running Browser tools",
-      "to": "阻止 Agent 自动运行浏览器工具"
-    },
-    {
-      "from": "Show Localhost Links in Browser",
-      "to": "在浏览器中显示 Localhost 链接"
-    },
-    {
       "from": "Automatically open localhost links in the Browser Tab",
       "to": "自动在浏览器标签页中打开 localhost 链接"
-    },
-    {
-      "from": "Open Web Links in Browser",
-      "to": "在浏览器中打开网页链接"
     },
     {
       "from": "Automatically open http and https links in the Browser Tab",
@@ -4363,10 +4151,6 @@
       "to": "title:\"退出登录\""
     },
     {
-      "from": "Close Tab",
-      "to": "关闭标签页"
-    },
-    {
       "from": "label:\"Close Tab\"",
       "to": "label:\"关闭标签页\""
     },
@@ -4381,10 +4165,6 @@
     {
       "from": "children:\"Close Tab\"",
       "to": "children:\"关闭标签页\""
-    },
-    {
-      "from": "Close Running Tab?",
-      "to": "关闭正在运行的标签页？"
     },
     {
       "from": "label:\"Close Running Tab?\"",
@@ -4403,10 +4183,6 @@
       "to": "children:\"关闭正在运行的标签页？\""
     },
     {
-      "from": "New Tab",
-      "to": "新建标签页"
-    },
-    {
       "from": "label:\"New Tab\"",
       "to": "label:\"新建标签页\""
     },
@@ -4421,10 +4197,6 @@
     {
       "from": "children:\"New Tab\"",
       "to": "children:\"新建标签页\""
-    },
-    {
-      "from": "Create New Tab",
-      "to": "创建新标签页"
     },
     {
       "from": "label:\"Create New Tab\"",
@@ -4443,10 +4215,6 @@
       "to": "children:\"创建新标签页\""
     },
     {
-      "from": "Next Tab",
-      "to": "下一个标签页"
-    },
-    {
       "from": "label:\"Next Tab\"",
       "to": "label:\"下一个标签页\""
     },
@@ -4461,10 +4229,6 @@
     {
       "from": "children:\"Next Tab\"",
       "to": "children:\"下一个标签页\""
-    },
-    {
-      "from": "Previous Tab",
-      "to": "上一个标签页"
     },
     {
       "from": "label:\"Previous Tab\"",
@@ -4483,10 +4247,6 @@
       "to": "children:\"上一个标签页\""
     },
     {
-      "from": "Switch Tab",
-      "to": "切换标签页"
-    },
-    {
       "from": "label:\"Switch Tab\"",
       "to": "label:\"切换标签页\""
     },
@@ -4501,10 +4261,6 @@
     {
       "from": "children:\"Switch Tab\"",
       "to": "children:\"切换标签页\""
-    },
-    {
-      "from": "List Tabs",
-      "to": "列出标签页"
     },
     {
       "from": "label:\"List Tabs\"",
@@ -4523,10 +4279,6 @@
       "to": "children:\"列出标签页\""
     },
     {
-      "from": "Reopen Last Closed Tab",
-      "to": "重新打开上次关闭的标签页"
-    },
-    {
       "from": "label:\"Reopen Last Closed Tab\"",
       "to": "label:\"重新打开上次关闭的标签页\""
     },
@@ -4541,10 +4293,6 @@
     {
       "from": "children:\"Reopen Last Closed Tab\"",
       "to": "children:\"重新打开上次关闭的标签页\""
-    },
-    {
-      "from": "New Tab Menu",
-      "to": "新建标签页菜单"
     },
     {
       "from": "label:\"New Tab Menu\"",
@@ -4563,10 +4311,6 @@
       "to": "children:\"新建标签页菜单\""
     },
     {
-      "from": "Activate Browser Tab",
-      "to": "激活浏览器标签页"
-    },
-    {
       "from": "label:\"Activate Browser Tab\"",
       "to": "label:\"激活浏览器标签页\""
     },
@@ -4581,10 +4325,6 @@
     {
       "from": "children:\"Activate Browser Tab\"",
       "to": "children:\"激活浏览器标签页\""
-    },
-    {
-      "from": "Close Browser Tab",
-      "to": "关闭浏览器标签页"
     },
     {
       "from": "label:\"Close Browser Tab\"",
@@ -4603,10 +4343,6 @@
       "to": "children:\"关闭浏览器标签页\""
     },
     {
-      "from": "Hard Reload Browser Tab",
-      "to": "强制重新加载浏览器标签页"
-    },
-    {
       "from": "label:\"Hard Reload Browser Tab\"",
       "to": "label:\"强制重新加载浏览器标签页\""
     },
@@ -4621,10 +4357,6 @@
     {
       "from": "children:\"Hard Reload Browser Tab\"",
       "to": "children:\"强制重新加载浏览器标签页\""
-    },
-    {
-      "from": "Browser Menu",
-      "to": "浏览器菜单"
     },
     {
       "from": "label:\"Browser Menu\"",
@@ -4643,10 +4375,6 @@
       "to": "children:\"浏览器菜单\""
     },
     {
-      "from": "Browser Navigation",
-      "to": "浏览器导航"
-    },
-    {
       "from": "label:\"Browser Navigation\"",
       "to": "label:\"浏览器导航\""
     },
@@ -4661,10 +4389,6 @@
     {
       "from": "children:\"Browser Navigation\"",
       "to": "children:\"浏览器导航\""
-    },
-    {
-      "from": "Browser Tools",
-      "to": "浏览器工具"
     },
     {
       "from": "label:\"Browser Tools\"",
@@ -4683,10 +4407,6 @@
       "to": "children:\"浏览器工具\""
     },
     {
-      "from": "Browser Tool Calls",
-      "to": "浏览器工具调用"
-    },
-    {
       "from": "label:\"Browser Tool Calls\"",
       "to": "label:\"浏览器工具调用\""
     },
@@ -4701,10 +4421,6 @@
     {
       "from": "children:\"Browser Tool Calls\"",
       "to": "children:\"浏览器工具调用\""
-    },
-    {
-      "from": "New Browser",
-      "to": "新建浏览器"
     },
     {
       "from": "label:\"New Browser\"",
@@ -4723,10 +4439,6 @@
       "to": "children:\"新建浏览器\""
     },
     {
-      "from": "Find in Browser Page",
-      "to": "在浏览器页面中查找"
-    },
-    {
       "from": "label:\"Find in Browser Page\"",
       "to": "label:\"在浏览器页面中查找\""
     },
@@ -4741,10 +4453,6 @@
     {
       "from": "children:\"Find in Browser Page\"",
       "to": "children:\"在浏览器页面中查找\""
-    },
-    {
-      "from": "Find Next in Browser Page",
-      "to": "查找下一处（浏览器）"
     },
     {
       "from": "label:\"Find Next in Browser Page\"",
@@ -4763,10 +4471,6 @@
       "to": "children:\"查找下一处（浏览器）\""
     },
     {
-      "from": "Find Previous in Browser Page",
-      "to": "查找上一处（浏览器）"
-    },
-    {
       "from": "label:\"Find Previous in Browser Page\"",
       "to": "label:\"查找上一处（浏览器）\""
     },
@@ -4781,10 +4485,6 @@
     {
       "from": "children:\"Find Previous in Browser Page\"",
       "to": "children:\"查找上一处（浏览器）\""
-    },
-    {
-      "from": "Close Browser Find",
-      "to": "关闭浏览器查找"
     },
     {
       "from": "label:\"Close Browser Find\"",
@@ -4803,10 +4503,6 @@
       "to": "children:\"关闭浏览器查找\""
     },
     {
-      "from": "Abort Agent and Restore Query",
-      "to": "中止 Agent 并恢复查询"
-    },
-    {
       "from": "label:\"Abort Agent and Restore Query\"",
       "to": "label:\"中止 Agent 并恢复查询\""
     },
@@ -4821,10 +4517,6 @@
     {
       "from": "children:\"Abort Agent and Restore Query\"",
       "to": "children:\"中止 Agent 并恢复查询\""
-    },
-    {
-      "from": "Agent Mode",
-      "to": "Agent 模式"
     },
     {
       "from": "label:\"Agent Mode\"",
@@ -4843,10 +4535,6 @@
       "to": "children:\"Agent 模式\""
     },
     {
-      "from": "Cloud Agent",
-      "to": "云端 Agent"
-    },
-    {
       "from": "label:\"Cloud Agent\"",
       "to": "label:\"云端 Agent\""
     },
@@ -4861,10 +4549,6 @@
     {
       "from": "children:\"Cloud Agent\"",
       "to": "children:\"云端 Agent\""
-    },
-    {
-      "from": "Search Agents",
-      "to": "搜索 Agent"
     },
     {
       "from": "label:\"Search Agents\"",
@@ -4883,10 +4567,6 @@
       "to": "children:\"搜索 Agent\""
     },
     {
-      "from": "Next Agent",
-      "to": "下一个 Agent"
-    },
-    {
       "from": "label:\"Next Agent\"",
       "to": "label:\"下一个 Agent\""
     },
@@ -4901,10 +4581,6 @@
     {
       "from": "children:\"Next Agent\"",
       "to": "children:\"下一个 Agent\""
-    },
-    {
-      "from": "Previous Agent",
-      "to": "上一个 Agent"
     },
     {
       "from": "label:\"Previous Agent\"",
@@ -4923,10 +4599,6 @@
       "to": "children:\"上一个 Agent\""
     },
     {
-      "from": "Pin / Unpin Agent",
-      "to": "固定 / 取消固定 Agent"
-    },
-    {
       "from": "label:\"Pin / Unpin Agent\"",
       "to": "label:\"固定 / 取消固定 Agent\""
     },
@@ -4941,10 +4613,6 @@
     {
       "from": "children:\"Pin / Unpin Agent\"",
       "to": "children:\"固定 / 取消固定 Agent\""
-    },
-    {
-      "from": "Fix in Agent",
-      "to": "在 Agent 中修复"
     },
     {
       "from": "label:\"Fix in Agent\"",
@@ -4963,10 +4631,6 @@
       "to": "children:\"在 Agent 中修复\""
     },
     {
-      "from": "No Agent For This Task",
-      "to": "此任务没有可用 Agent"
-    },
-    {
       "from": "label:\"No Agent For This Task\"",
       "to": "label:\"此任务没有可用 Agent\""
     },
@@ -4981,10 +4645,6 @@
     {
       "from": "children:\"No Agent For This Task\"",
       "to": "children:\"此任务没有可用 Agent\""
-    },
-    {
-      "from": "Scroll Agent Panel Down",
-      "to": "向下滚动 Agent 面板"
     },
     {
       "from": "label:\"Scroll Agent Panel Down\"",
@@ -5003,10 +4663,6 @@
       "to": "children:\"向下滚动 Agent 面板\""
     },
     {
-      "from": "Scroll Agent Panel Up",
-      "to": "向上滚动 Agent 面板"
-    },
-    {
       "from": "label:\"Scroll Agent Panel Up\"",
       "to": "label:\"向上滚动 Agent 面板\""
     },
@@ -5021,10 +4677,6 @@
     {
       "from": "children:\"Scroll Agent Panel Up\"",
       "to": "children:\"向上滚动 Agent 面板\""
-    },
-    {
-      "from": "Skip Pending Shell Tool",
-      "to": "跳过待处理的 Shell 工具"
     },
     {
       "from": "label:\"Skip Pending Shell Tool\"",
@@ -5043,10 +4695,6 @@
       "to": "children:\"跳过待处理的 Shell 工具\""
     },
     {
-      "from": "Copy Agent Deeplink",
-      "to": "复制 Agent 深度链接"
-    },
-    {
       "from": "label:\"Copy Agent Deeplink\"",
       "to": "label:\"复制 Agent 深度链接\""
     },
@@ -5061,10 +4709,6 @@
     {
       "from": "children:\"Copy Agent Deeplink\"",
       "to": "children:\"复制 Agent 深度链接\""
-    },
-    {
-      "from": "Plan Mode",
-      "to": "计划模式"
     },
     {
       "from": "label:\"Plan Mode\"",
@@ -5083,10 +4727,6 @@
       "to": "children:\"计划模式\""
     },
     {
-      "from": "Build Plan",
-      "to": "生成计划"
-    },
-    {
       "from": "label:\"Build Plan\"",
       "to": "label:\"生成计划\""
     },
@@ -5101,10 +4741,6 @@
     {
       "from": "children:\"Build Plan\"",
       "to": "children:\"生成计划\""
-    },
-    {
-      "from": "View Plan",
-      "to": "查看计划"
     },
     {
       "from": "label:\"View Plan\"",
@@ -5123,10 +4759,6 @@
       "to": "children:\"查看计划\""
     },
     {
-      "from": "With Plan",
-      "to": "使用计划"
-    },
-    {
       "from": "label:\"With Plan\"",
       "to": "label:\"使用计划\""
     },
@@ -5141,10 +4773,6 @@
     {
       "from": "children:\"With Plan\"",
       "to": "children:\"使用计划\""
-    },
-    {
-      "from": "Empty Plan State",
-      "to": "空计划状态"
     },
     {
       "from": "label:\"Empty Plan State\"",
@@ -7715,10 +7343,6 @@
       "to": "aria-label:\"打开浏览器\""
     },
     {
-      "from": "Plugins",
-      "to": "插件"
-    },
-    {
       "from": "children:\"Plugins\"",
       "to": "children:\"插件\""
     },
@@ -8110,5 +7734,6 @@
       "from": "aria-label:\"Cursor Blame\"",
       "to": "aria-label:\"Cursor 追溯\""
     }
-  ]
+  ],
+  "prunedAt": "2026-07-12T04:29:21"
 }

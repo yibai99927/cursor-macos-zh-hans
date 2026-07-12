@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [master, "cursor/**"]
+  pull_request:
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate runtime dictionaries
+        run: python3 scripts/validate-dicts.py --strict
+
+      - name: Check Win/Mac install parity
+        run: python3 scripts/check-parity.py
+
+      - name: Check Glass dictionary overlaps
+        run: python3 scripts/prune-glass-dict.py --check-overlaps

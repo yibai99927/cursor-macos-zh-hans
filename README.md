@@ -106,9 +106,11 @@ cursor-zh-hans/
 3. 静态补丁：优先改 `data/structured-patches.json`；必要时再改 `glass-ui-replacements.json`
 4. 重新运行对应平台的安装脚本
 
-Cursor 大版本更新后可提取漏译：
+维护者提取漏译（默认安装已跳过此步骤）：
 
 ```bash
+CURSOR_ZH_MAINTAINER=1 ./scripts/install-mac.sh
+# Windows: $env:CURSOR_ZH_MAINTAINER = "1"
 python scripts/extract.py
 ```
 

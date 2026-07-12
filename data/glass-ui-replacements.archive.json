@@ -1,0 +1,569 @@
+{
+  "version": "1.0.0",
+  "entries": [
+    {
+      "from": "Search Settings",
+      "to": "搜索设置",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Open Agents Window on Startup",
+      "to": "启动时打开 Agents 窗口",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Manage your account and billing",
+      "to": "管理你的账户和账单",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Show rotating tips on the empty screen",
+      "to": "在空白界面显示轮换提示",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Show system notifications when Agent completes or needs attention",
+      "to": "当 Agent 完成或需要关注时显示系统通知",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Show warning-level in-app toasts",
+      "to": "显示警告级别的应用内通知",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Show Cursor in menu bar",
+      "to": "在菜单栏中显示 Cursor",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Play a sound when Agent finishes responding",
+      "to": "Agent 完成回复时播放提示音",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Open the Agents Window by default when Cursor launches",
+      "to": "Cursor 启动时默认打开 Agents 窗口",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Open Agents Window",
+      "to": "打开 Agents 窗口",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Agents Window",
+      "to": "Agents 窗口",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "New Agents Window",
+      "to": "新建 Agents 窗口",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Your agents now live in the Agents Window",
+      "to": "你的 Agent 现已迁移至 Agents 窗口",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Your agent chats now live in the Agents Window",
+      "to": "你的 Agent 对话现已迁移至 Agents 窗口",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Continue working with agents in a simpler, more powerful interface.",
+      "to": "在更简洁、更强大的界面中继续使用 Agent。",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Prefer the Agent layout? Try the new Agents Window.",
+      "to": "更喜欢 Agent 布局？试试全新的 Agents 窗口。",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Meet the new Agents Window",
+      "to": "认识全新的 Agents 窗口",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Search chats and cloud agents",
+      "to": "搜索对话和云端 Agent",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Search chat history",
+      "to": "搜索对话历史",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Switch between recently used agents",
+      "to": "在最近使用的 Agent 之间切换",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Quick Open Previous Recently Used Agent",
+      "to": "快速打开最近使用的 Agent",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Quick Open Least Recently Used Agent",
+      "to": "快速打开最久未使用的 Agent",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "All Agents",
+      "to": "所有 Agent",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "No chats available",
+      "to": "没有可用的对话",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "No recent agents",
+      "to": "没有最近的 Agent",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Start a new agent to see it here",
+      "to": "新建 Agent 后将显示在此处",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Try a different search query",
+      "to": "尝试其他搜索关键词",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Untitled chat",
+      "to": "未命名对话",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Cloud agents",
+      "to": "云端 Agent",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Import Project Rules from GitHub/GitLab",
+      "to": "从 GitHub/GitLab 导入项目规则",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Enter the GitHub/GitLab repository URL to import project rules",
+      "to": "输入 GitHub/GitLab 仓库 URL 以导入项目规则",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Cannot create project rules without a workspace. Please open a folder first.",
+      "to": "没有工作区无法创建项目规则。请先打开一个文件夹。",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Loading Cloud Agents settings...",
+      "to": "正在加载云端 Agent 设置...",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Cursor Account",
+      "to": "Cursor 账户",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Cursor Settings",
+      "to": "Cursor 设置",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Open Cursor Settings",
+      "to": "打开 Cursor 设置",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Search Cursor Settings",
+      "to": "搜索 Cursor 设置",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Search Cursor settings…",
+      "to": "搜索 Cursor 设置…",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Close Settings",
+      "to": "关闭设置",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Go to Settings",
+      "to": "前往设置",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Open Settings",
+      "to": "打开设置",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Agent is still working",
+      "to": "Agent 仍在运行",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Search agents",
+      "to": "搜索 Agent",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Customize your Cursor experience",
+      "to": "自定义你的 Cursor 体验",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Customize is the new home for managing this page",
+      "to": "自定义是管理此页面的新入口",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Customize Sidebar",
+      "to": "自定义侧栏",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Plan & Usage",
+      "to": "套餐与用量",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "System Notifications",
+      "to": "系统通知",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Browser Automation",
+      "to": "浏览器自动化",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Browser Protection",
+      "to": "浏览器保护",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Prevent Agent from automatically running Browser tools",
+      "to": "阻止 Agent 自动运行浏览器工具",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Show Localhost Links in Browser",
+      "to": "在浏览器中显示 Localhost 链接",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Open Web Links in Browser",
+      "to": "在浏览器中打开网页链接",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Close Tab",
+      "to": "关闭标签页",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Close Running Tab?",
+      "to": "关闭正在运行的标签页？",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "New Tab",
+      "to": "新建标签页",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Create New Tab",
+      "to": "创建新标签页",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Next Tab",
+      "to": "下一个标签页",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Previous Tab",
+      "to": "上一个标签页",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Switch Tab",
+      "to": "切换标签页",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "List Tabs",
+      "to": "列出标签页",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Reopen Last Closed Tab",
+      "to": "重新打开上次关闭的标签页",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "New Tab Menu",
+      "to": "新建标签页菜单",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Activate Browser Tab",
+      "to": "激活浏览器标签页",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Close Browser Tab",
+      "to": "关闭浏览器标签页",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Hard Reload Browser Tab",
+      "to": "强制重新加载浏览器标签页",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Browser Menu",
+      "to": "浏览器菜单",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Browser Navigation",
+      "to": "浏览器导航",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Browser Tools",
+      "to": "浏览器工具",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Browser Tool Calls",
+      "to": "浏览器工具调用",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "New Browser",
+      "to": "新建浏览器",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Find in Browser Page",
+      "to": "在浏览器页面中查找",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Find Next in Browser Page",
+      "to": "查找下一处（浏览器）",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Find Previous in Browser Page",
+      "to": "查找上一处（浏览器）",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Close Browser Find",
+      "to": "关闭浏览器查找",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Abort Agent and Restore Query",
+      "to": "中止 Agent 并恢复查询",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Agent Mode",
+      "to": "Agent 模式",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Cloud Agent",
+      "to": "云端 Agent",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Search Agents",
+      "to": "搜索 Agent",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Next Agent",
+      "to": "下一个 Agent",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Previous Agent",
+      "to": "上一个 Agent",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Pin / Unpin Agent",
+      "to": "固定 / 取消固定 Agent",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Fix in Agent",
+      "to": "在 Agent 中修复",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "No Agent For This Task",
+      "to": "此任务没有可用 Agent",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Scroll Agent Panel Down",
+      "to": "向下滚动 Agent 面板",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Scroll Agent Panel Up",
+      "to": "向上滚动 Agent 面板",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Skip Pending Shell Tool",
+      "to": "跳过待处理的 Shell 工具",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Copy Agent Deeplink",
+      "to": "复制 Agent 深度链接",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Plan Mode",
+      "to": "计划模式",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Build Plan",
+      "to": "生成计划",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "View Plan",
+      "to": "查看计划",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "With Plan",
+      "to": "使用计划",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Empty Plan State",
+      "to": "空计划状态",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    },
+    {
+      "from": "Plugins",
+      "to": "插件",
+      "reason": "heuristic-overlap",
+      "archivedAt": "2026-07-12T04:29:21"
+    }
+  ]
+}

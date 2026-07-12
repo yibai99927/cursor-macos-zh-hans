@@ -116,6 +116,14 @@ try {
 Write-Host "==> 注入 workbench 运行时翻译..."
 Invoke-Python -PyArgs @("$Root\scripts\inject-runtime.py", "--app-root", $AppRoot)
 
+# 5.5 清理失效 Glass 词典
+Write-Host "==> 清理失效 Glass 词典条目..."
+try {
+    Invoke-Python -PyArgs @("$Root\scripts\prune-glass-dict.py", "--app-root", $AppRoot, "--apply-heuristics", "--apply")
+} catch {
+    Write-Warning "Glass 词典清理跳过（可忽略）: $_"
+}
+
 # 6. Glass UI / 结构化静态补丁
 Write-Host "==> 应用 Glass UI / 结构化静态补丁..."
 Invoke-Python -PyArgs @("$Root\scripts\patch-glass-ui.py", "--app-root", $AppRoot)
@@ -128,12 +136,14 @@ try {
     Write-Warning "守护扩展安装失败（可忽略）: $_"
 }
 
-# 8. 提取字符串（维护用）
-Write-Host "==> 提取当前版本待翻译字符串..."
-try {
-    Invoke-Python -PyArgs @("$Root\scripts\extract.py", $AppRoot)
-} catch {
-    Write-Warning "提取字符串失败（可忽略）: $_"
+# 8. 提取字符串（仅维护者模式）
+if ($env:CURSOR_ZH_MAINTAINER -eq "1") {
+    Write-Host "==> 提取当前版本待翻译字符串（维护者模式）..."
+    try {
+        Invoke-Python -PyArgs @("$Root\scripts\extract.py", $AppRoot)
+    } catch {
+        Write-Warning "提取字符串失败（可忽略）: $_"
+    }
 }
 
 Write-Host ""
