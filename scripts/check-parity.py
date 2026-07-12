@@ -26,6 +26,7 @@ REQUIRED_SCRIPTS = [
     "inject-runtime.py",
     "patch-glass-ui.py",
     "validate-dicts.py",
+    "prune-glass-dict.py",
     "extract.py",
     "install-win.ps1",
     "install-mac.sh",
@@ -41,6 +42,7 @@ INSTALL_STEP_MARKERS = [
     "merge-overlay",
     "bridge-private-extensions",
     "inject-runtime",
+    "prune-glass-dict",
     "patch-glass-ui",
 ]
 

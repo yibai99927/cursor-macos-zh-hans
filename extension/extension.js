@@ -89,15 +89,13 @@ function checkStatus(appRoot) {
   }
   runtimeOk = fs.existsSync(runtimePath);
 
-  // 静态补丁粗检：glass 文件是否仍含常见英文导航键值（未补丁时更常见）
   const glassPath = path.join(appRoot, "out", "vs", "workbench", "workbench.glass.main.js");
   let staticLikelyPatched = null;
   if (fs.existsSync(glassPath)) {
     try {
       const sample = fs.readFileSync(glassPath, "utf8");
-      // 已汉化时通常能看到「通用」；未汉化时常见 general:"General"
-      if (sample.includes("general:\"通用\"") || sample.includes("general:\"General\"")) {
-        staticLikelyPatched = sample.includes("general:\"通用\"");
+      if (sample.includes('general:"通用"') || sample.includes('general:"General"')) {
+        staticLikelyPatched = sample.includes('general:"通用"');
       }
     } catch {
       staticLikelyPatched = null;
@@ -113,8 +111,19 @@ function checkStatus(appRoot) {
   };
 }
 
+function resolveBundledRoot(context) {
+  const bundled = path.join(context.extensionPath, "bundled");
+  if (fs.existsSync(path.join(bundled, "scripts", "inject-runtime.py"))) {
+    return bundled;
+  }
+  return null;
+}
+
 function findRepoRoot(context) {
-  // 扩展可能安装在 ~/.cursor/extensions/...，也可能从开发目录加载
+  const bundled = resolveBundledRoot(context);
+  if (bundled) {
+    return bundled;
+  }
   const candidates = [
     path.resolve(context.extensionPath, ".."),
     path.resolve(context.extensionPath, "..", ".."),
@@ -127,10 +136,13 @@ function findRepoRoot(context) {
   return null;
 }
 
-function runPython(scriptPath, args) {
+function runPython(scriptPath, args, cwd) {
   return new Promise((resolve) => {
     const py = process.platform === "win32" ? "python" : "python3";
-    const child = spawn(py, [scriptPath, ...args], { windowsHide: true });
+    const child = spawn(py, [scriptPath, ...args], {
+      windowsHide: true,
+      cwd: cwd || path.dirname(scriptPath),
+    });
     let out = "";
     let err = "";
     child.stdout.on("data", (d) => {
@@ -148,16 +160,42 @@ function runPython(scriptPath, args) {
   });
 }
 
+function scriptPath(repo, name) {
+  return path.join(repo, "scripts", name);
+}
+
+async function reapplyRuntimePatch(context, appRoot) {
+  const repo = findRepoRoot(context);
+  if (!repo) {
+    vscode.window.showWarningMessage(
+      "未找到汉化回补资源。请重新运行项目中的安装脚本（启动汉化_Win.bat / 启动汉化_Mac.sh）。"
+    );
+    return false;
+  }
+  const script = scriptPath(repo, "inject-runtime.py");
+  const result = await runPython(script, ["--app-root", appRoot], repo);
+  if (result.code === 0) {
+    vscode.window
+      .showInformationMessage("运行时注入已尝试回补。请完全退出并重启 Cursor。", "知道了")
+      .then(() => {});
+    return true;
+  }
+  vscode.window.showErrorMessage(
+    `运行时回补失败（可能无写权限）。请用管理员/有权限的终端重跑安装脚本。\n${result.err || result.out}`
+  );
+  return false;
+}
+
 async function reapplyStaticPatch(context, appRoot) {
   const repo = findRepoRoot(context);
   if (!repo) {
     vscode.window.showWarningMessage(
-      "未找到汉化项目中的 patch-glass-ui.py。请在项目目录重新运行安装脚本（启动汉化_Win.bat / 启动汉化_Mac.sh）。"
+      "未找到汉化回补资源。请重新运行项目中的安装脚本（启动汉化_Win.bat / 启动汉化_Mac.sh）。"
     );
     return false;
   }
-  const script = path.join(repo, "scripts", "patch-glass-ui.py");
-  const result = await runPython(script, ["--app-root", appRoot]);
+  const script = scriptPath(repo, "patch-glass-ui.py");
+  const result = await runPython(script, ["--app-root", appRoot], repo);
   if (result.code === 0) {
     vscode.window
       .showInformationMessage("静态补丁已尝试回补。请完全退出并重启 Cursor。", "知道了")
@@ -168,6 +206,19 @@ async function reapplyStaticPatch(context, appRoot) {
     `静态补丁回补失败（可能无写权限）。请用管理员/有权限的终端重跑安装脚本。\n${result.err || result.out}`
   );
   return false;
+}
+
+async function reapplyAllPatches(context, appRoot) {
+  const runtimeOk = await reapplyRuntimePatch(context, appRoot);
+  const staticOk = await reapplyStaticPatch(context, appRoot);
+  if (runtimeOk && staticOk) {
+    vscode.window.showInformationMessage("运行时与静态补丁均已尝试回补。请完全退出并重启 Cursor。");
+    return true;
+  }
+  if (runtimeOk || staticOk) {
+    vscode.window.showWarningMessage("部分补丁回补失败，请查看上方错误提示或重跑安装脚本。");
+  }
+  return runtimeOk && staticOk;
 }
 
 async function reportStatus(context, silent) {
@@ -205,16 +256,44 @@ async function autoCheck(context) {
     return;
   }
 
-  if (!status.injectionOk || !status.runtimeOk) {
+  const runtimeMissing = !status.injectionOk || !status.runtimeOk;
+  const staticMissing = status.staticLikelyPatched === false;
+
+  if (runtimeMissing && staticMissing) {
     const pick = await vscode.window.showWarningMessage(
-      "检测到 Cursor 运行时汉化注入可能已丢失（常见于 Cursor 升级后）。请重新运行项目中的安装脚本。",
+      "检测到运行时注入与静态汉化可能均已丢失（常见于 Cursor 升级后）。是否尝试一键回补？",
+      "一键回补",
       "打开说明",
       "忽略"
     );
-    if (pick === "打开说明") {
+    if (pick === "一键回补") {
+      await reapplyAllPatches(context, status.appRoot);
+    } else if (pick === "打开说明") {
       openGuide(context);
     }
-  } else if (status.staticLikelyPatched === false && cfg.get("autoReapplyStaticPatch")) {
+    return;
+  }
+
+  if (runtimeMissing) {
+    if (cfg.get("autoReapplyRuntimePatch")) {
+      await reapplyRuntimePatch(context, status.appRoot);
+      return;
+    }
+    const pick = await vscode.window.showWarningMessage(
+      "检测到 Cursor 运行时汉化注入可能已丢失（常见于 Cursor 升级后）。是否尝试回补？",
+      "回补",
+      "打开说明",
+      "忽略"
+    );
+    if (pick === "回补") {
+      await reapplyRuntimePatch(context, status.appRoot);
+    } else if (pick === "打开说明") {
+      openGuide(context);
+    }
+    return;
+  }
+
+  if (staticMissing && cfg.get("autoReapplyStaticPatch")) {
     const pick = await vscode.window.showWarningMessage(
       "检测到设置页静态汉化可能已丢失。是否尝试自动回补？",
       "回补",
@@ -243,7 +322,9 @@ function openGuide(context) {
     "",
     "完成后请完全退出 Cursor 再打开。",
     "",
-    repo ? `当前推断的项目目录: ${repo}` : "请打开你克隆的 cursor-zh-hans 仓库目录操作。",
+    "守护扩展也可尝试命令「Cursor 简体中文: 一键回补全部汉化」。",
+    "",
+    repo ? `当前回补资源目录: ${repo}` : "请打开你克隆的 cursor-zh-hans 仓库目录操作。",
   ].join("\n");
   const doc = vscode.workspace.openTextDocument({ content: md, language: "markdown" });
   doc.then((d) => vscode.window.showTextDocument(d));
@@ -262,6 +343,22 @@ function activate(context) {
         return;
       }
       await reapplyStaticPatch(context, appRoot);
+    }),
+    vscode.commands.registerCommand("cursorZhHans.reapplyRuntimePatch", async () => {
+      const appRoot = resolveAppRoot(context);
+      if (!appRoot) {
+        vscode.window.showWarningMessage("未找到 Cursor 安装目录");
+        return;
+      }
+      await reapplyRuntimePatch(context, appRoot);
+    }),
+    vscode.commands.registerCommand("cursorZhHans.reapplyAllPatches", async () => {
+      const appRoot = resolveAppRoot(context);
+      if (!appRoot) {
+        vscode.window.showWarningMessage("未找到 Cursor 安装目录");
+        return;
+      }
+      await reapplyAllPatches(context, appRoot);
     }),
     vscode.commands.registerCommand("cursorZhHans.openInstallGuide", () => openGuide(context))
   );

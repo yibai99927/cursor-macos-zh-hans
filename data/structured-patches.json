@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "按对象字面量 key 锚定替换硬编码文案（比整段压缩串更抗更新）。思路参考 YeYu-Wang/cursor-zh-hans-language-pack（MIT）。",
   "targets": [
     {
@@ -79,6 +79,86 @@
           "source": "Open Web Links in Browser",
           "target": "在浏览器中打开网页链接"
         }
+      }
+    },
+    {
+      "id": "automations-tab-mine",
+      "type": "object-literal-values",
+      "description": "自动化「我的」标签",
+      "optional": true,
+      "requiredKeys": ["mine"],
+      "values": {
+        "label": { "source": "Mine", "target": "我的" }
+      }
+    },
+    {
+      "id": "automations-tab-team",
+      "type": "object-literal-values",
+      "description": "自动化「团队」标签",
+      "optional": true,
+      "requiredKeys": ["team"],
+      "values": {
+        "label": { "source": "Team", "target": "团队" }
+      }
+    },
+    {
+      "id": "automations-label-popular",
+      "type": "object-literal-values",
+      "description": "自动化模板筛选：热门",
+      "optional": true,
+      "requiredKeys": ["popular"],
+      "values": {
+        "label": { "source": "Popular", "target": "热门" }
+      }
+    },
+    {
+      "id": "automations-label-code-review",
+      "type": "object-literal-values",
+      "description": "自动化模板筛选：代码审查",
+      "optional": true,
+      "requiredKeys": ["code-review"],
+      "values": {
+        "label": { "source": "Code Review", "target": "代码审查" }
+      }
+    },
+    {
+      "id": "automations-label-security",
+      "type": "object-literal-values",
+      "description": "自动化模板筛选：安全",
+      "optional": true,
+      "requiredKeys": ["security"],
+      "values": {
+        "label": { "source": "Security", "target": "安全" }
+      }
+    },
+    {
+      "id": "automations-label-incidents",
+      "type": "object-literal-values",
+      "description": "自动化模板筛选：事故与分诊",
+      "optional": true,
+      "requiredKeys": ["incidents-triage"],
+      "values": {
+        "label": { "source": "Incidents & Triage", "target": "事故与分诊" }
+      }
+    },
+    {
+      "id": "automations-label-data-research",
+      "type": "object-literal-values",
+      "description": "自动化模板筛选：数据与研究",
+      "optional": true,
+      "requiredKeys": ["data-research"],
+      "values": {
+        "label": { "source": "Data & Research", "target": "数据与研究" }
+      }
+    },
+    {
+      "id": "automations-label-environment",
+      "type": "object-literal-values",
+      "description": "自动化模板筛选：环境",
+      "optional": true,
+      "requiredKeys": ["environment"],
+      "values": {
+        "label": { "source": "Environment", "target": "环境" }
       }
     }
   ]
