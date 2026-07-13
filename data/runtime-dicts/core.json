@@ -1,6 +1,6 @@
 {
   "description": "通用界面精确匹配词典（设置侧栏、Agent 窗口等）",
-  "updatedAt": "2026-07-11",
+  "updatedAt": "2026-07-13",
   "entries": [
     [
       "Cannot create project rules without a workspace. Please open a folder first.",
@@ -669,6 +669,30 @@
     [
       "Fun",
       "趣味"
+    ],
+    [
+      "Browser Automation",
+      "浏览器自动化"
+    ],
+    [
+      "Browser Protection",
+      "浏览器保护"
+    ],
+    [
+      "Prevent Agent from automatically running Browser tools",
+      "阻止 Agent 自动运行浏览器工具"
+    ],
+    [
+      "Show Localhost Links in Browser",
+      "在浏览器中显示 Localhost 链接"
+    ],
+    [
+      "Open Web Links in Browser",
+      "在浏览器中打开网页链接"
+    ],
+    [
+      "Browser",
+      "浏览器"
     ]
   ]
 }

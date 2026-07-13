@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "按对象字面量 key 锚定替换硬编码文案（比整段压缩串更抗更新）。思路参考 YeYu-Wang/cursor-zh-hans-language-pack（MIT）。",
   "targets": [
     {
@@ -60,9 +60,13 @@
     {
       "id": "browser-settings-labels",
       "type": "object-literal-values",
-      "description": "浏览器设置文案",
+      "description": "浏览器设置文案（用更稳定的长 key 锚定，避免 section/automation 等泛词误判）",
       "optional": true,
-      "requiredKeys": ["section", "automation", "protection"],
+      "requiredKeys": [
+        "protectionDescription",
+        "showLocalhostLinks",
+        "openWebLinks"
+      ],
       "values": {
         "section": { "source": "Browser", "target": "浏览器" },
         "automation": { "source": "Browser Automation", "target": "浏览器自动化" },

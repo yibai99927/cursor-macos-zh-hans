@@ -79,16 +79,50 @@ def ensure_writable(app_root: Path) -> None:
         ) from exc
 
 
+# 短词裸替换极易误伤邻近英文（如 Accept → Accepted 变成 接受ed）
+MIN_UNQUOTED_EXACT_LEN = 16
+
+
+def replace_exact_string(content: str, src: str, dst: str) -> tuple[str, int]:
+    """优先替换引号包裹的 UI 文案；短词禁止裸替换以防污染标识符/其它词。"""
+    hits = 0
+    for quote in ('"', "'"):
+        needle = f"{quote}{src}{quote}"
+        if needle not in content:
+            continue
+        repl = f"{quote}{dst}{quote}"
+        # 用 count 避免二次全表扫描判断是否变化
+        n = content.count(needle)
+        if n:
+            content = content.replace(needle, repl)
+            hits += n
+    if hits:
+        return content, hits
+    # 长句才允许裸替换（覆盖 HTML 片段内嵌文案等）
+    if len(src) >= MIN_UNQUOTED_EXACT_LEN and src in content:
+        content = content.replace(src, dst)
+        return content, 1
+    return content, 0
+
+
 def apply_replacements(content: str, config: dict, progress_label: str = "") -> tuple[str, dict]:
-    stats = {"blocks": 0, "exact": 0, "structured": 0, "missed_blocks": [], "missed_exact": [], "missed_structured": []}
+    stats = {
+        "blocks": 0,
+        "exact": 0,
+        "structured": 0,
+        "missed_blocks": [],
+        "missed_exact": [],
+        "missed_structured": [],
+    }
 
     for block in config.get("blocks", []):
         src = block["from"]
         dst = block["to"]
+        optional = block.get("optional", False)
         if src in content:
             content = content.replace(src, dst)
             stats["blocks"] += 1
-        else:
+        elif not optional:
             stats["missed_blocks"].append(block.get("id", src[:40]))
 
     exact_items = sorted(config.get("exact", []), key=lambda x: len(x["from"]), reverse=True)
@@ -99,9 +133,8 @@ def apply_replacements(content: str, config: dict, progress_label: str = "") -> 
     for i, item in enumerate(exact_items, start=1):
         src = item["from"]
         dst = item["to"]
-        # 避免额外的 count() 全表扫描；命中即替换
-        if src in content:
-            content = content.replace(src, dst)
+        content, n = replace_exact_string(content, src, dst)
+        if n:
             stats["exact"] += 1
         else:
             stats["missed_exact"].append(src)
@@ -113,6 +146,30 @@ def apply_replacements(content: str, config: dict, progress_label: str = "") -> 
     return content, stats
 
 
+def _key_present(content: str, key: str) -> bool:
+    return re.search(rf'(?:{re.escape(key)}|"{re.escape(key)}")\s*:', content) is not None
+
+
+def _replace_object_value(content: str, key: str, source: str, target: str) -> tuple[str, int]:
+    patterns = [
+        rf'({re.escape(key)}\s*:\s*)"{re.escape(source)}"',
+        rf'("{re.escape(key)}"\s*:\s*)"{re.escape(source)}"',
+    ]
+    for pat in patterns:
+        new_content, n = re.subn(pat, rf'\1"{target}"', content, count=1)
+        if n:
+            return new_content, n
+    return content, 0
+
+
+def _value_already_translated(content: str, key: str, target: str) -> bool:
+    patterns = [
+        rf'{re.escape(key)}\s*:\s*"{re.escape(target)}"',
+        rf'"{re.escape(key)}"\s*:\s*"{re.escape(target)}"',
+    ]
+    return any(re.search(pat, content) for pat in patterns)
+
+
 def apply_structured_replacements(content: str, structured: dict) -> tuple[str, dict]:
     """按对象字面量 key 锚定替换字符串值，降低压缩变量改名带来的失效。"""
     stats = {"structured": 0, "missed_structured": []}
@@ -121,40 +178,29 @@ def apply_structured_replacements(content: str, structured: dict) -> tuple[str, 
             continue
         values = item.get("values") or {}
         required = item.get("requiredKeys") or []
-        optional = item.get("optional", True)
         item_id = item.get("id", "structured")
 
-        # 在文件中找同时包含足够多 requiredKeys 的窗口，再逐 key 替换
-        # 简化实现：全局按 key:"source" / key:"target" 模式替换（仅当 source 仍存在）
-        hit_required = 0
-        for key in required:
-            # key 可能带引号或不带
-            if re.search(rf'(?:{re.escape(key)}|"{re.escape(key)}")\s*:', content):
-                hit_required += 1
-        if required and hit_required < max(1, len(required) // 2):
+        hit_required = sum(1 for key in required if _key_present(content, key))
+        if required and hit_required < max(1, (len(required) + 1) // 2):
             stats["missed_structured"].append(item_id)
             continue
 
         changed_here = 0
+        already_ok = 0
         for key, mapping in values.items():
             source = mapping.get("source")
             target = mapping.get("target")
             if not source or not target or source == target:
                 continue
-            # 匹配 key:"source" 或 "key":"source"
-            patterns = [
-                rf'({re.escape(key)}\s*:\s*)"{re.escape(source)}"',
-                rf'("{re.escape(key)}"\s*:\s*)"{re.escape(source)}"',
-            ]
-            for pat in patterns:
-                new_content, n = re.subn(pat, rf'\1"{target}"', content, count=1)
-                if n:
-                    content = new_content
-                    changed_here += n
-                    break
+            content, n = _replace_object_value(content, key, source, target)
+            if n:
+                changed_here += n
+            elif _value_already_translated(content, key, target):
+                already_ok += 1
         if changed_here:
             stats["structured"] += changed_here
-        else:
+        elif already_ok == 0:
+            # 既未替换也未发现目标译文 → 真正未命中
             stats["missed_structured"].append(item_id)
 
     return content, stats
@@ -338,12 +384,12 @@ def main() -> int:
             log(f"    - 精确替换: {result['exact']} 处")
             log(f"    - 结构化替换: {result.get('structured', 0)} 处")
         if result["missed_blocks"]:
-            log(f"    - 未命中块: {', '.join(result['missed_blocks'][:5])}")
+            log(f"    - 未命中必选块: {', '.join(result['missed_blocks'][:5])}")
         if result.get("missed_structured"):
             log(f"    - 未命中结构化项: {', '.join(result['missed_structured'][:5])}")
         if result["missed_exact"] and result["changed"]:
             missed = result["missed_exact"]
-            log(f"    - 未命中条目: {len(missed)} 条")
+            log(f"    - 未命中条目: {len(missed)} 条（多为历史失效词条，可忽略）")
 
     if changed_files:
         updated = update_product_checksums(app_root, changed_files, dry_run=args.dry_run)
