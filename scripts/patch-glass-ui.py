@@ -88,14 +88,11 @@ def replace_exact_string(content: str, src: str, dst: str) -> tuple[str, int]:
     hits = 0
     for quote in ('"', "'"):
         needle = f"{quote}{src}{quote}"
-        if needle not in content:
-            continue
-        repl = f"{quote}{dst}{quote}"
-        # 用 count 避免二次全表扫描判断是否变化
         n = content.count(needle)
-        if n:
-            content = content.replace(needle, repl)
-            hits += n
+        if not n:
+            continue
+        content = content.replace(needle, f"{quote}{dst}{quote}")
+        hits += n
     if hits:
         return content, hits
     # 长句才允许裸替换（覆盖 HTML 片段内嵌文案等）
@@ -104,6 +101,17 @@ def replace_exact_string(content: str, src: str, dst: str) -> tuple[str, int]:
         return content, 1
     return content, 0
 
+
+def _quoted_target_coverage(content: str, values: dict) -> int:
+    """统计已以引号形式存在的目标译文（含 exact 先替换的情况）。"""
+    ok = 0
+    for mapping in values.values():
+        target = mapping.get("target")
+        if not target:
+            continue
+        if f'"{target}"' in content or f"'{target}'" in content:
+            ok += 1
+    return ok
 
 def apply_replacements(content: str, config: dict, progress_label: str = "") -> tuple[str, dict]:
     stats = {
@@ -172,17 +180,29 @@ def _value_already_translated(content: str, key: str, target: str) -> bool:
 
 def apply_structured_replacements(content: str, structured: dict) -> tuple[str, dict]:
     """按对象字面量 key 锚定替换字符串值，降低压缩变量改名带来的失效。"""
-    stats = {"structured": 0, "missed_structured": []}
+    stats = {"structured": 0, "missed_structured": [], "skipped_optional": []}
     for item in structured.get("structuredReplacements", []):
         if item.get("type") != "object-literal-values":
             continue
         values = item.get("values") or {}
         required = item.get("requiredKeys") or []
+        optional = item.get("optional", True)
         item_id = item.get("id", "structured")
+        min_hits = max(1, (len(required) + 1) // 2) if required else 0
+
+        def mark_miss() -> None:
+            # 可选补丁在当前包体中不存在时静默跳过，避免重复安装误报
+            if optional:
+                stats["skipped_optional"].append(item_id)
+            else:
+                stats["missed_structured"].append(item_id)
 
         hit_required = sum(1 for key in required if _key_present(content, key))
-        if required and hit_required < max(1, (len(required) + 1) // 2):
-            stats["missed_structured"].append(item_id)
+        if required and hit_required < min_hits:
+            # exact 可能已写入译文，或本文件根本不含该模块
+            if _quoted_target_coverage(content, values) >= max(1, len(values) // 2):
+                continue
+            mark_miss()
             continue
 
         changed_here = 0
@@ -199,12 +219,14 @@ def apply_structured_replacements(content: str, structured: dict) -> tuple[str, 
                 already_ok += 1
         if changed_here:
             stats["structured"] += changed_here
-        elif already_ok == 0:
-            # 既未替换也未发现目标译文 → 真正未命中
-            stats["missed_structured"].append(item_id)
+        elif already_ok > 0:
+            continue
+        elif _quoted_target_coverage(content, values) >= max(1, len(values) // 2):
+            continue
+        else:
+            mark_miss()
 
     return content, stats
-
 
 def update_product_checksums(app_root: Path, changed_rel_paths: list[str], dry_run: bool = False) -> int:
     product_path = app_root / "product.json"
@@ -255,14 +277,15 @@ def patch_file(
         patched, struct_stats = apply_structured_replacements(patched, structured)
         stats["structured"] = struct_stats.get("structured", 0)
         stats["missed_structured"] = struct_stats.get("missed_structured", [])
+        stats["skipped_optional"] = struct_stats.get("skipped_optional", [])
     else:
         stats.setdefault("structured", 0)
         stats.setdefault("missed_structured", [])
+        stats.setdefault("skipped_optional", [])
 
     if patched == original:
-        log(f"    无变化 ({time.time() - t0:.1f}s)")
+        log(f"    无变化（已是最新或无需补丁）({time.time() - t0:.1f}s)")
         return {"file": rel_path, "changed": False, **stats}
-
     if not dry_run:
         log("    正在备份并写入...")
         backup_file(target)
@@ -386,7 +409,7 @@ def main() -> int:
         if result["missed_blocks"]:
             log(f"    - 未命中必选块: {', '.join(result['missed_blocks'][:5])}")
         if result.get("missed_structured"):
-            log(f"    - 未命中结构化项: {', '.join(result['missed_structured'][:5])}")
+            log(f"    - 未命中必选结构化项: {', '.join(result['missed_structured'][:5])}")
         if result["missed_exact"] and result["changed"]:
             missed = result["missed_exact"]
             log(f"    - 未命中条目: {len(missed)} 条（多为历史失效词条，可忽略）")
@@ -398,7 +421,7 @@ def main() -> int:
     if args.dry_run:
         log("预览模式，未写入任何文件")
     elif total_changed == 0:
-        log("没有文件被修改（可能已打过补丁或版本不匹配）")
+        log("没有文件被修改（已打过补丁，可直接重启 Cursor）")
     else:
         log(f"完成，共修改 {total_changed} 个文件")
 

@@ -94,10 +94,86 @@ def test_structured_translates_and_skips_already_done() -> None:
     assert stats2["missed_structured"] == []
 
 
+def test_optional_structured_missing_is_silent() -> None:
+    content = 'other={foo:"bar"}'
+    structured = {
+        "structuredReplacements": [
+            {
+                "id": "browser-settings-labels",
+                "type": "object-literal-values",
+                "optional": True,
+                "requiredKeys": [
+                    "protectionDescription",
+                    "showLocalhostLinks",
+                    "openWebLinks",
+                ],
+                "values": {
+                    "section": {"source": "Browser", "target": "浏览器"},
+                    "automation": {
+                        "source": "Browser Automation",
+                        "target": "浏览器自动化",
+                    },
+                },
+            }
+        ]
+    }
+    patched, stats = apply_structured_replacements(content, structured)
+    assert patched == content
+    assert stats["missed_structured"] == []
+    assert "browser-settings-labels" in stats["skipped_optional"]
+
+
+def test_exact_coverage_counts_as_structured_ok() -> None:
+    # 无对象 key，但 exact 已写入译文
+    content = '"浏览器自动化","浏览器保护","阻止 Agent 自动运行浏览器工具","在浏览器中显示 Localhost 链接","在浏览器中打开网页链接","浏览器"'
+    structured = {
+        "structuredReplacements": [
+            {
+                "id": "browser-settings-labels",
+                "type": "object-literal-values",
+                "optional": True,
+                "requiredKeys": [
+                    "protectionDescription",
+                    "showLocalhostLinks",
+                    "openWebLinks",
+                ],
+                "values": {
+                    "section": {"source": "Browser", "target": "浏览器"},
+                    "automation": {
+                        "source": "Browser Automation",
+                        "target": "浏览器自动化",
+                    },
+                    "protection": {
+                        "source": "Browser Protection",
+                        "target": "浏览器保护",
+                    },
+                    "protectionDescription": {
+                        "source": "Prevent Agent from automatically running Browser tools",
+                        "target": "阻止 Agent 自动运行浏览器工具",
+                    },
+                    "showLocalhostLinks": {
+                        "source": "Show Localhost Links in Browser",
+                        "target": "在浏览器中显示 Localhost 链接",
+                    },
+                    "openWebLinks": {
+                        "source": "Open Web Links in Browser",
+                        "target": "在浏览器中打开网页链接",
+                    },
+                },
+            }
+        ]
+    }
+    _, stats = apply_structured_replacements(content, structured)
+    assert stats["missed_structured"] == []
+    assert stats["skipped_optional"] == []
+
+
 def main() -> int:
     test_short_exact_quote_only()
     test_long_exact_unquoted_fallback()
     test_structured_translates_and_skips_already_done()
+    test_optional_structured_missing_is_silent()
+    test_exact_coverage_counts_as_structured_ok()
     print("ok")
     return 0
 
